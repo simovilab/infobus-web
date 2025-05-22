@@ -11,28 +11,59 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Inicio', link: '/' },
-      { text: 'Arquitectura', link: '/arquitectura/' },
-      { text: 'Mapa del sitio', link: '/sitio/' },
-      { text: 'Infobús API', link: '/infobus/' },
-      { text: 'Configuración', link: '/configuracion/' },
-      { text: 'Implementación', link: '/implementacion/' },
-      { text: 'Desarrollo', link: '/desarrollo/' },
-      { text: 'Guía de estilo', link: '/estilo/' },
-      { text: 'Glosario', link: '/glosario/' }
+      { text: 'Proyecto', link: '/proyecto/' },
+      { text: 'Diseño', link: '/diseno/' },
+      { text: 'Desarrollo', link: '/desarrollo/' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Proyecto',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Acerca', link: '/proyecto/' },
+          { text: 'Glosario', link: '/proyecto/glosario/' }
+        ]
+      },
+      {
+        text: 'Diseño',
+        items: [
+          { text: 'Principios', link: '/diseno/' },
+          { text: 'Arquitectura', link: '/diseno/arquitectura/' },
+          { text: 'Mapa del sitio', link: '/diseno/sitio/' },
+          { text: 'Plantillas y componentes', link: '/diseno/componentes/' },
+          { text: 'Panel de administración', link: '/diseno/admin/' },
+          { text: 'Accesibilidad', link: '/diseno/accesibilidad/' }
+        ]
+      },
+      {
+        text: 'Desarrollo',
+        items: [
+          { text: 'Pasos', link: '/desarrollo/' },
+          { text: 'Infobús API', link: '/desarrollo/infobus/' },
+          { text: 'Configuración', link: '/desarrollo/configuración/' },
+          { text: 'Implementación', link: '/desarrollo/implementacion/' },
+          { text: 'Pruebas', link: '/desarrollo/pruebas/' },
+          { text: 'Guía de estilo', link: '/desarrollo/estilo/' }
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+      { icon: 'github', link: 'https://github.com/simovilab/infobus-web' }
+    ],
+
+    outlineTitle: 'En esta página',
+    lastUpdatedText: 'Última actualización',
+    darkModeSwitchLabel: 'Apariencia',
+    lightModeSwitchTitle: 'Cambiar a modo claro',
+    darkModeSwitchTitle: 'Cambiar a modo oscuro',
+    returnToTopLabel: 'Volver arriba',
+    docFooter: {
+      prev: 'Página anterior',
+      next: 'Página siguiente'
+    },
+    search: {
+      placeholder: 'Buscar'
+    }
   }
 })
