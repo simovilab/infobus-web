@@ -1,4 +1,4 @@
-# Desarrollo
+# Lineamientos de desarrollo
 
 ## Cronograma
 

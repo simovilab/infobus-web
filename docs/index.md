@@ -31,4 +31,3 @@ features:
     details: Lineamientos para el desarrollo del sitio web
     link: /desarrollo/
 ---
-
