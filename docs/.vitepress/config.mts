@@ -33,6 +33,7 @@ export default defineConfig({
           { text: "Lenguaje de diseño", link: "/diseno/lenguaje/" },
           { text: "Interfaz del usuario", link: "/diseno/interfaz/" },
           { text: "Experiencia del usuario", link: "/diseno/experiencia/" },
+          { text: "Inteligencia artificial", link: "/diseno/ia/" },
           { text: "Panel de administración", link: "/diseno/admin/" },
         ],
       },
@@ -41,7 +42,7 @@ export default defineConfig({
         items: [
           { text: "Lineamientos", link: "/desarrollo/" },
           { text: "Infobús API", link: "/desarrollo/infobus/" },
-          { text: "Configuración", link: "/desarrollo/configuración/" },
+          { text: "Configuración", link: "/desarrollo/configuracion/" },
           { text: "Implementación", link: "/desarrollo/implementacion/" },
           { text: "Pruebas", link: "/desarrollo/pruebas/" },
           { text: "Guía de estilo", link: "/desarrollo/estilo/" },
