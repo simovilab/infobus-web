@@ -43,6 +43,7 @@ export default defineConfig({
           { text: "Lineamientos", link: "/desarrollo/" },
           { text: "Infobús API", link: "/desarrollo/infobus-api/" },
           { text: "Infobús Admin", link: "/desarrollo/infobus-admin/" },
+          { text: "Infobús MCP", link: "/desarrollo/infobus-mcp/" },
           { text: "Configuración", link: "/desarrollo/configuracion/" },
           { text: "Implementación", link: "/desarrollo/implementacion/" },
           {
@@ -65,6 +66,17 @@ export default defineConfig({
               { text: "TripPlanner", link: "/desarrollo/componentes/" },
               { text: "FareCard", link: "/desarrollo/componentes/" },
               { text: "FeedbackForm", link: "/desarrollo/componentes/" },
+            ],
+          },
+          {
+            text: "Módulos",
+            collapsed: true,
+            items: [
+              { text: "Descripción", link: "/desarrollo/modulos/" },
+              {
+                text: "Nuxt Infobús",
+                link: "/desarrollo/modulos/nuxt-infobus/",
+              },
             ],
           },
           { text: "Pruebas", link: "/desarrollo/pruebas/" },

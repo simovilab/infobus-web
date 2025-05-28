@@ -1,5 +1,16 @@
 # Componentes Vue
 
+La información del servicio de transporte público en el sitio está clasificada en las siguientes categorías:
+
+- Agencias: Información general, de contacto y medios de atenciónn al cliente
+- Rutas: Códigos, nombres, descripción y colores que ayudan a la identificación
+- Paradas: Ubicación, infraestructura, facilidades, seguridad y accesibilidad
+- Viajes y horarios: Tiempos de salida de cada viaje y de preferencia para cada parada
+- Días de operación: Especificación de rangos de operación semanal y estacional y cambios en feriados
+- Tarifas: Detalles del precio, métodos de compra y de pago
+- Datos geoespaciales y mapas: Mapas de los recorridos de las rutas y ubicación de las paradas
+- Tiempo real: Información de ubicación y estado de los vehículos, actualización de tiempos de llegada y alertas en tiempo real
+
 Estructura básica de un componente Vue con el API de composición (`<script setup>`):
 
 ## Ejemplo de componente Vue
