@@ -68,3 +68,5 @@ Toda la información proviene de la **Infobús API**, desarrollada por el labora
 - Repositorio MCP: [github.com/simovilab/infobus-mcp](https://github.com/simovilab/infobus-mcp)
 - API Infobús: [infobus.bucr.digital/api/docs](https://infobus.bucr.digital/api/docs)
 - Estándar GTFS: [https://gtfs.org](https://gtfs.org)
+
+
