@@ -33,6 +33,7 @@ export default defineConfig({
           { text: "Lenguaje de diseño", link: "/diseno/lenguaje/" },
           { text: "Interfaz del usuario", link: "/diseno/interfaz/" },
           { text: "Experiencia del usuario", link: "/diseno/experiencia/" },
+          { text: "Planificador de viajes", link: "/diseno/planificador/" },
           { text: "Inteligencia artificial", link: "/diseno/ia/" },
           { text: "Panel de administración", link: "/diseno/admin/" },
         ],

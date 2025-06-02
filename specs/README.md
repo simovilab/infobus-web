@@ -12,6 +12,7 @@ Para contribuir al desarrollo de esta documentación:
 1. Instalar `pnpm` (gestor de paquetes) con `npm install -g pnpm`
 1. Clonar el repositorio con `git clone https://github.com/simovilab/infobus-web.git`
 1. Ir al repositorio clonado con `cd infobus-web`
+1. Ir al directorio de la documentación con `cd specs`
 1. Instalar VitePress con `pnpm add -D vitepress`
 1. Instalar dependencias con `pnpm install` (esto creará un directorio `node_modules` con las dependencias necesarias)
 1. Correr el servidor de desarrollo con `pnpm docs:dev`
