@@ -3,11 +3,11 @@
 layout: home
 
 hero:
-  name: "Sitio web"
-  text: "Sistema de información para el transporte público en Costa Rica"
+  name: "Infobús web"
+  text: "Sitio web de información del transporte público"
   tagline: Especificación de las funcionalidades y características para el desarrollo del sitio.
   image:
-    src: /infobus.png
+    src: /ib.png
     alt: Logo Infobús
   actions:
     - theme: brand
@@ -19,15 +19,15 @@ hero:
 
 features:
   - title: Proyecto
-    icon: ⚙️
+    icon: <span class="material-symbols-outlined">assignment</span>
     details: Información general sobre el proyecto Infobús
     link: /proyecto/
   - title: Diseño
-    icon: 🎨
+    icon: <span class="material-symbols-outlined">draw</span>
     details: Consideraciones para el diseño del sitio web
     link: /diseno/
   - title: Desarrollo
-    icon: 💻
+    icon: <span class="material-symbols-outlined">rocket_launch</span>
     details: Lineamientos para el desarrollo del sitio web
     link: /desarrollo/
 ---

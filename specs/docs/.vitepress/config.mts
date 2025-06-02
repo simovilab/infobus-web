@@ -7,8 +7,19 @@ export default defineConfig({
   cleanUrls: true,
   base: "/infobus-web/",
 
+  head: [
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined",
+      },
+    ],
+  ],
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: "/ib.png",
     nav: [
       { text: "Inicio", link: "/" },
       { text: "Proyecto", link: "/proyecto/" },
@@ -42,6 +53,7 @@ export default defineConfig({
         text: "Desarrollo",
         items: [
           { text: "Lineamientos", link: "/desarrollo/" },
+          { text: "Tecnologías", link: "/desarrollo/tecnologias" },
           { text: "Infobús API", link: "/desarrollo/infobus-api/" },
           { text: "Infobús Admin", link: "/desarrollo/infobus-admin/" },
           { text: "Infobús MCP", link: "/desarrollo/infobus-mcp/" },
