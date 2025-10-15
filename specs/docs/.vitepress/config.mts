@@ -64,7 +64,10 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: "Descripción", link: "/desarrollo/componentes/" },
-              { text: "ShapeMap", link: "/desarrollo/componentes/" },
+              {
+                text: "ShapeMap",
+                link: "/desarrollo/componentes/ShapeMap",
+              },
               { text: "RealTimeMap", link: "/desarrollo/componentes/" },
               { text: "RouteCard", link: "/desarrollo/componentes/" },
               {
