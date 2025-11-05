@@ -11,40 +11,27 @@ useSeoMeta({
   description,
   ogDescription: description
 })
-
-const items = ref([
-  {
-    label: 'Is Nuxt UI free to use?',
-    content:
-      'Yes! Nuxt UI is completely free and open source under the MIT license. All 100+ components are available to everyone.'
-  },
-  {
-    label: 'Can I use Nuxt UI with Vue without Nuxt?',
-    content:
-      'Yes! While optimized for Nuxt, Nuxt UI works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.'
-  },
-  {
-    label: 'Is Nuxt UI production-ready?',
-    content:
-      'Yes! Nuxt UI is used in production by thousands of applications with extensive tests, regular updates, and active maintenance.'
-  }
-])
 </script>
 
 <template>
   <div v-if="page">
-    <UPageHero :title="page.title" :description="page.description" :links="page.hero.links">
+    <UPageHero
+      :title="page.title"
+      :description="page.description"
+      :links="page.hero.links"
+    >
       <template #top>
         <HeroBackground />
       </template>
 
       <template #title>
-        <MDC :value="page.title" unwrap="p" />
+        <MDC
+          :value="page.title"
+          unwrap="p"
+        />
       </template>
 
       <PromotionalVideo />
-
-      <UAccordion :items="items" />
     </UPageHero>
 
     <UPageSection
@@ -59,7 +46,10 @@ const items = ref([
       <ImagePlaceholder />
     </UPageSection>
 
-    <UPageSection :title="page.features.title" :description="page.features.description">
+    <UPageSection
+      :title="page.features.title"
+      :description="page.features.description"
+    >
       <UPageGrid>
         <UPageCard
           v-for="(item, index) in page.features.items"
@@ -82,12 +72,13 @@ const items = ref([
           :key="index"
           variant="subtle"
           :description="testimonial.quote"
-          :ui="{
-            description: 'before:content-[open-quote] after:content-[close-quote]'
-          }"
+          :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
         >
           <template #footer>
-            <UUser v-bind="testimonial.user" size="lg" />
+            <UUser
+              v-bind="testimonial.user"
+              size="lg"
+            />
           </template>
         </UPageCard>
       </UPageColumns>
@@ -95,7 +86,11 @@ const items = ref([
 
     <USeparator />
 
-    <UPageCTA v-bind="page.cta" variant="naked" class="overflow-hidden">
+    <UPageCTA
+      v-bind="page.cta"
+      variant="naked"
+      class="overflow-hidden"
+    >
       <LazyStarsBg />
     </UPageCTA>
   </div>
