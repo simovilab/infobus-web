@@ -6,14 +6,32 @@ const items = computed(() => [{
   to: '/docs',
   active: route.path.startsWith('/docs')
 }, {
-  label: 'Pricing',
-  to: '/pricing'
+  label: 'Rutas',
+  to: '/rutas'
 }, {
-  label: 'Blog',
-  to: '/blog'
+  label: 'Paradas',
+  to: '/paradas'
 }, {
-  label: 'Changelog',
-  to: '/changelog'
+  label: 'Tarifas',
+  to: '/tarifas'
+}, {
+  label: 'Alertas',
+  to: '/alertas'
+}, {
+  label: 'Contacto',
+  to: '/contacto'
+}, {
+  label: 'Servicio',
+  to: '/servicio'
+}, {
+  label: 'Gestión',
+  to: '/gestion'
+}, {
+  label: 'Datos',
+  to: '/datos'
+}, {
+  label: 'Acerca',
+  to: '/acerca'
 }])
 </script>
 
