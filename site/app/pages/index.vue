@@ -14,84 +14,84 @@ useSeoMeta({
 </script>
 
 <template>
-  <div v-if="page">
-    <UPageHero
-      :title="page.title"
-      :description="page.description"
-      :links="page.hero.links"
-    >
-      <template #top>
-        <HeroBackground />
-      </template>
+  <div>
+    <!-- Hero Section con búsqueda -->
+    <div class="bg-gradient-to-b from-blue-50 to-white dark:from-slate-900 dark:to-slate-950">
+      <UContainer class="py-12 md:py-20">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Planifica tu viaje con InfoBus
+          </h1>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Consulta horarios, encuentra paradas y descubre las mejores rutas de transporte
+          </p>
+        </div>
+        
+        <!-- Search Component -->
+        <SearchStopsRoutes class="mb-12" />
+        
+        <!-- Services Grid -->
+        <div class="mt-12">
+          <ServicesGrid />
+        </div>
+      </UContainer>
+    </div>
 
-      <template #title>
-        <MDC
-          :value="page.title"
-          unwrap="p"
+    <!-- Alerts Section -->
+    <UContainer class="py-12">
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+          Alertas y Notificaciones
+        </h2>
+        <p class="text-gray-600 dark:text-gray-300">
+          Mantente informado sobre cambios de servicio y trabajo de mantenimiento
+        </p>
+      </div>
+      <AlertsList />
+      <div class="mt-6 text-center">
+        <NuxtLink to="/alertas" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">
+          Ver todas las alertas →
+        </NuxtLink>
+      </div>
+    </UContainer>
+
+    <!-- Featured Content Section -->
+    <div v-if="page" class="bg-gray-50 dark:bg-slate-900/50 py-12">
+      <UContainer>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">45+</div>
+            <p class="text-gray-600 dark:text-gray-300">Líneas de transporte</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">1200+</div>
+            <p class="text-gray-600 dark:text-gray-300">Paradas disponibles</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">100%</div>
+            <p class="text-gray-600 dark:text-gray-300">Cobertura de la ciudad</p>
+          </div>
+        </div>
+      </UContainer>
+    </div>
+
+    <!-- CTA Section -->
+    <UContainer class="py-12">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          ¿Necesitas ayuda?
+        </h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">
+          Contáctanos para consultas o feedback sobre nuestro servicio
+        </p>
+        <UButton
+          label="Contactar"
+          to="/contacto"
+          size="lg"
+          icon="i-lucide-arrow-right"
+          trailing
         />
-      </template>
-
-      <PromotionalVideo />
-    </UPageHero>
-
-    <UPageSection
-      v-for="(section, index) in page.sections"
-      :key="index"
-      :title="section.title"
-      :description="section.description"
-      :orientation="section.orientation"
-      :reverse="section.reverse"
-      :features="section.features"
-    >
-      <ImagePlaceholder />
-    </UPageSection>
-
-    <UPageSection
-      :title="page.features.title"
-      :description="page.features.description"
-    >
-      <UPageGrid>
-        <UPageCard
-          v-for="(item, index) in page.features.items"
-          :key="index"
-          v-bind="item"
-          spotlight
-        />
-      </UPageGrid>
-    </UPageSection>
-
-    <UPageSection
-      id="testimonials"
-      :headline="page.testimonials.headline"
-      :title="page.testimonials.title"
-      :description="page.testimonials.description"
-    >
-      <UPageColumns class="xl:columns-4">
-        <UPageCard
-          v-for="(testimonial, index) in page.testimonials.items"
-          :key="index"
-          variant="subtle"
-          :description="testimonial.quote"
-          :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
-        >
-          <template #footer>
-            <UUser
-              v-bind="testimonial.user"
-              size="lg"
-            />
-          </template>
-        </UPageCard>
-      </UPageColumns>
-    </UPageSection>
-
-    <USeparator />
-
-    <UPageCTA
-      v-bind="page.cta"
-      variant="naked"
-      class="overflow-hidden"
-    >
-      <LazyStarsBg />
-    </UPageCTA>
+      </div>
+    </UContainer>
   </div>
 </template>

@@ -1,9 +1,8 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-@source "../../../content/**/*";
 
-@theme static {
+:root {
   --font-sans: 'Public Sans', sans-serif;
 
   --color-green-50: #EFFDF5;
@@ -17,6 +16,32 @@
   --color-green-800: #016538;
   --color-green-900: #0A5331;
   --color-green-950: #052E16;
+
+  --color-primary: #1E40AF; /* Nuevo color primario */
+  --color-secondary: #9333EA; /* Nuevo color secundario */
+  --color-accent: #FACC15; /* Color de acento */
+
+  --spacing-base: 1rem; /* Espaciado base */
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  --font-heading: 'Poppins', sans-serif; /* Fuente para encabezados */
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--ui-color-neutral-900);
+  background-color: var(--ui-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  margin-bottom: var(--spacing-base);
+}
+
+p {
+  margin-bottom: var(--spacing-base);
 }
 
 .dark {
@@ -24,4 +49,5 @@
   --ui-bg-muted: var(--ui-color-neutral-900);
   --ui-bg-elevated: var(--ui-color-neutral-900);
   --ui-bg-accented: var(--ui-color-neutral-800);
+  color: var(--ui-color-neutral-100);
 }

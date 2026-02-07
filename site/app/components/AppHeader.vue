@@ -2,36 +2,30 @@
 const route = useRoute()
 
 const items = computed(() => [{
-  label: 'Docs',
-  to: '/docs',
-  active: route.path.startsWith('/docs')
-}, {
-  label: 'Rutas',
-  to: '/rutas'
+  label: 'Horarios',
+  to: '/rutas',
+  icon: 'i-lucide-clock',
+  active: route.path.startsWith('/rutas')
 }, {
   label: 'Paradas',
-  to: '/paradas'
-}, {
-  label: 'Tarifas',
-  to: '/tarifas'
+  to: '/paradas',
+  icon: 'i-lucide-map-pin',
+  active: route.path.startsWith('/paradas')
 }, {
   label: 'Alertas',
-  to: '/alertas'
+  to: '/alertas',
+  icon: 'i-lucide-alert-circle',
+  active: route.path.startsWith('/alertas')
 }, {
-  label: 'Contacto',
-  to: '/contacto'
+  label: 'Tarifas',
+  to: '/tarifas',
+  icon: 'i-lucide-dollar-sign',
+  active: route.path.startsWith('/tarifas')
 }, {
-  label: 'Servicio',
-  to: '/servicio'
-}, {
-  label: 'Gestión',
-  to: '/gestion'
-}, {
-  label: 'Datos',
-  to: '/datos'
-}, {
-  label: 'Acerca',
-  to: '/acerca'
+  label: 'Mapas',
+  to: '/docs',
+  icon: 'i-lucide-map',
+  active: route.path.startsWith('/docs')
 }])
 </script>
 
@@ -47,33 +41,33 @@ const items = computed(() => [{
     <UNavigationMenu
       :items="items"
       variant="link"
+      class="hidden lg:flex"
     />
 
     <template #right>
       <UColorModeButton />
 
       <UButton
-        icon="i-lucide-log-in"
+        icon="i-lucide-search"
         color="neutral"
         variant="ghost"
-        to="/login"
         class="lg:hidden"
+        aria-label="Buscar"
       />
 
       <UButton
-        label="Sign in"
+        label="Contacto"
         color="neutral"
         variant="outline"
-        to="/login"
+        to="/contacto"
         class="hidden lg:inline-flex"
       />
 
       <UButton
-        label="Sign up"
+        label="Más"
         color="neutral"
-        trailing-icon="i-lucide-arrow-right"
+        trailing-icon="i-lucide-chevron-down"
         class="hidden lg:inline-flex"
-        to="/signup"
       />
     </template>
 
@@ -87,17 +81,17 @@ const items = computed(() => [{
       <USeparator class="my-6" />
 
       <UButton
-        label="Sign in"
+        label="Contacto"
         color="neutral"
         variant="subtle"
-        to="/login"
+        to="/contacto"
         block
         class="mb-3"
       />
       <UButton
-        label="Sign up"
+        label="Acerca de"
         color="neutral"
-        to="/signup"
+        to="/acerca"
         block
       />
     </template>
