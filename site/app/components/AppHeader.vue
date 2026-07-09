@@ -6,32 +6,18 @@ const items = computed(() => [{
   to: '/docs',
   active: route.path.startsWith('/docs')
 }, {
-  label: 'Rutas',
-  to: '/rutas'
+  label: 'Routes',
+  to: '/routes',
+  active: route.path.startsWith('/routes')
 }, {
-  label: 'Paradas',
-  to: '/paradas'
+  label: 'Pricing',
+  to: '/pricing'
 }, {
-  label: 'Tarifas',
-  to: '/tarifas'
+  label: 'Blog',
+  to: '/blog'
 }, {
-  label: 'Alertas',
-  to: '/alertas'
-}, {
-  label: 'Contacto',
-  to: '/contacto'
-}, {
-  label: 'Servicio',
-  to: '/servicio'
-}, {
-  label: 'Gestión',
-  to: '/gestion'
-}, {
-  label: 'Datos',
-  to: '/datos'
-}, {
-  label: 'Acerca',
-  to: '/acerca'
+  label: 'Changelog',
+  to: '/changelog'
 }])
 </script>
 
@@ -41,7 +27,6 @@ const items = computed(() => [{
       <NuxtLink to="/">
         <AppLogo class="w-auto h-6 shrink-0" />
       </NuxtLink>
-      <TemplateMenu />
     </template>
 
     <UNavigationMenu
