@@ -1,27 +1,97 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-@source "../../../content/**/*";
+/*
+ * Brand tokens, ported from feat/bucr-static-site's main.css. The brand
+ * blue traces back to the real bUCR logo (logo-bucr.png); the amber traces
+ * back to databús's own "En desarrollo" status badge — reused here for the
+ * "Pronto nuevo sitio web" banner, since it's the same "in progress"
+ * semantics. This page is light-mode only (no color-mode toggle), so only
+ * the light-mode token values are kept — no `.dark` override block.
+ */
+@theme {
+  --font-sans: 'Archivo', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
-@theme static {
-  --font-sans: 'Public Sans', sans-serif;
+  --color-ink: #0E1116;
+  --color-ink-2: #3D4650;
+  --color-muted: #6C757F;
+  --color-muted-2: #7A828C;
+  --color-muted-3: #8A929C;
 
-  --color-green-50: #EFFDF5;
-  --color-green-100: #D9FBE8;
-  --color-green-200: #B3F5D1;
-  --color-green-300: #75EDAE;
-  --color-green-400: #00DC82;
-  --color-green-500: #00C16A;
-  --color-green-600: #00A155;
-  --color-green-700: #007F45;
-  --color-green-800: #016538;
-  --color-green-900: #0A5331;
-  --color-green-950: #052E16;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #FAFAF9;
+  --color-surface-3: #F3F6F9;
+
+  /* Brand blue (primary) */
+  --color-blue-50: #F3F8FD;
+  --color-blue-100: #E1EEF9;
+  --color-blue-200: #C3DDF3;
+  --color-blue-300: #93C3E8;
+  --color-blue-400: #5CA1D6;
+  --color-blue-500: #2BA4DE;
+  --color-blue-600: #0B5CA8;
+  --color-blue-700: #084680;
+  --color-blue-800: #063463;
+  --color-blue-900: #04233F;
+  --color-blue-950: #02141F;
+
+  /* Accent amber — "in development" / attention only, never the primary action color */
+  --color-amber-50: #FFF6DA;
+  --color-amber-100: #FFEEB8;
+  --color-amber-200: #FFE9A3;
+  --color-amber-300: #FFDE7A;
+  --color-amber-400: #FFD24E;
+  --color-amber-500: #FFC107;
+  --color-amber-600: #E0A800;
+  --color-amber-700: #B38400;
+  --color-amber-800: #8C6600;
+  --color-amber-900: #664B00;
+  --color-amber-950: #402E00;
 }
 
-.dark {
-  --ui-bg: var(--ui-color-neutral-950);
-  --ui-bg-muted: var(--ui-color-neutral-900);
-  --ui-bg-elevated: var(--ui-color-neutral-900);
-  --ui-bg-accented: var(--ui-color-neutral-800);
+:root {
+  /* bucr-web (github.com/simovilab/bucr-web) caps its whole page at
+     max-width: 960px (its "container-md"), noticeably narrower than Nuxt
+     UI's own 80rem (1280px) default — that gap is why our tables felt
+     more spread out than theirs. Overriding this one variable narrows
+     every UContainer sitewide (header, banner, sections, footer) to match. */
+  --ui-container: 60rem;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-surface-2);
+    color-scheme: light;
+  }
+  a {
+    color: var(--color-blue-600);
+  }
+  a:hover {
+    color: var(--color-blue-700);
+  }
+}
+
+@keyframes map-spin {
+  to { transform: rotate(360deg); }
+}
+
+/*
+ * Shared spinner for CampusLiveMap's two loading phases (ported from
+ * feat/bucr-static-site along with the maplibre-gl prep): the SSR→
+ * hydration gap (the map is a .client.vue component, renders nothing
+ * server-side) and the network round-trips to tiles.openfreemap.org once
+ * it mounts. Defined globally (not scoped to one component) so both
+ * phases look identical — the swap between them should be invisible.
+ * Currently unused until CampusLiveMap.client.vue itself is ported (see
+ * server/utils/scheduleMock.ts), kept ready alongside the rest of the
+ * map scaffolding.
+ */
+.map-spinner {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 3px solid color-mix(in srgb, var(--color-ink) 12%, transparent);
+  border-top-color: var(--color-blue-600);
+  animation: map-spin .8s linear infinite;
 }
