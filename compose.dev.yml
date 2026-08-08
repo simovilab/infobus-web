@@ -1,0 +1,29 @@
+name: infobus-web-dev
+services:
+
+  site:
+    build:
+      context: ./site
+      dockerfile: Dockerfile
+      target: dev
+    environment:
+      - NUXT_PORT=3000
+    ports:
+      - "${SITE_PORT:-3000}:3000"
+    volumes:
+      - ./site:/app
+      - site_node_modules:/app/node_modules
+      # pnpm@11.10.0 defaults to <project>/.pnpm-store here regardless of
+      # --store-dir/.npmrc/pnpm-workspace.yaml/env var overrides (verified
+      # while building this) — mounting a volume directly at that default
+      # path keeps pnpm's cache off the bind-mounted host directory,
+      # same trick already used for node_modules above.
+      - site_pnpm_store:/app/.pnpm-store
+
+volumes:
+  site_node_modules:
+  site_pnpm_store:
+
+networks:
+  default:
+    name: infobus_web_network

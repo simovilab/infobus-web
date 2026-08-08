@@ -1,0 +1,26 @@
+name: infobus-web-prod
+
+# ---------------------------------------------------------------------------
+# This repo has no backend/database of its own yet — server/utils/
+# scheduleMock.ts serves mock GTFS data from inside the Nuxt app itself
+# (see the "Pendiente" note there for the real data-source plan). So,
+# unlike databus/infobus's compose.prod.yml, there's no Traefik routing or
+# domain config here — add it once this connects to real infra.
+# ---------------------------------------------------------------------------
+
+services:
+
+  site:
+    build:
+      context: ./site
+      dockerfile: Dockerfile
+      target: prod
+    ports:
+      - "${SITE_PORT:-3000}:3000"
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+
+networks:
+  default:
+    name: infobus_web_network
