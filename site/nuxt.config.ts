@@ -27,6 +27,17 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css', 'maplibre-gl/dist/maplibre-gl.css'],
 
+  runtimeConfig: {
+    public: {
+      // Base URL of the static GTFS API published by the `bucr` repo
+      // (raw.githubusercontent.com responds with Access-Control-Allow-Origin: *,
+      // so fetching from the browser works with no backend or CORS setup).
+      // Locally/offline this can point at /api/ (site/public/api/, a static
+      // fallback copy) so the landing page works without hitting the network.
+      gtfsApiBase: 'https://raw.githubusercontent.com/simovilab/bucr/feature/static-website-gtfs/api/'
+    }
+  },
+
   compatibilityDate: '2026-06-30',
 
   nitro: {

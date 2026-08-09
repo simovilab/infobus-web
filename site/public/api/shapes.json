@@ -1,0 +1,6512 @@
+[
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93554944029271",
+    "shape_pt_lon": "-84.0491138975951",
+    "shape_pt_sequence": "0",
+    "shape_dist_traveled": "0"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9355589010814",
+    "shape_pt_lon": "-84.0491582627979",
+    "shape_pt_sequence": "1",
+    "shape_dist_traveled": "0.005"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93557354275506",
+    "shape_pt_lon": "-84.0492241246225",
+    "shape_pt_sequence": "2",
+    "shape_dist_traveled": "0.012"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9356000651633",
+    "shape_pt_lon": "-84.049324861376",
+    "shape_pt_sequence": "3",
+    "shape_dist_traveled": "0.024"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93563773463719",
+    "shape_pt_lon": "-84.049416778843",
+    "shape_pt_sequence": "4",
+    "shape_dist_traveled": "0.035"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93568399531643",
+    "shape_pt_lon": "-84.0495368755472",
+    "shape_pt_sequence": "5",
+    "shape_dist_traveled": "0.049"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93570316048327",
+    "shape_pt_lon": "-84.0495945755631",
+    "shape_pt_sequence": "6",
+    "shape_dist_traveled": "0.056"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93571109089738",
+    "shape_pt_lon": "-84.0496871639603",
+    "shape_pt_sequence": "7",
+    "shape_dist_traveled": "0.066"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93571292483817",
+    "shape_pt_lon": "-84.0498464474787",
+    "shape_pt_sequence": "8",
+    "shape_dist_traveled": "0.083"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93570393244304",
+    "shape_pt_lon": "-84.0500877222699",
+    "shape_pt_sequence": "9",
+    "shape_dist_traveled": "0.11"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93566539329337",
+    "shape_pt_lon": "-84.050351168656",
+    "shape_pt_sequence": "10",
+    "shape_dist_traveled": "0.139"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93561786205413",
+    "shape_pt_lon": "-84.0505937476355",
+    "shape_pt_sequence": "11",
+    "shape_dist_traveled": "0.166"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93556519227529",
+    "shape_pt_lon": "-84.050878060609",
+    "shape_pt_sequence": "12",
+    "shape_dist_traveled": "0.198"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93552922267821",
+    "shape_pt_lon": "-84.051108901895",
+    "shape_pt_sequence": "13",
+    "shape_dist_traveled": "0.223"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93548169125642",
+    "shape_pt_lon": "-84.0513932152566",
+    "shape_pt_sequence": "14",
+    "shape_dist_traveled": "0.255"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93545342942273",
+    "shape_pt_lon": "-84.0516410109878",
+    "shape_pt_sequence": "15",
+    "shape_dist_traveled": "0.282"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93544741074256",
+    "shape_pt_lon": "-84.0516943904767",
+    "shape_pt_sequence": "16",
+    "shape_dist_traveled": "0.288"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93544700627605",
+    "shape_pt_lon": "-84.051754475488",
+    "shape_pt_sequence": "17",
+    "shape_dist_traveled": "0.295"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93546627570862",
+    "shape_pt_lon": "-84.0519579288248",
+    "shape_pt_sequence": "18",
+    "shape_dist_traveled": "0.317"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93548939902537",
+    "shape_pt_lon": "-84.052131385837",
+    "shape_pt_sequence": "19",
+    "shape_dist_traveled": "0.336"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93550517435119",
+    "shape_pt_lon": "-84.0522239834817",
+    "shape_pt_sequence": "20",
+    "shape_dist_traveled": "0.347"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93554618004823",
+    "shape_pt_lon": "-84.0523340057342",
+    "shape_pt_sequence": "21",
+    "shape_dist_traveled": "0.36"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93559987797587",
+    "shape_pt_lon": "-84.0523914948391",
+    "shape_pt_sequence": "22",
+    "shape_dist_traveled": "0.368"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93565552854654",
+    "shape_pt_lon": "-84.0524281689233",
+    "shape_pt_sequence": "23",
+    "shape_dist_traveled": "0.376"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93572094236273",
+    "shape_pt_lon": "-84.0524410544122",
+    "shape_pt_sequence": "24",
+    "shape_dist_traveled": "0.383"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93583614886311",
+    "shape_pt_lon": "-84.0524182569563",
+    "shape_pt_sequence": "25",
+    "shape_dist_traveled": "0.396"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93603336648931",
+    "shape_pt_lon": "-84.0523528383197",
+    "shape_pt_sequence": "26",
+    "shape_dist_traveled": "0.419"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93625691629266",
+    "shape_pt_lon": "-84.0522832947174",
+    "shape_pt_sequence": "27",
+    "shape_dist_traveled": "0.445"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93639307154715",
+    "shape_pt_lon": "-84.0522431941422",
+    "shape_pt_sequence": "28",
+    "shape_dist_traveled": "0.46"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93653561474882",
+    "shape_pt_lon": "-84.0522372469934",
+    "shape_pt_sequence": "29",
+    "shape_dist_traveled": "0.476"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93660005206628",
+    "shape_pt_lon": "-84.0522600443969",
+    "shape_pt_sequence": "30",
+    "shape_dist_traveled": "0.484"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93661957852377",
+    "shape_pt_lon": "-84.0523423132888",
+    "shape_pt_sequence": "31",
+    "shape_dist_traveled": "0.493"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93659126516027",
+    "shape_pt_lon": "-84.0524275557544",
+    "shape_pt_sequence": "32",
+    "shape_dist_traveled": "0.503"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93653854371827",
+    "shape_pt_lon": "-84.0524503531584",
+    "shape_pt_sequence": "33",
+    "shape_dist_traveled": "0.509"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93645360359939",
+    "shape_pt_lon": "-84.0524483707755",
+    "shape_pt_sequence": "34",
+    "shape_dist_traveled": "0.519"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93636085286962",
+    "shape_pt_lon": "-84.052439450052",
+    "shape_pt_sequence": "35",
+    "shape_dist_traveled": "0.529"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93633386047036",
+    "shape_pt_lon": "-84.0524268046992",
+    "shape_pt_sequence": "36",
+    "shape_dist_traveled": "0.532"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93630422609543",
+    "shape_pt_lon": "-84.0524265645631",
+    "shape_pt_sequence": "37",
+    "shape_dist_traveled": "0.535"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93618120917912",
+    "shape_pt_lon": "-84.0524473794854",
+    "shape_pt_sequence": "38",
+    "shape_dist_traveled": "0.549"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93600742368285",
+    "shape_pt_lon": "-84.052484053706",
+    "shape_pt_sequence": "39",
+    "shape_dist_traveled": "0.569"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93581118236608",
+    "shape_pt_lon": "-84.0525276661302",
+    "shape_pt_sequence": "40",
+    "shape_dist_traveled": "0.591"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93571876163712",
+    "shape_pt_lon": "-84.0525355663096",
+    "shape_pt_sequence": "41",
+    "shape_dist_traveled": "0.601"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93563153840537",
+    "shape_pt_lon": "-84.0525177541372",
+    "shape_pt_sequence": "42",
+    "shape_dist_traveled": "0.611"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93553310902874",
+    "shape_pt_lon": "-84.0524334735888",
+    "shape_pt_sequence": "43",
+    "shape_dist_traveled": "0.626"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93545970504671",
+    "shape_pt_lon": "-84.0523512340121",
+    "shape_pt_sequence": "44",
+    "shape_dist_traveled": "0.638"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93542065199216",
+    "shape_pt_lon": "-84.0522451765253",
+    "shape_pt_sequence": "45",
+    "shape_dist_traveled": "0.65"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93541674668641",
+    "shape_pt_lon": "-84.0521014537632",
+    "shape_pt_sequence": "46",
+    "shape_dist_traveled": "0.666"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93537769362758",
+    "shape_pt_lon": "-84.0518556382803",
+    "shape_pt_sequence": "47",
+    "shape_dist_traveled": "0.693"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93533766423581",
+    "shape_pt_lon": "-84.0515960083744",
+    "shape_pt_sequence": "48",
+    "shape_dist_traveled": "0.722"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93531364398533",
+    "shape_pt_lon": "-84.0515277691646",
+    "shape_pt_sequence": "49",
+    "shape_dist_traveled": "0.73"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93528103728449",
+    "shape_pt_lon": "-84.0514612063353",
+    "shape_pt_sequence": "50",
+    "shape_dist_traveled": "0.738"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93537964636139",
+    "shape_pt_lon": "-84.0510449054667",
+    "shape_pt_sequence": "51",
+    "shape_dist_traveled": "0.785"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93549228868242",
+    "shape_pt_lon": "-84.0506385823758",
+    "shape_pt_sequence": "52",
+    "shape_dist_traveled": "0.831"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93560853450969",
+    "shape_pt_lon": "-84.0501428263958",
+    "shape_pt_sequence": "53",
+    "shape_dist_traveled": "0.887"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93564523227799",
+    "shape_pt_lon": "-84.0499153784661",
+    "shape_pt_sequence": "54",
+    "shape_dist_traveled": "0.912"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9355593156005",
+    "shape_pt_lon": "-84.0495436816674",
+    "shape_pt_sequence": "55",
+    "shape_dist_traveled": "0.954"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93549425099087",
+    "shape_pt_lon": "-84.049203385401",
+    "shape_pt_sequence": "56",
+    "shape_dist_traveled": "0.992"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93539252590615",
+    "shape_pt_lon": "-84.0487850070695",
+    "shape_pt_sequence": "57",
+    "shape_dist_traveled": "1.039"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93537592835444",
+    "shape_pt_lon": "-84.0486462402645",
+    "shape_pt_sequence": "58",
+    "shape_dist_traveled": "1.055"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93528024833921",
+    "shape_pt_lon": "-84.0486373195414",
+    "shape_pt_sequence": "59",
+    "shape_dist_traveled": "1.065"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93529755089066",
+    "shape_pt_lon": "-84.0483824809879",
+    "shape_pt_sequence": "60",
+    "shape_dist_traveled": "1.093"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93524885628052",
+    "shape_pt_lon": "-84.048123669054",
+    "shape_pt_sequence": "61",
+    "shape_dist_traveled": "1.122"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9351256875275",
+    "shape_pt_lon": "-84.0477514451489",
+    "shape_pt_sequence": "62",
+    "shape_dist_traveled": "1.165"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93500538311991",
+    "shape_pt_lon": "-84.0473850372423",
+    "shape_pt_sequence": "63",
+    "shape_dist_traveled": "1.208"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93492412702167",
+    "shape_pt_lon": "-84.0470954278149",
+    "shape_pt_sequence": "64",
+    "shape_dist_traveled": "1.241"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93480668693231",
+    "shape_pt_lon": "-84.046441127981",
+    "shape_pt_sequence": "65",
+    "shape_dist_traveled": "1.314"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93468020166955",
+    "shape_pt_lon": "-84.0458485099908",
+    "shape_pt_sequence": "66",
+    "shape_dist_traveled": "1.38"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93461570602311",
+    "shape_pt_lon": "-84.0456145784198",
+    "shape_pt_sequence": "67",
+    "shape_dist_traveled": "1.407"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93495613335646",
+    "shape_pt_lon": "-84.0456080574792",
+    "shape_pt_sequence": "68",
+    "shape_dist_traveled": "1.444"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93502533870439",
+    "shape_pt_lon": "-84.0455873014759",
+    "shape_pt_sequence": "69",
+    "shape_dist_traveled": "1.452"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93533638426393",
+    "shape_pt_lon": "-84.045580669786",
+    "shape_pt_sequence": "70",
+    "shape_dist_traveled": "1.487"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93558174876489",
+    "shape_pt_lon": "-84.045528502083",
+    "shape_pt_sequence": "71",
+    "shape_dist_traveled": "1.514"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9356639649666",
+    "shape_pt_lon": "-84.0454554675517",
+    "shape_pt_sequence": "72",
+    "shape_dist_traveled": "1.527"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93591239555134",
+    "shape_pt_lon": "-84.0454118867064",
+    "shape_pt_sequence": "73",
+    "shape_dist_traveled": "1.554"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93618345188633",
+    "shape_pt_lon": "-84.0453571107868",
+    "shape_pt_sequence": "74",
+    "shape_dist_traveled": "1.585"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93630292207917",
+    "shape_pt_lon": "-84.0453649359146",
+    "shape_pt_sequence": "75",
+    "shape_dist_traveled": "1.598"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93644423085287",
+    "shape_pt_lon": "-84.0454366662581",
+    "shape_pt_sequence": "76",
+    "shape_dist_traveled": "1.616"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93668331840604",
+    "shape_pt_lon": "-84.045567569655",
+    "shape_pt_sequence": "77",
+    "shape_dist_traveled": "1.646"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93677195745002",
+    "shape_pt_lon": "-84.045592349228",
+    "shape_pt_sequence": "78",
+    "shape_dist_traveled": "1.656"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9368528887295",
+    "shape_pt_lon": "-84.0455871324757",
+    "shape_pt_sequence": "79",
+    "shape_dist_traveled": "1.665"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93694152772752",
+    "shape_pt_lon": "-84.0455467026459",
+    "shape_pt_sequence": "80",
+    "shape_dist_traveled": "1.676"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93708540528038",
+    "shape_pt_lon": "-84.0454423673758",
+    "shape_pt_sequence": "81",
+    "shape_dist_traveled": "1.695"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9372459343465",
+    "shape_pt_lon": "-84.0452787163273",
+    "shape_pt_sequence": "82",
+    "shape_dist_traveled": "1.721"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93733842710149",
+    "shape_pt_lon": "-84.0451378640166",
+    "shape_pt_sequence": "83",
+    "shape_dist_traveled": "1.739"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93756026309952",
+    "shape_pt_lon": "-84.044752821983",
+    "shape_pt_sequence": "84",
+    "shape_dist_traveled": "1.788"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93777652816203",
+    "shape_pt_lon": "-84.0443585013794",
+    "shape_pt_sequence": "85",
+    "shape_dist_traveled": "1.837"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9381041049962",
+    "shape_pt_lon": "-84.0438016139119",
+    "shape_pt_sequence": "86",
+    "shape_dist_traveled": "1.908"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93796476738381",
+    "shape_pt_lon": "-84.0436166501913",
+    "shape_pt_sequence": "87",
+    "shape_dist_traveled": "1.934"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93791473560688",
+    "shape_pt_lon": "-84.0434457982085",
+    "shape_pt_sequence": "88",
+    "shape_dist_traveled": "1.953"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93789047771889",
+    "shape_pt_lon": "-84.0432203034589",
+    "shape_pt_sequence": "89",
+    "shape_dist_traveled": "1.978"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93791970638376",
+    "shape_pt_lon": "-84.0429894627193",
+    "shape_pt_sequence": "90",
+    "shape_dist_traveled": "2.004"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93798008366965",
+    "shape_pt_lon": "-84.0426008139046",
+    "shape_pt_sequence": "91",
+    "shape_dist_traveled": "2.047"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93800449142722",
+    "shape_pt_lon": "-84.0424795244151",
+    "shape_pt_sequence": "92",
+    "shape_dist_traveled": "2.06"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9381380917555",
+    "shape_pt_lon": "-84.0421782569734",
+    "shape_pt_sequence": "93",
+    "shape_dist_traveled": "2.097"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93816473253672",
+    "shape_pt_lon": "-84.0419964534982",
+    "shape_pt_sequence": "94",
+    "shape_dist_traveled": "2.117"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93815830944601",
+    "shape_pt_lon": "-84.0418503844357",
+    "shape_pt_sequence": "95",
+    "shape_dist_traveled": "2.133"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93812876322556",
+    "shape_pt_lon": "-84.0417251823817",
+    "shape_pt_sequence": "96",
+    "shape_dist_traveled": "2.147"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93807176432108",
+    "shape_pt_lon": "-84.0416449024973",
+    "shape_pt_sequence": "97",
+    "shape_dist_traveled": "2.158"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9380170014129",
+    "shape_pt_lon": "-84.0416364975937",
+    "shape_pt_sequence": "98",
+    "shape_dist_traveled": "2.164"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9379218878614",
+    "shape_pt_lon": "-84.0416378013257",
+    "shape_pt_sequence": "99",
+    "shape_dist_traveled": "2.174"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93790138516287",
+    "shape_pt_lon": "-84.0411362584451",
+    "shape_pt_sequence": "100",
+    "shape_dist_traveled": "2.229"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93789650346394",
+    "shape_pt_lon": "-84.041068473332",
+    "shape_pt_sequence": "101",
+    "shape_dist_traveled": "2.237"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93846399292934",
+    "shape_pt_lon": "-84.0409289658467",
+    "shape_pt_sequence": "102",
+    "shape_dist_traveled": "2.301"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93868999787477",
+    "shape_pt_lon": "-84.0409645503437",
+    "shape_pt_sequence": "103",
+    "shape_dist_traveled": "2.327"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93885220465146",
+    "shape_pt_lon": "-84.0411343350368",
+    "shape_pt_sequence": "104",
+    "shape_dist_traveled": "2.353"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93915775668989",
+    "shape_pt_lon": "-84.0416551779252",
+    "shape_pt_sequence": "105",
+    "shape_dist_traveled": "2.419"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93928866239001",
+    "shape_pt_lon": "-84.0417942257713",
+    "shape_pt_sequence": "106",
+    "shape_dist_traveled": "2.44"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9394332650851",
+    "shape_pt_lon": "-84.0418835860126",
+    "shape_pt_sequence": "107",
+    "shape_dist_traveled": "2.459"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93950294569722",
+    "shape_pt_lon": "-84.0419072239736",
+    "shape_pt_sequence": "108",
+    "shape_dist_traveled": "2.467"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93950393195614",
+    "shape_pt_lon": "-84.0422269282472",
+    "shape_pt_sequence": "109",
+    "shape_dist_traveled": "2.502"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93949212322203",
+    "shape_pt_lon": "-84.0425117128132",
+    "shape_pt_sequence": "110",
+    "shape_dist_traveled": "2.533"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93945684385667",
+    "shape_pt_lon": "-84.0429181490899",
+    "shape_pt_sequence": "111",
+    "shape_dist_traveled": "2.578"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93942503205056",
+    "shape_pt_lon": "-84.0433331349077",
+    "shape_pt_sequence": "112",
+    "shape_dist_traveled": "2.624"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93972770605043",
+    "shape_pt_lon": "-84.0432631191506",
+    "shape_pt_sequence": "113",
+    "shape_dist_traveled": "2.658"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93979024582779",
+    "shape_pt_lon": "-84.0432957235711",
+    "shape_pt_sequence": "114",
+    "shape_dist_traveled": "2.666"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93981898031695",
+    "shape_pt_lon": "-84.0433729445674",
+    "shape_pt_sequence": "115",
+    "shape_dist_traveled": "2.675"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94007108411656",
+    "shape_pt_lon": "-84.0443132968873",
+    "shape_pt_sequence": "116",
+    "shape_dist_traveled": "2.782"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94016605495639",
+    "shape_pt_lon": "-84.0446693302114",
+    "shape_pt_sequence": "117",
+    "shape_dist_traveled": "2.822"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94027244564152",
+    "shape_pt_lon": "-84.0448273689979",
+    "shape_pt_sequence": "118",
+    "shape_dist_traveled": "2.843"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94046211098755",
+    "shape_pt_lon": "-84.0455400945559",
+    "shape_pt_sequence": "119",
+    "shape_dist_traveled": "2.924"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94049056601295",
+    "shape_pt_lon": "-84.0456302713637",
+    "shape_pt_sequence": "120",
+    "shape_dist_traveled": "2.934"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94063822457009",
+    "shape_pt_lon": "-84.0455978789472",
+    "shape_pt_sequence": "121",
+    "shape_dist_traveled": "2.951"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94079717180704",
+    "shape_pt_lon": "-84.0450688663703",
+    "shape_pt_sequence": "122",
+    "shape_dist_traveled": "3.012"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94095438717349",
+    "shape_pt_lon": "-84.04474671421",
+    "shape_pt_sequence": "123",
+    "shape_dist_traveled": "3.051"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94105262250509",
+    "shape_pt_lon": "-84.0446527254796",
+    "shape_pt_sequence": "124",
+    "shape_dist_traveled": "3.066"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9414150973303",
+    "shape_pt_lon": "-84.0446772759114",
+    "shape_pt_sequence": "125",
+    "shape_dist_traveled": "3.106"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94222783326419",
+    "shape_pt_lon": "-84.0447316948875",
+    "shape_pt_sequence": "126",
+    "shape_dist_traveled": "3.196"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94282430588245",
+    "shape_pt_lon": "-84.0447692666912",
+    "shape_pt_sequence": "127",
+    "shape_dist_traveled": "3.262"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9430072194504",
+    "shape_pt_lon": "-84.0447361152365",
+    "shape_pt_sequence": "128",
+    "shape_dist_traveled": "3.283"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94325327852743",
+    "shape_pt_lon": "-84.0446536543918",
+    "shape_pt_sequence": "129",
+    "shape_dist_traveled": "3.311"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94367377439675",
+    "shape_pt_lon": "-84.0444658512058",
+    "shape_pt_sequence": "130",
+    "shape_dist_traveled": "3.362"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94380472710699",
+    "shape_pt_lon": "-84.0447574980966",
+    "shape_pt_sequence": "131",
+    "shape_dist_traveled": "3.397"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94388103477618",
+    "shape_pt_lon": "-84.044883947833",
+    "shape_pt_sequence": "132",
+    "shape_dist_traveled": "3.414"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94396870046222",
+    "shape_pt_lon": "-84.044952212081",
+    "shape_pt_sequence": "133",
+    "shape_dist_traveled": "3.426"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94440018674929",
+    "shape_pt_lon": "-84.0449991890221",
+    "shape_pt_sequence": "134",
+    "shape_dist_traveled": "3.474"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94457575401998",
+    "shape_pt_lon": "-84.045011078064",
+    "shape_pt_sequence": "135",
+    "shape_dist_traveled": "3.493"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94495341180596",
+    "shape_pt_lon": "-84.045007224609",
+    "shape_pt_sequence": "136",
+    "shape_dist_traveled": "3.535"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94503790634203",
+    "shape_pt_lon": "-84.0450804402532",
+    "shape_pt_sequence": "137",
+    "shape_dist_traveled": "3.547"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94507262278836",
+    "shape_pt_lon": "-84.0454078875236",
+    "shape_pt_sequence": "138",
+    "shape_dist_traveled": "3.584"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94509663743075",
+    "shape_pt_lon": "-84.0455018337476",
+    "shape_pt_sequence": "139",
+    "shape_dist_traveled": "3.594"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94516495042239",
+    "shape_pt_lon": "-84.0455370798079",
+    "shape_pt_sequence": "140",
+    "shape_dist_traveled": "3.603"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94535421093323",
+    "shape_pt_lon": "-84.0455279840503",
+    "shape_pt_sequence": "141",
+    "shape_dist_traveled": "3.624"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94569609354827",
+    "shape_pt_lon": "-84.0455006967812",
+    "shape_pt_sequence": "142",
+    "shape_dist_traveled": "3.662"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94576019859063",
+    "shape_pt_lon": "-84.0454636202844",
+    "shape_pt_sequence": "143",
+    "shape_dist_traveled": "3.67"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9458090133638",
+    "shape_pt_lon": "-84.0453783778183",
+    "shape_pt_sequence": "144",
+    "shape_dist_traveled": "3.681"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94587051996754",
+    "shape_pt_lon": "-84.0452505141197",
+    "shape_pt_sequence": "145",
+    "shape_dist_traveled": "3.696"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94594579827001",
+    "shape_pt_lon": "-84.0451768005758",
+    "shape_pt_sequence": "146",
+    "shape_dist_traveled": "3.708"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9462925242644",
+    "shape_pt_lon": "-84.0451498689492",
+    "shape_pt_sequence": "147",
+    "shape_dist_traveled": "3.746"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9463897709987",
+    "shape_pt_lon": "-84.0451620803092",
+    "shape_pt_sequence": "148",
+    "shape_dist_traveled": "3.757"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94645002673405",
+    "shape_pt_lon": "-84.0452016714679",
+    "shape_pt_sequence": "149",
+    "shape_dist_traveled": "3.765"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94648404073633",
+    "shape_pt_lon": "-84.0452387476835",
+    "shape_pt_sequence": "150",
+    "shape_dist_traveled": "3.771"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93554615993122",
+    "shape_pt_lon": "-84.0491114962244",
+    "shape_pt_sequence": "0",
+    "shape_dist_traveled": "0"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93557253860416",
+    "shape_pt_lon": "-84.0492324408382",
+    "shape_pt_sequence": "1",
+    "shape_dist_traveled": "0.014"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93559719650295",
+    "shape_pt_lon": "-84.0493243902202",
+    "shape_pt_sequence": "2",
+    "shape_dist_traveled": "0.024"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93566832503712",
+    "shape_pt_lon": "-84.0495039565472",
+    "shape_pt_sequence": "3",
+    "shape_dist_traveled": "0.045"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93570246673155",
+    "shape_pt_lon": "-84.0495983130441",
+    "shape_pt_sequence": "4",
+    "shape_dist_traveled": "0.056"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93570957958473",
+    "shape_pt_lon": "-84.0496907438365",
+    "shape_pt_sequence": "5",
+    "shape_dist_traveled": "0.066"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93571147624034",
+    "shape_pt_lon": "-84.0498491281346",
+    "shape_pt_sequence": "6",
+    "shape_dist_traveled": "0.084"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93570246663722",
+    "shape_pt_lon": "-84.0500893518124",
+    "shape_pt_sequence": "7",
+    "shape_dist_traveled": "0.11"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93566785089355",
+    "shape_pt_lon": "-84.0503237982121",
+    "shape_pt_sequence": "8",
+    "shape_dist_traveled": "0.136"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93562801871054",
+    "shape_pt_lon": "-84.0505362327233",
+    "shape_pt_sequence": "9",
+    "shape_dist_traveled": "0.16"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93558581568109",
+    "shape_pt_lon": "-84.0507591258626",
+    "shape_pt_sequence": "10",
+    "shape_dist_traveled": "0.185"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93553934502577",
+    "shape_pt_lon": "-84.0510354553896",
+    "shape_pt_sequence": "11",
+    "shape_dist_traveled": "0.215"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93548718391971",
+    "shape_pt_lon": "-84.0513535074206",
+    "shape_pt_sequence": "12",
+    "shape_dist_traveled": "0.251"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93544590778002",
+    "shape_pt_lon": "-84.0516944413929",
+    "shape_pt_sequence": "13",
+    "shape_dist_traveled": "0.288"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93544406437546",
+    "shape_pt_lon": "-84.0517683691601",
+    "shape_pt_sequence": "14",
+    "shape_dist_traveled": "0.297"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93549752617786",
+    "shape_pt_lon": "-84.0521913460308",
+    "shape_pt_sequence": "15",
+    "shape_dist_traveled": "0.343"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93552149197739",
+    "shape_pt_lon": "-84.0522746314152",
+    "shape_pt_sequence": "16",
+    "shape_dist_traveled": "0.353"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93554545760814",
+    "shape_pt_lon": "-84.0523420082619",
+    "shape_pt_sequence": "17",
+    "shape_dist_traveled": "0.361"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93560168465873",
+    "shape_pt_lon": "-84.0523981556341",
+    "shape_pt_sequence": "18",
+    "shape_dist_traveled": "0.369"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93565791169966",
+    "shape_pt_lon": "-84.0524318440576",
+    "shape_pt_sequence": "19",
+    "shape_dist_traveled": "0.377"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.935720591012",
+    "shape_pt_lon": "-84.0524430735317",
+    "shape_pt_sequence": "20",
+    "shape_dist_traveled": "0.384"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93583857529975",
+    "shape_pt_lon": "-84.0524187427515",
+    "shape_pt_sequence": "21",
+    "shape_dist_traveled": "0.397"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93605505885652",
+    "shape_pt_lon": "-84.0523466867771",
+    "shape_pt_sequence": "22",
+    "shape_dist_traveled": "0.422"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93627443620344",
+    "shape_pt_lon": "-84.0522802455722",
+    "shape_pt_sequence": "23",
+    "shape_dist_traveled": "0.448"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93639436894143",
+    "shape_pt_lon": "-84.052243749702",
+    "shape_pt_sequence": "24",
+    "shape_dist_traveled": "0.461"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93653263180367",
+    "shape_pt_lon": "-84.0522390707544",
+    "shape_pt_sequence": "25",
+    "shape_dist_traveled": "0.477"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93679802054417",
+    "shape_pt_lon": "-84.0523349506756",
+    "shape_pt_sequence": "26",
+    "shape_dist_traveled": "0.508"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93706910208629",
+    "shape_pt_lon": "-84.0524313369778",
+    "shape_pt_sequence": "27",
+    "shape_dist_traveled": "0.54"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93735023603007",
+    "shape_pt_lon": "-84.0525380169441",
+    "shape_pt_sequence": "28",
+    "shape_dist_traveled": "0.573"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.9375714563375",
+    "shape_pt_lon": "-84.0526437612861",
+    "shape_pt_sequence": "29",
+    "shape_dist_traveled": "0.6"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93774105816322",
+    "shape_pt_lon": "-84.0527027160271",
+    "shape_pt_sequence": "30",
+    "shape_dist_traveled": "0.62"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93778978041929",
+    "shape_pt_lon": "-84.0527151488461",
+    "shape_pt_sequence": "31",
+    "shape_dist_traveled": "0.625"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93794647765702",
+    "shape_pt_lon": "-84.0527273141104",
+    "shape_pt_sequence": "32",
+    "shape_dist_traveled": "0.643"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93809150988507",
+    "shape_pt_lon": "-84.0527076622996",
+    "shape_pt_sequence": "33",
+    "shape_dist_traveled": "0.659"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93815511047925",
+    "shape_pt_lon": "-84.052635606505",
+    "shape_pt_sequence": "34",
+    "shape_dist_traveled": "0.67"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93840121696546",
+    "shape_pt_lon": "-84.0521246655647",
+    "shape_pt_sequence": "35",
+    "shape_dist_traveled": "0.732"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93857142751338",
+    "shape_pt_lon": "-84.051894479649",
+    "shape_pt_sequence": "36",
+    "shape_dist_traveled": "0.763"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93879176765612",
+    "shape_pt_lon": "-84.0516156036497",
+    "shape_pt_sequence": "37",
+    "shape_dist_traveled": "0.802"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93890106345436",
+    "shape_pt_lon": "-84.0514555284908",
+    "shape_pt_sequence": "38",
+    "shape_dist_traveled": "0.824"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93897507515302",
+    "shape_pt_lon": "-84.0513020294891",
+    "shape_pt_sequence": "39",
+    "shape_dist_traveled": "0.842"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.9390141956147",
+    "shape_pt_lon": "-84.0511345760324",
+    "shape_pt_sequence": "40",
+    "shape_dist_traveled": "0.861"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93905117558812",
+    "shape_pt_lon": "-84.0509224405605",
+    "shape_pt_sequence": "41",
+    "shape_dist_traveled": "0.885"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93906597792292",
+    "shape_pt_lon": "-84.0506014881021",
+    "shape_pt_sequence": "42",
+    "shape_dist_traveled": "0.92"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93909856537408",
+    "shape_pt_lon": "-84.0501243834524",
+    "shape_pt_sequence": "43",
+    "shape_dist_traveled": "0.973"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93910318560055",
+    "shape_pt_lon": "-84.0497656390733",
+    "shape_pt_sequence": "44",
+    "shape_dist_traveled": "1.012"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93906512245888",
+    "shape_pt_lon": "-84.049652930016",
+    "shape_pt_sequence": "45",
+    "shape_dist_traveled": "1.025"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.9389773657529",
+    "shape_pt_lon": "-84.0495133854688",
+    "shape_pt_sequence": "46",
+    "shape_dist_traveled": "1.043"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93881453893313",
+    "shape_pt_lon": "-84.0493115816303",
+    "shape_pt_sequence": "47",
+    "shape_dist_traveled": "1.072"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93860413409909",
+    "shape_pt_lon": "-84.0490281988577",
+    "shape_pt_sequence": "48",
+    "shape_dist_traveled": "1.11"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93847607358095",
+    "shape_pt_lon": "-84.0488647834885",
+    "shape_pt_sequence": "49",
+    "shape_dist_traveled": "1.133"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93830796101282",
+    "shape_pt_lon": "-84.0486425856324",
+    "shape_pt_sequence": "50",
+    "shape_dist_traveled": "1.164"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93812775111203",
+    "shape_pt_lon": "-84.0484368995492",
+    "shape_pt_sequence": "51",
+    "shape_dist_traveled": "1.194"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93798100124938",
+    "shape_pt_lon": "-84.0482768335369",
+    "shape_pt_sequence": "52",
+    "shape_dist_traveled": "1.218"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93768022319365",
+    "shape_pt_lon": "-84.0479566982914",
+    "shape_pt_sequence": "53",
+    "shape_dist_traveled": "1.266"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93763286635998",
+    "shape_pt_lon": "-84.0479111252314",
+    "shape_pt_sequence": "54",
+    "shape_dist_traveled": "1.274"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93758319780721",
+    "shape_pt_lon": "-84.0478722576937",
+    "shape_pt_sequence": "55",
+    "shape_dist_traveled": "1.28"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93753870216281",
+    "shape_pt_lon": "-84.0478404135935",
+    "shape_pt_sequence": "56",
+    "shape_dist_traveled": "1.287"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.9374942065184",
+    "shape_pt_lon": "-84.0478139339113",
+    "shape_pt_sequence": "57",
+    "shape_dist_traveled": "1.292"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93745024180206",
+    "shape_pt_lon": "-84.0477923420699",
+    "shape_pt_sequence": "58",
+    "shape_dist_traveled": "1.298"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93735938216936",
+    "shape_pt_lon": "-84.0477606919451",
+    "shape_pt_sequence": "59",
+    "shape_dist_traveled": "1.308"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93724916693389",
+    "shape_pt_lon": "-84.0477606931305",
+    "shape_pt_sequence": "60",
+    "shape_dist_traveled": "1.32"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93715177760806",
+    "shape_pt_lon": "-84.0477784341865",
+    "shape_pt_sequence": "61",
+    "shape_dist_traveled": "1.331"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93705710158646",
+    "shape_pt_lon": "-84.0477987581936",
+    "shape_pt_sequence": "62",
+    "shape_dist_traveled": "1.342"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93672866697375",
+    "shape_pt_lon": "-84.0479001602699",
+    "shape_pt_sequence": "63",
+    "shape_dist_traveled": "1.38"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93643873625598",
+    "shape_pt_lon": "-84.0479940310818",
+    "shape_pt_sequence": "64",
+    "shape_dist_traveled": "1.414"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93605459371357",
+    "shape_pt_lon": "-84.0481209106209",
+    "shape_pt_sequence": "65",
+    "shape_dist_traveled": "1.458"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93594785009141",
+    "shape_pt_lon": "-84.0481497577059",
+    "shape_pt_sequence": "66",
+    "shape_dist_traveled": "1.471"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93584672067646",
+    "shape_pt_lon": "-84.0481926863882",
+    "shape_pt_sequence": "67",
+    "shape_dist_traveled": "1.483"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93562414968525",
+    "shape_pt_lon": "-84.0482902977589",
+    "shape_pt_sequence": "68",
+    "shape_dist_traveled": "1.51"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93555563302149",
+    "shape_pt_lon": "-84.0483541402688",
+    "shape_pt_sequence": "69",
+    "shape_dist_traveled": "1.52"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93552377293763",
+    "shape_pt_lon": "-84.048395536302",
+    "shape_pt_sequence": "70",
+    "shape_dist_traveled": "1.526"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93549323384328",
+    "shape_pt_lon": "-84.0484359265072",
+    "shape_pt_sequence": "71",
+    "shape_dist_traveled": "1.531"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93545924101029",
+    "shape_pt_lon": "-84.0485562630898",
+    "shape_pt_sequence": "72",
+    "shape_dist_traveled": "1.545"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93545410965148",
+    "shape_pt_lon": "-84.0486084574091",
+    "shape_pt_sequence": "73",
+    "shape_dist_traveled": "1.551"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93545261101962",
+    "shape_pt_lon": "-84.0486583047952",
+    "shape_pt_sequence": "74",
+    "shape_dist_traveled": "1.556"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93527714539185",
+    "shape_pt_lon": "-84.0486381383254",
+    "shape_pt_sequence": "75",
+    "shape_dist_traveled": "1.576"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93529369875646",
+    "shape_pt_lon": "-84.0483849370953",
+    "shape_pt_sequence": "76",
+    "shape_dist_traveled": "1.604"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93524845287248",
+    "shape_pt_lon": "-84.0481250138729",
+    "shape_pt_sequence": "77",
+    "shape_dist_traveled": "1.633"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93510490695821",
+    "shape_pt_lon": "-84.0476876510322",
+    "shape_pt_sequence": "78",
+    "shape_dist_traveled": "1.683"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93492309622952",
+    "shape_pt_lon": "-84.0471049676225",
+    "shape_pt_sequence": "79",
+    "shape_dist_traveled": "1.75"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93478795156821",
+    "shape_pt_lon": "-84.0463710454434",
+    "shape_pt_sequence": "80",
+    "shape_dist_traveled": "1.832"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93468712924438",
+    "shape_pt_lon": "-84.0458810362687",
+    "shape_pt_sequence": "81",
+    "shape_dist_traveled": "1.887"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93461716476174",
+    "shape_pt_lon": "-84.0456150110652",
+    "shape_pt_sequence": "82",
+    "shape_dist_traveled": "1.917"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93466453460568",
+    "shape_pt_lon": "-84.045615726073",
+    "shape_pt_sequence": "83",
+    "shape_dist_traveled": "1.922"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93495411611772",
+    "shape_pt_lon": "-84.0456098658075",
+    "shape_pt_sequence": "84",
+    "shape_dist_traveled": "1.954"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93501867239507",
+    "shape_pt_lon": "-84.0455893287031",
+    "shape_pt_sequence": "85",
+    "shape_dist_traveled": "1.962"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93533255656777",
+    "shape_pt_lon": "-84.0455828491321",
+    "shape_pt_sequence": "86",
+    "shape_dist_traveled": "1.996"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93558174215077",
+    "shape_pt_lon": "-84.0455310895244",
+    "shape_pt_sequence": "87",
+    "shape_dist_traveled": "2.025"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93565354440517",
+    "shape_pt_lon": "-84.0454587191306",
+    "shape_pt_sequence": "88",
+    "shape_dist_traveled": "2.036"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93601427775509",
+    "shape_pt_lon": "-84.0453935565556",
+    "shape_pt_sequence": "89",
+    "shape_dist_traveled": "2.076"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93618250695711",
+    "shape_pt_lon": "-84.0453574183472",
+    "shape_pt_sequence": "90",
+    "shape_dist_traveled": "2.095"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93624056084127",
+    "shape_pt_lon": "-84.0453568135217",
+    "shape_pt_sequence": "91",
+    "shape_dist_traveled": "2.102"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93629795423082",
+    "shape_pt_lon": "-84.0453642553238",
+    "shape_pt_sequence": "92",
+    "shape_dist_traveled": "2.108"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93659318251401",
+    "shape_pt_lon": "-84.0455215059456",
+    "shape_pt_sequence": "93",
+    "shape_dist_traveled": "2.145"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93667976807258",
+    "shape_pt_lon": "-84.0455703414396",
+    "shape_pt_sequence": "94",
+    "shape_dist_traveled": "2.156"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.9367692395777",
+    "shape_pt_lon": "-84.0455957359235",
+    "shape_pt_sequence": "95",
+    "shape_dist_traveled": "2.166"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93685293870503",
+    "shape_pt_lon": "-84.0455879222361",
+    "shape_pt_sequence": "96",
+    "shape_dist_traveled": "2.176"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93694173624727",
+    "shape_pt_lon": "-84.0455491295231",
+    "shape_pt_sequence": "97",
+    "shape_dist_traveled": "2.186"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93708123470739",
+    "shape_pt_lon": "-84.0454446214555",
+    "shape_pt_sequence": "98",
+    "shape_dist_traveled": "2.206"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93724313131711",
+    "shape_pt_lon": "-84.0452817159445",
+    "shape_pt_sequence": "99",
+    "shape_dist_traveled": "2.231"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93734607124923",
+    "shape_pt_lon": "-84.0451254422096",
+    "shape_pt_sequence": "100",
+    "shape_dist_traveled": "2.251"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93748749351063",
+    "shape_pt_lon": "-84.0448724740612",
+    "shape_pt_sequence": "101",
+    "shape_dist_traveled": "2.283"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93761860756564",
+    "shape_pt_lon": "-84.0446484093239",
+    "shape_pt_sequence": "102",
+    "shape_dist_traveled": "2.312"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93781098243242",
+    "shape_pt_lon": "-84.0443002302728",
+    "shape_pt_sequence": "103",
+    "shape_dist_traveled": "2.355"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93799146315684",
+    "shape_pt_lon": "-84.0439934603325",
+    "shape_pt_sequence": "104",
+    "shape_dist_traveled": "2.395"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93810165004318",
+    "shape_pt_lon": "-84.0438034580265",
+    "shape_pt_sequence": "105",
+    "shape_dist_traveled": "2.419"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93796407612903",
+    "shape_pt_lon": "-84.0436169062427",
+    "shape_pt_sequence": "106",
+    "shape_dist_traveled": "2.444"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93791116339785",
+    "shape_pt_lon": "-84.043444027742",
+    "shape_pt_sequence": "107",
+    "shape_dist_traveled": "2.464"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93788614994896",
+    "shape_pt_lon": "-84.0432193842326",
+    "shape_pt_sequence": "108",
+    "shape_dist_traveled": "2.489"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93792655633902",
+    "shape_pt_lon": "-84.0429361376045",
+    "shape_pt_sequence": "109",
+    "shape_dist_traveled": "2.52"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93800099196738",
+    "shape_pt_lon": "-84.0424812505301",
+    "shape_pt_sequence": "110",
+    "shape_dist_traveled": "2.571"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93813818359375",
+    "shape_pt_lon": "-84.0421772565051",
+    "shape_pt_sequence": "111",
+    "shape_dist_traveled": "2.607"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93816415907815",
+    "shape_pt_lon": "-84.0419985184082",
+    "shape_pt_sequence": "112",
+    "shape_dist_traveled": "2.627"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.9381545385288",
+    "shape_pt_lon": "-84.0418510350607",
+    "shape_pt_sequence": "113",
+    "shape_dist_traveled": "2.643"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93812567687818",
+    "shape_pt_lon": "-84.0417260160641",
+    "shape_pt_sequence": "114",
+    "shape_dist_traveled": "2.657"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93807564954973",
+    "shape_pt_lon": "-84.0416527622632",
+    "shape_pt_sequence": "115",
+    "shape_dist_traveled": "2.667"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93804289664845",
+    "shape_pt_lon": "-84.0416384252501",
+    "shape_pt_sequence": "116",
+    "shape_dist_traveled": "2.671"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93801311595451",
+    "shape_pt_lon": "-84.0416361581774",
+    "shape_pt_sequence": "117",
+    "shape_dist_traveled": "2.675"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93792172067878",
+    "shape_pt_lon": "-84.0416381115992",
+    "shape_pt_sequence": "118",
+    "shape_dist_traveled": "2.685"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93790247956499",
+    "shape_pt_lon": "-84.0412122658535",
+    "shape_pt_sequence": "119",
+    "shape_dist_traveled": "2.731"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93789478311904",
+    "shape_pt_lon": "-84.0410686893496",
+    "shape_pt_sequence": "120",
+    "shape_dist_traveled": "2.747"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93830046896954",
+    "shape_pt_lon": "-84.040969095546",
+    "shape_pt_sequence": "121",
+    "shape_dist_traveled": "2.793"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93846168564775",
+    "shape_pt_lon": "-84.0409298363785",
+    "shape_pt_sequence": "122",
+    "shape_dist_traveled": "2.812"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93868873033166",
+    "shape_pt_lon": "-84.040967928104",
+    "shape_pt_sequence": "123",
+    "shape_dist_traveled": "2.837"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93884815398905",
+    "shape_pt_lon": "-84.0411370173071",
+    "shape_pt_sequence": "124",
+    "shape_dist_traveled": "2.863"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93915383599336",
+    "shape_pt_lon": "-84.0416568644267",
+    "shape_pt_sequence": "125",
+    "shape_dist_traveled": "2.929"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93928521203319",
+    "shape_pt_lon": "-84.0417935755105",
+    "shape_pt_sequence": "126",
+    "shape_dist_traveled": "2.95"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93942977628924",
+    "shape_pt_lon": "-84.0418876857024",
+    "shape_pt_sequence": "127",
+    "shape_dist_traveled": "2.969"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93950150662073",
+    "shape_pt_lon": "-84.0419089725314",
+    "shape_pt_sequence": "128",
+    "shape_dist_traveled": "2.977"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93950371370814",
+    "shape_pt_lon": "-84.0422428396408",
+    "shape_pt_sequence": "129",
+    "shape_dist_traveled": "3.014"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93948613333313",
+    "shape_pt_lon": "-84.0425204684191",
+    "shape_pt_sequence": "130",
+    "shape_dist_traveled": "3.044"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93944529338017",
+    "shape_pt_lon": "-84.0430246306461",
+    "shape_pt_sequence": "131",
+    "shape_dist_traveled": "3.1"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93942327481619",
+    "shape_pt_lon": "-84.0433356324423",
+    "shape_pt_sequence": "132",
+    "shape_dist_traveled": "3.134"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93972442200525",
+    "shape_pt_lon": "-84.0432655607324",
+    "shape_pt_sequence": "133",
+    "shape_dist_traveled": "3.168"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93978732393233",
+    "shape_pt_lon": "-84.043299171515",
+    "shape_pt_sequence": "134",
+    "shape_dist_traveled": "3.176"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93981711902594",
+    "shape_pt_lon": "-84.0433809579747",
+    "shape_pt_sequence": "135",
+    "shape_dist_traveled": "3.186"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.93991974845217",
+    "shape_pt_lon": "-84.0437596394605",
+    "shape_pt_sequence": "136",
+    "shape_dist_traveled": "3.229"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94007043205839",
+    "shape_pt_lon": "-84.0443170698121",
+    "shape_pt_sequence": "137",
+    "shape_dist_traveled": "3.292"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94016533658292",
+    "shape_pt_lon": "-84.0446744654815",
+    "shape_pt_sequence": "138",
+    "shape_dist_traveled": "3.332"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94027017298111",
+    "shape_pt_lon": "-84.0448268343636",
+    "shape_pt_sequence": "139",
+    "shape_dist_traveled": "3.353"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94038169599758",
+    "shape_pt_lon": "-84.045244089757",
+    "shape_pt_sequence": "140",
+    "shape_dist_traveled": "3.4"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94048873914792",
+    "shape_pt_lon": "-84.045632855511",
+    "shape_pt_sequence": "141",
+    "shape_dist_traveled": "3.444"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94063882056966",
+    "shape_pt_lon": "-84.045599244728",
+    "shape_pt_sequence": "142",
+    "shape_dist_traveled": "3.461"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94079662666821",
+    "shape_pt_lon": "-84.0450681942005",
+    "shape_pt_sequence": "143",
+    "shape_dist_traveled": "3.522"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94095071185347",
+    "shape_pt_lon": "-84.044750328054",
+    "shape_pt_sequence": "144",
+    "shape_dist_traveled": "3.561"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.9410528605391",
+    "shape_pt_lon": "-84.0446554341072",
+    "shape_pt_sequence": "145",
+    "shape_dist_traveled": "3.576"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94157411286451",
+    "shape_pt_lon": "-84.04469185811",
+    "shape_pt_sequence": "146",
+    "shape_dist_traveled": "3.634"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94242227255298",
+    "shape_pt_lon": "-84.0447474726987",
+    "shape_pt_sequence": "147",
+    "shape_dist_traveled": "3.728"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94283107241787",
+    "shape_pt_lon": "-84.0447699014639",
+    "shape_pt_sequence": "148",
+    "shape_dist_traveled": "3.773"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94300697065598",
+    "shape_pt_lon": "-84.0447350564938",
+    "shape_pt_sequence": "149",
+    "shape_dist_traveled": "3.793"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94326009234421",
+    "shape_pt_lon": "-84.0446544775012",
+    "shape_pt_sequence": "150",
+    "shape_dist_traveled": "3.823"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94351468777105",
+    "shape_pt_lon": "-84.0445407320727",
+    "shape_pt_sequence": "151",
+    "shape_dist_traveled": "3.853"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94366913468646",
+    "shape_pt_lon": "-84.0444710421328",
+    "shape_pt_sequence": "152",
+    "shape_dist_traveled": "3.872"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.9437999854876",
+    "shape_pt_lon": "-84.0447541575134",
+    "shape_pt_sequence": "153",
+    "shape_dist_traveled": "3.906"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94388149907578",
+    "shape_pt_lon": "-84.0448848261506",
+    "shape_pt_sequence": "154",
+    "shape_dist_traveled": "3.923"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94396600743452",
+    "shape_pt_lon": "-84.0449552037605",
+    "shape_pt_sequence": "155",
+    "shape_dist_traveled": "3.935"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94433419150155",
+    "shape_pt_lon": "-84.0449932717292",
+    "shape_pt_sequence": "156",
+    "shape_dist_traveled": "3.976"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94457398813642",
+    "shape_pt_lon": "-84.0450138149367",
+    "shape_pt_sequence": "157",
+    "shape_dist_traveled": "4.003"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94495221337372",
+    "shape_pt_lon": "-84.045010504636",
+    "shape_pt_sequence": "158",
+    "shape_dist_traveled": "4.045"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94503698779598",
+    "shape_pt_lon": "-84.0450833311997",
+    "shape_pt_sequence": "159",
+    "shape_dist_traveled": "4.057"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94506796311185",
+    "shape_pt_lon": "-84.045389534011",
+    "shape_pt_sequence": "160",
+    "shape_dist_traveled": "4.091"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94509404758507",
+    "shape_pt_lon": "-84.0455020842335",
+    "shape_pt_sequence": "161",
+    "shape_dist_traveled": "4.104"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94516741015652",
+    "shape_pt_lon": "-84.0455418078417",
+    "shape_pt_sequence": "162",
+    "shape_dist_traveled": "4.113"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94569411437748",
+    "shape_pt_lon": "-84.0455036631251",
+    "shape_pt_sequence": "163",
+    "shape_dist_traveled": "4.171"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94576235686358",
+    "shape_pt_lon": "-84.0454645549726",
+    "shape_pt_sequence": "164",
+    "shape_dist_traveled": "4.18"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94586939851089",
+    "shape_pt_lon": "-84.0452550477597",
+    "shape_pt_sequence": "165",
+    "shape_dist_traveled": "4.206"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94594554151604",
+    "shape_pt_lon": "-84.0451777429595",
+    "shape_pt_sequence": "166",
+    "shape_dist_traveled": "4.218"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94629085058927",
+    "shape_pt_lon": "-84.0451530949856",
+    "shape_pt_sequence": "167",
+    "shape_dist_traveled": "4.256"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94638848955421",
+    "shape_pt_lon": "-84.0451636656039",
+    "shape_pt_sequence": "168",
+    "shape_dist_traveled": "4.267"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94644918315917",
+    "shape_pt_lon": "-84.0452028781838",
+    "shape_pt_sequence": "169",
+    "shape_dist_traveled": "4.275"
+  },
+  {
+    "shape_id": "desde_educacion_a_odontologia_con_milla",
+    "shape_pt_lat": "9.94648865740507",
+    "shape_pt_lon": "-84.0452462913844",
+    "shape_pt_sequence": "170",
+    "shape_dist_traveled": "4.281"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93551240308205",
+    "shape_pt_lon": "-84.052232462037",
+    "shape_pt_sequence": "0",
+    "shape_dist_traveled": "0"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93553038682294",
+    "shape_pt_lon": "-84.0523024805564",
+    "shape_pt_sequence": "1",
+    "shape_dist_traveled": "0.008"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93554317941351",
+    "shape_pt_lon": "-84.0523354193901",
+    "shape_pt_sequence": "2",
+    "shape_dist_traveled": "0.012"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93560006968185",
+    "shape_pt_lon": "-84.0523952582046",
+    "shape_pt_sequence": "3",
+    "shape_dist_traveled": "0.021"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93565298376728",
+    "shape_pt_lon": "-84.0524284133704",
+    "shape_pt_sequence": "4",
+    "shape_dist_traveled": "0.028"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93571914349433",
+    "shape_pt_lon": "-84.0524404498132",
+    "shape_pt_sequence": "5",
+    "shape_dist_traveled": "0.035"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93583719162457",
+    "shape_pt_lon": "-84.0524171180445",
+    "shape_pt_sequence": "6",
+    "shape_dist_traveled": "0.049"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93594643029256",
+    "shape_pt_lon": "-84.0523801266021",
+    "shape_pt_sequence": "7",
+    "shape_dist_traveled": "0.061"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93608834513962",
+    "shape_pt_lon": "-84.0523343631691",
+    "shape_pt_sequence": "8",
+    "shape_dist_traveled": "0.078"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93620422239772",
+    "shape_pt_lon": "-84.0522977078958",
+    "shape_pt_sequence": "9",
+    "shape_dist_traveled": "0.091"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.936293049843",
+    "shape_pt_lon": "-84.0522711599884",
+    "shape_pt_sequence": "10",
+    "shape_dist_traveled": "0.101"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93639226353531",
+    "shape_pt_lon": "-84.0522405229359",
+    "shape_pt_sequence": "11",
+    "shape_dist_traveled": "0.113"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93653093553953",
+    "shape_pt_lon": "-84.0522367457551",
+    "shape_pt_sequence": "12",
+    "shape_dist_traveled": "0.128"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93659589447438",
+    "shape_pt_lon": "-84.0522590055211",
+    "shape_pt_sequence": "13",
+    "shape_dist_traveled": "0.136"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93661615058734",
+    "shape_pt_lon": "-84.0523412639074",
+    "shape_pt_sequence": "14",
+    "shape_dist_traveled": "0.145"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9365876265418",
+    "shape_pt_lon": "-84.0524260404882",
+    "shape_pt_sequence": "15",
+    "shape_dist_traveled": "0.155"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9365355393877",
+    "shape_pt_lon": "-84.0524499625703",
+    "shape_pt_sequence": "16",
+    "shape_dist_traveled": "0.161"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93644867420793",
+    "shape_pt_lon": "-84.0524473462339",
+    "shape_pt_sequence": "17",
+    "shape_dist_traveled": "0.171"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93635813864212",
+    "shape_pt_lon": "-84.0524384481957",
+    "shape_pt_sequence": "18",
+    "shape_dist_traveled": "0.181"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93632957313295",
+    "shape_pt_lon": "-84.052426075736",
+    "shape_pt_sequence": "19",
+    "shape_dist_traveled": "0.184"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93630067737655",
+    "shape_pt_lon": "-84.0524254379402",
+    "shape_pt_sequence": "20",
+    "shape_dist_traveled": "0.188"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9361767385198",
+    "shape_pt_lon": "-84.0524455386407",
+    "shape_pt_sequence": "21",
+    "shape_dist_traveled": "0.201"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93606938255121",
+    "shape_pt_lon": "-84.0524692189919",
+    "shape_pt_sequence": "22",
+    "shape_dist_traveled": "0.214"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9358662876061",
+    "shape_pt_lon": "-84.0525134237392",
+    "shape_pt_sequence": "23",
+    "shape_dist_traveled": "0.237"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93580530982546",
+    "shape_pt_lon": "-84.0525277028597",
+    "shape_pt_sequence": "24",
+    "shape_dist_traveled": "0.244"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93571720324209",
+    "shape_pt_lon": "-84.0525351455981",
+    "shape_pt_sequence": "25",
+    "shape_dist_traveled": "0.253"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93562932790421",
+    "shape_pt_lon": "-84.0525170973821",
+    "shape_pt_sequence": "26",
+    "shape_dist_traveled": "0.263"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93552958615174",
+    "shape_pt_lon": "-84.0524334827489",
+    "shape_pt_sequence": "27",
+    "shape_dist_traveled": "0.278"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93545575661828",
+    "shape_pt_lon": "-84.052350672979",
+    "shape_pt_sequence": "28",
+    "shape_dist_traveled": "0.29"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93541638163459",
+    "shape_pt_lon": "-84.0522446182099",
+    "shape_pt_sequence": "29",
+    "shape_dist_traveled": "0.302"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93541236377893",
+    "shape_pt_lon": "-84.0520977731443",
+    "shape_pt_sequence": "30",
+    "shape_dist_traveled": "0.318"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9353609350822",
+    "shape_pt_lon": "-84.0517673714683",
+    "shape_pt_sequence": "31",
+    "shape_dist_traveled": "0.355"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93533537431955",
+    "shape_pt_lon": "-84.0515957473315",
+    "shape_pt_sequence": "32",
+    "shape_dist_traveled": "0.374"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93527832074849",
+    "shape_pt_lon": "-84.0514578761312",
+    "shape_pt_sequence": "33",
+    "shape_dist_traveled": "0.39"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93537394568805",
+    "shape_pt_lon": "-84.051051560594",
+    "shape_pt_sequence": "34",
+    "shape_dist_traveled": "0.436"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93548509593826",
+    "shape_pt_lon": "-84.0506488451042",
+    "shape_pt_sequence": "35",
+    "shape_dist_traveled": "0.482"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93555656904013",
+    "shape_pt_lon": "-84.0503446866737",
+    "shape_pt_sequence": "36",
+    "shape_dist_traveled": "0.516"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93560639042598",
+    "shape_pt_lon": "-84.0501407351937",
+    "shape_pt_sequence": "37",
+    "shape_dist_traveled": "0.539"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93564014039442",
+    "shape_pt_lon": "-84.0499188359838",
+    "shape_pt_sequence": "38",
+    "shape_dist_traveled": "0.564"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93555237106771",
+    "shape_pt_lon": "-84.0495240741516",
+    "shape_pt_sequence": "39",
+    "shape_dist_traveled": "0.608"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9355127171103",
+    "shape_pt_lon": "-84.0493169635181",
+    "shape_pt_sequence": "40",
+    "shape_dist_traveled": "0.631"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93544759669272",
+    "shape_pt_lon": "-84.0490255135247",
+    "shape_pt_sequence": "41",
+    "shape_dist_traveled": "0.664"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93538988817417",
+    "shape_pt_lon": "-84.0487899823799",
+    "shape_pt_sequence": "42",
+    "shape_dist_traveled": "0.691"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93537301317815",
+    "shape_pt_lon": "-84.0486447689264",
+    "shape_pt_sequence": "43",
+    "shape_dist_traveled": "0.707"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93527658461171",
+    "shape_pt_lon": "-84.0486366108669",
+    "shape_pt_sequence": "44",
+    "shape_dist_traveled": "0.718"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93529274995559",
+    "shape_pt_lon": "-84.0483784246656",
+    "shape_pt_sequence": "45",
+    "shape_dist_traveled": "0.746"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93524694618673",
+    "shape_pt_lon": "-84.0481238929513",
+    "shape_pt_sequence": "46",
+    "shape_dist_traveled": "0.774"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93514165787212",
+    "shape_pt_lon": "-84.0478057230236",
+    "shape_pt_sequence": "47",
+    "shape_dist_traveled": "0.811"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93500316815773",
+    "shape_pt_lon": "-84.0473807827294",
+    "shape_pt_sequence": "48",
+    "shape_dist_traveled": "0.86"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93492049042863",
+    "shape_pt_lon": "-84.0470859236543",
+    "shape_pt_sequence": "49",
+    "shape_dist_traveled": "0.894"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93479657132182",
+    "shape_pt_lon": "-84.0464195689003",
+    "shape_pt_sequence": "50",
+    "shape_dist_traveled": "0.968"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93468604728109",
+    "shape_pt_lon": "-84.0458857020311",
+    "shape_pt_sequence": "51",
+    "shape_dist_traveled": "1.028"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9346124699569",
+    "shape_pt_lon": "-84.0456137031377",
+    "shape_pt_sequence": "52",
+    "shape_dist_traveled": "1.059"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93481022852054",
+    "shape_pt_lon": "-84.0456081393267",
+    "shape_pt_sequence": "53",
+    "shape_dist_traveled": "1.081"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93495379560579",
+    "shape_pt_lon": "-84.0456083692307",
+    "shape_pt_sequence": "54",
+    "shape_dist_traveled": "1.096"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93502122053513",
+    "shape_pt_lon": "-84.0455873976348",
+    "shape_pt_sequence": "55",
+    "shape_dist_traveled": "1.104"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93525069991888",
+    "shape_pt_lon": "-84.0455815527507",
+    "shape_pt_sequence": "56",
+    "shape_dist_traveled": "1.13"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93533621207088",
+    "shape_pt_lon": "-84.0455791055204",
+    "shape_pt_sequence": "57",
+    "shape_dist_traveled": "1.139"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9355796939962",
+    "shape_pt_lon": "-84.0455277100451",
+    "shape_pt_sequence": "58",
+    "shape_dist_traveled": "1.167"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93566141737569",
+    "shape_pt_lon": "-84.0454545424224",
+    "shape_pt_sequence": "59",
+    "shape_dist_traveled": "1.179"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93593880374486",
+    "shape_pt_lon": "-84.0454033749615",
+    "shape_pt_sequence": "60",
+    "shape_dist_traveled": "1.21"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93617987563359",
+    "shape_pt_lon": "-84.0453561940705",
+    "shape_pt_sequence": "61",
+    "shape_dist_traveled": "1.237"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93629878421235",
+    "shape_pt_lon": "-84.0453622217276",
+    "shape_pt_sequence": "62",
+    "shape_dist_traveled": "1.25"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93647074793075",
+    "shape_pt_lon": "-84.0454544077961",
+    "shape_pt_sequence": "63",
+    "shape_dist_traveled": "1.272"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9366470154013",
+    "shape_pt_lon": "-84.0455491574187",
+    "shape_pt_sequence": "64",
+    "shape_dist_traveled": "1.294"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93667996169247",
+    "shape_pt_lon": "-84.0455671051487",
+    "shape_pt_sequence": "65",
+    "shape_dist_traveled": "1.298"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93677076487081",
+    "shape_pt_lon": "-84.0455923951325",
+    "shape_pt_sequence": "66",
+    "shape_dist_traveled": "1.308"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93685019478803",
+    "shape_pt_lon": "-84.0455875957907",
+    "shape_pt_sequence": "67",
+    "shape_dist_traveled": "1.317"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93693939078323",
+    "shape_pt_lon": "-84.0455459896891",
+    "shape_pt_sequence": "68",
+    "shape_dist_traveled": "1.328"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93708216879507",
+    "shape_pt_lon": "-84.0454405657035",
+    "shape_pt_sequence": "69",
+    "shape_dist_traveled": "1.348"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9372417505605",
+    "shape_pt_lon": "-84.0452791956738",
+    "shape_pt_sequence": "70",
+    "shape_dist_traveled": "1.373"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93733175001592",
+    "shape_pt_lon": "-84.0451437718914",
+    "shape_pt_sequence": "71",
+    "shape_dist_traveled": "1.391"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93747880276838",
+    "shape_pt_lon": "-84.0448843455207",
+    "shape_pt_sequence": "72",
+    "shape_dist_traveled": "1.423"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93759383837854",
+    "shape_pt_lon": "-84.0446848467803",
+    "shape_pt_sequence": "73",
+    "shape_dist_traveled": "1.449"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93775722150572",
+    "shape_pt_lon": "-84.0443877220931",
+    "shape_pt_sequence": "74",
+    "shape_dist_traveled": "1.486"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93792650160209",
+    "shape_pt_lon": "-84.0440980878075",
+    "shape_pt_sequence": "75",
+    "shape_dist_traveled": "1.523"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93809919166979",
+    "shape_pt_lon": "-84.0437999865192",
+    "shape_pt_sequence": "76",
+    "shape_dist_traveled": "1.561"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93796097853527",
+    "shape_pt_lon": "-84.0436147985756",
+    "shape_pt_sequence": "77",
+    "shape_dist_traveled": "1.586"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93791115773413",
+    "shape_pt_lon": "-84.0434434787742",
+    "shape_pt_sequence": "78",
+    "shape_dist_traveled": "1.606"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9378853721441",
+    "shape_pt_lon": "-84.0432188653814",
+    "shape_pt_sequence": "79",
+    "shape_dist_traveled": "1.63"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93792474683056",
+    "shape_pt_lon": "-84.0429382281456",
+    "shape_pt_sequence": "80",
+    "shape_dist_traveled": "1.661"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93798421082772",
+    "shape_pt_lon": "-84.0425692976739",
+    "shape_pt_sequence": "81",
+    "shape_dist_traveled": "1.702"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93799717971221",
+    "shape_pt_lon": "-84.0424760119919",
+    "shape_pt_sequence": "82",
+    "shape_dist_traveled": "1.713"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93813619639644",
+    "shape_pt_lon": "-84.0421774270254",
+    "shape_pt_sequence": "83",
+    "shape_dist_traveled": "1.749"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93816151133474",
+    "shape_pt_lon": "-84.0419972282554",
+    "shape_pt_sequence": "84",
+    "shape_dist_traveled": "1.769"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93815347569085",
+    "shape_pt_lon": "-84.0418487515775",
+    "shape_pt_sequence": "85",
+    "shape_dist_traveled": "1.785"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93812695789198",
+    "shape_pt_lon": "-84.0417223014224",
+    "shape_pt_sequence": "86",
+    "shape_dist_traveled": "1.799"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93807552975984",
+    "shape_pt_lon": "-84.041649694696",
+    "shape_pt_sequence": "87",
+    "shape_dist_traveled": "1.809"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93801445884308",
+    "shape_pt_lon": "-84.0416317469654",
+    "shape_pt_sequence": "88",
+    "shape_dist_traveled": "1.816"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93791897942971",
+    "shape_pt_lon": "-84.0416350505556",
+    "shape_pt_sequence": "89",
+    "shape_dist_traveled": "1.827"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93789540463778",
+    "shape_pt_lon": "-84.0410687729965",
+    "shape_pt_sequence": "90",
+    "shape_dist_traveled": "1.889"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93846102257875",
+    "shape_pt_lon": "-84.0409278059346",
+    "shape_pt_sequence": "91",
+    "shape_dist_traveled": "1.953"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93868770509072",
+    "shape_pt_lon": "-84.0409636843222",
+    "shape_pt_sequence": "92",
+    "shape_dist_traveled": "1.979"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93884702967763",
+    "shape_pt_lon": "-84.0411317795776",
+    "shape_pt_sequence": "93",
+    "shape_dist_traveled": "2.004"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93915009329333",
+    "shape_pt_lon": "-84.0416545090707",
+    "shape_pt_sequence": "94",
+    "shape_dist_traveled": "2.071"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93928437269097",
+    "shape_pt_lon": "-84.0417940169538",
+    "shape_pt_sequence": "95",
+    "shape_dist_traveled": "2.092"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93942339095397",
+    "shape_pt_lon": "-84.0418844077991",
+    "shape_pt_sequence": "96",
+    "shape_dist_traveled": "2.11"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93949992907343",
+    "shape_pt_lon": "-84.0419066090587",
+    "shape_pt_sequence": "97",
+    "shape_dist_traveled": "2.119"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93949992907343",
+    "shape_pt_lon": "-84.0422475569833",
+    "shape_pt_sequence": "98",
+    "shape_dist_traveled": "2.156"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.939437",
+    "shape_pt_lon": "-84.043074",
+    "shape_pt_sequence": "99",
+    "shape_dist_traveled": "2.187"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9394249524573",
+    "shape_pt_lon": "-84.0433290766316",
+    "shape_pt_sequence": "100",
+    "shape_dist_traveled": "2.275"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93972312001197",
+    "shape_pt_lon": "-84.0432616940963",
+    "shape_pt_sequence": "101",
+    "shape_dist_traveled": "2.309"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9397847344284",
+    "shape_pt_lon": "-84.0432938739159",
+    "shape_pt_sequence": "102",
+    "shape_dist_traveled": "2.317"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.9398186343525",
+    "shape_pt_lon": "-84.0433818049407",
+    "shape_pt_sequence": "103",
+    "shape_dist_traveled": "2.327"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.93998824672434",
+    "shape_pt_lon": "-84.0440308770623",
+    "shape_pt_sequence": "104",
+    "shape_dist_traveled": "2.401"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94015974971341",
+    "shape_pt_lon": "-84.0446658158992",
+    "shape_pt_sequence": "105",
+    "shape_dist_traveled": "2.473"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94026910203425",
+    "shape_pt_lon": "-84.0448245474961",
+    "shape_pt_sequence": "106",
+    "shape_dist_traveled": "2.494"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94036490303632",
+    "shape_pt_lon": "-84.0451873514683",
+    "shape_pt_sequence": "107",
+    "shape_dist_traveled": "2.535"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94048769323097",
+    "shape_pt_lon": "-84.0456290389484",
+    "shape_pt_sequence": "108",
+    "shape_dist_traveled": "2.586"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94063635155576",
+    "shape_pt_lon": "-84.0455931434884",
+    "shape_pt_sequence": "109",
+    "shape_dist_traveled": "2.602"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94079234514589",
+    "shape_pt_lon": "-84.0450690355552",
+    "shape_pt_sequence": "110",
+    "shape_dist_traveled": "2.662"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94094918383372",
+    "shape_pt_lon": "-84.0447505513004",
+    "shape_pt_sequence": "111",
+    "shape_dist_traveled": "2.701"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94104532842372",
+    "shape_pt_lon": "-84.0446520351469",
+    "shape_pt_sequence": "112",
+    "shape_dist_traveled": "2.717"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94113081479986",
+    "shape_pt_lon": "-84.0446571934664",
+    "shape_pt_sequence": "113",
+    "shape_dist_traveled": "2.726"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94144321527622",
+    "shape_pt_lon": "-84.0446770863329",
+    "shape_pt_sequence": "114",
+    "shape_dist_traveled": "2.761"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94195499816524",
+    "shape_pt_lon": "-84.0447142198439",
+    "shape_pt_sequence": "115",
+    "shape_dist_traveled": "2.817"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94233948335795",
+    "shape_pt_lon": "-84.0447371192727",
+    "shape_pt_sequence": "116",
+    "shape_dist_traveled": "2.86"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94270561942093",
+    "shape_pt_lon": "-84.0447624203313",
+    "shape_pt_sequence": "117",
+    "shape_dist_traveled": "2.901"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94282741926446",
+    "shape_pt_lon": "-84.0447662997461",
+    "shape_pt_sequence": "118",
+    "shape_dist_traveled": "2.914"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94300876520552",
+    "shape_pt_lon": "-84.0447342405736",
+    "shape_pt_sequence": "119",
+    "shape_dist_traveled": "2.934"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94322619282253",
+    "shape_pt_lon": "-84.044661630678",
+    "shape_pt_sequence": "120",
+    "shape_dist_traveled": "2.96"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94336188947768",
+    "shape_pt_lon": "-84.0446070756693",
+    "shape_pt_sequence": "121",
+    "shape_dist_traveled": "2.976"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94366938860733",
+    "shape_pt_lon": "-84.0444664621215",
+    "shape_pt_sequence": "122",
+    "shape_dist_traveled": "3.013"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94379763572232",
+    "shape_pt_lon": "-84.0447499441632",
+    "shape_pt_sequence": "123",
+    "shape_dist_traveled": "3.047"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94387703073651",
+    "shape_pt_lon": "-84.0448781808515",
+    "shape_pt_sequence": "124",
+    "shape_dist_traveled": "3.064"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94396544788927",
+    "shape_pt_lon": "-84.0449496270056",
+    "shape_pt_sequence": "125",
+    "shape_dist_traveled": "3.077"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94454435151914",
+    "shape_pt_lon": "-84.0450074182673",
+    "shape_pt_sequence": "126",
+    "shape_dist_traveled": "3.141"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94494922686726",
+    "shape_pt_lon": "-84.0450098494603",
+    "shape_pt_sequence": "127",
+    "shape_dist_traveled": "3.186"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94503488859595",
+    "shape_pt_lon": "-84.0450726102459",
+    "shape_pt_sequence": "128",
+    "shape_dist_traveled": "3.197"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94506635931216",
+    "shape_pt_lon": "-84.0453994971357",
+    "shape_pt_sequence": "129",
+    "shape_dist_traveled": "3.233"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94509373573383",
+    "shape_pt_lon": "-84.0454999143925",
+    "shape_pt_sequence": "130",
+    "shape_dist_traveled": "3.245"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94516587977827",
+    "shape_pt_lon": "-84.0455384857143",
+    "shape_pt_sequence": "131",
+    "shape_dist_traveled": "3.254"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94569334489241",
+    "shape_pt_lon": "-84.045501640108",
+    "shape_pt_sequence": "132",
+    "shape_dist_traveled": "3.312"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94576818120904",
+    "shape_pt_lon": "-84.0454572011088",
+    "shape_pt_sequence": "133",
+    "shape_dist_traveled": "3.322"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94581918999885",
+    "shape_pt_lon": "-84.0453571624431",
+    "shape_pt_sequence": "134",
+    "shape_dist_traveled": "3.334"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94586821736523",
+    "shape_pt_lon": "-84.0452494124261",
+    "shape_pt_sequence": "135",
+    "shape_dist_traveled": "3.347"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94594549545337",
+    "shape_pt_lon": "-84.0451749917014",
+    "shape_pt_sequence": "136",
+    "shape_dist_traveled": "3.359"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94628917517751",
+    "shape_pt_lon": "-84.045149887399",
+    "shape_pt_sequence": "137",
+    "shape_dist_traveled": "3.397"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.946387887887",
+    "shape_pt_lon": "-84.0451617577946",
+    "shape_pt_sequence": "138",
+    "shape_dist_traveled": "3.408"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94644528982524",
+    "shape_pt_lon": "-84.0451994142665",
+    "shape_pt_sequence": "139",
+    "shape_dist_traveled": "3.416"
+  },
+  {
+    "shape_id": "desde_artes_a_odontologia_sin_milla",
+    "shape_pt_lat": "9.94649012442296",
+    "shape_pt_lon": "-84.0452511227568",
+    "shape_pt_sequence": "140",
+    "shape_dist_traveled": "3.423"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93551129613598",
+    "shape_pt_lon": "-84.0522203008732",
+    "shape_pt_sequence": "0",
+    "shape_dist_traveled": "0"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9355310767404",
+    "shape_pt_lon": "-84.0522927059177",
+    "shape_pt_sequence": "1",
+    "shape_dist_traveled": "0.008"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93554722789095",
+    "shape_pt_lon": "-84.0523347118824",
+    "shape_pt_sequence": "2",
+    "shape_dist_traveled": "0.013"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93559998927965",
+    "shape_pt_lon": "-84.0523891977038",
+    "shape_pt_sequence": "3",
+    "shape_dist_traveled": "0.022"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93565665681396",
+    "shape_pt_lon": "-84.0524266115309",
+    "shape_pt_sequence": "4",
+    "shape_dist_traveled": "0.029"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93572400544303",
+    "shape_pt_lon": "-84.0524387877407",
+    "shape_pt_sequence": "5",
+    "shape_dist_traveled": "0.037"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93583791088976",
+    "shape_pt_lon": "-84.0524163085106",
+    "shape_pt_sequence": "6",
+    "shape_dist_traveled": "0.049"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93589348533485",
+    "shape_pt_lon": "-84.0524004247557",
+    "shape_pt_sequence": "7",
+    "shape_dist_traveled": "0.056"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93594773879152",
+    "shape_pt_lon": "-84.0523801824105",
+    "shape_pt_sequence": "8",
+    "shape_dist_traveled": "0.062"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93618639604332",
+    "shape_pt_lon": "-84.052302832233",
+    "shape_pt_sequence": "9",
+    "shape_dist_traveled": "0.09"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93639684624757",
+    "shape_pt_lon": "-84.0522406782275",
+    "shape_pt_sequence": "10",
+    "shape_dist_traveled": "0.114"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93653551980098",
+    "shape_pt_lon": "-84.0522361299255",
+    "shape_pt_sequence": "11",
+    "shape_dist_traveled": "0.13"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93673682209909",
+    "shape_pt_lon": "-84.0523076585187",
+    "shape_pt_sequence": "12",
+    "shape_dist_traveled": "0.153"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93708559662569",
+    "shape_pt_lon": "-84.05243186663",
+    "shape_pt_sequence": "13",
+    "shape_dist_traveled": "0.194"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93733577696727",
+    "shape_pt_lon": "-84.0525288520072",
+    "shape_pt_sequence": "14",
+    "shape_dist_traveled": "0.224"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93757969853555",
+    "shape_pt_lon": "-84.0526438746271",
+    "shape_pt_sequence": "15",
+    "shape_dist_traveled": "0.253"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9377485826659",
+    "shape_pt_lon": "-84.0527043524954",
+    "shape_pt_sequence": "16",
+    "shape_dist_traveled": "0.273"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93779188190045",
+    "shape_pt_lon": "-84.0527107981436",
+    "shape_pt_sequence": "17",
+    "shape_dist_traveled": "0.278"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93787132360124",
+    "shape_pt_lon": "-84.0527199326082",
+    "shape_pt_sequence": "18",
+    "shape_dist_traveled": "0.287"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93795076530203",
+    "shape_pt_lon": "-84.0527243732062",
+    "shape_pt_sequence": "19",
+    "shape_dist_traveled": "0.296"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93802242474458",
+    "shape_pt_lon": "-84.0527168419396",
+    "shape_pt_sequence": "20",
+    "shape_dist_traveled": "0.304"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93809408418712",
+    "shape_pt_lon": "-84.0527036109785",
+    "shape_pt_sequence": "21",
+    "shape_dist_traveled": "0.312"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93815622170643",
+    "shape_pt_lon": "-84.0526341385986",
+    "shape_pt_sequence": "22",
+    "shape_dist_traveled": "0.322"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93824866125399",
+    "shape_pt_lon": "-84.0524441849862",
+    "shape_pt_sequence": "23",
+    "shape_dist_traveled": "0.345"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93840212874288",
+    "shape_pt_lon": "-84.0521210493447",
+    "shape_pt_sequence": "24",
+    "shape_dist_traveled": "0.385"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93859022704029",
+    "shape_pt_lon": "-84.0518711468269",
+    "shape_pt_sequence": "25",
+    "shape_dist_traveled": "0.419"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9387164365478",
+    "shape_pt_lon": "-84.0517146035903",
+    "shape_pt_sequence": "26",
+    "shape_dist_traveled": "0.441"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93883769238516",
+    "shape_pt_lon": "-84.0515516901066",
+    "shape_pt_sequence": "27",
+    "shape_dist_traveled": "0.463"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93890538473733",
+    "shape_pt_lon": "-84.0514467461262",
+    "shape_pt_sequence": "28",
+    "shape_dist_traveled": "0.477"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93897774723731",
+    "shape_pt_lon": "-84.051298218969",
+    "shape_pt_sequence": "29",
+    "shape_dist_traveled": "0.495"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93901864778466",
+    "shape_pt_lon": "-84.0511281313016",
+    "shape_pt_sequence": "30",
+    "shape_dist_traveled": "0.514"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93905404247567",
+    "shape_pt_lon": "-84.0509181170952",
+    "shape_pt_sequence": "31",
+    "shape_dist_traveled": "0.538"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93908393146568",
+    "shape_pt_lon": "-84.0503591447661",
+    "shape_pt_sequence": "32",
+    "shape_dist_traveled": "0.599"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93910272348104",
+    "shape_pt_lon": "-84.0501183551865",
+    "shape_pt_sequence": "33",
+    "shape_dist_traveled": "0.626"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93910706388403",
+    "shape_pt_lon": "-84.0499402779348",
+    "shape_pt_sequence": "34",
+    "shape_dist_traveled": "0.645"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93910711111161",
+    "shape_pt_lon": "-84.0497648828928",
+    "shape_pt_sequence": "35",
+    "shape_dist_traveled": "0.664"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93906715286185",
+    "shape_pt_lon": "-84.0496439745831",
+    "shape_pt_sequence": "36",
+    "shape_dist_traveled": "0.678"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93897699483947",
+    "shape_pt_lon": "-84.0494999920866",
+    "shape_pt_sequence": "37",
+    "shape_dist_traveled": "0.697"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93879865248422",
+    "shape_pt_lon": "-84.0492839130465",
+    "shape_pt_sequence": "38",
+    "shape_dist_traveled": "0.728"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93852631535243",
+    "shape_pt_lon": "-84.0489259634067",
+    "shape_pt_sequence": "39",
+    "shape_dist_traveled": "0.777"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9383125595628",
+    "shape_pt_lon": "-84.0486415140485",
+    "shape_pt_sequence": "40",
+    "shape_dist_traveled": "0.817"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93816149920894",
+    "shape_pt_lon": "-84.0484645585026",
+    "shape_pt_sequence": "41",
+    "shape_dist_traveled": "0.842"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93801276292967",
+    "shape_pt_lon": "-84.0483041187788",
+    "shape_pt_sequence": "42",
+    "shape_dist_traveled": "0.866"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93767314890347",
+    "shape_pt_lon": "-84.0479456361923",
+    "shape_pt_sequence": "43",
+    "shape_dist_traveled": "0.921"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93762896738312",
+    "shape_pt_lon": "-84.0479035036496",
+    "shape_pt_sequence": "44",
+    "shape_dist_traveled": "0.927"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9375818136517",
+    "shape_pt_lon": "-84.0478664002497",
+    "shape_pt_sequence": "45",
+    "shape_dist_traveled": "0.934"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9375407094932",
+    "shape_pt_lon": "-84.0478370279249",
+    "shape_pt_sequence": "46",
+    "shape_dist_traveled": "0.94"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93749795410686",
+    "shape_pt_lon": "-84.0478110083611",
+    "shape_pt_sequence": "47",
+    "shape_dist_traveled": "0.945"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93745496587906",
+    "shape_pt_lon": "-84.0477901145765",
+    "shape_pt_sequence": "48",
+    "shape_dist_traveled": "0.95"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93736508273494",
+    "shape_pt_lon": "-84.0477598330601",
+    "shape_pt_sequence": "49",
+    "shape_dist_traveled": "0.961"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93726069019733",
+    "shape_pt_lon": "-84.047759267964",
+    "shape_pt_sequence": "50",
+    "shape_dist_traveled": "0.972"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93707479279145",
+    "shape_pt_lon": "-84.047793713066",
+    "shape_pt_sequence": "51",
+    "shape_dist_traveled": "0.993"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93681544721791",
+    "shape_pt_lon": "-84.0478715216077",
+    "shape_pt_sequence": "52",
+    "shape_dist_traveled": "1.023"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93657305173134",
+    "shape_pt_lon": "-84.0479476285628",
+    "shape_pt_sequence": "53",
+    "shape_dist_traveled": "1.051"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93622234344519",
+    "shape_pt_lon": "-84.0480642553351",
+    "shape_pt_sequence": "54",
+    "shape_dist_traveled": "1.092"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93602464016541",
+    "shape_pt_lon": "-84.0481251956082",
+    "shape_pt_sequence": "55",
+    "shape_dist_traveled": "1.115"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93585590049247",
+    "shape_pt_lon": "-84.0481829479595",
+    "shape_pt_sequence": "56",
+    "shape_dist_traveled": "1.135"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9357089398831",
+    "shape_pt_lon": "-84.0482522936584",
+    "shape_pt_sequence": "57",
+    "shape_dist_traveled": "1.153"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93563189742607",
+    "shape_pt_lon": "-84.0482869664637",
+    "shape_pt_sequence": "58",
+    "shape_dist_traveled": "1.162"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93556048694849",
+    "shape_pt_lon": "-84.0483531600847",
+    "shape_pt_sequence": "59",
+    "shape_dist_traveled": "1.173"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93549839086817",
+    "shape_pt_lon": "-84.048435114092",
+    "shape_pt_sequence": "60",
+    "shape_dist_traveled": "1.184"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93546527295384",
+    "shape_pt_lon": "-84.0485569944104",
+    "shape_pt_sequence": "61",
+    "shape_dist_traveled": "1.198"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9354549236054",
+    "shape_pt_lon": "-84.0486547088036",
+    "shape_pt_sequence": "62",
+    "shape_dist_traveled": "1.209"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93528001900853",
+    "shape_pt_lon": "-84.048634745016",
+    "shape_pt_sequence": "63",
+    "shape_dist_traveled": "1.228"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93529761291067",
+    "shape_pt_lon": "-84.0483794267626",
+    "shape_pt_sequence": "64",
+    "shape_dist_traveled": "1.256"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9352527346308",
+    "shape_pt_lon": "-84.0481286733116",
+    "shape_pt_sequence": "65",
+    "shape_dist_traveled": "1.284"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93512765815873",
+    "shape_pt_lon": "-84.0477461762194",
+    "shape_pt_sequence": "66",
+    "shape_dist_traveled": "1.328"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93492703280895",
+    "shape_pt_lon": "-84.0471055797031",
+    "shape_pt_sequence": "67",
+    "shape_dist_traveled": "1.402"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93478949058113",
+    "shape_pt_lon": "-84.046354626689",
+    "shape_pt_sequence": "68",
+    "shape_dist_traveled": "1.486"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93469070939338",
+    "shape_pt_lon": "-84.0458746565008",
+    "shape_pt_sequence": "69",
+    "shape_dist_traveled": "1.539"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93462060674132",
+    "shape_pt_lon": "-84.0456143293",
+    "shape_pt_sequence": "70",
+    "shape_dist_traveled": "1.569"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93489289845325",
+    "shape_pt_lon": "-84.0456070252698",
+    "shape_pt_sequence": "71",
+    "shape_dist_traveled": "1.599"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93495950947043",
+    "shape_pt_lon": "-84.045606154414",
+    "shape_pt_sequence": "72",
+    "shape_dist_traveled": "1.606"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93502573261312",
+    "shape_pt_lon": "-84.0455877894747",
+    "shape_pt_sequence": "73",
+    "shape_dist_traveled": "1.614"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93533984703067",
+    "shape_pt_lon": "-84.0455793808645",
+    "shape_pt_sequence": "74",
+    "shape_dist_traveled": "1.649"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93553106245252",
+    "shape_pt_lon": "-84.0455366983597",
+    "shape_pt_sequence": "75",
+    "shape_dist_traveled": "1.67"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93558489672501",
+    "shape_pt_lon": "-84.0455256779408",
+    "shape_pt_sequence": "76",
+    "shape_dist_traveled": "1.677"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93566584972937",
+    "shape_pt_lon": "-84.0454519050346",
+    "shape_pt_sequence": "77",
+    "shape_dist_traveled": "1.689"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93603020143902",
+    "shape_pt_lon": "-84.0453870153627",
+    "shape_pt_sequence": "78",
+    "shape_dist_traveled": "1.73"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93619941008339",
+    "shape_pt_lon": "-84.0453504149565",
+    "shape_pt_sequence": "79",
+    "shape_dist_traveled": "1.749"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93630011253566",
+    "shape_pt_lon": "-84.0453617663184",
+    "shape_pt_sequence": "80",
+    "shape_dist_traveled": "1.76"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93651948121636",
+    "shape_pt_lon": "-84.0454755016038",
+    "shape_pt_sequence": "81",
+    "shape_dist_traveled": "1.787"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93668368683727",
+    "shape_pt_lon": "-84.0455653411938",
+    "shape_pt_sequence": "82",
+    "shape_dist_traveled": "1.808"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93677258981834",
+    "shape_pt_lon": "-84.045589182648",
+    "shape_pt_sequence": "83",
+    "shape_dist_traveled": "1.818"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93685310570445",
+    "shape_pt_lon": "-84.0455874796866",
+    "shape_pt_sequence": "84",
+    "shape_dist_traveled": "1.827"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93694508327091",
+    "shape_pt_lon": "-84.0455437249918",
+    "shape_pt_sequence": "85",
+    "shape_dist_traveled": "1.838"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93708383542657",
+    "shape_pt_lon": "-84.0454400845081",
+    "shape_pt_sequence": "86",
+    "shape_dist_traveled": "1.857"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93721635101928",
+    "shape_pt_lon": "-84.045309807991",
+    "shape_pt_sequence": "87",
+    "shape_dist_traveled": "1.878"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93724819645461",
+    "shape_pt_lon": "-84.0452761874456",
+    "shape_pt_sequence": "88",
+    "shape_dist_traveled": "1.883"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93734716375109",
+    "shape_pt_lon": "-84.0451229209554",
+    "shape_pt_sequence": "89",
+    "shape_dist_traveled": "1.903"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93752119585777",
+    "shape_pt_lon": "-84.0448187291416",
+    "shape_pt_sequence": "90",
+    "shape_dist_traveled": "1.941"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93767426097248",
+    "shape_pt_lon": "-84.0445416760749",
+    "shape_pt_sequence": "91",
+    "shape_dist_traveled": "1.976"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93785833808635",
+    "shape_pt_lon": "-84.0442186256065",
+    "shape_pt_sequence": "92",
+    "shape_dist_traveled": "2.017"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93810435753431",
+    "shape_pt_lon": "-84.0437983732383",
+    "shape_pt_sequence": "93",
+    "shape_dist_traveled": "2.07"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93796632120651",
+    "shape_pt_lon": "-84.0436125738981",
+    "shape_pt_sequence": "94",
+    "shape_dist_traveled": "2.096"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93791432144543",
+    "shape_pt_lon": "-84.0434414999464",
+    "shape_pt_sequence": "95",
+    "shape_dist_traveled": "2.116"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93788832161072",
+    "shape_pt_lon": "-84.0432184120559",
+    "shape_pt_sequence": "96",
+    "shape_dist_traveled": "2.14"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93792789506808",
+    "shape_pt_lon": "-84.042939145496",
+    "shape_pt_sequence": "97",
+    "shape_dist_traveled": "2.171"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93799597108977",
+    "shape_pt_lon": "-84.0425252959219",
+    "shape_pt_sequence": "98",
+    "shape_dist_traveled": "2.217"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93800488549925",
+    "shape_pt_lon": "-84.0424724302894",
+    "shape_pt_sequence": "99",
+    "shape_dist_traveled": "2.223"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9381395635656",
+    "shape_pt_lon": "-84.0421750587842",
+    "shape_pt_sequence": "100",
+    "shape_dist_traveled": "2.259"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93816556338036",
+    "shape_pt_lon": "-84.0419988023209",
+    "shape_pt_sequence": "101",
+    "shape_dist_traveled": "2.278"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93815877702913",
+    "shape_pt_lon": "-84.0418468568672",
+    "shape_pt_sequence": "102",
+    "shape_dist_traveled": "2.295"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93812774499086",
+    "shape_pt_lon": "-84.0417208377531",
+    "shape_pt_sequence": "103",
+    "shape_dist_traveled": "2.309"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93810465445374",
+    "shape_pt_lon": "-84.0416827286396",
+    "shape_pt_sequence": "104",
+    "shape_dist_traveled": "2.314"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93807826146448",
+    "shape_pt_lon": "-84.0416493133915",
+    "shape_pt_sequence": "105",
+    "shape_dist_traveled": "2.319"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93804738144964",
+    "shape_pt_lon": "-84.0416349312544",
+    "shape_pt_sequence": "106",
+    "shape_dist_traveled": "2.323"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93801451996184",
+    "shape_pt_lon": "-84.0416322837814",
+    "shape_pt_sequence": "107",
+    "shape_dist_traveled": "2.326"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93792436774485",
+    "shape_pt_lon": "-84.0416346601389",
+    "shape_pt_sequence": "108",
+    "shape_dist_traveled": "2.336"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93790082410227",
+    "shape_pt_lon": "-84.041067340985",
+    "shape_pt_sequence": "109",
+    "shape_dist_traveled": "2.399"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93846425290711",
+    "shape_pt_lon": "-84.0409284047187",
+    "shape_pt_sequence": "110",
+    "shape_dist_traveled": "2.463"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93868651413261",
+    "shape_pt_lon": "-84.0409624274215",
+    "shape_pt_sequence": "111",
+    "shape_dist_traveled": "2.488"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93885247660523",
+    "shape_pt_lon": "-84.0411341586918",
+    "shape_pt_sequence": "112",
+    "shape_dist_traveled": "2.514"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93915539473273",
+    "shape_pt_lon": "-84.0416474460876",
+    "shape_pt_sequence": "113",
+    "shape_dist_traveled": "2.579"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93928861127028",
+    "shape_pt_lon": "-84.0417889786806",
+    "shape_pt_sequence": "114",
+    "shape_dist_traveled": "2.601"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9394354239606",
+    "shape_pt_lon": "-84.0418813247414",
+    "shape_pt_sequence": "115",
+    "shape_dist_traveled": "2.62"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93950244712471",
+    "shape_pt_lon": "-84.0419056263361",
+    "shape_pt_sequence": "116",
+    "shape_dist_traveled": "2.628"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93950244613303",
+    "shape_pt_lon": "-84.042239368576",
+    "shape_pt_sequence": "117",
+    "shape_dist_traveled": "2.664"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93949446718606",
+    "shape_pt_lon": "-84.0425196469705",
+    "shape_pt_sequence": "118",
+    "shape_dist_traveled": "2.695"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93945457168453",
+    "shape_pt_lon": "-84.0429991991022",
+    "shape_pt_sequence": "119",
+    "shape_dist_traveled": "2.748"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93942712460796",
+    "shape_pt_lon": "-84.043331873611",
+    "shape_pt_sequence": "120",
+    "shape_dist_traveled": "2.784"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93972789866721",
+    "shape_pt_lon": "-84.0432605742965",
+    "shape_pt_sequence": "121",
+    "shape_dist_traveled": "2.819"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93979051078508",
+    "shape_pt_lon": "-84.0432941313524",
+    "shape_pt_sequence": "122",
+    "shape_dist_traveled": "2.826"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93982252793726",
+    "shape_pt_lon": "-84.0433753940134",
+    "shape_pt_sequence": "123",
+    "shape_dist_traveled": "2.836"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.93991292983544",
+    "shape_pt_lon": "-84.0437147893588",
+    "shape_pt_sequence": "124",
+    "shape_dist_traveled": "2.875"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94002028140903",
+    "shape_pt_lon": "-84.0441287509128",
+    "shape_pt_sequence": "125",
+    "shape_dist_traveled": "2.922"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94016644833328",
+    "shape_pt_lon": "-84.0446669802431",
+    "shape_pt_sequence": "126",
+    "shape_dist_traveled": "2.983"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94027078687104",
+    "shape_pt_lon": "-84.044823754755",
+    "shape_pt_sequence": "127",
+    "shape_dist_traveled": "3.003"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94048864067421",
+    "shape_pt_lon": "-84.0456295904777",
+    "shape_pt_sequence": "128",
+    "shape_dist_traveled": "3.095"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9406416703034",
+    "shape_pt_lon": "-84.045594280927",
+    "shape_pt_sequence": "129",
+    "shape_dist_traveled": "3.112"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94079771456593",
+    "shape_pt_lon": "-84.0450692602221",
+    "shape_pt_sequence": "130",
+    "shape_dist_traveled": "3.172"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9409503711104",
+    "shape_pt_lon": "-84.0447481499267",
+    "shape_pt_sequence": "131",
+    "shape_dist_traveled": "3.212"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94105192700053",
+    "shape_pt_lon": "-84.0446521079484",
+    "shape_pt_sequence": "132",
+    "shape_dist_traveled": "3.227"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94171142158802",
+    "shape_pt_lon": "-84.0446962954808",
+    "shape_pt_sequence": "133",
+    "shape_dist_traveled": "3.3"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94281915936154",
+    "shape_pt_lon": "-84.0447683576565",
+    "shape_pt_sequence": "134",
+    "shape_dist_traveled": "3.423"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94301266464211",
+    "shape_pt_lon": "-84.0447317924328",
+    "shape_pt_sequence": "135",
+    "shape_dist_traveled": "3.445"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94326484610015",
+    "shape_pt_lon": "-84.0446461368594",
+    "shape_pt_sequence": "136",
+    "shape_dist_traveled": "3.474"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94367235170777",
+    "shape_pt_lon": "-84.0444664659679",
+    "shape_pt_sequence": "137",
+    "shape_dist_traveled": "3.523"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94380140312083",
+    "shape_pt_lon": "-84.044752272012",
+    "shape_pt_sequence": "138",
+    "shape_dist_traveled": "3.558"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9438796367465",
+    "shape_pt_lon": "-84.0448814333755",
+    "shape_pt_sequence": "139",
+    "shape_dist_traveled": "3.574"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94396952509255",
+    "shape_pt_lon": "-84.0449503878825",
+    "shape_pt_sequence": "140",
+    "shape_dist_traveled": "3.587"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94433433418409",
+    "shape_pt_lon": "-84.044987908675",
+    "shape_pt_sequence": "141",
+    "shape_dist_traveled": "3.627"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94457411376674",
+    "shape_pt_lon": "-84.0450080280451",
+    "shape_pt_sequence": "142",
+    "shape_dist_traveled": "3.654"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94495390060397",
+    "shape_pt_lon": "-84.0450080280451",
+    "shape_pt_sequence": "143",
+    "shape_dist_traveled": "3.696"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94504571713547",
+    "shape_pt_lon": "-84.0450786471473",
+    "shape_pt_sequence": "144",
+    "shape_dist_traveled": "3.709"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94507075688808",
+    "shape_pt_lon": "-84.0453964329445",
+    "shape_pt_sequence": "145",
+    "shape_dist_traveled": "3.744"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94509858007239",
+    "shape_pt_lon": "-84.0454995368328",
+    "shape_pt_sequence": "146",
+    "shape_dist_traveled": "3.755"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94517301639726",
+    "shape_pt_lon": "-84.0455360879379",
+    "shape_pt_sequence": "147",
+    "shape_dist_traveled": "3.764"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94569599438186",
+    "shape_pt_lon": "-84.0455012141288",
+    "shape_pt_sequence": "148",
+    "shape_dist_traveled": "3.822"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94576731883437",
+    "shape_pt_lon": "-84.0454579354822",
+    "shape_pt_sequence": "149",
+    "shape_dist_traveled": "3.832"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94587443785238",
+    "shape_pt_lon": "-84.0452474905592",
+    "shape_pt_sequence": "150",
+    "shape_dist_traveled": "3.858"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94594677794762",
+    "shape_pt_lon": "-84.0451754590753",
+    "shape_pt_sequence": "151",
+    "shape_dist_traveled": "3.869"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94629204599402",
+    "shape_pt_lon": "-84.0451469719024",
+    "shape_pt_sequence": "152",
+    "shape_dist_traveled": "3.907"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.9463908179176",
+    "shape_pt_lon": "-84.0451610957222",
+    "shape_pt_sequence": "153",
+    "shape_dist_traveled": "3.918"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94645063751956",
+    "shape_pt_lon": "-84.0451992300371",
+    "shape_pt_sequence": "154",
+    "shape_dist_traveled": "3.926"
+  },
+  {
+    "shape_id": "desde_artes_con_milla",
+    "shape_pt_lat": "9.94649738913102",
+    "shape_pt_lon": "-84.0452562192863",
+    "shape_pt_sequence": "155",
+    "shape_dist_traveled": "3.934"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94651450274987",
+    "shape_pt_lon": "-84.0452709224469",
+    "shape_pt_sequence": "0",
+    "shape_dist_traveled": "0"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.9465713930344",
+    "shape_pt_lon": "-84.0453586296957",
+    "shape_pt_sequence": "1",
+    "shape_dist_traveled": "0.011"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94670523135418",
+    "shape_pt_lon": "-84.0455321860811",
+    "shape_pt_sequence": "2",
+    "shape_dist_traveled": "0.036"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94685977487793",
+    "shape_pt_lon": "-84.0457428830683",
+    "shape_pt_sequence": "3",
+    "shape_dist_traveled": "0.064"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94692114024093",
+    "shape_pt_lon": "-84.0458252584096",
+    "shape_pt_sequence": "4",
+    "shape_dist_traveled": "0.076"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94699848130395",
+    "shape_pt_lon": "-84.045874911642",
+    "shape_pt_sequence": "5",
+    "shape_dist_traveled": "0.086"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94709174550324",
+    "shape_pt_lon": "-84.0458702927366",
+    "shape_pt_sequence": "6",
+    "shape_dist_traveled": "0.096"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94733286724273",
+    "shape_pt_lon": "-84.0456762984049",
+    "shape_pt_sequence": "7",
+    "shape_dist_traveled": "0.13"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94734992775087",
+    "shape_pt_lon": "-84.0455816108455",
+    "shape_pt_sequence": "8",
+    "shape_dist_traveled": "0.141"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94731694409985",
+    "shape_pt_lon": "-84.0454811496546",
+    "shape_pt_sequence": "9",
+    "shape_dist_traveled": "0.152"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94706331033958",
+    "shape_pt_lon": "-84.0451520526366",
+    "shape_pt_sequence": "10",
+    "shape_dist_traveled": "0.198"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94695639770921",
+    "shape_pt_lon": "-84.044934964086",
+    "shape_pt_sequence": "11",
+    "shape_dist_traveled": "0.225"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94685739750313",
+    "shape_pt_lon": "-84.0447940381815",
+    "shape_pt_sequence": "12",
+    "shape_dist_traveled": "0.244"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94674934743632",
+    "shape_pt_lon": "-84.0447120526121",
+    "shape_pt_sequence": "13",
+    "shape_dist_traveled": "0.259"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94663902259388",
+    "shape_pt_lon": "-84.0446901128118",
+    "shape_pt_sequence": "14",
+    "shape_dist_traveled": "0.271"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94658480665502",
+    "shape_pt_lon": "-84.0447036688627",
+    "shape_pt_sequence": "15",
+    "shape_dist_traveled": "0.277"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94652566341521",
+    "shape_pt_lon": "-84.0447440842844",
+    "shape_pt_sequence": "16",
+    "shape_dist_traveled": "0.285"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94631063663281",
+    "shape_pt_lon": "-84.0447956225084",
+    "shape_pt_sequence": "17",
+    "shape_dist_traveled": "0.31"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94607861289951",
+    "shape_pt_lon": "-84.0448175623087",
+    "shape_pt_sequence": "18",
+    "shape_dist_traveled": "0.335"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94606268969643",
+    "shape_pt_lon": "-84.0448198717614",
+    "shape_pt_sequence": "19",
+    "shape_dist_traveled": "0.337"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94607633849742",
+    "shape_pt_lon": "-84.0451616705072",
+    "shape_pt_sequence": "20",
+    "shape_dist_traveled": "0.375"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94594816328299",
+    "shape_pt_lon": "-84.0451794721398",
+    "shape_pt_sequence": "21",
+    "shape_dist_traveled": "0.389"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94587650883204",
+    "shape_pt_lon": "-84.0452499104458",
+    "shape_pt_sequence": "22",
+    "shape_dist_traveled": "0.4"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94577755742257",
+    "shape_pt_lon": "-84.0454566064596",
+    "shape_pt_sequence": "23",
+    "shape_dist_traveled": "0.425"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94570040854178",
+    "shape_pt_lon": "-84.0455092507792",
+    "shape_pt_sequence": "24",
+    "shape_dist_traveled": "0.435"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94516698035057",
+    "shape_pt_lon": "-84.0455392738468",
+    "shape_pt_sequence": "25",
+    "shape_dist_traveled": "0.494"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94508917283893",
+    "shape_pt_lon": "-84.0455023654374",
+    "shape_pt_sequence": "26",
+    "shape_dist_traveled": "0.504"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94505732633557",
+    "shape_pt_lon": "-84.045382273899",
+    "shape_pt_sequence": "27",
+    "shape_dist_traveled": "0.518"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94502889195332",
+    "shape_pt_lon": "-84.0450808903258",
+    "shape_pt_sequence": "28",
+    "shape_dist_traveled": "0.551"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94495155042415",
+    "shape_pt_lon": "-84.0450173803773",
+    "shape_pt_sequence": "29",
+    "shape_dist_traveled": "0.562"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94472000465252",
+    "shape_pt_lon": "-84.045015769873",
+    "shape_pt_sequence": "30",
+    "shape_dist_traveled": "0.587"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94425679788889",
+    "shape_pt_lon": "-84.0449868892884",
+    "shape_pt_sequence": "31",
+    "shape_dist_traveled": "0.639"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94389594579139",
+    "shape_pt_lon": "-84.0449568041774",
+    "shape_pt_sequence": "32",
+    "shape_dist_traveled": "0.679"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.9433847319748",
+    "shape_pt_lon": "-84.0449197895004",
+    "shape_pt_sequence": "33",
+    "shape_dist_traveled": "0.736"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94261500079999",
+    "shape_pt_lon": "-84.0448773383005",
+    "shape_pt_sequence": "34",
+    "shape_dist_traveled": "0.821"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94204155986042",
+    "shape_pt_lon": "-84.0448390343892",
+    "shape_pt_sequence": "35",
+    "shape_dist_traveled": "0.884"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94137698645447",
+    "shape_pt_lon": "-84.0448024388483",
+    "shape_pt_sequence": "36",
+    "shape_dist_traveled": "0.958"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94096102380372",
+    "shape_pt_lon": "-84.0447771566035",
+    "shape_pt_sequence": "37",
+    "shape_dist_traveled": "1.004"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94082181962447",
+    "shape_pt_lon": "-84.0450446175143",
+    "shape_pt_sequence": "38",
+    "shape_dist_traveled": "1.037"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94065523781238",
+    "shape_pt_lon": "-84.0456053336701",
+    "shape_pt_sequence": "39",
+    "shape_dist_traveled": "1.101"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94048314593914",
+    "shape_pt_lon": "-84.045634999557",
+    "shape_pt_sequence": "40",
+    "shape_dist_traveled": "1.121"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.9403780406827",
+    "shape_pt_lon": "-84.0452283043053",
+    "shape_pt_sequence": "41",
+    "shape_dist_traveled": "1.167"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.9402703855621",
+    "shape_pt_lon": "-84.04482278961",
+    "shape_pt_sequence": "42",
+    "shape_dist_traveled": "1.213"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94016328794055",
+    "shape_pt_lon": "-84.0446641785108",
+    "shape_pt_sequence": "43",
+    "shape_dist_traveled": "1.234"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.94010181117775",
+    "shape_pt_lon": "-84.0444165990228",
+    "shape_pt_sequence": "44",
+    "shape_dist_traveled": "1.262"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93971666992378",
+    "shape_pt_lon": "-84.0445263287881",
+    "shape_pt_sequence": "45",
+    "shape_dist_traveled": "1.306"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93932936015097",
+    "shape_pt_lon": "-84.0446221116145",
+    "shape_pt_sequence": "46",
+    "shape_dist_traveled": "1.35"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93920408915902",
+    "shape_pt_lon": "-84.0446545394456",
+    "shape_pt_sequence": "47",
+    "shape_dist_traveled": "1.364"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.9391568243881",
+    "shape_pt_lon": "-84.0446456512568",
+    "shape_pt_sequence": "48",
+    "shape_dist_traveled": "1.37"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93912509354336",
+    "shape_pt_lon": "-84.0446159514984",
+    "shape_pt_sequence": "49",
+    "shape_dist_traveled": "1.375"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93911021843789",
+    "shape_pt_lon": "-84.0445637722231",
+    "shape_pt_sequence": "50",
+    "shape_dist_traveled": "1.381"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93919615665697",
+    "shape_pt_lon": "-84.0443354246074",
+    "shape_pt_sequence": "51",
+    "shape_dist_traveled": "1.407"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.939024",
+    "shape_pt_lon": "-84.043697",
+    "shape_pt_sequence": "52",
+    "shape_dist_traveled": "1.459"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.9389589108528",
+    "shape_pt_lon": "-84.0434647440871",
+    "shape_pt_sequence": "53",
+    "shape_dist_traveled": "1.506"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93927926961302",
+    "shape_pt_lon": "-84.0433689657322",
+    "shape_pt_sequence": "54",
+    "shape_dist_traveled": "1.543"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.9394214266361",
+    "shape_pt_lon": "-84.0433251613281",
+    "shape_pt_sequence": "55",
+    "shape_dist_traveled": "1.56"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.939438",
+    "shape_pt_lon": "-84.043078",
+    "shape_pt_sequence": "56",
+    "shape_dist_traveled": "1.597"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93949676004582",
+    "shape_pt_lon": "-84.0424704121516",
+    "shape_pt_sequence": "57",
+    "shape_dist_traveled": "1.654"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93950197815545",
+    "shape_pt_lon": "-84.0423387592283",
+    "shape_pt_sequence": "58",
+    "shape_dist_traveled": "1.668"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93950471943605",
+    "shape_pt_lon": "-84.042195874555",
+    "shape_pt_sequence": "59",
+    "shape_dist_traveled": "1.684"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93950937287681",
+    "shape_pt_lon": "-84.0420595652431",
+    "shape_pt_sequence": "60",
+    "shape_dist_traveled": "1.699"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93950560510053",
+    "shape_pt_lon": "-84.0419237588459",
+    "shape_pt_sequence": "61",
+    "shape_dist_traveled": "1.714"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93932694656827",
+    "shape_pt_lon": "-84.0418526043861",
+    "shape_pt_sequence": "62",
+    "shape_dist_traveled": "1.735"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93916441674404",
+    "shape_pt_lon": "-84.0416871226965",
+    "shape_pt_sequence": "63",
+    "shape_dist_traveled": "1.761"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93904364750639",
+    "shape_pt_lon": "-84.0415030389796",
+    "shape_pt_sequence": "64",
+    "shape_dist_traveled": "1.785"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93882652989536",
+    "shape_pt_lon": "-84.0411360631089",
+    "shape_pt_sequence": "65",
+    "shape_dist_traveled": "1.832"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93877761093714",
+    "shape_pt_lon": "-84.0410711382821",
+    "shape_pt_sequence": "66",
+    "shape_dist_traveled": "1.841"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93872439879922",
+    "shape_pt_lon": "-84.0410192892248",
+    "shape_pt_sequence": "67",
+    "shape_dist_traveled": "1.849"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93860739420377",
+    "shape_pt_lon": "-84.0409548622543",
+    "shape_pt_sequence": "68",
+    "shape_dist_traveled": "1.863"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93847712489684",
+    "shape_pt_lon": "-84.0409464827492",
+    "shape_pt_sequence": "69",
+    "shape_dist_traveled": "1.878"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93831748290179",
+    "shape_pt_lon": "-84.0409847362632",
+    "shape_pt_sequence": "70",
+    "shape_dist_traveled": "1.896"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93790526804534",
+    "shape_pt_lon": "-84.0410975311932",
+    "shape_pt_sequence": "71",
+    "shape_dist_traveled": "1.943"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93791543483811",
+    "shape_pt_lon": "-84.0413721007657",
+    "shape_pt_sequence": "72",
+    "shape_dist_traveled": "1.973"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93792971313351",
+    "shape_pt_lon": "-84.0416234000621",
+    "shape_pt_sequence": "73",
+    "shape_dist_traveled": "2.001"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93801943406157",
+    "shape_pt_lon": "-84.0416214268987",
+    "shape_pt_sequence": "74",
+    "shape_dist_traveled": "2.011"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93808013647371",
+    "shape_pt_lon": "-84.0416385167757",
+    "shape_pt_sequence": "75",
+    "shape_dist_traveled": "2.018"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.9381333560273",
+    "shape_pt_lon": "-84.0417143841426",
+    "shape_pt_sequence": "76",
+    "shape_dist_traveled": "2.028"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.9381491692212",
+    "shape_pt_lon": "-84.0417661717713",
+    "shape_pt_sequence": "77",
+    "shape_dist_traveled": "2.034"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93816498245021",
+    "shape_pt_lon": "-84.0418402279053",
+    "shape_pt_sequence": "78",
+    "shape_dist_traveled": "2.042"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93817110369939",
+    "shape_pt_lon": "-84.041955196169",
+    "shape_pt_sequence": "79",
+    "shape_dist_traveled": "2.055"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93816447211196",
+    "shape_pt_lon": "-84.0420620743374",
+    "shape_pt_sequence": "80",
+    "shape_dist_traveled": "2.067"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93814558312971",
+    "shape_pt_lon": "-84.042172549653",
+    "shape_pt_sequence": "81",
+    "shape_dist_traveled": "2.079"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93806546361139",
+    "shape_pt_lon": "-84.0423590295751",
+    "shape_pt_sequence": "82",
+    "shape_dist_traveled": "2.101"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93800868895506",
+    "shape_pt_lon": "-84.0424754995415",
+    "shape_pt_sequence": "83",
+    "shape_dist_traveled": "2.116"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93798455282835",
+    "shape_pt_lon": "-84.0426277550985",
+    "shape_pt_sequence": "84",
+    "shape_dist_traveled": "2.132"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93793303246509",
+    "shape_pt_lon": "-84.0429680898401",
+    "shape_pt_sequence": "85",
+    "shape_dist_traveled": "2.17"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93789255913571",
+    "shape_pt_lon": "-84.0431865014681",
+    "shape_pt_sequence": "86",
+    "shape_dist_traveled": "2.195"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93792278510311",
+    "shape_pt_lon": "-84.0434262188335",
+    "shape_pt_sequence": "87",
+    "shape_dist_traveled": "2.221"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93793612530689",
+    "shape_pt_lon": "-84.0435140997635",
+    "shape_pt_sequence": "88",
+    "shape_dist_traveled": "2.231"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93796843588535",
+    "shape_pt_lon": "-84.0436045719397",
+    "shape_pt_sequence": "89",
+    "shape_dist_traveled": "2.241"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93811029202329",
+    "shape_pt_lon": "-84.0437946545471",
+    "shape_pt_sequence": "90",
+    "shape_dist_traveled": "2.267"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93796317506452",
+    "shape_pt_lon": "-84.044044224914",
+    "shape_pt_sequence": "91",
+    "shape_dist_traveled": "2.299"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93778888741941",
+    "shape_pt_lon": "-84.0443497474269",
+    "shape_pt_sequence": "92",
+    "shape_dist_traveled": "2.338"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93759056212761",
+    "shape_pt_lon": "-84.0447040111923",
+    "shape_pt_sequence": "93",
+    "shape_dist_traveled": "2.383"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93743889754011",
+    "shape_pt_lon": "-84.0449773758339",
+    "shape_pt_sequence": "94",
+    "shape_dist_traveled": "2.417"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93734106177819",
+    "shape_pt_lon": "-84.0451442319336",
+    "shape_pt_sequence": "95",
+    "shape_dist_traveled": "2.438"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93725220134541",
+    "shape_pt_lon": "-84.0452700748287",
+    "shape_pt_sequence": "96",
+    "shape_dist_traveled": "2.455"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93710383236486",
+    "shape_pt_lon": "-84.0454232410009",
+    "shape_pt_sequence": "97",
+    "shape_dist_traveled": "2.479"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93703302156643",
+    "shape_pt_lon": "-84.045480287002",
+    "shape_pt_sequence": "98",
+    "shape_dist_traveled": "2.489"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93692669580576",
+    "shape_pt_lon": "-84.0455559204937",
+    "shape_pt_sequence": "99",
+    "shape_dist_traveled": "2.503"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93685320196694",
+    "shape_pt_lon": "-84.0455868138288",
+    "shape_pt_sequence": "100",
+    "shape_dist_traveled": "2.512"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93677214106483",
+    "shape_pt_lon": "-84.045591032246",
+    "shape_pt_sequence": "101",
+    "shape_dist_traveled": "2.521"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93667892839703",
+    "shape_pt_lon": "-84.0455673986725",
+    "shape_pt_sequence": "102",
+    "shape_dist_traveled": "2.531"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93652937757293",
+    "shape_pt_lon": "-84.0454873867401",
+    "shape_pt_sequence": "103",
+    "shape_dist_traveled": "2.55"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93646683969579",
+    "shape_pt_lon": "-84.0454491600057",
+    "shape_pt_sequence": "104",
+    "shape_dist_traveled": "2.558"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93640033885562",
+    "shape_pt_lon": "-84.0454129449283",
+    "shape_pt_sequence": "105",
+    "shape_dist_traveled": "2.567"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93634297166293",
+    "shape_pt_lon": "-84.0453776127618",
+    "shape_pt_sequence": "106",
+    "shape_dist_traveled": "2.574"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93629576054226",
+    "shape_pt_lon": "-84.0453623778292",
+    "shape_pt_sequence": "107",
+    "shape_dist_traveled": "2.579"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93624363287526",
+    "shape_pt_lon": "-84.0453512637102",
+    "shape_pt_sequence": "108",
+    "shape_dist_traveled": "2.585"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.9361862212533",
+    "shape_pt_lon": "-84.0453538959122",
+    "shape_pt_sequence": "109",
+    "shape_dist_traveled": "2.592"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93603883510741",
+    "shape_pt_lon": "-84.0453890269646",
+    "shape_pt_sequence": "110",
+    "shape_dist_traveled": "2.608"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93580414505913",
+    "shape_pt_lon": "-84.0454308854351",
+    "shape_pt_sequence": "111",
+    "shape_dist_traveled": "2.635"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93565385732093",
+    "shape_pt_lon": "-84.0454587046985",
+    "shape_pt_sequence": "112",
+    "shape_dist_traveled": "2.652"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93558390036268",
+    "shape_pt_lon": "-84.0455252542674",
+    "shape_pt_sequence": "113",
+    "shape_dist_traveled": "2.662"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93547184500151",
+    "shape_pt_lon": "-84.0455798539966",
+    "shape_pt_sequence": "114",
+    "shape_dist_traveled": "2.676"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93533906172064",
+    "shape_pt_lon": "-84.0456377473207",
+    "shape_pt_sequence": "115",
+    "shape_dist_traveled": "2.692"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93501118853525",
+    "shape_pt_lon": "-84.0456383288227",
+    "shape_pt_sequence": "116",
+    "shape_dist_traveled": "2.728"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93495718975151",
+    "shape_pt_lon": "-84.0456086223286",
+    "shape_pt_sequence": "117",
+    "shape_dist_traveled": "2.735"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93465006354252",
+    "shape_pt_lon": "-84.0456168978697",
+    "shape_pt_sequence": "118",
+    "shape_dist_traveled": "2.769"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93477095640989",
+    "shape_pt_lon": "-84.0461340991613",
+    "shape_pt_sequence": "119",
+    "shape_dist_traveled": "2.827"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93490403346722",
+    "shape_pt_lon": "-84.0468176973466",
+    "shape_pt_sequence": "120",
+    "shape_dist_traveled": "2.904"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93495932029753",
+    "shape_pt_lon": "-84.0471113963055",
+    "shape_pt_sequence": "121",
+    "shape_dist_traveled": "2.937"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93505827498137",
+    "shape_pt_lon": "-84.0474601236579",
+    "shape_pt_sequence": "122",
+    "shape_dist_traveled": "2.976"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93519897363926",
+    "shape_pt_lon": "-84.0478899692808",
+    "shape_pt_sequence": "123",
+    "shape_dist_traveled": "3.026"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93527449143981",
+    "shape_pt_lon": "-84.0481284685146",
+    "shape_pt_sequence": "124",
+    "shape_dist_traveled": "3.053"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93531543817006",
+    "shape_pt_lon": "-84.0483778894022",
+    "shape_pt_sequence": "125",
+    "shape_dist_traveled": "3.081"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93529755715117",
+    "shape_pt_lon": "-84.0486249437023",
+    "shape_pt_sequence": "126",
+    "shape_dist_traveled": "3.108"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.93545425079317",
+    "shape_pt_lon": "-84.0486430566726",
+    "shape_pt_sequence": "127",
+    "shape_dist_traveled": "3.126"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.9354703595261",
+    "shape_pt_lon": "-84.0488000764969",
+    "shape_pt_sequence": "128",
+    "shape_dist_traveled": "3.143"
+  },
+  {
+    "shape_id": "desde_odontologia_a_educacion",
+    "shape_pt_lat": "9.9355323422866",
+    "shape_pt_lon": "-84.0490437766179",
+    "shape_pt_sequence": "129",
+    "shape_dist_traveled": "3.171"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94651439468106",
+    "shape_pt_lon": "-84.0452793145875",
+    "shape_pt_sequence": "0",
+    "shape_dist_traveled": "0"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94656979269062",
+    "shape_pt_lon": "-84.0453635889366",
+    "shape_pt_sequence": "1",
+    "shape_dist_traveled": "0.011"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94668819013391",
+    "shape_pt_lon": "-84.0455133598416",
+    "shape_pt_sequence": "2",
+    "shape_dist_traveled": "0.032"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94677813595565",
+    "shape_pt_lon": "-84.0456333624982",
+    "shape_pt_sequence": "3",
+    "shape_dist_traveled": "0.049"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94692110409536",
+    "shape_pt_lon": "-84.0458288226395",
+    "shape_pt_sequence": "4",
+    "shape_dist_traveled": "0.075"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94699667079666",
+    "shape_pt_lon": "-84.0458784281265",
+    "shape_pt_sequence": "5",
+    "shape_dist_traveled": "0.085"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94709290535486",
+    "shape_pt_lon": "-84.0458729567443",
+    "shape_pt_sequence": "6",
+    "shape_dist_traveled": "0.096"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94722193423012",
+    "shape_pt_lon": "-84.0457747817661",
+    "shape_pt_sequence": "7",
+    "shape_dist_traveled": "0.114"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94733469552996",
+    "shape_pt_lon": "-84.0456766067879",
+    "shape_pt_sequence": "8",
+    "shape_dist_traveled": "0.13"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94735240267321",
+    "shape_pt_lon": "-84.0455812484176",
+    "shape_pt_sequence": "9",
+    "shape_dist_traveled": "0.141"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94731698838683",
+    "shape_pt_lon": "-84.0454835451677",
+    "shape_pt_sequence": "10",
+    "shape_dist_traveled": "0.152"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94706401578786",
+    "shape_pt_lon": "-84.045155482603",
+    "shape_pt_sequence": "11",
+    "shape_dist_traveled": "0.198"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94695753981341",
+    "shape_pt_lon": "-84.0449388905875",
+    "shape_pt_sequence": "12",
+    "shape_dist_traveled": "0.224"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94685591607748",
+    "shape_pt_lon": "-84.0447927265256",
+    "shape_pt_sequence": "13",
+    "shape_dist_traveled": "0.244"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94674691466528",
+    "shape_pt_lon": "-84.0447132911805",
+    "shape_pt_sequence": "14",
+    "shape_dist_traveled": "0.259"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94663836196663",
+    "shape_pt_lon": "-84.0446929689046",
+    "shape_pt_sequence": "15",
+    "shape_dist_traveled": "0.271"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.9465853910728",
+    "shape_pt_lon": "-84.0447054750041",
+    "shape_pt_sequence": "16",
+    "shape_dist_traveled": "0.277"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94652457073993",
+    "shape_pt_lon": "-84.0447469011822",
+    "shape_pt_sequence": "17",
+    "shape_dist_traveled": "0.285"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94630948675802",
+    "shape_pt_lon": "-84.0447977068717",
+    "shape_pt_sequence": "18",
+    "shape_dist_traveled": "0.31"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94606507414992",
+    "shape_pt_lon": "-84.0448235005163",
+    "shape_pt_sequence": "19",
+    "shape_dist_traveled": "0.337"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94607893196729",
+    "shape_pt_lon": "-84.0451642894519",
+    "shape_pt_sequence": "20",
+    "shape_dist_traveled": "0.374"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94594726623906",
+    "shape_pt_lon": "-84.0451842895768",
+    "shape_pt_sequence": "21",
+    "shape_dist_traveled": "0.389"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94587566747948",
+    "shape_pt_lon": "-84.0452538542911",
+    "shape_pt_sequence": "22",
+    "shape_dist_traveled": "0.4"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94577795917383",
+    "shape_pt_lon": "-84.0454601695233",
+    "shape_pt_sequence": "23",
+    "shape_dist_traveled": "0.425"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94569943146",
+    "shape_pt_lon": "-84.0455125384658",
+    "shape_pt_sequence": "24",
+    "shape_dist_traveled": "0.435"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94545154684154",
+    "shape_pt_lon": "-84.0455252458136",
+    "shape_pt_sequence": "25",
+    "shape_dist_traveled": "0.463"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94516751299271",
+    "shape_pt_lon": "-84.0455414357082",
+    "shape_pt_sequence": "26",
+    "shape_dist_traveled": "0.494"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94508849180003",
+    "shape_pt_lon": "-84.0455037479672",
+    "shape_pt_sequence": "27",
+    "shape_dist_traveled": "0.504"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94505511036374",
+    "shape_pt_lon": "-84.0453835472561",
+    "shape_pt_sequence": "28",
+    "shape_dist_traveled": "0.518"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94502739484005",
+    "shape_pt_lon": "-84.045084965639",
+    "shape_pt_sequence": "29",
+    "shape_dist_traveled": "0.55"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94499479036127",
+    "shape_pt_lon": "-84.0450504044021",
+    "shape_pt_sequence": "30",
+    "shape_dist_traveled": "0.556"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94494963682908",
+    "shape_pt_lon": "-84.0450208723069",
+    "shape_pt_sequence": "31",
+    "shape_dist_traveled": "0.562"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94467428591231",
+    "shape_pt_lon": "-84.0450154011338",
+    "shape_pt_sequence": "32",
+    "shape_dist_traveled": "0.592"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94435778151253",
+    "shape_pt_lon": "-84.0450041637077",
+    "shape_pt_sequence": "33",
+    "shape_dist_traveled": "0.627"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94347268380579",
+    "shape_pt_lon": "-84.0449287137552",
+    "shape_pt_sequence": "34",
+    "shape_dist_traveled": "0.725"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94295817880508",
+    "shape_pt_lon": "-84.0448982678798",
+    "shape_pt_sequence": "35",
+    "shape_dist_traveled": "0.782"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94230048632557",
+    "shape_pt_lon": "-84.0448587644203",
+    "shape_pt_sequence": "36",
+    "shape_dist_traveled": "0.855"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94171228683352",
+    "shape_pt_lon": "-84.0448222996627",
+    "shape_pt_sequence": "37",
+    "shape_dist_traveled": "0.92"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94096530647596",
+    "shape_pt_lon": "-84.0447760219723",
+    "shape_pt_sequence": "38",
+    "shape_dist_traveled": "1.003"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94090663320268",
+    "shape_pt_lon": "-84.0448740739734",
+    "shape_pt_sequence": "39",
+    "shape_dist_traveled": "1.016"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94084406020503",
+    "shape_pt_lon": "-84.0449871934796",
+    "shape_pt_sequence": "40",
+    "shape_dist_traveled": "1.03"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94077751897418",
+    "shape_pt_lon": "-84.0452171289551",
+    "shape_pt_sequence": "41",
+    "shape_dist_traveled": "1.056"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94072156165138",
+    "shape_pt_lon": "-84.0453974813657",
+    "shape_pt_sequence": "42",
+    "shape_dist_traveled": "1.077"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94066022328121",
+    "shape_pt_lon": "-84.0456042948351",
+    "shape_pt_sequence": "43",
+    "shape_dist_traveled": "1.101"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94049309734092",
+    "shape_pt_lon": "-84.0456331735173",
+    "shape_pt_sequence": "44",
+    "shape_dist_traveled": "1.119"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94043960234258",
+    "shape_pt_lon": "-84.0454384499972",
+    "shape_pt_sequence": "45",
+    "shape_dist_traveled": "1.142"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94037244769911",
+    "shape_pt_lon": "-84.0451953028132",
+    "shape_pt_sequence": "46",
+    "shape_dist_traveled": "1.169"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94027492444419",
+    "shape_pt_lon": "-84.0448203307503",
+    "shape_pt_sequence": "47",
+    "shape_dist_traveled": "1.212"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94022435173391",
+    "shape_pt_lon": "-84.0447437519701",
+    "shape_pt_sequence": "48",
+    "shape_dist_traveled": "1.222"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94016681408322",
+    "shape_pt_lon": "-84.0446621944019",
+    "shape_pt_sequence": "49",
+    "shape_dist_traveled": "1.233"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.94010200702146",
+    "shape_pt_lon": "-84.044417503094",
+    "shape_pt_sequence": "50",
+    "shape_dist_traveled": "1.261"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93987745974345",
+    "shape_pt_lon": "-84.0444809655781",
+    "shape_pt_sequence": "51",
+    "shape_dist_traveled": "1.286"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93971459423953",
+    "shape_pt_lon": "-84.0445245874922",
+    "shape_pt_sequence": "52",
+    "shape_dist_traveled": "1.305"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93927560616025",
+    "shape_pt_lon": "-84.0446392902696",
+    "shape_pt_sequence": "53",
+    "shape_dist_traveled": "1.355"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93920545121652",
+    "shape_pt_lon": "-84.0446560771702",
+    "shape_pt_sequence": "54",
+    "shape_dist_traveled": "1.363"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93916110643307",
+    "shape_pt_lon": "-84.0446448875091",
+    "shape_pt_sequence": "55",
+    "shape_dist_traveled": "1.368"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93912385292449",
+    "shape_pt_lon": "-84.0446191813258",
+    "shape_pt_sequence": "56",
+    "shape_dist_traveled": "1.373"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93911625815432",
+    "shape_pt_lon": "-84.0445525134932",
+    "shape_pt_sequence": "57",
+    "shape_dist_traveled": "1.38"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93919941590806",
+    "shape_pt_lon": "-84.0443337547524",
+    "shape_pt_sequence": "58",
+    "shape_dist_traveled": "1.406"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93911055274011",
+    "shape_pt_lon": "-84.044006444136",
+    "shape_pt_sequence": "59",
+    "shape_dist_traveled": "1.443"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.9390190082839",
+    "shape_pt_lon": "-84.0436747724812",
+    "shape_pt_sequence": "60",
+    "shape_dist_traveled": "1.481"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93895911426052",
+    "shape_pt_lon": "-84.0434673567427",
+    "shape_pt_sequence": "61",
+    "shape_dist_traveled": "1.505"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.9392879865273",
+    "shape_pt_lon": "-84.0433689432454",
+    "shape_pt_sequence": "62",
+    "shape_dist_traveled": "1.543"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93942115014918",
+    "shape_pt_lon": "-84.0433274860744",
+    "shape_pt_sequence": "63",
+    "shape_dist_traveled": "1.558"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93944755512195",
+    "shape_pt_lon": "-84.0429942406062",
+    "shape_pt_sequence": "64",
+    "shape_dist_traveled": "1.595"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93946810072644",
+    "shape_pt_lon": "-84.0427365454686",
+    "shape_pt_sequence": "65",
+    "shape_dist_traveled": "1.623"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93949017843466",
+    "shape_pt_lon": "-84.0424561880641",
+    "shape_pt_sequence": "66",
+    "shape_dist_traveled": "1.654"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93949896641922",
+    "shape_pt_lon": "-84.0421337910545",
+    "shape_pt_sequence": "67",
+    "shape_dist_traveled": "1.689"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93950631475532",
+    "shape_pt_lon": "-84.0419274245262",
+    "shape_pt_sequence": "68",
+    "shape_dist_traveled": "1.712"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93932958005353",
+    "shape_pt_lon": "-84.0418524186819",
+    "shape_pt_sequence": "69",
+    "shape_dist_traveled": "1.733"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93916814008368",
+    "shape_pt_lon": "-84.041691039804",
+    "shape_pt_sequence": "70",
+    "shape_dist_traveled": "1.758"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93900519121203",
+    "shape_pt_lon": "-84.0414413521148",
+    "shape_pt_sequence": "71",
+    "shape_dist_traveled": "1.791"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93882565486029",
+    "shape_pt_lon": "-84.0411391429389",
+    "shape_pt_sequence": "72",
+    "shape_dist_traveled": "1.83"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93878072700935",
+    "shape_pt_lon": "-84.0410728454411",
+    "shape_pt_sequence": "73",
+    "shape_dist_traveled": "1.839"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93872490109004",
+    "shape_pt_lon": "-84.0410213000932",
+    "shape_pt_sequence": "74",
+    "shape_dist_traveled": "1.847"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93861004710345",
+    "shape_pt_lon": "-84.0409544792739",
+    "shape_pt_sequence": "75",
+    "shape_dist_traveled": "1.862"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93847396797512",
+    "shape_pt_lon": "-84.0409494403816",
+    "shape_pt_sequence": "76",
+    "shape_dist_traveled": "1.877"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93814652860348",
+    "shape_pt_lon": "-84.0410341635524",
+    "shape_pt_sequence": "77",
+    "shape_dist_traveled": "1.914"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93790671250708",
+    "shape_pt_lon": "-84.0411014405278",
+    "shape_pt_sequence": "78",
+    "shape_dist_traveled": "1.942"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93791663555238",
+    "shape_pt_lon": "-84.0413834314017",
+    "shape_pt_sequence": "79",
+    "shape_dist_traveled": "1.973"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93793079347671",
+    "shape_pt_lon": "-84.0416285810649",
+    "shape_pt_sequence": "80",
+    "shape_dist_traveled": "1.999"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93801967154644",
+    "shape_pt_lon": "-84.0416254546011",
+    "shape_pt_sequence": "81",
+    "shape_dist_traveled": "2.009"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93807996226397",
+    "shape_pt_lon": "-84.0416431189912",
+    "shape_pt_sequence": "82",
+    "shape_dist_traveled": "2.016"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93810791480517",
+    "shape_pt_lon": "-84.0416788253891",
+    "shape_pt_sequence": "83",
+    "shape_dist_traveled": "2.021"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93813256489417",
+    "shape_pt_lon": "-84.0417178845482",
+    "shape_pt_sequence": "84",
+    "shape_dist_traveled": "2.026"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.9381630635316",
+    "shape_pt_lon": "-84.0418440755105",
+    "shape_pt_sequence": "85",
+    "shape_dist_traveled": "2.041"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93816840355805",
+    "shape_pt_lon": "-84.0419580950124",
+    "shape_pt_sequence": "86",
+    "shape_dist_traveled": "2.053"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93816233402513",
+    "shape_pt_lon": "-84.0420632597521",
+    "shape_pt_sequence": "87",
+    "shape_dist_traveled": "2.065"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93814321123235",
+    "shape_pt_lon": "-84.0421742120474",
+    "shape_pt_sequence": "88",
+    "shape_dist_traveled": "2.077"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93803086770445",
+    "shape_pt_lon": "-84.042431585693",
+    "shape_pt_sequence": "89",
+    "shape_dist_traveled": "2.108"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93800811636062",
+    "shape_pt_lon": "-84.0424780922361",
+    "shape_pt_sequence": "90",
+    "shape_dist_traveled": "2.113"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93798034157711",
+    "shape_pt_lon": "-84.0426586032431",
+    "shape_pt_sequence": "91",
+    "shape_dist_traveled": "2.134"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93791715763552",
+    "shape_pt_lon": "-84.0430584128099",
+    "shape_pt_sequence": "92",
+    "shape_dist_traveled": "2.178"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93789378213828",
+    "shape_pt_lon": "-84.0431955755255",
+    "shape_pt_sequence": "93",
+    "shape_dist_traveled": "2.193"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.9379228858361",
+    "shape_pt_lon": "-84.0434355505527",
+    "shape_pt_sequence": "94",
+    "shape_dist_traveled": "2.22"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93793324365073",
+    "shape_pt_lon": "-84.0435100147268",
+    "shape_pt_sequence": "95",
+    "shape_dist_traveled": "2.228"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93796925623814",
+    "shape_pt_lon": "-84.0436073742708",
+    "shape_pt_sequence": "96",
+    "shape_dist_traveled": "2.239"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93811129632628",
+    "shape_pt_lon": "-84.0437957690067",
+    "shape_pt_sequence": "97",
+    "shape_dist_traveled": "2.265"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93796149488666",
+    "shape_pt_lon": "-84.0440534496211",
+    "shape_pt_sequence": "98",
+    "shape_dist_traveled": "2.298"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93777133769974",
+    "shape_pt_lon": "-84.0443836171542",
+    "shape_pt_sequence": "99",
+    "shape_dist_traveled": "2.34"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.9375818272445",
+    "shape_pt_lon": "-84.0447196978834",
+    "shape_pt_sequence": "100",
+    "shape_dist_traveled": "2.382"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93745018852863",
+    "shape_pt_lon": "-84.0449635706007",
+    "shape_pt_sequence": "101",
+    "shape_dist_traveled": "2.413"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93734180767617",
+    "shape_pt_lon": "-84.0451463546949",
+    "shape_pt_sequence": "102",
+    "shape_dist_traveled": "2.436"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93725372200282",
+    "shape_pt_lon": "-84.0452714142582",
+    "shape_pt_sequence": "103",
+    "shape_dist_traveled": "2.453"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.937108322267",
+    "shape_pt_lon": "-84.0454262175884",
+    "shape_pt_sequence": "104",
+    "shape_dist_traveled": "2.476"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93692719931924",
+    "shape_pt_lon": "-84.0455586526682",
+    "shape_pt_sequence": "105",
+    "shape_dist_traveled": "2.501"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93685401442958",
+    "shape_pt_lon": "-84.0455873611916",
+    "shape_pt_sequence": "106",
+    "shape_dist_traveled": "2.51"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93677373653686",
+    "shape_pt_lon": "-84.0455923110153",
+    "shape_pt_sequence": "107",
+    "shape_dist_traveled": "2.519"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93668019604487",
+    "shape_pt_lon": "-84.0455680674162",
+    "shape_pt_sequence": "108",
+    "shape_dist_traveled": "2.529"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93646480148586",
+    "shape_pt_lon": "-84.0454482787829",
+    "shape_pt_sequence": "109",
+    "shape_dist_traveled": "2.556"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93636588688585",
+    "shape_pt_lon": "-84.0453892763726",
+    "shape_pt_sequence": "110",
+    "shape_dist_traveled": "2.569"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93632308831075",
+    "shape_pt_lon": "-84.0453697036442",
+    "shape_pt_sequence": "111",
+    "shape_dist_traveled": "2.574"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93629762770389",
+    "shape_pt_lon": "-84.0453615303045",
+    "shape_pt_sequence": "112",
+    "shape_dist_traveled": "2.577"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93624652235345",
+    "shape_pt_lon": "-84.0453532765511",
+    "shape_pt_sequence": "113",
+    "shape_dist_traveled": "2.583"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93618732594838",
+    "shape_pt_lon": "-84.0453570927397",
+    "shape_pt_sequence": "114",
+    "shape_dist_traveled": "2.59"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93603538344972",
+    "shape_pt_lon": "-84.0453927689936",
+    "shape_pt_sequence": "115",
+    "shape_dist_traveled": "2.607"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93577991764324",
+    "shape_pt_lon": "-84.045437957483",
+    "shape_pt_sequence": "116",
+    "shape_dist_traveled": "2.636"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93565154581259",
+    "shape_pt_lon": "-84.0454621421002",
+    "shape_pt_sequence": "117",
+    "shape_dist_traveled": "2.65"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93558482499322",
+    "shape_pt_lon": "-84.0455294509499",
+    "shape_pt_sequence": "118",
+    "shape_dist_traveled": "2.66"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93533787082614",
+    "shape_pt_lon": "-84.0456405554627",
+    "shape_pt_sequence": "119",
+    "shape_dist_traveled": "2.69"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.9350109333037",
+    "shape_pt_lon": "-84.0456410811815",
+    "shape_pt_sequence": "120",
+    "shape_dist_traveled": "2.727"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93495968412818",
+    "shape_pt_lon": "-84.0456087998837",
+    "shape_pt_sequence": "121",
+    "shape_dist_traveled": "2.733"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93464858697721",
+    "shape_pt_lon": "-84.0456196757956",
+    "shape_pt_sequence": "122",
+    "shape_dist_traveled": "2.768"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93480225304748",
+    "shape_pt_lon": "-84.046294734079",
+    "shape_pt_sequence": "123",
+    "shape_dist_traveled": "2.844"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93495610721508",
+    "shape_pt_lon": "-84.0470992295944",
+    "shape_pt_sequence": "124",
+    "shape_dist_traveled": "2.933"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93514466639919",
+    "shape_pt_lon": "-84.047738281775",
+    "shape_pt_sequence": "125",
+    "shape_dist_traveled": "3.007"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93527584609242",
+    "shape_pt_lon": "-84.048128961463",
+    "shape_pt_sequence": "126",
+    "shape_dist_traveled": "3.052"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93531583349863",
+    "shape_pt_lon": "-84.0483847176419",
+    "shape_pt_sequence": "127",
+    "shape_dist_traveled": "3.08"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93529983825585",
+    "shape_pt_lon": "-84.0486296483808",
+    "shape_pt_sequence": "128",
+    "shape_dist_traveled": "3.107"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93545520267059",
+    "shape_pt_lon": "-84.0486491888617",
+    "shape_pt_sequence": "129",
+    "shape_dist_traveled": "3.124"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.9354703980085",
+    "shape_pt_lon": "-84.0488055127148",
+    "shape_pt_sequence": "130",
+    "shape_dist_traveled": "3.142"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93553667972237",
+    "shape_pt_lon": "-84.0490832368349",
+    "shape_pt_sequence": "131",
+    "shape_dist_traveled": "3.173"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.9355977604479",
+    "shape_pt_lon": "-84.0493162487417",
+    "shape_pt_sequence": "132",
+    "shape_dist_traveled": "3.199"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93570243695239",
+    "shape_pt_lon": "-84.0495918083302",
+    "shape_pt_sequence": "133",
+    "shape_dist_traveled": "3.232"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93571038517426",
+    "shape_pt_lon": "-84.0496787768477",
+    "shape_pt_sequence": "134",
+    "shape_dist_traveled": "3.241"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93571038484225",
+    "shape_pt_lon": "-84.0499696558076",
+    "shape_pt_sequence": "135",
+    "shape_dist_traveled": "3.273"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93570321714193",
+    "shape_pt_lon": "-84.0500954158227",
+    "shape_pt_sequence": "136",
+    "shape_dist_traveled": "3.287"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93566700857604",
+    "shape_pt_lon": "-84.0503419760518",
+    "shape_pt_sequence": "137",
+    "shape_dist_traveled": "3.314"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93560674646944",
+    "shape_pt_lon": "-84.0506470296121",
+    "shape_pt_sequence": "138",
+    "shape_dist_traveled": "3.348"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93553343216217",
+    "shape_pt_lon": "-84.0510737676674",
+    "shape_pt_sequence": "139",
+    "shape_dist_traveled": "3.396"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93549263100849",
+    "shape_pt_lon": "-84.0513075140395",
+    "shape_pt_sequence": "140",
+    "shape_dist_traveled": "3.422"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93546272803463",
+    "shape_pt_lon": "-84.0515459542782",
+    "shape_pt_sequence": "141",
+    "shape_dist_traveled": "3.448"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93544955548966",
+    "shape_pt_lon": "-84.0516525931019",
+    "shape_pt_sequence": "142",
+    "shape_dist_traveled": "3.46"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93544794162221",
+    "shape_pt_lon": "-84.0517605730299",
+    "shape_pt_sequence": "143",
+    "shape_dist_traveled": "3.472"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93547169143514",
+    "shape_pt_lon": "-84.0519830595855",
+    "shape_pt_sequence": "144",
+    "shape_dist_traveled": "3.496"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93548892832953",
+    "shape_pt_lon": "-84.0521081889526",
+    "shape_pt_sequence": "145",
+    "shape_dist_traveled": "3.51"
+  },
+  {
+    "shape_id": "desde_odontologia_a_artes",
+    "shape_pt_lat": "9.93550175796293",
+    "shape_pt_lon": "-84.0521827017793",
+    "shape_pt_sequence": "146",
+    "shape_dist_traveled": "3.519"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94651450274987",
+    "shape_pt_lon": "-84.0452709224469",
+    "shape_pt_sequence": "0",
+    "shape_dist_traveled": "0"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.9465713930344",
+    "shape_pt_lon": "-84.0453586296957",
+    "shape_pt_sequence": "1",
+    "shape_dist_traveled": "0.011"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94670523135418",
+    "shape_pt_lon": "-84.0455321860811",
+    "shape_pt_sequence": "2",
+    "shape_dist_traveled": "0.036"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94685977487793",
+    "shape_pt_lon": "-84.0457428830683",
+    "shape_pt_sequence": "3",
+    "shape_dist_traveled": "0.064"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94692114024093",
+    "shape_pt_lon": "-84.0458252584096",
+    "shape_pt_sequence": "4",
+    "shape_dist_traveled": "0.076"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94699848130395",
+    "shape_pt_lon": "-84.045874911642",
+    "shape_pt_sequence": "5",
+    "shape_dist_traveled": "0.086"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94709174550324",
+    "shape_pt_lon": "-84.0458702927366",
+    "shape_pt_sequence": "6",
+    "shape_dist_traveled": "0.096"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94733286724273",
+    "shape_pt_lon": "-84.0456762984049",
+    "shape_pt_sequence": "7",
+    "shape_dist_traveled": "0.13"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94734992775087",
+    "shape_pt_lon": "-84.0455816108455",
+    "shape_pt_sequence": "8",
+    "shape_dist_traveled": "0.141"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94731694409985",
+    "shape_pt_lon": "-84.0454811496546",
+    "shape_pt_sequence": "9",
+    "shape_dist_traveled": "0.152"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94706331033958",
+    "shape_pt_lon": "-84.0451520526366",
+    "shape_pt_sequence": "10",
+    "shape_dist_traveled": "0.198"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94695639770921",
+    "shape_pt_lon": "-84.044934964086",
+    "shape_pt_sequence": "11",
+    "shape_dist_traveled": "0.225"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94685739750313",
+    "shape_pt_lon": "-84.0447940381815",
+    "shape_pt_sequence": "12",
+    "shape_dist_traveled": "0.244"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94674934743632",
+    "shape_pt_lon": "-84.0447120526121",
+    "shape_pt_sequence": "13",
+    "shape_dist_traveled": "0.259"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94663902259388",
+    "shape_pt_lon": "-84.0446901128118",
+    "shape_pt_sequence": "14",
+    "shape_dist_traveled": "0.271"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94658480665502",
+    "shape_pt_lon": "-84.0447036688627",
+    "shape_pt_sequence": "15",
+    "shape_dist_traveled": "0.277"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94652566341521",
+    "shape_pt_lon": "-84.0447440842844",
+    "shape_pt_sequence": "16",
+    "shape_dist_traveled": "0.285"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94631063663281",
+    "shape_pt_lon": "-84.0447956225084",
+    "shape_pt_sequence": "17",
+    "shape_dist_traveled": "0.31"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94607861289951",
+    "shape_pt_lon": "-84.0448175623087",
+    "shape_pt_sequence": "18",
+    "shape_dist_traveled": "0.335"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94606268969643",
+    "shape_pt_lon": "-84.0448198717614",
+    "shape_pt_sequence": "19",
+    "shape_dist_traveled": "0.337"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94607633849742",
+    "shape_pt_lon": "-84.0451616705072",
+    "shape_pt_sequence": "20",
+    "shape_dist_traveled": "0.375"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94594816328299",
+    "shape_pt_lon": "-84.0451794721398",
+    "shape_pt_sequence": "21",
+    "shape_dist_traveled": "0.389"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94587650883204",
+    "shape_pt_lon": "-84.0452499104458",
+    "shape_pt_sequence": "22",
+    "shape_dist_traveled": "0.4"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94577755742257",
+    "shape_pt_lon": "-84.0454566064596",
+    "shape_pt_sequence": "23",
+    "shape_dist_traveled": "0.425"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94570040854178",
+    "shape_pt_lon": "-84.0455092507792",
+    "shape_pt_sequence": "24",
+    "shape_dist_traveled": "0.435"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94516698035057",
+    "shape_pt_lon": "-84.0455392738468",
+    "shape_pt_sequence": "25",
+    "shape_dist_traveled": "0.494"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94508917283893",
+    "shape_pt_lon": "-84.0455023654374",
+    "shape_pt_sequence": "26",
+    "shape_dist_traveled": "0.504"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94505732633557",
+    "shape_pt_lon": "-84.045382273899",
+    "shape_pt_sequence": "27",
+    "shape_dist_traveled": "0.518"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94502889195332",
+    "shape_pt_lon": "-84.0450808903258",
+    "shape_pt_sequence": "28",
+    "shape_dist_traveled": "0.551"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94495155042415",
+    "shape_pt_lon": "-84.0450173803773",
+    "shape_pt_sequence": "29",
+    "shape_dist_traveled": "0.562"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94472000465252",
+    "shape_pt_lon": "-84.045015769873",
+    "shape_pt_sequence": "30",
+    "shape_dist_traveled": "0.587"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94425679788889",
+    "shape_pt_lon": "-84.0449868892884",
+    "shape_pt_sequence": "31",
+    "shape_dist_traveled": "0.639"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.94389594579139",
+    "shape_pt_lon": "-84.0449568041774",
+    "shape_pt_sequence": "32",
+    "shape_dist_traveled": "0.679"
+  },
+  {
+    "shape_id": "desde_odontologia_a_edufi",
+    "shape_pt_lat": "9.9433847319748",
+    "shape_pt_lon": "-84.0449197895004",
+    "shape_pt_sequence": "33",
+    "shape_dist_traveled": "0.736"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "service_id": "entresemana",
+    "monday": "1",
+    "tuesday": "1",
+    "wednesday": "1",
+    "thursday": "1",
+    "friday": "1",
+    "saturday": "0",
+    "sunday": "0",
+    "start_date": "20260810",
+    "end_date": "20261205"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "agency": 1,
+    "stops": 22,
+    "routes": 1,
+    "trips": 122,
+    "stop_times": 1043,
+    "calendar": 1,
+    "calendar_dates": 4,
+    "fare_attributes": 1,
+    "fare_rules": 1,
+    "shapes": 930,
+    "feed_info": 1,
+    "translations": 2
+  },
+  "generated_at": "2026-08-09T18:48:33.568098Z"
+}

@@ -57,6 +57,28 @@ pnpm preview
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
+## GTFS data (bUCR)
+
+The site consumes bUCR's GTFS feed as a static API published by the sibling
+repo [`bucr`](https://github.com/simovilab/bucr) (`api/` folder, branch
+`feature/static-website-gtfs`) — `bucr` is the single source of truth, this
+repo doesn't duplicate the data.
+
+- `useGtfs()` (`app/composables/useGtfs.ts`): typed functions (`getRoutes`,
+  `getStops`, `getTrips`, etc.) that `$fetch` against
+  `runtimeConfig.public.gtfsApiBase`, with in-memory per-session caching and
+  automatic fallback to the local copy if the remote fetch fails.
+- `gtfsApiBase` (`nuxt.config.ts` / env `NUXT_PUBLIC_GTFS_API_BASE`) defaults
+  to `bucr`'s raw GitHub URL (`raw.githubusercontent.com` responds with
+  `Access-Control-Allow-Origin: *`, so it works from the browser with no
+  backend of its own and no CORS setup). Pointing it at `/api/` forces the
+  local copy.
+- `public/api/*.json`: offline fallback copy of `bucr/api/*.json` (same
+  format — one array of objects per GTFS file). Refresh it by copying again
+  from `bucr/api/` whenever the feed version changes.
+- `/gtfs`: test page that lists routes and stops consuming the live feed, to
+  verify the end-to-end pattern.
+
 ## Renovate integration
 
 Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.

@@ -1,0 +1,26 @@
+[
+  {
+    "service_id": "entresemana",
+    "date": "20260831",
+    "exception_type": "2",
+    "holiday_name": "Día de la Persona Negra y la Cultura Afrocostarricense"
+  },
+  {
+    "service_id": "entresemana",
+    "date": "20260915",
+    "exception_type": "2",
+    "holiday_name": "Día de la Independencia"
+  },
+  {
+    "service_id": "entresemana",
+    "date": "20261012",
+    "exception_type": "2",
+    "holiday_name": "Día de las Culturas"
+  },
+  {
+    "service_id": "entresemana",
+    "date": "20261201",
+    "exception_type": "2",
+    "holiday_name": "Abolición del Ejército"
+  }
+]

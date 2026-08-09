@@ -1,0 +1,12 @@
+[
+  {
+    "agency_id": "bUCR",
+    "agency_name": "Oficina de Servicios Generales de la Universidad de Costa Rica",
+    "agency_url": "https://bus.ucr.ac.cr/",
+    "agency_timezone": "America/Costa_Rica",
+    "agency_lang": "es",
+    "agency_phone": "25112919",
+    "agency_fare_url": "https://bus.ucr.ac.cr/#tarifas",
+    "agency_email": "bus@ucr.ac.cr"
+  }
+]

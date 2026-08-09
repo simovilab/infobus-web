@@ -1,0 +1,11 @@
+[
+  {
+    "fare_id": "no_tarifa",
+    "price": "0",
+    "currency_type": "CRC",
+    "payment_method": "0",
+    "transfers": "0",
+    "agency_id": "bUCR",
+    "transfer_duration": ""
+  }
+]

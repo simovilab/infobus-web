@@ -1,0 +1,20 @@
+[
+  {
+    "table_name": "routes",
+    "field_name": "route_long_name",
+    "language": "en",
+    "translation": "UCR Internal Route",
+    "record_id": "bUCR_L1",
+    "record_sub_id": "",
+    "field_value": ""
+  },
+  {
+    "table_name": "routes",
+    "field_name": "route_desc",
+    "language": "en",
+    "translation": "Connects the Rodrigo Facio University Campus with the Research City and the Sports Facilities. From 19:00, departures from Educacion and Artes Plasticas travel along the university mile (milla universitaria).",
+    "record_id": "bUCR_L1",
+    "record_sub_id": "",
+    "field_value": ""
+  }
+]
