@@ -34,7 +34,7 @@ export const copy = {
   mapas: {
     title: 'Mapas',
     description: 'Trayectorias de cada ruta, en orden de parada.',
-    pending: 'Mapa interactivo próximamente.'
+    legendHint: 'Es una sola ruta con variantes según el horario. Elija una para verla resaltada en el mapa.'
   },
   paradas: {
     title: 'Paradas',

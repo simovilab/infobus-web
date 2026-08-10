@@ -52,10 +52,33 @@ const paradaTabs = computed(() => [
   { label: copy.horarios.desde, sentido: copy.horarios.sentidoDesde, rows: dedupeStops(desde.value) }
 ])
 
-const mapaTabs = computed(() => (routes.value ?? []).map(route => ({
-  label: `${route.route_short_name} · ${route.direction_id === 0 ? copy.horarios.hacia : copy.horarios.desde}`,
-  route
-})))
+// One map per direction, not per trip pattern — bUCR's schedule has 7 real
+// patterns (outbound from Educación/Artes with/without the evening milla
+// detour, 3 return variants), which read fine as separate rows in the
+// Horarios table but would be 7 confusing tabs here. It's genuinely one
+// route (bUCR_L1 in the real GTFS), so all patterns share one color; the
+// legend below lets someone pick a pattern to see solid on the map instead
+// of relying on hue to tell 7 near-identical lines apart.
+const mapaTabs = computed(() => [
+  { label: copy.horarios.hacia, sentido: copy.horarios.sentidoHacia, routes: hacia.value },
+  { label: copy.horarios.desde, sentido: copy.horarios.sentidoDesde, routes: desde.value }
+])
+
+// Defaults to the most frequent pattern (same rule CampusLiveMap falls back
+// to on its own) so the map's initial state and the legend's initial
+// "active" highlight always agree without the user having to click anything.
+function primaryPattern(list: GtfsRoute[]) {
+  return list.reduce((best, r) => {
+    const bestFreq = best?.frequency_minutes ?? Infinity
+    const freq = r.frequency_minutes ?? Infinity
+    return freq < bestFreq ? r : best
+  }, list[0])?.route_id
+}
+
+const selectedPattern = ref<Record<string, string | undefined>>({})
+function selectedFor(item: { label: string, routes: GtfsRoute[] }) {
+  return selectedPattern.value[item.label] ?? primaryPattern(item.routes)
+}
 
 // Nuxt UI's default UPageSection padding (py-16 sm:py-24 lg:py-32, plus a
 // mt-16 gap before the body) is meant for a marketing page with a handful
@@ -74,6 +97,12 @@ const sectionUi = {
   description: 'mt-1 text-lg sm:text-xl text-toned',
   body: 'mt-4'
 }
+
+// The map reads cramped at the same max-width as a paragraph of text — it's
+// the one section here that benefits from the full page width instead of a
+// reading-width column. max-w-none here wins over UPageSection's default
+// max-w-(--ui-container) via tailwind-merge (both are max-w-* utilities).
+const mapaSectionUi = { ...sectionUi, container: `${sectionUi.container} max-w-none` }
 
 // text-muted (the UTable default) is too low-contrast for primary data;
 // text-sm reads small for a schedule someone's checking at a glance.
@@ -166,7 +195,7 @@ useSeoMeta({
       icon="i-lucide-map"
       :title="copy.mapas.title"
       :description="copy.mapas.description"
-      :ui="sectionUi"
+      :ui="mapaSectionUi"
       class="scroll-mt-20"
     >
       <UTabs
@@ -174,28 +203,39 @@ useSeoMeta({
         :ui="{ trigger: 'flex-1' }"
       >
         <template #content="{ item }">
-          <UAlert
-            color="neutral"
-            variant="subtle"
-            :description="copy.mapas.pending"
-            :ui="{ description: 'text-base' }"
-            class="mb-4"
-          />
-          <UPageList divide>
-            <div
-              v-for="(stop, i) in item.route.stops"
-              :key="stop.id"
-              class="flex items-center gap-3 py-2"
+          <p class="mb-2 text-sm text-toned">
+            {{ copy.mapas.legendHint }}
+          </p>
+          <div class="mb-3 flex flex-wrap gap-x-4 gap-y-1.5">
+            <button
+              v-for="route in item.routes"
+              :key="route.route_id"
+              type="button"
+              class="flex items-center gap-1.5 rounded text-sm transition-opacity"
+              :class="selectedFor(item) === route.route_id ? 'font-semibold text-highlighted opacity-100' : 'text-toned opacity-55 hover:opacity-80'"
+              :aria-pressed="selectedFor(item) === route.route_id"
+              @click="selectedPattern[item.label] = route.route_id"
             >
-              <UBadge
-                color="neutral"
-                variant="soft"
-              >
-                {{ i + 1 }}
-              </UBadge>
-              <span class="text-base text-toned">{{ stop.name }}</span>
-            </div>
-          </UPageList>
+              <span
+                class="h-2.5 w-2.5 shrink-0 rounded-full"
+                :style="{ backgroundColor: `#${route.route_color}` }"
+              />
+              {{ route.route_long_name }}
+            </button>
+          </div>
+          <div class="h-[420px] sm:h-[560px]">
+            <ClientOnly>
+              <CampusLiveMap
+                :routes="item.routes"
+                :selected="selectedFor(item)"
+              />
+              <template #fallback>
+                <div class="flex h-full items-center justify-center bg-elevated/50">
+                  <span class="map-spinner" />
+                </div>
+              </template>
+            </ClientOnly>
+          </div>
         </template>
       </UTabs>
     </UPageSection>
