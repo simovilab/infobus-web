@@ -41,4 +41,4 @@ See the [guidelines](https://github.com/simovilab/.github/blob/main/CONTRIBUTING
 
 ## License
 
-See [LICENSE](site/LICENSE).
+Apache 2.0 — see [LICENSE](LICENSE).
