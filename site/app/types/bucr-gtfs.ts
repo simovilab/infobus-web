@@ -3,6 +3,14 @@
  * per GTFS file, using the spec's standard field names. Distinct from
  * ~/types/gtfs.ts (GtfsRoute/GtfsStop), which is the enriched model used by
  * the coming-soon UI (see useSchedule/scheduleProvider).
+ *
+ * Shapes and stops specifically are consumed as GeoJSON
+ * (api/shapes.geojson, api/stops.geojson) instead of the raw per-row
+ * shapes.json/stops.json — bucr/build.py builds the LineString/Point
+ * geometry once, following the same convention incofer
+ * (utils/create_geo_shapes.py/create_geo_stops.py) and databus/infobus
+ * (GeoDjango + django-rest-framework-gis) use. Nothing in this app should
+ * re-derive geometry from raw lat/lon rows itself.
  */
 
 export interface BucrAgency {
@@ -14,27 +22,6 @@ export interface BucrAgency {
   agency_phone?: string
   agency_fare_url?: string
   agency_email?: string
-}
-
-export interface BucrStop {
-  stop_id: string
-  stop_name: string
-  stop_code?: string
-  stop_desc?: string
-  stop_lat: string
-  stop_lon: string
-  stop_point?: string
-  stop_heading?: string
-  zone_id?: string
-  stop_url?: string
-  location_type?: string
-  parent_station?: string
-  wheelchair_boarding?: string
-  shelter?: string
-  bench?: string
-  lit?: string
-  bay?: string
-  device_charging_station?: string
 }
 
 export interface BucrRoute {
@@ -93,14 +80,6 @@ export interface BucrCalendarDate {
   holiday_name?: string
 }
 
-export interface BucrShape {
-  shape_id: string
-  shape_pt_lat: string
-  shape_pt_lon: string
-  shape_pt_sequence: string
-  shape_dist_traveled?: string
-}
-
 export interface BucrFeedInfo {
   feed_publisher_name: string
   feed_publisher_url: string
@@ -141,4 +120,42 @@ export interface BucrTranslation {
 export interface BucrIndex {
   files: Record<string, number>
   generated_at: string
+}
+
+export interface BucrShapeFeature {
+  type: 'Feature'
+  geometry: { type: 'LineString', coordinates: [number, number][] }
+  properties: { shape_id: string, shape_dist_traveled: number | null }
+}
+
+export interface BucrShapesGeoJson {
+  type: 'FeatureCollection'
+  features: BucrShapeFeature[]
+}
+
+export interface BucrStopFeature {
+  type: 'Feature'
+  geometry: { type: 'Point', coordinates: [number, number] }
+  properties: {
+    stop_id: string
+    stop_name: string
+    stop_code?: string
+    stop_desc?: string
+    stop_heading?: string
+    zone_id?: string
+    stop_url?: string
+    location_type?: string
+    parent_station?: string
+    wheelchair_boarding?: string
+    shelter?: string
+    bench?: string
+    lit?: string
+    bay?: string
+    device_charging_station?: string
+  }
+}
+
+export interface BucrStopsGeoJson {
+  type: 'FeatureCollection'
+  features: BucrStopFeature[]
 }

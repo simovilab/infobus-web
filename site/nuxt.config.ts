@@ -7,6 +7,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt'
   ],
 
+  components: [{ path: '~/components', pathPrefix: false }],
+
   devtools: {
     enabled: true
   },
@@ -28,14 +30,13 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css', 'maplibre-gl/dist/maplibre-gl.css'],
 
   runtimeConfig: {
-    public: {
-      // Base URL of the static GTFS API published by the `bucr` repo
-      // (raw.githubusercontent.com responds with Access-Control-Allow-Origin: *,
-      // so fetching from the browser works with no backend or CORS setup).
-      // Locally/offline this can point at /api/ (site/public/api/, a static
-      // fallback copy) so the landing page works without hitting the network.
-      gtfsApiBase: 'https://raw.githubusercontent.com/simovilab/bucr/feature/static-website-gtfs/api/'
-    }
+    // Base URL of the static GTFS API published by the `bucr` repo, fetched
+    // server-side by server/utils/bucrGtfs.ts to build the schedule shown
+    // on the site (see server/utils/scheduleProvider.ts). Server-only (not
+    // under `public`) since nothing fetches it from the browser — falls
+    // back to the bundled copy in server/assets/gtfs/ if the remote fetch
+    // fails. Override with env NUXT_GTFS_API_BASE.
+    gtfsApiBase: 'https://raw.githubusercontent.com/simovilab/bucr/feature/static-website-gtfs/api/'
   },
 
   compatibilityDate: '2026-06-30',
