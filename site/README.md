@@ -1,84 +1,75 @@
-# Nuxt SaaS Template
+# bUCR — Infobús web
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+![Static Badge](https://img.shields.io/badge/frontend-Nuxt_4-white?logo=nuxt)
+![Static Badge](https://img.shields.io/badge/ui-Nuxt_UI-white?logo=nuxt)
+![Static Badge](https://img.shields.io/badge/maps-MapLibre_GL_JS-white?logo=mapbox)
+![Static Badge](https://img.shields.io/badge/package_manager-pnpm-white?logo=pnpm)
+![Static Badge](https://img.shields.io/badge/infrastructure-Docker-white?logo=docker)
 
-Fully built SaaS application to launch your next project with a landing page, a pricing page, a documentation and a blog powered by [Nuxt UI](https://ui.nuxt.com) components.
+Nuxt 4 site for [bUCR](https://github.com/simovilab/bucr), the UCR Rodrigo Facio campus internal bus. Renders schedules, fares, and stops from bUCR's static GTFS feed, plus an interactive campus map built with MapLibre GL JS. No backend of its own — see [Data](#data) below.
 
-- [Live demo](https://saas-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
+## Getting started
 
-<a href="https://saas-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/saas-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/saas-light.png">
-    <img alt="Nuxt SaaS Template" src="https://ui.nuxt.com/assets/templates/nuxt/saas-light.png">
-  </picture>
-</a>
-
-## Quick Start
-
-```bash [Terminal]
-npm create nuxt@latest -- -t ui/saas
-```
-
-## Deploy your own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=saas&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fsaas&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fsaas-dark.png&demo-url=https%3A%2F%2Fsaas-template.nuxt.dev%2F&demo-title=Nuxt%20SaaS%20Template&demo-description=A%20SaaS%20template%20with%20landing%2C%20pricing%2C%20docs%20and%20blog%20powered%20by%20Nuxt%20Content.)
-
-## Setup
-
-Make sure to install the dependencies:
+Requires Docker Engine and Docker Compose v2. From the repo root (not this directory):
 
 ```bash
-pnpm install
+git clone https://github.com/simovilab/infobus-web.git
+cd infobus-web
+docker compose -f compose.dev.yml up
 ```
 
-## Development Server
+Open http://localhost:3000. Source is bind-mounted, so edits reload live — no local Node/pnpm install needed. Test through this Docker setup rather than a bare `pnpm dev`, since production behavior (compression, caching, the prerendered build) only shows up in a real container.
 
-Start the development server on `http://localhost:3000`:
+### Common commands
 
 ```bash
-pnpm dev
+# Logs
+docker compose -f compose.dev.yml logs -f site
+
+# Run a one-off command inside the container (lint, typecheck, etc.)
+docker compose -f compose.dev.yml exec site pnpm lint
+docker compose -f compose.dev.yml exec site pnpm typecheck
+
+# Stop
+docker compose -f compose.dev.yml down
 ```
 
-## Production
-
-Build the application for production:
+## Production deployment
 
 ```bash
-pnpm build
+docker compose -f compose.prod.yml up -d --build
 ```
 
-Locally preview production build:
+Builds the Nuxt app (`pnpm build`) into a standalone Node server (`.output/server/index.mjs`) in a separate runtime stage — no dev dependencies, no source bind-mount. Unlike [databus](https://github.com/simovilab/databus)/[infobus](https://github.com/simovilab/infobus)'s `compose.prod.yml`, there's no Traefik routing or domain config here yet — add it once this connects to real infra.
 
-```bash
-pnpm preview
-```
+### Environment variables
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+See [`.env.example`](.env.example). `NUXT_GTFS_API_BASE` overrides which GTFS API base URL is fetched (defaults to bucr's `raw.githubusercontent.com` URL — see [Data](#data)); leave unset unless testing against a fork or local copy.
 
-## GTFS data (bUCR)
+## Data
 
-The site consumes bUCR's GTFS feed as a static API published by the sibling
-repo [`bucr`](https://github.com/simovilab/bucr) (`api/` folder, branch
-`feature/static-website-gtfs`) — `bucr` is the single source of truth, this
-repo doesn't duplicate the data.
+bUCR is modeled in GTFS as one route with several trip patterns (the evening *milla universitaria* detour, alternate Educación/Artes Plásticas termini); each pattern is treated as its own entry in the schedule shown here, since a single "route" badge wouldn't distinguish them.
 
-- `useGtfs()` (`app/composables/useGtfs.ts`): typed functions (`getRoutes`,
-  `getStops`, `getTrips`, etc.) that `$fetch` against
-  `runtimeConfig.public.gtfsApiBase`, with in-memory per-session caching and
-  automatic fallback to the local copy if the remote fetch fails.
-- `gtfsApiBase` (`nuxt.config.ts` / env `NUXT_PUBLIC_GTFS_API_BASE`) defaults
-  to `bucr`'s raw GitHub URL (`raw.githubusercontent.com` responds with
-  `Access-Control-Allow-Origin: *`, so it works from the browser with no
-  backend of its own and no CORS setup). Pointing it at `/api/` forces the
-  local copy.
-- `public/api/*.json`: offline fallback copy of `bucr/api/*.json` (same
-  format — one array of objects per GTFS file). Refresh it by copying again
-  from `bucr/api/` whenever the feed version changes.
-- `/gtfs`: test page that lists routes and stops consuming the live feed, to
-  verify the end-to-end pattern.
+- **[`server/utils/bucrGtfs.ts`](server/utils/bucrGtfs.ts)** — fetches bucr's static GTFS API server-side (`raw.githubusercontent.com/simovilab/bucr/<branch>/api/`), with a short in-memory cache and a bundled fallback ([`server/assets/gtfs/`](server/assets/gtfs/)) for when the remote fetch fails.
+- **[`server/utils/scheduleProvider.ts`](server/utils/scheduleProvider.ts)** — turns the raw GTFS files into the schedule model the UI renders.
+- Shapes and stops are fetched as GeoJSON (`shapes.geojson`/`stops.geojson`, not the raw per-row `shapes.json`/`stops.json`) — bucr builds that geometry once, this app doesn't re-derive it. Same convention [incofer](https://github.com/simovilab/incofer) and databus/infobus's GeoDjango models use elsewhere in the ecosystem.
+- `gtfsApiBase` (`nuxt.config.ts` / env `NUXT_GTFS_API_BASE`) — server-only, since nothing fetches it from the browser.
 
-## Renovate integration
+## Map
 
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+`app/components/home/CampusLiveMap.client.vue` renders campus routes/stops with MapLibre GL JS over a self-hosted OpenFreeMap "positron" basemap (`public/tiles/`, regenerated with `pnpm exec node scripts/fetch-basemap-tiles.mjs`) — self-hosted rather than pointed at a live tile server so the campus-scale tile set (a few MB) doesn't depend on a third party's network latency or serve the full unrelated OpenMapTiles dataset per tile. `app/components/home/MapPlaceholder.vue` shows a static screenshot with the route drawn fresh as an SVG overlay while the live map loads.
+
+Re-run the fetch script (and re-screenshot the placeholder) if the route's geographic area changes enough to fall outside its current bounding box.
+
+## Contributing
+
+See the [guidelines](https://github.com/simovilab/.github/blob/main/CONTRIBUTING.md).
+
+## Contact
+
+- Email: simovi@ucr.ac.cr
+- Website: [simovi.org](https://simovi.org)
+
+## License
+
+See [LICENSE](LICENSE).
