@@ -1,7 +1,19 @@
 <script setup lang="ts">
 import type { GtfsRoute } from '~/types/gtfs'
-import type { GeoJSONSource } from 'maplibre-gl'
-import { Map as MaplibreMap, Marker, LngLatBounds } from 'maplibre-gl'
+import type { GeoJSONSource, StyleSpecification } from 'maplibre-gl'
+import { Map as MaplibreMap, Marker, setWorkerUrl } from 'maplibre-gl'
+import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
+import { CAMPUS_MAP_CENTER, CAMPUS_MAP_ZOOM } from '~/utils/campusMapReference'
+
+// maplibre-gl resolves its tile-processing worker relative to its own
+// import.meta.url at runtime, which Vite's production bundler can't see
+// (it's built from a string template, not a static `new URL(...)`), so the
+// worker chunk silently never gets emitted into the build — the map then
+// hangs forever on the loading spinner since no vector tiles ever get
+// decoded. `?worker&url` routes it through Vite's worker pipeline instead
+// (bundles it as its own self-contained chunk, worker deps included), and
+// setWorkerUrl points maplibre-gl at that instead of guessing.
+setWorkerUrl(workerUrl)
 
 // Real basemap (OpenFreeMap "positron" — free, keyless, light gray) instead
 // of a hand-illustrated SVG, so the actual shape of the UCR Rodrigo Facio
@@ -10,6 +22,15 @@ import { Map as MaplibreMap, Marker, LngLatBounds } from 'maplibre-gl'
 // is a static schedule map (bucr's GTFS Schedule feed, no GTFS-RT source
 // yet) — it intentionally does NOT show moving bus markers, which would
 // misrepresent it as a live vehicle tracker.
+//
+// The style/sprite/glyphs/tiles are a self-hosted copy under public/tiles/
+// (see scripts/fetch-basemap-tiles.mjs) instead of tiles.openfreemap.org
+// live — OpenFreeMap serves the full OpenMapTiles vector dataset regardless
+// of style, and a single live tile near UCR measured ~370 KB; the campus
+// area only needs a small, fixed set of tiles, so caching them ourselves
+// cuts a multi-MB live fetch down to a couple hundred KB, same-origin, no
+// dependency on a third-party host's latency from wherever a visitor is.
+// Re-run that script if the route's area or the zoom levels needed change.
 //
 // bUCR is one real GTFS route, but its trips fork into several stop
 // patterns (evening milla universitaria detour, alternate Educación/Artes
@@ -29,6 +50,10 @@ const props = defineProps<{
   focus?: { lat: number, lon: number }
 }>()
 
+// Lets a parent (e.g. MapPlaceholder's crossfade in index.vue) know when
+// it's safe to fade this in and fade the placeholder out.
+const emit = defineEmits<{ loaded: [] }>()
+
 // Falls back to the highest-frequency pattern (lowest average gap between
 // departures) when the caller doesn't control selection — that's the one
 // that best represents "the route" day-to-day, e.g. the sin-milla trip
@@ -45,17 +70,17 @@ const effectiveSelected = computed(() => props.selected ?? defaultSelected.value
 const mapContainer = useTemplateRef<HTMLDivElement>('mapContainer')
 let map: MaplibreMap | null = null
 
-// The map depends on a handful of network round-trips to tiles.openfreemap.org
-// (style, sprite, glyphs, tiles) before anything is visible, so it's slower
-// than the old self-contained SVG illustration — show a placeholder instead
-// of a blank box while that's in flight.
+// The map still needs a handful of round-trips (style, sprite, glyphs,
+// tiles — same-origin, see the note above) before anything is visible, so
+// it's slower than the old self-contained SVG illustration — show a
+// placeholder instead of a blank box while that's in flight.
 const isLoaded = ref(false)
 
-type LngLat = [number, number]
+type LngLatTuple = [number, number]
 
 /** The real street-following path (GTFS shapes.txt) if the route has one, else a straight stop-to-stop fallback. */
-function routeLine(route: GtfsRoute): LngLat[] {
-  return route.shape?.length ? route.shape : route.stops.map((s): LngLat => [s.lon, s.lat])
+function routeLine(route: GtfsRoute): LngLatTuple[] {
+  return route.shape?.length ? route.shape : route.stops.map((s): LngLatTuple => [s.lon, s.lat])
 }
 
 function routeGeoJson() {
@@ -83,7 +108,7 @@ function routeGeoJson() {
 type PointFeature = {
   type: 'Feature'
   properties: { name: string, terminal: boolean, served: boolean }
-  geometry: { type: 'Point', coordinates: LngLat }
+  geometry: { type: 'Point', coordinates: LngLatTuple }
 }
 
 function stopsGeoJson() {
@@ -109,28 +134,45 @@ function stopsGeoJson() {
 }
 
 onMounted(async () => {
+  // Kicked off before awaiting nextTick (rather than after) so the request
+  // starts in this same tick — index.vue also fires a <link rel=preload>
+  // for this same URL as soon as the section nears the viewport, so by the
+  // time this resolves it's usually a cache hit instead of a cold fetch.
+  const stylePromise = $fetch<StyleSpecification>('/tiles/style.json')
+
   await nextTick()
   if (!mapContainer.value) return
 
+  // MapLibre requires `sprite` to be a fully-qualified URL (root-relative
+  // paths throw "must be absolute"), but the static style.json can't bake
+  // in a real origin — fetch it ourselves and resolve sprite against the
+  // page's own origin before handing it a style object instead of a URL.
+  const style = await stylePromise
+  style.sprite = new URL('/tiles/sprite', location.origin).href
+
   map = new MaplibreMap({
     container: mapContainer.value,
-    style: 'https://tiles.openfreemap.org/styles/positron',
-    center: props.focus ? [props.focus.lon, props.focus.lat] : [-84.0464, 9.938],
-    zoom: props.focus ? 16.8 : 15.1,
+    style,
+    // Fixed, not fitBounds-to-content: this needs to be pixel-identical to
+    // what MapPlaceholder projects its SVG route against (see
+    // campusMapReference.ts) — a dynamically-computed fitBounds result
+    // can't be matched by a build-time-generated placeholder, since it
+    // depends on the live container size. focus mode (the stop detail
+    // page's mini map) is the one case that still centers dynamically,
+    // since it has no placeholder to stay aligned with.
+    center: props.focus ? [props.focus.lon, props.focus.lat] : CAMPUS_MAP_CENTER,
+    zoom: props.focus ? 16.8 : CAMPUS_MAP_ZOOM,
     interactive: false,
-    attributionControl: { compact: true }
+    attributionControl: { compact: true },
+    // This is a static illustration, not a basemap someone zooms into for
+    // detail — @2x/@3x retina tiles cost 4-9x the bytes for sharpness we
+    // don't need here, so force standard-resolution tiles.
+    pixelRatio: 1,
+    fadeDuration: 0
   })
 
   map.on('load', () => {
     if (!map) return
-
-    if (!props.focus) {
-      const coords = props.routes.flatMap(r => r.stops.map((s): LngLat => [s.lon, s.lat]))
-      if (coords.length) {
-        const bounds = coords.reduce((b, c) => b.extend(c), new LngLatBounds(coords[0], coords[0]))
-        map.fitBounds(bounds, { padding: props.compact ? 50 : 70, duration: 0 })
-      }
-    }
 
     map.addSource('bucr-routes', { type: 'geojson', data: routeGeoJson() })
 
@@ -222,6 +264,7 @@ onMounted(async () => {
     }
 
     isLoaded.value = true
+    emit('loaded')
   })
 })
 

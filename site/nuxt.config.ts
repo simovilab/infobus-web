@@ -18,11 +18,7 @@ export default defineNuxtConfig({
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap' },
-        // CampusLiveMap (MapLibre, ported from feat/bucr-static-site) needs
-        // style/sprite/glyph/tile round-trips to this host — preconnecting
-        // now shaves off DNS+TLS setup once the map component lands.
-        { rel: 'preconnect', href: 'https://tiles.openfreemap.org' }
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap' }
       ]
     }
   },
@@ -47,6 +43,20 @@ export default defineNuxtConfig({
         '/'
       ],
       crawlLinks: true
+    },
+    // Verified via curl against the dev server that /tiles/** (style.json,
+    // sprite, .pbf tiles) was going out with no Content-Encoding at all — a
+    // 372 KB tile served fully uncompressed. Nitro pre-compresses build
+    // output for public/ at build time (dev mode can't, since there's no
+    // build step) and serves whichever encoding the client accepts.
+    compressPublicAssets: { gzip: true, brotli: true },
+    routeRules: {
+      // The self-hosted basemap only changes when
+      // scripts/fetch-basemap-tiles.mjs is re-run (a deploy), never per
+      // request — verified the dev server was sending max-age=0, meaning
+      // every repeat visit/tab switch re-downloaded the whole basemap from
+      // network instead of the browser's own cache.
+      '/tiles/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } }
     }
   },
 

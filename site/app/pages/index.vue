@@ -7,6 +7,38 @@ const { data: routes, pending, error } = useSchedule()
 const hacia = computed(() => routes.value?.filter(r => r.direction_id === 0) ?? [])
 const desde = computed(() => routes.value?.filter(r => r.direction_id === 1) ?? [])
 
+// The map is the 3rd section down (after Horarios/Tarifas) and depends on
+// network round-trips to tiles.openfreemap.org that we don't control the
+// speed of — mounting it only once it's about to scroll into view keeps it
+// from competing with everything above it on initial page load.
+// rootMargin gives it a 400px head start so tiles are already in flight by
+// the time it's actually visible, instead of starting cold at that instant.
+const mapsAnchor = useTemplateRef<HTMLDivElement>('mapsAnchor')
+const mapsVisible = ref(false)
+const { stop: stopMapsObserver } = useIntersectionObserver(
+  mapsAnchor,
+  ([entry]) => {
+    if (entry?.isIntersecting) {
+      mapsVisible.value = true
+      stopMapsObserver()
+    }
+  },
+  { rootMargin: '400px' }
+)
+
+// The 400px head start above only advances *when the component mounts* —
+// it still had to wait for CampusLiveMap's own JS chunk to load, parse, and
+// run onMounted before the very first map-asset request went out. This
+// preload hint starts that request the instant the section is within
+// range, in parallel with (not after) the chunk load, so by the time the
+// map actually mounts, style.json is already in the browser's cache
+// instead of a cold fetch.
+useHead({
+  link: computed(() => mapsVisible.value
+    ? [{ rel: 'preload', as: 'fetch', href: '/tiles/style.json', crossorigin: 'anonymous' }]
+    : [])
+})
+
 function flattenStops(list: GtfsRoute[]) {
   return list.flatMap(route => route.stops.map(stop => ({
     route_short_name: route.route_short_name,
@@ -80,6 +112,13 @@ function selectedFor(item: { label: string, routes: GtfsRoute[] }) {
   return selectedPattern.value[item.label] ?? primaryPattern(item.routes)
 }
 
+// Per-tab: has the real CampusLiveMap finished loading (vs. still showing
+// MapPlaceholder)? Reset on unmount (see @vue:unmounted below) so
+// switching tabs away and back shows the placeholder again during the
+// remount's reload, instead of an instant-opaque map with nothing in it
+// yet — Nuxt UI's tabs unmount inactive panels by default.
+const mapLoaded = ref<Record<string, boolean>>({})
+
 // Nuxt UI's default UPageSection padding (py-16 sm:py-24 lg:py-32, plus a
 // mt-16 gap before the body) is meant for a marketing page with a handful
 // of spaced-out sections — too much air for four short sections in a row
@@ -98,11 +137,17 @@ const sectionUi = {
   body: 'mt-4'
 }
 
-// The map reads cramped at the same max-width as a paragraph of text — it's
-// the one section here that benefits from the full page width instead of a
-// reading-width column. max-w-none here wins over UPageSection's default
-// max-w-(--ui-container) via tailwind-merge (both are max-w-* utilities).
-const mapaSectionUi = { ...sectionUi, container: `${sectionUi.container} max-w-none` }
+// The map reads cramped at the same max-width as a paragraph of text, but
+// fully unbounded (max-w-none) let it grow arbitrarily wide on large
+// monitors — MapPlaceholder's static basemap image is captured at one
+// fixed reference size, and object-fit:cover has to crop/scale it more
+// aggressively the further the container strays from that reference,
+// which read as visibly mismatched. A fixed max a bit wider than the
+// Paradas table below (60rem) keeps the map comfortably wide while giving
+// MapPlaceholder a bounded, known target to match. max-w-[72rem] here
+// wins over UPageSection's default max-w-(--ui-container) via
+// tailwind-merge (both are max-w-* utilities).
+const mapaSectionUi = { ...sectionUi, container: `${sectionUi.container} max-w-[72rem]` }
 
 // text-muted (the UTable default) is too low-contrast for primary data;
 // text-sm reads small for a schedule someone's checking at a glance.
@@ -198,46 +243,71 @@ useSeoMeta({
       :ui="mapaSectionUi"
       class="scroll-mt-20"
     >
-      <UTabs
-        :items="mapaTabs"
-        :ui="{ trigger: 'flex-1' }"
-      >
-        <template #content="{ item }">
-          <p class="mb-2 text-sm text-toned">
-            {{ copy.mapas.legendHint }}
-          </p>
-          <div class="mb-3 flex flex-wrap gap-x-4 gap-y-1.5">
-            <button
-              v-for="route in item.routes"
-              :key="route.route_id"
-              type="button"
-              class="flex items-center gap-1.5 rounded text-sm transition-opacity"
-              :class="selectedFor(item) === route.route_id ? 'font-semibold text-highlighted opacity-100' : 'text-toned opacity-55 hover:opacity-80'"
-              :aria-pressed="selectedFor(item) === route.route_id"
-              @click="selectedPattern[item.label] = route.route_id"
-            >
-              <span
-                class="h-2.5 w-2.5 shrink-0 rounded-full"
-                :style="{ backgroundColor: `#${route.route_color}` }"
-              />
-              {{ route.route_long_name }}
-            </button>
-          </div>
-          <div class="h-[420px] sm:h-[560px]">
-            <ClientOnly>
-              <CampusLiveMap
-                :routes="item.routes"
-                :selected="selectedFor(item)"
-              />
-              <template #fallback>
-                <div class="flex h-full items-center justify-center bg-elevated/50">
-                  <span class="map-spinner" />
+      <div ref="mapsAnchor">
+        <UTabs
+          :items="mapaTabs"
+          :ui="{ trigger: 'flex-1' }"
+        >
+          <template #content="{ item }">
+            <p class="mb-2 text-sm text-toned">
+              {{ copy.mapas.legendHint }}
+            </p>
+            <div class="mb-3 flex flex-wrap gap-x-4 gap-y-1.5">
+              <button
+                v-for="route in item.routes"
+                :key="route.route_id"
+                type="button"
+                class="flex items-center gap-1.5 rounded text-sm transition-opacity"
+                :class="selectedFor(item) === route.route_id ? 'font-semibold text-highlighted opacity-100' : 'text-toned opacity-55 hover:opacity-80'"
+                :aria-pressed="selectedFor(item) === route.route_id"
+                @click="selectedPattern[item.label] = route.route_id"
+              >
+                <span
+                  class="h-2.5 w-2.5 shrink-0 rounded-full"
+                  :style="{ backgroundColor: `#${route.route_color}` }"
+                />
+                {{ route.route_long_name }}
+              </button>
+            </div>
+            <div class="relative h-[420px] overflow-hidden sm:h-[560px]">
+              <!-- Wrapping divs (not a class passed straight to the
+                   component) for the absolute-positioning/opacity — both
+                   components already set their own root to `relative`
+                   internally, which would collide with an `absolute`
+                   fallthrough class and silently lose depending on
+                   Tailwind's generated CSS order, pushing the real map
+                   into normal document flow below the placeholder instead
+                   of stacking on top of it. -->
+              <div
+                class="absolute inset-0 transition-opacity duration-300"
+                :class="mapLoaded[item.label] ? 'opacity-0' : 'opacity-100'"
+              >
+                <!-- Always rendered (SSR-safe, no maplibre-gl) so there's a
+                     real, accurate route preview from the very first paint
+                     instead of a blank box or a generic spinner while the
+                     real map loads. -->
+                <MapPlaceholder
+                  :routes="item.routes"
+                  :selected="selectedFor(item)"
+                />
+              </div>
+              <ClientOnly v-if="mapsVisible">
+                <div
+                  class="absolute inset-0 transition-opacity duration-300"
+                  :class="mapLoaded[item.label] ? 'opacity-100' : 'opacity-0'"
+                >
+                  <CampusLiveMap
+                    :routes="item.routes"
+                    :selected="selectedFor(item)"
+                    @loaded="mapLoaded[item.label] = true"
+                    @vue:unmounted="mapLoaded[item.label] = false"
+                  />
                 </div>
-              </template>
-            </ClientOnly>
-          </div>
-        </template>
-      </UTabs>
+              </ClientOnly>
+            </div>
+          </template>
+        </UTabs>
+      </div>
     </UPageSection>
 
     <UPageSection
