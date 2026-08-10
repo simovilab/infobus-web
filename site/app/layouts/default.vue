@@ -31,6 +31,10 @@ import { copy } from '~/utils/copy'
           :ui="{ link: 'text-base' }"
         />
       </template>
+
+      <template #right>
+        <UColorModeButton />
+      </template>
     </UHeader>
 
     <slot />
