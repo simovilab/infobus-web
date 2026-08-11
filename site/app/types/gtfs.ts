@@ -32,6 +32,10 @@ export interface GtfsRoute {
   /** GTFS direction_id: 0 = hacia Deportivas (Finca 1 → Finca 3), 1 = desde Deportivas (Finca 3 → Finca 1). */
   direction_id: 0 | 1
   direction_destinations?: string[]
+  /** True for the evening "milla universitaria" detour variant of a pattern — drawn dashed alongside the regular route rather than picked via selection. */
+  is_milla?: boolean
+  /** Every real departure time (HH:MM) this pattern makes — what a Horarios table should list, not stops[].scheduled_time (that's one representative trip's stop-by-stop path, for the map/tramo, not a timetable). */
+  departures?: string[]
   /** Short "via" description shown under the route name (e.g. "EDUFI · CIMAR · Lanamme"). */
   tramo?: string
   frequency_minutes?: number

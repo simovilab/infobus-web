@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { GtfsRoute } from '~/types/gtfs'
-import type { GeoJSONSource, StyleSpecification } from 'maplibre-gl'
+import type { StyleSpecification } from 'maplibre-gl'
 import { Map as MaplibreMap, Marker, setWorkerUrl } from 'maplibre-gl'
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import { CAMPUS_MAP_CENTER, CAMPUS_MAP_ZOOM } from '~/utils/campusMapReference'
@@ -32,20 +32,16 @@ setWorkerUrl(workerUrl)
 // dependency on a third-party host's latency from wherever a visitor is.
 // Re-run that script if the route's area or the zoom levels needed change.
 //
-// bUCR is one real GTFS route, but its trips fork into several stop
-// patterns (evening milla universitaria detour, alternate Educación/Artes
-// Plásticas origin) — routes[] holds one entry per pattern. Coloring each
-// one differently would read as "4 separate bus routes", which is wrong.
-// Instead every pattern shares the same official route_color, and only the
-// `selected` one draws solid/on top; the rest draw dashed/dimmed — where a
-// dashed pattern geographically coincides with the selected one (the shared
-// trunk) the solid stroke covers it, so only the genuinely diverging branch
-// (the part that's actually different) reads as dashed.
+// The caller (index.vue) scopes routes[] to one origin+direction sentido
+// already, so this is at most two patterns: the regular one and its
+// evening milla universitaria detour (GtfsRoute.is_milla) — never
+// something needing a legend/click-to-select UI to disambiguate. The milla
+// variant always draws dashed alongside the regular one, solid; where they
+// geographically coincide (the shared trunk) the solid stroke covers the
+// dashed one, so only the genuinely diverging branch reads as dashed.
 const props = defineProps<{
   routes: GtfsRoute[]
   compact?: boolean
-  /** route_id of the pattern to draw solid/highlighted; defaults to the most frequent pattern if omitted. */
-  selected?: string
   /** Center tightly on this point and mark it "Estás acá" — used for the stop detail page's mini map. */
   focus?: { lat: number, lon: number }
 }>()
@@ -53,19 +49,6 @@ const props = defineProps<{
 // Lets a parent (e.g. MapPlaceholder's crossfade in index.vue) know when
 // it's safe to fade this in and fade the placeholder out.
 const emit = defineEmits<{ loaded: [] }>()
-
-// Falls back to the highest-frequency pattern (lowest average gap between
-// departures) when the caller doesn't control selection — that's the one
-// that best represents "the route" day-to-day, e.g. the sin-milla trip
-// rather than a five-departure evening variant.
-const defaultSelected = computed(() => {
-  return props.routes.reduce((best, r) => {
-    const bestFreq = best?.frequency_minutes ?? Infinity
-    const freq = r.frequency_minutes ?? Infinity
-    return freq < bestFreq ? r : best
-  }, props.routes[0])?.route_id
-})
-const effectiveSelected = computed(() => props.selected ?? defaultSelected.value)
 
 const mapContainer = useTemplateRef<HTMLDivElement>('mapContainer')
 let map: MaplibreMap | null = null
@@ -92,7 +75,7 @@ function routeGeoJson() {
       properties: {
         routeId: route.route_id,
         color: `#${route.route_color}`,
-        selected: route.route_id === effectiveSelected.value,
+        milla: !!route.is_milla,
         // Routes that share the same physical street (e.g. both directions
         // of the bUCR loop) would otherwise draw exactly on top of each
         // other and be indistinguishable — nudge each route a few pixels
@@ -107,25 +90,18 @@ function routeGeoJson() {
 
 type PointFeature = {
   type: 'Feature'
-  properties: { name: string, terminal: boolean, served: boolean }
+  properties: { name: string, terminal: boolean }
   geometry: { type: 'Point', coordinates: LngLatTuple }
 }
 
 function stopsGeoJson() {
-  const selectedRoute = props.routes.find(r => r.route_id === effectiveSelected.value)
-  const servedIds = new Set(selectedRoute?.stops.map(s => s.id))
-
   const byId = new Map<string, PointFeature>()
   for (const route of props.routes) {
     for (const stop of route.stops) {
-      // A stop served by the selected pattern always wins its `served`
-      // flag, even if an earlier (unselected) route already added it to
-      // the map — otherwise whichever route happened to list the stop
-      // first would decide its highlight state.
-      if (byId.has(stop.id) && !servedIds.has(stop.id)) continue
+      if (byId.has(stop.id)) continue
       byId.set(stop.id, {
         type: 'Feature',
-        properties: { name: stop.name, terminal: !!stop.terminal, served: servedIds.has(stop.id) },
+        properties: { name: stop.name, terminal: !!stop.terminal },
         geometry: { type: 'Point', coordinates: [stop.lon, stop.lat] }
       })
     }
@@ -176,23 +152,23 @@ onMounted(async () => {
 
     map.addSource('bucr-routes', { type: 'geojson', data: routeGeoJson() })
 
-    const selectedWidth = props.compact ? 5 : 4
-    const otherWidth = props.compact ? 3.5 : 3
+    const regularWidth = props.compact ? 5 : 4
+    const millaWidth = props.compact ? 3.5 : 3
 
     // line-dasharray isn't a data-driven (per-feature) paint property in
-    // MapLibre's style spec, so "solid for the selected pattern, dashed for
-    // the rest" needs two layers filtered by the `selected` feature flag,
-    // rather than one layer with an expression. Dashed is added first so
-    // the solid layer draws on top of it wherever their paths coincide.
+    // MapLibre's style spec, so "solid for the regular pattern, dashed for
+    // its milla variant" needs two layers filtered by the `milla` feature
+    // flag, rather than one layer with an expression. Dashed is added first
+    // so the solid layer draws on top of it wherever their paths coincide.
     map.addLayer({
       id: 'bucr-routes-line-dashed',
       type: 'line',
       source: 'bucr-routes',
-      filter: ['==', ['get', 'selected'], false],
+      filter: ['==', ['get', 'milla'], true],
       layout: { 'line-cap': 'round', 'line-join': 'round' },
       paint: {
         'line-color': ['get', 'color'],
-        'line-width': otherWidth,
+        'line-width': millaWidth,
         'line-opacity': 0.55,
         'line-offset': ['get', 'offset'],
         'line-dasharray': [2, 1.6]
@@ -202,19 +178,16 @@ onMounted(async () => {
       id: 'bucr-routes-line-solid',
       type: 'line',
       source: 'bucr-routes',
-      filter: ['==', ['get', 'selected'], true],
+      filter: ['==', ['get', 'milla'], false],
       layout: { 'line-cap': 'round', 'line-join': 'round' },
       paint: {
         'line-color': ['get', 'color'],
-        'line-width': selectedWidth,
+        'line-width': regularWidth,
         'line-opacity': 0.92,
         'line-offset': ['get', 'offset']
       }
     })
 
-    // Stops the selected pattern doesn't serve stay on the map (removing
-    // them would make the other dashed patterns look broken) but fade back
-    // — bigger + fully opaque for served stops, smaller + dim for the rest.
     map.addSource('bucr-stops', { type: 'geojson', data: stopsGeoJson() })
     map.addLayer({
       id: 'bucr-stops-dot',
@@ -224,9 +197,7 @@ onMounted(async () => {
         'circle-radius': ['case', ['get', 'terminal'], 6.5, 4.5],
         'circle-color': '#fff',
         'circle-stroke-color': '#0E1116',
-        'circle-stroke-width': ['case', ['get', 'served'], 2.5, 1.5],
-        'circle-opacity': ['case', ['get', 'served'], 1, 0.45],
-        'circle-stroke-opacity': ['case', ['get', 'served'], 1, 0.45]
+        'circle-stroke-width': 2.5
       }
     })
 
@@ -250,8 +221,7 @@ onMounted(async () => {
         paint: {
           'text-color': '#0E1116',
           'text-halo-color': '#fff',
-          'text-halo-width': 1.4,
-          'text-opacity': ['case', ['get', 'served'], 1, 0.45]
+          'text-halo-width': 1.4
         }
       })
     }
@@ -266,13 +236,6 @@ onMounted(async () => {
     isLoaded.value = true
     emit('loaded')
   })
-})
-
-watch(effectiveSelected, () => {
-  const routesSource = map?.getSource('bucr-routes') as GeoJSONSource | undefined
-  routesSource?.setData(routeGeoJson())
-  const stopsSource = map?.getSource('bucr-stops') as GeoJSONSource | undefined
-  stopsSource?.setData(stopsGeoJson())
 })
 
 onBeforeUnmount(() => {

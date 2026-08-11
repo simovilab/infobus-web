@@ -24,7 +24,6 @@ import { CAMPUS_MAP_CENTER, CAMPUS_MAP_ZOOM } from '~/utils/campusMapReference'
  */
 const props = defineProps<{
   routes: GtfsRoute[]
-  selected?: string
 }>()
 
 // The screenshot's capture size (1088x560 — the Mapas section's bounded
@@ -71,15 +70,6 @@ function offset(lon: number, lat: number): [number, number] {
   return [x - centerX, y - centerY]
 }
 
-const defaultSelected = computed(() => {
-  return props.routes.reduce((best, r) => {
-    const bestFreq = best?.frequency_minutes ?? Infinity
-    const freq = r.frequency_minutes ?? Infinity
-    return freq < bestFreq ? r : best
-  }, props.routes[0])?.route_id
-})
-const effectiveSelected = computed(() => props.selected ?? defaultSelected.value)
-
 const routeLines = computed(() => props.routes
   .filter(r => r.stops.length > 1)
   .map((route) => {
@@ -88,23 +78,21 @@ const routeLines = computed(() => props.routes
     return {
       routeId: route.route_id,
       color: route.route_color,
-      selected: route.route_id === effectiveSelected.value,
+      milla: !!route.is_milla,
       d: points.map(([x, y], i) => `${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`).join(' ')
     }
   })
-  // Selected pattern drawn last so it renders on top of the dashed ones,
-  // same reasoning as CampusLiveMap's dashed-then-solid layer order.
-  .sort((a, b) => Number(a.selected) - Number(b.selected)))
+  // Regular pattern drawn last so it renders on top of its dashed milla
+  // variant, same reasoning as CampusLiveMap's dashed-then-solid layer order.
+  .sort((a, b) => Number(b.milla) - Number(a.milla)))
 
 const stopDots = computed(() => {
-  const selectedRoute = props.routes.find(r => r.route_id === effectiveSelected.value)
-  const servedIds = new Set(selectedRoute?.stops.map(s => s.id))
-  const byId = new Map<string, { id: string, x: number, y: number, terminal: boolean, served: boolean }>()
+  const byId = new Map<string, { id: string, x: number, y: number, terminal: boolean }>()
   for (const route of props.routes) {
     for (const stop of route.stops) {
-      if (byId.has(stop.id) && !servedIds.has(stop.id)) continue
+      if (byId.has(stop.id)) continue
       const [x, y] = offset(stop.lon, stop.lat)
-      byId.set(stop.id, { id: stop.id, x, y, terminal: !!stop.terminal, served: servedIds.has(stop.id) })
+      byId.set(stop.id, { id: stop.id, x, y, terminal: !!stop.terminal })
     }
   }
   return [...byId.values()]
@@ -142,9 +130,9 @@ const stopDots = computed(() => {
           :d="line.d"
           fill="none"
           :stroke="`#${line.color}`"
-          :stroke-width="line.selected ? 4 : 3"
-          :stroke-opacity="line.selected ? 0.92 : 0.55"
-          :stroke-dasharray="line.selected ? undefined : '5,4'"
+          :stroke-width="line.milla ? 3 : 4"
+          :stroke-opacity="line.milla ? 0.55 : 0.92"
+          :stroke-dasharray="line.milla ? '5,4' : undefined"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -156,8 +144,7 @@ const stopDots = computed(() => {
           :r="stop.terminal ? 6.5 : 4.5"
           fill="#fff"
           stroke="#0E1116"
-          :stroke-width="stop.served ? 2.5 : 1.5"
-          :opacity="stop.served ? 1 : 0.45"
+          stroke-width="2.5"
         />
       </svg>
     </div>

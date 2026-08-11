@@ -4,8 +4,30 @@ import { copy } from '~/utils/copy'
 
 const { data: routes, pending, error } = useSchedule()
 
-const hacia = computed(() => routes.value?.filter(r => r.direction_id === 0) ?? [])
-const desde = computed(() => routes.value?.filter(r => r.direction_id === 1) ?? [])
+/**
+ * bUCR has two real origins (Educación, Artes Plásticas), both ending at
+ * Odontología — this groups every pattern by origin first, direction
+ * second, matching the printed schedule's own convention (see copy.ts).
+ * "Artes Plásticas" appearing in direction_destinations is what tells the
+ * two groups apart; the late-night Odontología→EDUFI trip has no
+ * "Artes Plásticas" destination, so it falls into the Educación group's
+ * "Odontología → Educación" sentido alongside the regular return trips,
+ * same as the printed schedule folds it in as a footnote rather than its
+ * own column.
+ */
+function grupoIdFor(route: GtfsRoute) {
+  return route.direction_destinations?.includes('Artes Plásticas') ? 'artes' : 'educacion'
+}
+
+const grupos = computed(() => copy.grupos.map(g => ({
+  id: g.id,
+  label: g.label,
+  sentidos: g.sentidos.map(s => ({
+    label: s.label,
+    key: `${g.id}-${s.direction_id}`,
+    routes: (routes.value ?? []).filter(r => grupoIdFor(r) === g.id && r.direction_id === s.direction_id)
+  }))
+})))
 
 // The map is the 3rd section down (after Horarios/Tarifas) and depends on
 // network round-trips to tiles.openfreemap.org that we don't control the
@@ -39,13 +61,30 @@ useHead({
     : [])
 })
 
-function flattenStops(list: GtfsRoute[]) {
-  return list.flatMap(route => route.stops.map(stop => ({
-    route_short_name: route.route_short_name,
-    route_color: route.route_color,
-    stop_name: stop.name,
-    time: stop.scheduled_time
-  })))
+// A Horarios table lists every real departure a rider could catch — not
+// one representative trip's full stop-by-stop path (that's what
+// route.stops is for: the map, and tramo). Sorted chronologically across
+// every pattern in the sentido (sin_milla and its con_milla variant
+// interleave naturally here, since milla departures are simply later).
+function flattenDepartures(list: GtfsRoute[]) {
+  return list
+    .flatMap(route => (route.departures ?? []).map(time => ({
+      route_short_name: route.route_short_name,
+      route_color: route.route_color,
+      // direction_destinations is [origin, destination] for this specific
+      // pattern — constant across every row in a given sentido (that's the
+      // whole point of the sentido split), but shown explicitly rather than
+      // only implied by the tab label above the table.
+      from: route.direction_destinations?.[0] ?? '',
+      time,
+      // Every row in a Horarios table now shares one sentido (see
+      // route_short_name's note above) — these are the only two things
+      // that can still differ trip-to-trip within it, so they get their
+      // own small chip next to the route badge and the time.
+      is_milla: !!route.is_milla,
+      is_edufi: !!route.direction_destinations?.includes('EDUFI')
+    })))
+    .sort((a, b) => a.time.localeCompare(b.time))
 }
 
 function dedupeStops(list: GtfsRoute[]) {
@@ -64,7 +103,7 @@ function dedupeStops(list: GtfsRoute[]) {
 
 const horarioColumns = [
   { accessorKey: 'route_short_name', header: copy.horarios.route },
-  { accessorKey: 'stop_name', header: copy.horarios.stop },
+  { accessorKey: 'from', header: copy.horarios.from },
   { accessorKey: 'time', header: copy.horarios.time }
 ]
 
@@ -74,46 +113,48 @@ const paradaColumns = [
   { accessorKey: 'description', header: copy.paradas.description }
 ]
 
-const horarioTabs = computed(() => [
-  { label: copy.horarios.hacia, sentido: copy.horarios.sentidoHacia, rows: flattenStops(hacia.value) },
-  { label: copy.horarios.desde, sentido: copy.horarios.sentidoDesde, rows: flattenStops(desde.value) }
-])
+const horarioGrupos = computed(() => grupos.value.map(g => ({
+  ...g,
+  sentidos: g.sentidos.map(s => ({ ...s, rows: flattenDepartures(s.routes) }))
+})))
 
-const paradaTabs = computed(() => [
-  { label: copy.horarios.hacia, sentido: copy.horarios.sentidoHacia, rows: dedupeStops(hacia.value) },
-  { label: copy.horarios.desde, sentido: copy.horarios.sentidoDesde, rows: dedupeStops(desde.value) }
-])
+const paradaGrupos = computed(() => grupos.value.map(g => ({
+  ...g,
+  sentidos: g.sentidos.map(s => ({ ...s, rows: dedupeStops(s.routes) }))
+})))
 
-// One map per direction, not per trip pattern — bUCR's schedule has 7 real
-// patterns (outbound from Educación/Artes with/without the evening milla
-// detour, 3 return variants), which read fine as separate rows in the
-// Horarios table but would be 7 confusing tabs here. It's genuinely one
-// route (bUCR_L1 in the real GTFS), so all patterns share one color; the
-// legend below lets someone pick a pattern to see solid on the map instead
-// of relying on hue to tell 7 near-identical lines apart.
-const mapaTabs = computed(() => [
-  { label: copy.horarios.hacia, sentido: copy.horarios.sentidoHacia, routes: hacia.value },
-  { label: copy.horarios.desde, sentido: copy.horarios.sentidoDesde, routes: desde.value }
-])
-
-// Defaults to the most frequent pattern (same rule CampusLiveMap falls back
-// to on its own) so the map's initial state and the legend's initial
-// "active" highlight always agree without the user having to click anything.
-function primaryPattern(list: GtfsRoute[]) {
-  return list.reduce((best, r) => {
-    const bestFreq = best?.frequency_minutes ?? Infinity
-    const freq = r.frequency_minutes ?? Infinity
-    return freq < bestFreq ? r : best
-  }, list[0])?.route_id
+// Each sentido has at most two patterns: the regular one and its evening
+// milla variant (GtfsRoute.is_milla) — the map draws both automatically
+// (solid + dashed, see CampusLiveMap/MapPlaceholder), so there's no
+// legend/selection UI needed here, just a note when a milla variant exists
+// for the currently open sentido.
+function millaRoute(list: GtfsRoute[]) {
+  return list.find(r => r.is_milla)
 }
 
-const selectedPattern = ref<Record<string, string | undefined>>({})
-function selectedFor(item: { label: string, routes: GtfsRoute[] }) {
-  return selectedPattern.value[item.label] ?? primaryPattern(item.routes)
+// The one late-night "Odontología → Educación" trip that actually ends at
+// EDUFI instead — same treatment as the milla variant, a note rather than
+// its own tab (see grupoIdFor above for why it's folded into that sentido).
+function edufiRoute(list: GtfsRoute[]) {
+  return list.find(r => r.direction_destinations?.includes('EDUFI'))
 }
 
-// Per-tab: has the real CampusLiveMap finished loading (vs. still showing
-// MapPlaceholder)? Reset on unmount (see @vue:unmounted below) so
+// The two big group tabs above (UTabs, same look as Horarios/Tarifas/etc.)
+// and this small sentido toggle deliberately look nothing alike — same
+// size/style for both read as two sliders doing the same thing, which is
+// disorienting. Each section (Horarios/Paradas/Mapas) tracks its own active
+// sentido per group independently, same as they already did as separate
+// UTabs instances before this.
+function activeSentido<T extends { key: string }>(state: Record<string, string>, grupo: { id: string, sentidos: T[] }): T {
+  const key = state[grupo.id] ?? grupo.sentidos[0]?.key
+  return grupo.sentidos.find(s => s.key === key) ?? grupo.sentidos[0]!
+}
+const horarioSentido = ref<Record<string, string>>({})
+const paradaSentido = ref<Record<string, string>>({})
+const mapaSentido = ref<Record<string, string>>({})
+
+// Per-sentido: has the real CampusLiveMap finished loading (vs. still
+// showing MapPlaceholder)? Reset on unmount (see @vue:unmounted below) so
 // switching tabs away and back shows the placeholder again during the
 // remount's reload, instead of an instant-opaque map with nothing in it
 // yet — Nuxt UI's tabs unmount inactive panels by default.
@@ -199,27 +240,74 @@ useSeoMeta({
         class="mb-4"
       />
       <UTabs
-        :items="horarioTabs"
+        :items="horarioGrupos"
         :ui="{ trigger: 'flex-1' }"
       >
-        <template #content="{ item }">
-          <p class="mb-3 text-xl font-semibold text-highlighted">
-            {{ item.sentido }}
-          </p>
+        <template #content="{ item: grupo }">
+          <UFieldGroup class="mt-4 mb-3">
+            <UButton
+              v-for="sentido in grupo.sentidos"
+              :key="sentido.key"
+              :color="activeSentido(horarioSentido, grupo).key === sentido.key ? 'primary' : 'neutral'"
+              :variant="activeSentido(horarioSentido, grupo).key === sentido.key ? 'solid' : 'outline'"
+              @click="horarioSentido[grupo.id] = sentido.key"
+            >
+              {{ sentido.label }}
+            </UButton>
+          </UFieldGroup>
           <UTable
-            :data="item.rows"
+            :data="activeSentido(horarioSentido, grupo).rows"
             :columns="horarioColumns"
             :loading="pending"
             :empty="copy.horarios.empty"
             :ui="tableUi"
           >
             <template #route_short_name-cell="{ row }">
-              <UBadge
-                :style="{ backgroundColor: `#${row.original.route_color}` }"
-                class="text-white"
-              >
-                {{ row.original.route_short_name }}
-              </UBadge>
+              <div class="flex items-center gap-2">
+                <UBadge
+                  :style="{ backgroundColor: `#${row.original.route_color}` }"
+                  class="text-white"
+                >
+                  {{ row.original.route_short_name }}
+                </UBadge>
+                <UBadge
+                  v-if="row.original.is_milla"
+                  color="neutral"
+                  variant="subtle"
+                  size="sm"
+                >
+                  con milla
+                </UBadge>
+                <UBadge
+                  v-if="row.original.is_edufi"
+                  color="neutral"
+                  variant="subtle"
+                  size="sm"
+                >
+                  EDUFI
+                </UBadge>
+              </div>
+            </template>
+            <template #time-cell="{ row }">
+              <div class="flex items-center gap-2">
+                {{ row.original.time }}
+                <UBadge
+                  v-if="row.original.is_milla"
+                  color="neutral"
+                  variant="subtle"
+                  size="sm"
+                >
+                  con milla
+                </UBadge>
+                <UBadge
+                  v-if="row.original.is_edufi"
+                  color="neutral"
+                  variant="subtle"
+                  size="sm"
+                >
+                  EDUFI
+                </UBadge>
+              </div>
             </template>
           </UTable>
         </template>
@@ -245,66 +333,77 @@ useSeoMeta({
     >
       <div ref="mapsAnchor">
         <UTabs
-          :items="mapaTabs"
+          :items="grupos"
           :ui="{ trigger: 'flex-1' }"
         >
-          <template #content="{ item }">
-            <p class="mb-2 text-sm text-toned">
-              {{ copy.mapas.legendHint }}
-            </p>
-            <div class="mb-3 flex flex-wrap gap-x-4 gap-y-1.5">
-              <button
-                v-for="route in item.routes"
-                :key="route.route_id"
-                type="button"
-                class="flex items-center gap-1.5 rounded text-sm transition-opacity"
-                :class="selectedFor(item) === route.route_id ? 'font-semibold text-highlighted opacity-100' : 'text-toned opacity-55 hover:opacity-80'"
-                :aria-pressed="selectedFor(item) === route.route_id"
-                @click="selectedPattern[item.label] = route.route_id"
+          <template #content="{ item: grupo }">
+            <UFieldGroup class="mt-4 mb-3">
+              <UButton
+                v-for="sentido in grupo.sentidos"
+                :key="sentido.key"
+                :color="activeSentido(mapaSentido, grupo).key === sentido.key ? 'primary' : 'neutral'"
+                :variant="activeSentido(mapaSentido, grupo).key === sentido.key ? 'solid' : 'outline'"
+                @click="mapaSentido[grupo.id] = sentido.key"
               >
-                <span
-                  class="h-2.5 w-2.5 shrink-0 rounded-full"
-                  :style="{ backgroundColor: `#${route.route_color}` }"
-                />
-                {{ route.route_long_name }}
-              </button>
-            </div>
-            <div class="relative h-[420px] overflow-hidden sm:h-[560px]">
-              <!-- Wrapping divs (not a class passed straight to the
-                   component) for the absolute-positioning/opacity — both
-                   components already set their own root to `relative`
-                   internally, which would collide with an `absolute`
-                   fallthrough class and silently lose depending on
-                   Tailwind's generated CSS order, pushing the real map
-                   into normal document flow below the placeholder instead
-                   of stacking on top of it. -->
-              <div
-                class="absolute inset-0 transition-opacity duration-300"
-                :class="mapLoaded[item.label] ? 'opacity-0' : 'opacity-100'"
-              >
-                <!-- Always rendered (SSR-safe, no maplibre-gl) so there's a
-                     real, accurate route preview from the very first paint
-                     instead of a blank box or a generic spinner while the
-                     real map loads. -->
-                <MapPlaceholder
-                  :routes="item.routes"
-                  :selected="selectedFor(item)"
-                />
-              </div>
-              <ClientOnly v-if="mapsVisible">
-                <div
-                  class="absolute inset-0 transition-opacity duration-300"
-                  :class="mapLoaded[item.label] ? 'opacity-100' : 'opacity-0'"
-                >
-                  <CampusLiveMap
-                    :routes="item.routes"
-                    :selected="selectedFor(item)"
-                    @loaded="mapLoaded[item.label] = true"
-                    @vue:unmounted="mapLoaded[item.label] = false"
-                  />
+                {{ sentido.label }}
+              </UButton>
+            </UFieldGroup>
+            <!-- v-if (not v-show) — only the active sentido's map should
+                 ever be mounted, both to avoid running two maplibre-gl
+                 instances at once and so mapLoaded resets cleanly via
+                 @vue:unmounted below when switching sentido, same as
+                 switching used to unmount the old UTabs panel. -->
+            <template
+              v-for="sentido in grupo.sentidos"
+              :key="sentido.key"
+            >
+              <div v-if="activeSentido(mapaSentido, grupo).key === sentido.key">
+                <div class="relative h-[420px] overflow-hidden sm:h-[560px]">
+                  <!-- Wrapping divs (not a class passed straight to the
+                       component) for the absolute-positioning/opacity — both
+                       components already set their own root to `relative`
+                       internally, which would collide with an `absolute`
+                       fallthrough class and silently lose depending on
+                       Tailwind's generated CSS order, pushing the real map
+                       into normal document flow below the placeholder instead
+                       of stacking on top of it. -->
+                  <div
+                    class="absolute inset-0 transition-opacity duration-300"
+                    :class="mapLoaded[sentido.key] ? 'opacity-0' : 'opacity-100'"
+                  >
+                    <!-- Always rendered (SSR-safe, no maplibre-gl) so there's a
+                         real, accurate route preview from the very first paint
+                         instead of a blank box or a generic spinner while the
+                         real map loads. -->
+                    <MapPlaceholder :routes="sentido.routes" />
+                  </div>
+                  <ClientOnly v-if="mapsVisible">
+                    <div
+                      class="absolute inset-0 transition-opacity duration-300"
+                      :class="mapLoaded[sentido.key] ? 'opacity-100' : 'opacity-0'"
+                    >
+                      <CampusLiveMap
+                        :routes="sentido.routes"
+                        @loaded="mapLoaded[sentido.key] = true"
+                        @vue:unmounted="mapLoaded[sentido.key] = false"
+                      />
+                    </div>
+                  </ClientOnly>
                 </div>
-              </ClientOnly>
-            </div>
+                <p
+                  v-if="millaRoute(sentido.routes)"
+                  class="mt-2 text-sm text-toned"
+                >
+                  {{ copy.mapas.millaNote(millaRoute(sentido.routes)!.first_bus!) }}
+                </p>
+                <p
+                  v-if="edufiRoute(sentido.routes)"
+                  class="mt-2 text-sm text-toned"
+                >
+                  {{ copy.mapas.edufiNote(edufiRoute(sentido.routes)!.first_bus!) }}
+                </p>
+              </div>
+            </template>
           </template>
         </UTabs>
       </div>
@@ -318,15 +417,23 @@ useSeoMeta({
       class="scroll-mt-20"
     >
       <UTabs
-        :items="paradaTabs"
+        :items="paradaGrupos"
         :ui="{ trigger: 'flex-1' }"
       >
-        <template #content="{ item }">
-          <p class="mb-3 text-xl font-semibold text-highlighted">
-            {{ item.sentido }}
-          </p>
+        <template #content="{ item: grupo }">
+          <UFieldGroup class="mt-4 mb-3">
+            <UButton
+              v-for="sentido in grupo.sentidos"
+              :key="sentido.key"
+              :color="activeSentido(paradaSentido, grupo).key === sentido.key ? 'primary' : 'neutral'"
+              :variant="activeSentido(paradaSentido, grupo).key === sentido.key ? 'solid' : 'outline'"
+              @click="paradaSentido[grupo.id] = sentido.key"
+            >
+              {{ sentido.label }}
+            </UButton>
+          </UFieldGroup>
           <UTable
-            :data="item.rows"
+            :data="activeSentido(paradaSentido, grupo).rows"
             :columns="paradaColumns"
             :loading="pending"
             :empty="copy.paradas.empty"

@@ -14,8 +14,10 @@ import { loadBucrGtfs } from './bucrGtfs'
  * entry here — this app models a "route" as a distinct stop pattern rather
  * than a literal GTFS route_id, same shape scheduleMock.ts used to fill in
  * by hand. One representative trip per pattern (the earliest departure)
- * supplies the stop order and per-stop scheduled_time; first/last bus and
- * frequency are computed across every trip that shares the pattern.
+ * supplies the stop order and per-stop scheduled_time, used for the map and
+ * `tramo` — not for Horarios, which needs every real departure a rider
+ * could catch, not one trip's path (see `departures`, computed from every
+ * trip sharing the pattern, same set first/last bus and frequency come from).
  */
 
 function hhmm(time: string) {
@@ -89,21 +91,26 @@ export async function fetchScheduleRoutes(): Promise<GtfsRoute[]> {
 
     routes.push({
       route_id: `${bucrRoute.route_id}__${shapeId}`,
-      // The badge label distinguishing each pattern: the "other" terminus
-      // from Odontología/Deportivas — the real route_short_name ("bUCR")
-      // is the same for all 7 patterns and wouldn't tell them apart.
-      route_short_name: direction_id === 0 ? firstStop.name : lastStop.name,
-      // sin_milla and con_milla patterns share the same first/last stop
-      // (e.g. both are "Educación → Odontología"), so the milla variant
-      // needs its own qualifier here — without it, two legend entries with
-      // the same text but different line colors are indistinguishable. The
-      // time window comes from this pattern's own real departures, not a
-      // hardcoded "19:00", so it stays correct if the schedule ever shifts.
-      route_long_name: `${firstStop.name} → ${lastStop.name}${isMilla ? ` (vía milla, desde ${hhmm(firstDeparture)})` : ''}`,
-      route_desc: `Servicio de ${firstStop.name} a ${lastStop.name}${isMilla ? `, vía la milla universitaria (de ${hhmm(firstDeparture)} a ${hhmm(lastDeparture)})` : ''}.`,
+      // The real GTFS route_short_name — bUCR is a single route, so this is
+      // "bUCR" for all 7 patterns. It used to be repurposed to hold the
+      // pattern's "other" terminus instead (Educación/Artes/Odontología) so
+      // the old single Hacia/Desde Deportivas tab could tell patterns apart
+      // by badge alone, but now that Horarios/Paradas/Mapas all group by
+      // origin first (see index.vue's grupoIdFor), every row already shares
+      // one sentido — the badge no longer needs to encode which pattern.
+      route_short_name: bucrRoute.route_short_name,
+      // The time window comes from this pattern's own real departures, not
+      // a hardcoded "19:00", so it stays correct if the schedule ever shifts.
+      route_long_name: `${firstStop.name} → ${lastStop.name}${isMilla ? ` (con milla, desde ${hhmm(firstDeparture)})` : ''}`,
+      route_desc: `Servicio de ${firstStop.name} a ${lastStop.name}${isMilla ? `, con la milla universitaria (de ${hhmm(firstDeparture)} a ${hhmm(lastDeparture)})` : ''}.`,
       route_type: Number(bucrRoute.route_type),
       route_color: bucrRoute.route_color ?? '005DA4',
       direction_id,
+      is_milla: isMilla,
+      // Every departure this pattern actually makes (Horarios shows these
+      // directly — a rider needs to know when the bus leaves Educación,
+      // not the one representative trip's full stop-by-stop path).
+      departures: departureTimes.map(hhmm),
       tramo: stops.length > 2 ? stops.slice(1, -1).map(s => s.name).join(' · ') : undefined,
       frequency_minutes,
       status: isMilla ? 'Servicio nocturno' : 'Servicio normal',
