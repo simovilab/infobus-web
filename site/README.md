@@ -44,16 +44,17 @@ Builds the Nuxt app (`pnpm build`) into a standalone Node server (`.output/serve
 
 ### Environment variables
 
-See [`.env.example`](.env.example). `NUXT_GTFS_API_BASE` overrides which GTFS API base URL is fetched (defaults to bucr's `raw.githubusercontent.com` URL — see [Data](#data)); leave unset unless testing against a fork or local copy.
+See [`.env.example`](.env.example). `NUXT_GTFS_ZIP_URL` overrides which GTFS zip URL is polled (defaults to bUCR's real feed, `feeds.simovi.org/bucr/schedule/gtfs.zip` — see [Data](#data)); leave unset unless testing against a fork or local copy.
 
 ## Data
 
 bUCR is modeled in GTFS as one route with several trip patterns (the evening *milla universitaria* detour, alternate Educación/Artes Plásticas termini); each pattern is treated as its own entry in the schedule shown here, since a single "route" badge wouldn't distinguish them.
 
-- **[`server/utils/bucrGtfs.ts`](server/utils/bucrGtfs.ts)** — fetches bucr's static GTFS API server-side (`raw.githubusercontent.com/simovilab/bucr/<branch>/api/`), with a short in-memory cache and a bundled fallback ([`server/assets/gtfs/`](server/assets/gtfs/)) for when the remote fetch fails.
+- **[`server/utils/bucrGtfs.ts`](server/utils/bucrGtfs.ts)** — downloads bUCR's real GTFS zip server-side and parses `routes.txt`/`trips.txt`/`stop_times.txt`/`fare_attributes.txt`/`shapes.txt`/`stops.txt` directly (`server/utils/zip.ts` + `server/utils/csv.ts`, no external deps). Hash-gated: a sync that downloads the same bytes as last time re-serves the cached parsed data instead of re-parsing. Falls back to the bundled copy ([`server/assets/gtfs/`](server/assets/gtfs/)) if the remote fetch fails and nothing has been cached yet.
+- **[`server/plugins/gtfsSync.ts`](server/plugins/gtfsSync.ts)** — runs that sync once on server start and then hourly, so requests just read the warm in-memory cache.
 - **[`server/utils/scheduleProvider.ts`](server/utils/scheduleProvider.ts)** — turns the raw GTFS files into the schedule model the UI renders.
-- Shapes and stops are fetched as GeoJSON (`shapes.geojson`/`stops.geojson`, not the raw per-row `shapes.json`/`stops.json`) — bucr builds that geometry once, this app doesn't re-derive it. Same convention [incofer](https://github.com/simovilab/incofer) and databus/infobus's GeoDjango models use elsewhere in the ecosystem.
-- `gtfsApiBase` (`nuxt.config.ts` / env `NUXT_GTFS_API_BASE`) — server-only, since nothing fetches it from the browser.
+- Shapes and stops are converted to GeoJSON in `bucrGtfs.ts` (same shape as bucr's `shapes.geojson`/`stops.geojson`, not the raw per-row `shapes.txt`/`stops.txt`) — geometry built once here, not re-derived downstream. Same convention [incofer](https://github.com/simovilab/incofer) and databus/infobus's GeoDjango models use elsewhere in the ecosystem.
+- `gtfsZipUrl` (`nuxt.config.ts` / env `NUXT_GTFS_ZIP_URL`) — server-only, since nothing fetches it from the browser.
 
 ## Map
 

@@ -132,11 +132,29 @@ function millaRoute(list: GtfsRoute[]) {
   return list.find(r => r.is_milla)
 }
 
-// The one late-night "Odontología → Educación" trip that actually ends at
-// EDUFI instead — same treatment as the milla variant, a note rather than
-// its own tab (see grupoIdFor above for why it's folded into that sentido).
+// The one late-night trip per sentido that's a short-turn through EDUFI
+// instead of the pattern's usual endpoint — same treatment as the milla
+// variant, a note rather than its own tab (see grupoIdFor above for why
+// it's folded into that sentido).
 function edufiRoute(list: GtfsRoute[]) {
   return list.find(r => r.direction_destinations?.includes('EDUFI'))
+}
+
+// "En lugar de X" needs the sentido's *normal* origin/destination — not the
+// EDUFI trip's own other endpoint, which is always Educación/Artes Plásticas
+// same as every other trip in that sentido (only the origin actually
+// changes). So this reads a sibling (non-EDUFI) route in the same list and
+// takes whichever of its two endpoints sits in the position EDUFI occupies
+// — read from the data instead of assumed, since that assumption broke
+// silently once already (see copy.ts's edufiNote).
+function edufiNoteText(list: GtfsRoute[]) {
+  const edufi = edufiRoute(list)
+  if (!edufi) return undefined
+  const edufiIndex = edufi.direction_destinations?.indexOf('EDUFI') ?? -1
+  const reference = list.find(r => r !== edufi && r.direction_destinations)
+  const otherEndpoint = reference?.direction_destinations?.[edufiIndex]
+  if (otherEndpoint === undefined) return undefined
+  return copy.mapas.edufiNote(edufi.first_bus!, otherEndpoint, edufiIndex === 0)
 }
 
 // The two big group tabs above (UTabs, same look as Horarios/Tarifas/etc.)
@@ -400,7 +418,7 @@ useSeoMeta({
                   v-if="edufiRoute(sentido.routes)"
                   class="mt-2 text-sm text-toned"
                 >
-                  {{ copy.mapas.edufiNote(edufiRoute(sentido.routes)!.first_bus!) }}
+                  {{ edufiNoteText(sentido.routes) }}
                 </p>
               </div>
             </template>

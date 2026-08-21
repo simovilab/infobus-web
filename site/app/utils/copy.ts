@@ -60,10 +60,17 @@ export const copy = {
     // from that pattern's own real first departure, not hardcoded, so it
     // stays correct if the schedule ever shifts.
     millaNote: (hora: string) => `La línea punteada es el recorrido con la milla universitaria, activo desde las ${hora}.`,
-    // Shown only on "Sentido Odontología → Educación" — that sentido's one
-    // late-night trip ends at EDUFI instead, folded in as a footnote rather
-    // than its own tab (same treatment the printed schedule gives it).
-    edufiNote: (hora: string) => `El viaje de las ${hora} finaliza en la Escuela de Educación Física (EDUFI) en lugar de Educación.`
+    // One late-night trip per sentido group is a short-turn through EDUFI
+    // instead of the pattern's usual endpoint, folded in as a footnote
+    // rather than its own tab (same treatment the printed schedule gives
+    // it). Whether that trip starts or ends at EDUFI — and what the other
+    // endpoint is — comes from the route's real direction_destinations
+    // (see index.vue's edufiRoute), not a hardcoded assumption, so this
+    // stays correct if bucr ever reshapes which end EDUFI replaces.
+    edufiNote: (hora: string, otherEndpoint: string, startsAtEdufi: boolean) =>
+      startsAtEdufi
+        ? `El viaje de las ${hora} inicia en la Escuela de Educación Física (EDUFI) en lugar de ${otherEndpoint}.`
+        : `El viaje de las ${hora} finaliza en la Escuela de Educación Física (EDUFI) en lugar de ${otherEndpoint}.`
   },
   paradas: {
     title: 'Paradas',

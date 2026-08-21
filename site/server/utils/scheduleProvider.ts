@@ -80,7 +80,12 @@ export async function fetchScheduleRoutes(): Promise<GtfsRoute[]> {
     const firstStop = first(stops, `stop for shape ${shapeId}`)
     const lastStop = stops[stops.length - 1]!
     const isMilla = shapeId.includes('con_milla')
-    const direction_id = shapeId.startsWith('desde_odontologia') ? 1 as const : 0 as const
+    // Read straight from the trip's own GTFS direction_id — a prior version
+    // guessed it from shapeId.startsWith('desde_odontologia'), which
+    // silently mis-sorted the 21:20 short-turn (desde_edufi_a_educacion)
+    // into the wrong sentido once bucr renamed that shape (it starts at
+    // EDUFI, not Odontología, even though direction_id correctly says 1).
+    const direction_id = representativeTrip.direction_id === '1' ? 1 as const : 0 as const
 
     const departureTimes = sortedTrips.map(t => t.trip_departure_time!)
     const firstDeparture = first(departureTimes, `departure for shape ${shapeId}`)

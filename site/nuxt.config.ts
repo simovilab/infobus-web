@@ -26,13 +26,17 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css', 'maplibre-gl/dist/maplibre-gl.css'],
 
   runtimeConfig: {
-    // Base URL of the static GTFS API published by the `bucr` repo, fetched
-    // server-side by server/utils/bucrGtfs.ts to build the schedule shown
-    // on the site (see server/utils/scheduleProvider.ts). Server-only (not
-    // under `public`) since nothing fetches it from the browser — falls
-    // back to the bundled copy in server/assets/gtfs/ if the remote fetch
-    // fails. Override with env NUXT_GTFS_API_BASE.
-    gtfsApiBase: 'https://raw.githubusercontent.com/simovilab/bucr/feature/static-website-gtfs/api/'
+    // URL of bUCR's real GTFS zip, downloaded+parsed server-side by
+    // server/utils/bucrGtfs.ts (see server/plugins/gtfsSync.ts for the
+    // hourly polling) to build the schedule shown on the site (see
+    // server/utils/scheduleProvider.ts). Server-only (not under `public`)
+    // since nothing fetches it from the browser — falls back to the
+    // bundled copy in server/assets/gtfs/ if the remote fetch fails.
+    // Override with env NUXT_GTFS_ZIP_URL.
+    // TEMP: pointed at the bucr repo's own zip for testing since
+    // feeds.simovi.org isn't serving the current data yet — switch back to
+    // https://feeds.simovi.org/bucr/schedule/gtfs.zip once it is.
+    gtfsZipUrl: 'https://raw.githubusercontent.com/simovilab/bucr/feature/static-website-gtfs/bucr.zip'
   },
 
   compatibilityDate: '2026-06-30',
