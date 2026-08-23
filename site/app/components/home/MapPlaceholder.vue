@@ -2,6 +2,7 @@
 import type { GtfsRoute } from '~/types/gtfs'
 import mapPlaceholder from '~/assets/images/map-placeholder.webp'
 import { CAMPUS_MAP_CENTER, CAMPUS_MAP_ZOOM } from '~/utils/campusMapReference'
+import { buildRouteSegments } from '~/utils/routeGeometry'
 
 /**
  * Instant-paint stand-in for CampusLiveMap while the real MapLibre map
@@ -10,7 +11,10 @@ import { CAMPUS_MAP_CENTER, CAMPUS_MAP_ZOOM } from '~/utils/campusMapReference'
  * background is a static screenshot of just the basemap (no route baked
  * in — the basemap is stable, but a baked-in route would go stale the
  * moment the schedule changes), and the route line/stop dots are drawn
- * fresh on top as SVG from the same data CampusLiveMap uses, projected
+ * fresh on top as SVG from the same data CampusLiveMap uses (routeGeometry.ts's
+ * buildRouteSegments does the milla-dashing/overlap-dedup work identically
+ * for both, so this placeholder doesn't drift from what the real map
+ * ends up drawing), projected
  * with the same Web Mercator math MapLibre itself uses internally, at the
  * exact same fixed center/zoom CampusLiveMap initializes with (see
  * campusMapReference.ts — that's what keeps the two pixel-aligned; an
@@ -70,21 +74,20 @@ function offset(lon: number, lat: number): [number, number] {
   return [x - centerX, y - centerY]
 }
 
-const routeLines = computed(() => props.routes
-  .filter(r => r.stops.length > 1)
-  .map((route) => {
-    const points = (route.shape?.length ? route.shape : route.stops.map((s): [number, number] => [s.lon, s.lat]))
-      .map(([lon, lat]) => offset(lon, lat))
+const routeLines = computed(() => buildRouteSegments(props.routes)
+  .map((seg) => {
+    const points = seg.points.map(([lon, lat]) => offset(lon, lat))
     return {
-      routeId: route.route_id,
-      color: route.route_color,
-      milla: !!route.is_milla,
+      id: seg.id,
+      color: seg.color,
+      dashed: seg.dashed,
       d: points.map(([x, y], i) => `${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`).join(' ')
     }
   })
-  // Regular pattern drawn last so it renders on top of its dashed milla
-  // variant, same reasoning as CampusLiveMap's dashed-then-solid layer order.
-  .sort((a, b) => Number(b.milla) - Number(a.milla)))
+  // Solid pieces drawn last so they render on top at any boundary they
+  // still share a pixel with a dashed piece, same reasoning as
+  // CampusLiveMap's dashed-then-solid layer order.
+  .sort((a, b) => Number(b.dashed) - Number(a.dashed)))
 
 const stopDots = computed(() => {
   const byId = new Map<string, { id: string, x: number, y: number, terminal: boolean }>()
@@ -126,13 +129,13 @@ const stopDots = computed(() => {
       >
         <path
           v-for="line in routeLines"
-          :key="line.routeId"
+          :key="line.id"
           :d="line.d"
           fill="none"
           :stroke="`#${line.color}`"
-          :stroke-width="line.milla ? 3 : 4"
-          :stroke-opacity="line.milla ? 0.55 : 0.92"
-          :stroke-dasharray="line.milla ? '5,4' : undefined"
+          :stroke-width="line.dashed ? 3 : 4"
+          :stroke-opacity="line.dashed ? 0.9 : 0.92"
+          :stroke-dasharray="line.dashed ? '7,5' : undefined"
           stroke-linecap="round"
           stroke-linejoin="round"
         />

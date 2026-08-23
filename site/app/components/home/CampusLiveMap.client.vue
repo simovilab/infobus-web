@@ -4,6 +4,7 @@ import type { StyleSpecification } from 'maplibre-gl'
 import { Map as MaplibreMap, Marker, setWorkerUrl } from 'maplibre-gl'
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import { CAMPUS_MAP_CENTER, CAMPUS_MAP_ZOOM } from '~/utils/campusMapReference'
+import { buildRouteSegments } from '~/utils/routeGeometry'
 
 // maplibre-gl resolves its tile-processing worker relative to its own
 // import.meta.url at runtime, which Vite's production bundler can't see
@@ -33,12 +34,14 @@ setWorkerUrl(workerUrl)
 // Re-run that script if the route's area or the zoom levels needed change.
 //
 // The caller (index.vue) scopes routes[] to one origin+direction sentido
-// already, so this is at most two patterns: the regular one and its
-// evening milla universitaria detour (GtfsRoute.is_milla) — never
-// something needing a legend/click-to-select UI to disambiguate. The milla
-// variant always draws dashed alongside the regular one, solid; where they
-// geographically coincide (the shared trunk) the solid stroke covers the
-// dashed one, so only the genuinely diverging branch reads as dashed.
+// already, so this is at most two or three patterns (the regular one, its
+// evening milla universitaria detour, or the late-night EDUFI short-turn)
+// — never something needing a legend/click-to-select UI to disambiguate.
+// routeGeometry.ts does the actual line-drawing work: it isolates each
+// milla variant's dashed styling to just the loop it adds over its regular
+// counterpart (not the whole shape), and collapses shapes that physically
+// share a road (the milla trunk, or the near-fully-coincident EDUFI vs.
+// regular return trip) down to one drawn line instead of doubling up.
 const props = defineProps<{
   routes: GtfsRoute[]
   compact?: boolean
@@ -61,29 +64,19 @@ const isLoaded = ref(false)
 
 type LngLatTuple = [number, number]
 
-/** The real street-following path (GTFS shapes.txt) if the route has one, else a straight stop-to-stop fallback. */
-function routeLine(route: GtfsRoute): LngLatTuple[] {
-  return route.shape?.length ? route.shape : route.stops.map((s): LngLatTuple => [s.lon, s.lat])
-}
-
 function routeGeoJson() {
-  const list = props.routes.filter(route => route.stops.length > 1)
+  const segments = buildRouteSegments(props.routes)
   return {
     type: 'FeatureCollection' as const,
-    features: list.map((route, i) => ({
+    features: segments.map(seg => ({
       type: 'Feature' as const,
       properties: {
-        routeId: route.route_id,
-        color: `#${route.route_color}`,
-        milla: !!route.is_milla,
-        // Routes that share the same physical street (e.g. both directions
-        // of the bUCR loop) would otherwise draw exactly on top of each
-        // other and be indistinguishable — nudge each route a few pixels
-        // sideways so overlapping stretches render as parallel lines.
-        // list.length <= 1 keeps a single route perfectly centered.
-        offset: list.length > 1 ? (i - (list.length - 1) / 2) * 3.2 : 0
+        segmentId: seg.id,
+        routeId: seg.routeId,
+        color: `#${seg.color}`,
+        dashed: seg.dashed
       },
-      geometry: { type: 'LineString' as const, coordinates: routeLine(route) }
+      geometry: { type: 'LineString' as const, coordinates: seg.points }
     }))
   }
 }
@@ -156,35 +149,38 @@ onMounted(async () => {
     const millaWidth = props.compact ? 3.5 : 3
 
     // line-dasharray isn't a data-driven (per-feature) paint property in
-    // MapLibre's style spec, so "solid for the regular pattern, dashed for
-    // its milla variant" needs two layers filtered by the `milla` feature
-    // flag, rather than one layer with an expression. Dashed is added first
-    // so the solid layer draws on top of it wherever their paths coincide.
+    // MapLibre's style spec, so "solid pieces vs. dashed milla pieces"
+    // needs two layers filtered by the `dashed` feature flag (set per-piece
+    // by routeGeometry.ts), rather than one layer with an expression.
+    // Overlapping shapes are already deduped to one drawn line before this
+    // (see buildRouteSegments) — no line-offset nudge needed anymore. A
+    // longer dash pattern than MapLibre's default reads as even/continuous
+    // rather than choppy on a curved, densely-sampled shape at this zoom;
+    // the color itself (blended toward white in routeGeometry.ts) carries
+    // the "lighter" look, so opacity doesn't need to fake it too.
     map.addLayer({
       id: 'bucr-routes-line-dashed',
       type: 'line',
       source: 'bucr-routes',
-      filter: ['==', ['get', 'milla'], true],
+      filter: ['==', ['get', 'dashed'], true],
       layout: { 'line-cap': 'round', 'line-join': 'round' },
       paint: {
         'line-color': ['get', 'color'],
         'line-width': millaWidth,
-        'line-opacity': 0.55,
-        'line-offset': ['get', 'offset'],
-        'line-dasharray': [2, 1.6]
+        'line-opacity': 0.9,
+        'line-dasharray': [3, 2]
       }
     })
     map.addLayer({
       id: 'bucr-routes-line-solid',
       type: 'line',
       source: 'bucr-routes',
-      filter: ['==', ['get', 'milla'], false],
+      filter: ['==', ['get', 'dashed'], false],
       layout: { 'line-cap': 'round', 'line-join': 'round' },
       paint: {
         'line-color': ['get', 'color'],
         'line-width': regularWidth,
-        'line-opacity': 0.92,
-        'line-offset': ['get', 'offset']
+        'line-opacity': 0.92
       }
     })
 
