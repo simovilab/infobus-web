@@ -33,10 +33,7 @@ export default defineNuxtConfig({
     // since nothing fetches it from the browser — falls back to the
     // bundled copy in server/assets/gtfs/ if the remote fetch fails.
     // Override with env NUXT_GTFS_ZIP_URL.
-    // TEMP: pointed at the bucr repo's own zip for testing since
-    // feeds.simovi.org isn't serving the current data yet — switch back to
-    // https://feeds.simovi.org/bucr/schedule/gtfs.zip once it is.
-    gtfsZipUrl: 'https://raw.githubusercontent.com/simovilab/bucr/feature/static-website-gtfs/bucr.zip'
+    gtfsZipUrl: 'https://feeds.simovi.org/bucr/schedule/gtfs.zip'
   },
 
   compatibilityDate: '2026-06-30',
