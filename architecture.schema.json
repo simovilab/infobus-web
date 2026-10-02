@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://infobus.example/schemas/architecture.schema.json",
+  "title": "Infobús Web Information Architecture",
+  "description": "Validates the page and component inventory for the Infobus website.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "metadata", "pages"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "./architecture.schema.json"
+    },
+    "metadata": {
+      "$ref": "#/$defs/metadata"
+    },
+    "pages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/page"
+      }
+    }
+  },
+  "$defs": {
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "title", "date"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+(?:\\.[0-9]+)?$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "page": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "path", "description", "components"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^/(?:[a-z0-9-]+|<[a-z][a-z0-9_]*>)(?:/(?:[a-z0-9-]+|<[a-z][a-z0-9_]*>))*$|^/$"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "components": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/component"
+          }
+        }
+      }
+    },
+    "component": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "description"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[A-Z][A-Za-z0-9]*$"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "endpoints": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/endpoint"
+          }
+        }
+      }
+    },
+    "endpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "path"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["REST", "WebSocket"]
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^/(?:[a-z0-9_-]+|<[a-z][a-z0-9_]*>)(?:/(?:[a-z0-9_-]+|<[a-z][a-z0-9_]*>))*$"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_]*(?:\\.(?:[a-z][a-z0-9_]*|<[a-z][a-z0-9_]*>))*$"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "WebSocket"
+              }
+            }
+          },
+          "then": {
+            "required": ["topic"]
+          },
+          "else": {
+            "not": {
+              "required": ["topic"]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

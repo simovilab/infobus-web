@@ -8,6 +8,7 @@ const runId = computed(() => String(route.params.run_id || ''))
   <UContainer>
     <TripHeader />
     <TripNextStops />
+    <TripAlerts />
     <TripMap />
   </UContainer>
 </template>

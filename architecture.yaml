@@ -1,0 +1,321 @@
+$schema: ./architecture.schema.json
+
+metadata:
+  version: "1.0"
+  title: Infobús Web Information Architecture
+  date: 2026-10-02
+
+pages:
+  - name: Home
+    path: /
+    description: Landing page for the public transportation service.
+    components:
+      - name: ServiceNavigation
+        description: Primary navigation to the transit service's major information areas.
+      - name: ServiceStatus
+        description: Summary of current service conditions and active alerts.
+      - name: NewsMenu
+        description: Preview of the most recent news and service updates.
+      - name: EventsMenu
+        description: Preview of upcoming transit-related events.
+
+  - name: Routes
+    path: /routes
+    description: Information about all the routes in the transit system.
+    components:
+      - name: RoutesSearch
+        description: Finds routes by name, number, location, or other criteria.
+      - name: RoutesMenu
+        description: Lists routes by an appropriate grouping such as type or number.
+      - name: RoutesMap
+        description: Shows all routes within the service area.
+
+  - name: Route
+    path: /routes/<route_id>
+    description: Detail page for a single transit route.
+    components:
+      - name: RouteHeader
+        description: Presents the route's ID, name, type, and essential information.
+        endpoints:
+          - type: REST
+            path: /api/web/routes/<route_id>
+      - name: RouteNextTrips
+        description: Shows ongoing and upcoming trips for the current time.
+        endpoints:
+          - type: WebSocket
+            path: /ws/updates
+            topic: route.<route_id>.stop_times
+      - name: RouteAlerts
+        description: Displays active alerts that apply to the route.
+        endpoints:
+          - type: WebSocket
+            path: /api/web/routes/<route_id>
+            topic: route.<route_id>.alerts
+      - name: RouteSchedule
+        description: Displays scheduled and estimated departures by stop.
+        endpoints:
+          - type: REST
+            path: /api/web/routes/<route_id>
+      - name: RouteMap
+        description: Shows trip shapes and, when available, real-time vehicle positions.
+      - name: RouteStops
+        description: Lists the route's stops in both directions.
+      - name: RouteFares
+        description: Displays fares and fare rules applicable to the route.
+
+  - name: Stops
+    path: /stops
+    description: Information about all stops in the transit system.
+    components:
+      - name: StopsSearch
+        description: Finds stops by name, identifier, location, or other criteria.
+      - name: StopsMap
+        description: Shows all stops within the service area.
+
+  - name: Stop
+    path: /stops/<stop_id>
+    description: Detail page for a single transit stop.
+    components:
+      - name: StopHeader
+        description: Presents the stop's ID, name, and essential information.
+      - name: StopNextArrivals
+        description: Shows upcoming arrivals at the stop.
+      - name: StopAlerts
+        description: Displays active alerts that apply to the stop.
+      - name: StopRoutes
+        description: Lists routes that serve the stop.
+      - name: StopMap
+        description: Shows the stop location and nearby area.
+
+  - name: Trips
+    path: /trips
+    description: Information about current and recent trips in the transit system.
+    components:
+      - name: TripsSearch
+        description: Finds trips by route, stop, time, or other criteria.
+      - name: TripsMap
+        description: Shows paths and, when available, real-time positions of current trips.
+
+  - name: Trip
+    path: /trips/<run_id>
+    description: Detail page for a single transit trip.
+    components:
+      - name: TripHeader
+        description: Presents the trip's ID, route, stops, and essential information.
+      - name: TripNextStops
+        description: Shows the trip's upcoming stops.
+      - name: TripAlerts
+        description: Displays active alerts that apply to the trip.
+      - name: TripMap
+        description: Shows the trip path and, when available, its real-time position.
+
+  - name: Fares
+    path: /fares
+    description: Information about all fare products and payment options.
+    components:
+      - name: FaresSearch
+        description: Finds fare products by name, audience, zone, or price.
+      - name: FaresProductMenu
+        description: Lists available fare products and their primary characteristics.
+
+  - name: Fare Product
+    path: /fares/<fare_product_id>
+    description: Detail page for a single fare product.
+    components:
+      - name: FareProductHeader
+        description: Presents the fare product's name, price, and key eligibility information.
+      - name: FareProductDescription
+        description: Explains validity, purchase, use, and fare rules.
+
+  - name: Alerts
+    path: /alerts
+    description: Information about all current and recent service alerts.
+    components:
+      - name: AlertsSearch
+        description: Finds alerts by affected service, location, or period.
+      - name: AlertsMenu
+        description: Lists alerts and summarizes their severity and affected services.
+
+  - name: Alert
+    path: /alerts/<entity_id>
+    description: Detail page for a single service alert.
+    components:
+      - name: AlertHeader
+        description: Presents the alert title, severity, and affected entities.
+      - name: AlertPeriod
+        description: Shows the alert's active period and update time.
+      - name: AlertDescription
+        description: Explains the disruption, impact, and passenger guidance.
+
+  - name: News
+    path: /news
+    description: News and updates about the public transportation service.
+    components:
+      - name: NewsSearch
+        description: Finds news items by topic, date, or keyword.
+      - name: NewsMenu
+        description: Lists published news and service updates.
+
+  - name: News Article
+    path: /news/<slug>
+    description: Detail page for a news article.
+    components:
+      - name: ArticleHeader
+        description: Presents the article title, publication information, and summary.
+      - name: ArticleBody
+        description: Renders the article content and supporting media.
+
+  - name: Blog
+    path: /blog
+    description: Articles and blog posts related to public transportation.
+    components:
+      - name: PageHeader
+        description: Introduces the blog and its editorial scope.
+      - name: ArticleMenu
+        description: Lists blog posts with publication information and summaries.
+
+  - name: Blog Post
+    path: /blog/<slug>
+    description: Detail page for a blog post.
+    components:
+      - name: ArticleHeader
+        description: Presents the post title, authors, date, and summary.
+      - name: ArticleBody
+        description: Renders the post content and supporting media.
+
+  - name: Events
+    path: /events
+    description: Information about transit-related events.
+    components:
+      - name: EventsSearch
+        description: Finds events by date, location, or topic.
+      - name: EventsMenu
+        description: Lists upcoming and recent events.
+
+  - name: Event
+    path: /events/<slug>
+    description: Detail page for a transit-related event.
+    components:
+      - name: EventHeader
+        description: Presents the event title, date, location, and essential details.
+      - name: EventBody
+        description: Renders the event description, schedule, and supporting media.
+
+  - name: Resources
+    path: /resources
+    description: Entry point for passenger resources and service guidance.
+    components:
+      - name: PageHeader
+        description: Introduces the available passenger resources.
+      - name: ResourcesMenu
+        description: Links to the guide, accessibility, and tourism resources.
+
+  - name: User Guide
+    path: /resources/guide
+    description: Guide to using the public transportation service.
+    components:
+      - name: PageHeader
+        description: Introduces the passenger usage guide.
+      - name: PictureAndText
+        description: Explains common passenger journeys with text and illustrations.
+
+  - name: Accessibility
+    path: /resources/accessibility
+    description: Information about accessibility across the public transportation service.
+    components:
+      - name: PageHeader
+        description: Introduces accessibility commitments and available support.
+      - name: PictureAndText
+        description: Explains accessible service features and how to use them.
+
+  - name: Tourism
+    path: /resources/tourism
+    description: Public transportation information for visitors and tourists.
+    components:
+      - name: PageHeader
+        description: Introduces visitor-focused transport information.
+      - name: PictureAndText
+        description: Explains tickets, key destinations, and visitor travel guidance.
+
+  - name: Design
+    path: /design
+    description: Information about the service's visual identity.
+    components:
+      - name: PageHeader
+        description: Introduces the visual identity and its purpose.
+      - name: Pictures
+        description: Displays visual identity examples and design assets.
+
+  - name: Engineering
+    path: /engineering
+    description: Information about the engineering aspects of the transit service.
+    components:
+      - name: PageHeader
+        description: Introduces the service's technical and engineering work.
+      - name: PictureAndText
+        description: Explains engineering systems, infrastructure, and practices.
+
+  - name: Data
+    path: /data
+    description: Information about public transportation data and feed metadata.
+    components:
+      - name: PageHeader
+        description: Presents the service's data publication information.
+      - name: DataSummary
+        description: Displays feed metadata, availability, and data-use information.
+      - name: DataMenu
+        description: Links to available datasets and GTFS documentation.
+
+  - name: GTFS
+    path: /data/gtfs
+    description: Information about the General Transit Feed Specification data feed.
+    components:
+      - name: PageHeader
+        description: Introduces the GTFS feed and its intended use.
+      - name: GtfsReference
+        description: Describes the published GTFS files, fields, and update cadence.
+
+  - name: Operators
+    path: /operators
+    description: Information about administrative management and service operators.
+    components:
+      - name: PageHeader
+        description: Introduces the organizations responsible for the service.
+      - name: OperatorsMenu
+        description: Lists operators and their responsibilities.
+
+  - name: FAQ
+    path: /faq
+    description: Frequently asked questions about the public transportation service.
+    components:
+      - name: PageHeader
+        description: Introduces the frequently asked questions.
+      - name: FaqList
+        description: Groups answers to common passenger questions by topic.
+
+  - name: Legal
+    path: /legal
+    description: Legal information and terms of use for the service.
+    components:
+      - name: PageHeader
+        description: Introduces the legal information and terms.
+      - name: LegalDocuments
+        description: Lists and renders applicable terms, policies, and notices.
+
+  - name: Contact
+    path: /contact
+    description: Contact information for the public transportation service.
+    components:
+      - name: PageHeader
+        description: Introduces available support and contact channels.
+      - name: ContactChannels
+        description: Lists contact methods, hours, and emergency guidance.
+
+  - name: About
+    path: /about
+    description: Overview of InfoTP and the public transportation service.
+    components:
+      - name: PageHeader
+        description: Introduces InfoTP's mission, scope, and service area.
+      - name: PictureAndText
+        description: Explains the service's history, purpose, and public value.

@@ -23,6 +23,7 @@
     "nuxt-og-image": "^6.9.0",
     "tailwindcss": "^4.3.3",
     "ufo": "^1.6.4",
+    "yaml": "^2.9.1",
     "zod": "^4.6.5"
   },
   "devDependencies": {

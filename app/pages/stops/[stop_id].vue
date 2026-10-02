@@ -7,7 +7,9 @@ const stopId = computed(() => String(route.params.stop_id || ''))
   <UPageSection :title="`Stop ${stopId}`" />
   <UContainer>
     <StopHeader />
-    <StopNextTrips />
+    <StopRoutes />
+    <StopNextArrivals />
+    <StopAlerts />
     <StopMap />
   </UContainer>
 </template>
