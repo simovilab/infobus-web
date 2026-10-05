@@ -1,5 +1,9 @@
+<script setup lang="ts">
+const page = getArchitecturePage('/routes')
+</script>
+
 <template>
-  <UPageSection title="Routes" description="Information about all the routes in the transit system." />
+  <UPageSection :title="page.name" :description="page.description" />
   <UContainer>
     <RoutesSearch />
     <RoutesMenu />

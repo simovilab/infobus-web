@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const page = getArchitecturePage('/operators')
+</script>
+
 <template>
-  <UPageHero title="Operators" />
+  <UPageSection :title="page.name" :description="page.description" />
 </template>

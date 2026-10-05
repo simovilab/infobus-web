@@ -1,5 +1,9 @@
+<script setup lang="ts">
+const page = getArchitecturePage('/fares')
+</script>
+
 <template>
-  <UPageSection title="Fares" />
+  <UPageSection :title="page.name" :description="page.description" />
   <UContainer>
     <FaresSearch />
     <FaresProductMenu />

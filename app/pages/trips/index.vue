@@ -1,5 +1,9 @@
+<script setup lang="ts">
+const page = getArchitecturePage('/trips')
+</script>
+
 <template>
-  <UPageSection title="Trips" />
+  <UPageSection :title="page.name" :description="page.description" />
   <UContainer>
     <TripsSearch />
     <TripsMap />

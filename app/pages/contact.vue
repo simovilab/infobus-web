@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const page = getArchitecturePage('/contact')
+</script>
+
 <template>
-  <UPageHero title="Contact" />
+  <UPageSection :title="page.name" :description="page.description" />
 </template>

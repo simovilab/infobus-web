@@ -1,5 +1,9 @@
+<script setup lang="ts">
+const page = getArchitecturePage('/stops')
+</script>
+
 <template>
-  <UPageSection title="Stops" />
+  <UPageSection :title="page.name" :description="page.description" />
   <UContainer>
     <StopsSearch />
     <StopsMap />

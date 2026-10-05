@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const page = getArchitecturePage('/engineering')
+</script>
+
 <template>
-  <UPageHero title="Engineering" />
+  <UPageSection :title="page.name" :description="page.description" />
 </template>

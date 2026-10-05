@@ -1,5 +1,9 @@
+<script setup lang="ts">
+const page = getArchitecturePage('/alerts')
+</script>
+
 <template>
-  <UPageSection title="Alerts" />
+  <UPageSection :title="page.name" :description="page.description" />
   <UContainer>
     <AlertsSearch />
     <AlertsMenu />

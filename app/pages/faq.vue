@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const page = getArchitecturePage('/faq')
+</script>
+
 <template>
-  <UPageHero title="FAQ" />
+  <UPageSection :title="page.name" :description="page.description" />
 </template>

@@ -1,5 +1,9 @@
+<script setup lang="ts">
+const page = getArchitecturePage('/news')
+</script>
+
 <template>
-  <UPageSection title="News" />
+  <UPageSection :title="page.name" :description="page.description" />
   <UContainer>
     <NewsSearch />
     <NewsMenu />

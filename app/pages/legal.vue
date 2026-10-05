@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const page = getArchitecturePage('/legal')
+</script>
+
 <template>
-  <UPageHero title="Legal" />
+  <UPageSection :title="page.name" :description="page.description" />
 </template>

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const page = getArchitecturePage('/resources/accessibility')
+</script>
+
 <template>
-  <UPageHero title="Accessibility" />
+  <UPageSection :title="page.name" :description="page.description" />
 </template>

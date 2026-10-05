@@ -1,5 +1,9 @@
+<script setup lang="ts">
+const page = getArchitecturePage('/events')
+</script>
+
 <template>
-  <UPageSection title="Events" />
+  <UPageSection :title="page.name" :description="page.description" />
   <UContainer>
     <EventsSearch />
     <EventsMenu />
