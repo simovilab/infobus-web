@@ -1,0 +1,15 @@
+{
+  "route_next_trips": {
+    "route_short_name": "39",
+    "trips": [
+      {
+        "trip_headsign": "Curridabat",
+        "departure_time": "08:30:00"
+      },
+      {
+        "trip_headsign": "Curridabat",
+        "departure_time": "09:00:00"
+      }
+    ]
+  }
+}

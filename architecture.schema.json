@@ -81,11 +81,50 @@
           "type": "string",
           "minLength": 1
         },
+        "feed": {
+          "type": "string",
+          "enum": ["schedule", "realtime"]
+        },
         "endpoints": {
           "type": "array",
           "minItems": 1,
           "items": {
             "$ref": "#/$defs/endpoint"
+          }
+        },
+        "data_entities": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/$defs/dataEntity"
+          }
+        }
+      }
+    },
+    "dataEntity": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*(?:\\.[a-z][a-z0-9_]*)*$"
+        },
+        {
+          "$ref": "#/$defs/collection"
+        }
+      ]
+    },
+    "collection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["collection", "fields"],
+      "properties": {
+        "collection": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "fields": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/dataEntity"
           }
         }
       }
@@ -97,11 +136,16 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["REST", "WebSocket"]
+          "enum": ["JSON", "GeoJSON", "WebSocket"]
         },
         "path": {
           "type": "string",
           "pattern": "^/(?:[a-z0-9_-]+|<[a-z][a-z0-9_]*>)(?:/(?:[a-z0-9_-]+|<[a-z][a-z0-9_]*>))*$"
+        },
+        "key": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_]*(?:\\.[a-z][a-z0-9_]*)*$"
         },
         "topic": {
           "type": "string",
@@ -124,6 +168,20 @@
           "else": {
             "not": {
               "required": ["topic"]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "JSON"
+              }
+            }
+          },
+          "else": {
+            "not": {
+              "required": ["key"]
             }
           }
         }

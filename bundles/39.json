@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "title": "Infobús Web Information Architecture",
+    "date": "2026-10-02"
+  },
+  "components": {
+    "route_header": {
+      "route_id": "39",
+      "route_short_name": "39",
+      "route_long_name": "Curridabat",
+      "route_desc": "La ruta más Freses",
+      "route_color": "A5B345",
+      "route_text_color": "C936DF",
+      "route_type": "3",
+      "cemv_support": true
+    },
+    "route_schedule": {
+      "calendar": [
+        {
+          "service_id": "entresemana",
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false,
+          "start_date": "2026-10-02",
+          "end_date": "2026-12-31"
+        }
+      ],
+      "calendar_dates": [
+        {
+          "service_id": "entresemana",
+          "date": "2026-12-01",
+          "exception_type": 1,
+          "holiday_name": "Día de la Abolición del Ejército"
+        }
+      ],
+      "services": [
+        {
+          "service_id": "entresemana",
+          "direction": [
+            {
+              "direction_id": 0,
+              "trips": [
+                {
+                  "trip_id": "A1",
+                  "stop_times": [
+                    {
+                      "stop_name": "Parada A1",
+                      "departure_time": "07:40:00"
+                    },
+                    {
+                      "stop_name": "Parada A2",
+                      "departure_time": "07:42:00"
+                    }
+                  ]
+                },
+                {
+                  "trip_id": "A2",
+                  "stop_times": [
+                    {
+                      "stop_name": "Parada A1",
+                      "departure_time": "07:55:00"
+                    },
+                    {
+                      "stop_name": "Parada A2",
+                      "departure_time": "07:57:00"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "direction_id": 1,
+              "trips": [
+                {
+                  "trip_id": "B1",
+                  "first_stop_name": "Parada B1",
+                  "first_departure_time": "07:40:00",
+                  "last_stop_name": "Parada B15",
+                  "last_arrival_time": "25:04:00",
+                  "stop_times": [
+                    {
+                      "stop_name": "Parada B1",
+                      "departure_time": "07:40:00"
+                    },
+                    {
+                      "stop_name": "Parada B2",
+                      "departure_time": "07:42:00"
+                    }
+                  ]
+                },
+                {
+                  "trip_id": "B2",
+                  "stop_times": [
+                    {
+                      "stop_name": "Parada B1",
+                      "departure_time": "07:55:00"
+                    },
+                    {
+                      "stop_name": "Parada B2",
+                      "departure_time": "07:57:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

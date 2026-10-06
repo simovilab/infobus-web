@@ -35,33 +35,103 @@ pages:
     description: Detail page for a single transit route.
     components:
       - name: RouteHeader
-        description: Presents the route's ID, name, type, and essential information.
+        description: Presents the route's essential information.
+        feed: schedule
         endpoints:
-          - type: REST
-            path: /api/web/routes/<route_id>
+          - type: JSON
+            path: /web/routes/<route_id>
+            key: components.route_header
+        data_entities:
+          - routes.route_id
+          - routes.route_short_name
+          - routes.route_long_name
+          - routes.route_desc
+          - routes.route_color
+          - routes.route_text_color
+          - routes.route_type
+          - routes.cemv_support
       - name: RouteNextTrips
         description: Shows ongoing and upcoming trips for the current time.
+        feed: realtime
         endpoints:
           - type: WebSocket
             path: /ws/updates
             topic: route.<route_id>.stop_times
+        data_entities:
+          - routes.route_short_name
+          - collection: trips
+            fields:
+              - trips.trip_headsign
+              - stop_times.departure_time
       - name: RouteAlerts
         description: Displays active alerts that apply to the route.
+        feed: realtime
         endpoints:
           - type: WebSocket
-            path: /api/web/routes/<route_id>
+            path: /ws/updates
             topic: route.<route_id>.alerts
       - name: RouteSchedule
         description: Displays scheduled and estimated departures by stop.
+        feed: schedule
         endpoints:
-          - type: REST
-            path: /api/web/routes/<route_id>
+          - type: JSON
+            path: /web/routes/<route_id>
+            key: components.route_schedule
+        data_entities:
+          - collection: calendar
+            fields:
+              - service_id
+              - monday
+              - tuesday
+              - wednesday
+              - thursday
+              - friday
+              - saturday
+              - sunday
+              - start_date
+              - end_date
+          - collection: calendar_dates
+            fields:
+              - service_id
+              - date
+              - exception_type
+          - collection: services
+            fields:
+              - calendar.service_id
+              - collection: direction
+                fields:
+                  - trips.direction_id
+                  - route.first_trip_departure_time
+                  - route.last_trip_departure_time
+                  - collection: trips
+                    fields:
+                      - trips.trip_id
+                      - route.first_stop_name
+                      - route.first_departure_time
+                      - route.last_stop_name
+                      - route.last_arrival_time
+                      - collection: stop_times
+                        fields:
+                          - stops.stop_name
+                          - stop_times.departure_time
       - name: RouteMap
         description: Shows trip shapes and, when available, real-time vehicle positions.
+        feed: schedule
+        endpoints:
+          - type: GeoJSON
+            path: /web/routes/<route_id>/map
       - name: RouteStops
         description: Lists the route's stops in both directions.
+        feed: schedule
+        endpoints:
+          - type: JSON
+            path: /web/routes/<route_id>
       - name: RouteFares
         description: Displays fares and fare rules applicable to the route.
+        feed: schedule
+        endpoints:
+          - type: JSON
+            path: /web/routes/<route_id>/fares
 
   - name: Stops
     path: /stops
