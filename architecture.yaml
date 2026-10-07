@@ -133,6 +133,24 @@ pages:
           - type: JSON
             path: /web/routes/<route_id>/fares
 
+  - name: Regions
+    path: /routes/regions
+    description: Bundled routes within a specific region.
+    components:
+      - name: RegionsSearch
+        description: Finds regions by name, identifier, or other criteria.
+      - name: RegionsMap
+        description: Shows all regions within the service area.
+
+  - name: Region
+    path: /routes/regions/<region_id>
+    description: Detail page for a single region.
+    components:
+      - name: RegionHeader
+        description: Presents the region's ID, name, and essential information.
+      - name: RegionMap
+        description: Shows the region's boundaries and included routes.
+
   - name: Stops
     path: /stops
     description: Information about all stops in the transit system.
