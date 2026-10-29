@@ -10,35 +10,35 @@
       "stop_code": null,
       "stop_name": "ESTACION DE TRENES DEL ATLÁNTICO",
       "stop_desc": "EN FRENTE DE LA ESTACION DE TRENES DEL ATLÁNTICO",
-      "stop_lat": 9.934905847447636,
-      "stop_lon": -84.06965450857649,
+      "stop_lat": 9.934906340526107,
+      "stop_lon": -84.06965415832572,
       "wheelchair_boarding": null
     },
     "stop_routes": {
       "routes": [
         {
-          "route_id": "0050-A-2",
-          "route_short_name": "SALITRILLOS - SJ - EXT. KARPINSKY",
-          "route_long_name": "SAN JOSÉ - SAN PEDRO - SALITRILLOS - EXT. KARPINSKY 2-1",
+          "route_id": "0050-A",
+          "route_short_name": "SJ - SALITRILLOS - EXT. KARPINSKY",
+          "route_long_name": "SAN JOSÉ - SAN PEDRO - SALITRILLOS - EXT. KARPINSKY",
           "route_color": null,
           "route_text_color": null,
-          "direction_id": 0
+          "direction_id": 1
         },
         {
-          "route_id": "0050-E-2",
-          "route_short_name": "VILLA HERMOSA - SAN RAMÓN TRES RÍOS - SJ",
-          "route_long_name": "SAN JOSÉ - SAN RAMÓN DE TRES RÍOS - VILLA HERMOSA 2-1",
+          "route_id": "0050-E",
+          "route_short_name": "SJ - SAN RAMÓN TRES RÍOS - VILLA HERMOSA",
+          "route_long_name": "SAN JOSÉ - SAN RAMÓN DE TRES RÍOS - VILLA HERMOSA",
           "route_color": null,
           "route_text_color": null,
-          "direction_id": 0
+          "direction_id": 1
         },
         {
-          "route_id": "0051-B-2",
-          "route_short_name": "CARMIOL - SJ",
-          "route_long_name": "SAN JOSE - CARMIOL 2-1",
+          "route_id": "0051-B",
+          "route_short_name": "SJ - CARMIOL",
+          "route_long_name": "SAN JOSÉ - URBANIZACIÓN CARMIOL Y VICEVERSA",
           "route_color": null,
           "route_text_color": null,
-          "direction_id": 0
+          "direction_id": 1
         }
       ]
     }

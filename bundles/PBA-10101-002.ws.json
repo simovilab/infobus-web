@@ -3,12 +3,12 @@
     "stop_name": "ESTACION DE TRENES DEL ATLÁNTICO",
     "trips": [
       {
-        "route_short_name": "SALITRILLOS - SJ - EXT. KARPINSKY",
+        "route_short_name": "SJ - SALITRILLOS - EXT. KARPINSKY",
         "trip_headsign": null,
         "departure_time": "08:01:10"
       },
       {
-        "route_short_name": "VILLA HERMOSA - SAN RAMÓN TRES RÍOS - SJ",
+        "route_short_name": "SJ - SAN RAMÓN TRES RÍOS - VILLA HERMOSA",
         "trip_headsign": null,
         "departure_time": "08:03:29"
       }
