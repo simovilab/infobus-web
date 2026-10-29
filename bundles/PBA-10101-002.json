@@ -9,36 +9,63 @@
       "stop_id": "PBA-10101-002",
       "stop_code": null,
       "stop_name": "ESTACION DE TRENES DEL ATLÁNTICO",
+      "tts_stop_name": null,
       "stop_desc": "EN FRENTE DE LA ESTACION DE TRENES DEL ATLÁNTICO",
       "stop_lat": 9.934906340526107,
       "stop_lon": -84.06965415832572,
-      "wheelchair_boarding": null
+      "zone_id": null,
+      "stop_url": null,
+      "location_type": "0",
+      "parent_station": null,
+      "stop_timezone": null,
+      "wheelchair_boarding": null,
+      "level_id": null,
+      "platform_code": null,
+      "stop_access": null
     },
     "stop_routes": {
       "routes": [
         {
           "route_id": "0050-A",
+          "agency_id": "3101065720",
           "route_short_name": "SJ - SALITRILLOS - EXT. KARPINSKY",
           "route_long_name": "SAN JOSÉ - SAN PEDRO - SALITRILLOS - EXT. KARPINSKY",
+          "route_desc": null,
+          "route_type": "3",
+          "route_url": null,
           "route_color": null,
           "route_text_color": null,
-          "direction_id": 1
+          "route_sort_order": null,
+          "direction_id": 1,
+          "trip_headsign": null
         },
         {
           "route_id": "0050-E",
+          "agency_id": "3101065720",
           "route_short_name": "SJ - SAN RAMÓN TRES RÍOS - VILLA HERMOSA",
           "route_long_name": "SAN JOSÉ - SAN RAMÓN DE TRES RÍOS - VILLA HERMOSA",
+          "route_desc": null,
+          "route_type": "3",
+          "route_url": null,
           "route_color": null,
           "route_text_color": null,
-          "direction_id": 1
+          "route_sort_order": null,
+          "direction_id": 1,
+          "trip_headsign": null
         },
         {
           "route_id": "0051-B",
+          "agency_id": "3101053176",
           "route_short_name": "SJ - CARMIOL",
           "route_long_name": "SAN JOSÉ - URBANIZACIÓN CARMIOL Y VICEVERSA",
+          "route_desc": null,
+          "route_type": "3",
+          "route_url": null,
           "route_color": null,
           "route_text_color": null,
-          "direction_id": 1
+          "route_sort_order": null,
+          "direction_id": 1,
+          "trip_headsign": null
         }
       ]
     }
