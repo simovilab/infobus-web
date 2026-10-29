@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "title": "Infobús Web Information Architecture",
+    "date": "2026-10-02"
+  },
+  "components": {
+    "stop_header": {
+      "stop_id": "PBA-10101-002",
+      "stop_code": null,
+      "stop_name": "ESTACION DE TRENES DEL ATLÁNTICO",
+      "stop_desc": "EN FRENTE DE LA ESTACION DE TRENES DEL ATLÁNTICO",
+      "stop_lat": 9.934905847447636,
+      "stop_lon": -84.06965450857649,
+      "wheelchair_boarding": null
+    },
+    "stop_routes": {
+      "routes": [
+        {
+          "route_id": "0050-A-2",
+          "route_short_name": "SALITRILLOS - SJ - EXT. KARPINSKY",
+          "route_long_name": "SAN JOSÉ - SAN PEDRO - SALITRILLOS - EXT. KARPINSKY 2-1",
+          "route_color": null,
+          "route_text_color": null,
+          "direction_id": 0
+        },
+        {
+          "route_id": "0050-E-2",
+          "route_short_name": "VILLA HERMOSA - SAN RAMÓN TRES RÍOS - SJ",
+          "route_long_name": "SAN JOSÉ - SAN RAMÓN DE TRES RÍOS - VILLA HERMOSA 2-1",
+          "route_color": null,
+          "route_text_color": null,
+          "direction_id": 0
+        },
+        {
+          "route_id": "0051-B-2",
+          "route_short_name": "CARMIOL - SJ",
+          "route_long_name": "SAN JOSE - CARMIOL 2-1",
+          "route_color": null,
+          "route_text_color": null,
+          "direction_id": 0
+        }
+      ]
+    }
+  }
+}

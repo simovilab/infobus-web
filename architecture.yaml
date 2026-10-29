@@ -188,21 +188,78 @@ pages:
         description: Finds stops by name, identifier, location, or other criteria.
       - name: StopsMap
         description: Shows all stops within the service area.
+        feed: schedule
+        endpoints:
+          - type: GeoJSON
+            path: /web/stops/map
+        data_entities:
+          - stops.stop_id
+          - stops.stop_name
+          - stops.stop_lat
+          - stops.stop_lon
 
   - name: Stop
     path: /stops/<stop_id>
     description: Detail page for a single transit stop.
     components:
       - name: StopHeader
-        description: Presents the stop's ID, name, and essential information.
+        description: Presents the stop's essential information.
+        feed: schedule
+        endpoints:
+          - type: JSON
+            path: /web/stops/<stop_id>
+            key: components.stop_header
+        data_entities:
+          - stops.stop_id
+          - stops.stop_code
+          - stops.stop_name
+          - stops.stop_desc
+          - stops.stop_lat
+          - stops.stop_lon
+          - stops.wheelchair_boarding
       - name: StopNextArrivals
         description: Shows upcoming arrivals at the stop.
+        feed: realtime
+        endpoints:
+          - type: WebSocket
+            path: /ws/updates
+            topic: stop.<stop_id>.stop_times
+        data_entities:
+          - stops.stop_name
+          - collection: trips
+            fields:
+              - routes.route_short_name
+              - trips.trip_headsign
+              - stop_times.departure_time
       - name: StopAlerts
         description: Displays active alerts that apply to the stop.
+        feed: realtime
+        endpoints:
+          - type: WebSocket
+            path: /ws/updates
+            topic: stop.<stop_id>.alerts
       - name: StopRoutes
         description: Lists routes that serve the stop.
+        feed: schedule
+        endpoints:
+          - type: JSON
+            path: /web/stops/<stop_id>
+            key: components.stop_routes
+        data_entities:
+          - collection: routes
+            fields:
+              - routes.route_id
+              - routes.route_short_name
+              - routes.route_long_name
+              - routes.route_color
+              - routes.route_text_color
+              - trips.direction_id
       - name: StopMap
         description: Shows the stop location and nearby area.
+        feed: schedule
+        endpoints:
+          - type: GeoJSON
+            path: /web/stops/<stop_id>/map
 
   - name: Trips
     path: /trips
