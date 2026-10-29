@@ -1,23 +1,45 @@
 $schema: ./architecture.schema.json
 
 metadata:
-  version: "1.0"
+  version: "0.1"
   title: Infobús Web Information Architecture
-  date: 2026-10-02
+  date: 2026-10-28
 
 pages:
   - name: Home
     path: /
     description: Landing page for the public transportation service.
     components:
-      - name: ServiceNavigation
-        description: Primary navigation to the transit service's major information areas.
-      - name: ServiceStatus
-        description: Summary of current service conditions and active alerts.
-      - name: NewsMenu
-        description: Preview of the most recent news and service updates.
-      - name: EventsMenu
-        description: Preview of upcoming transit-related events.
+      - name: RecentlyVisitedPages
+        description: Displays a list of pages the user has recently visited, including routes, stops, and other relevant sections.
+        type: editorial_content
+      - name: AlertsDigest
+        description: Summarizes active alerts affecting the transit service.
+        type: editorial_content
+      - name: RoutesBanner
+        description: Description of the routes and their content.
+        type: editorial_content
+      - name: StopsBanner
+        description: Description of the stops and their content.
+        type: editorial_content
+      - name: TripsBanner
+        description: Description of the trips and their content.
+        type: editorial_content
+      - name: FaresBanner
+        description: Description of the fares and their content.
+        type: editorial_content
+      - name: AlertsBanner
+        description: Description of the alerts and their content.
+        type: editorial_content
+      - name: NewsBanner
+        description: Description of the news and their content.
+        type: editorial_content
+      - name: EventsBanner
+        description: Description of the events and their content.
+        type: editorial_content
+      - name: BlogBanner
+        description: Description of the blog and its content.
+        type: editorial_content
 
   - name: Routes
     path: /routes
@@ -36,7 +58,8 @@ pages:
     components:
       - name: RouteHeader
         description: Presents the route's essential information.
-        feed: schedule
+        type: feed
+        gtfs: schedule
         endpoints:
           - type: JSON
             path: /web/routes/<route_id>
@@ -52,7 +75,8 @@ pages:
           - routes.cemv_support
       - name: RouteNextTrips
         description: Shows ongoing and upcoming trips for the current time.
-        feed: realtime
+        type: feed
+        gtfs: realtime
         endpoints:
           - type: WebSocket
             path: /ws/updates
@@ -65,14 +89,16 @@ pages:
               - stop_times.departure_time
       - name: RouteAlerts
         description: Displays active alerts that apply to the route.
-        feed: realtime
+        type: feed
+        gtfs: realtime
         endpoints:
           - type: WebSocket
             path: /ws/updates
             topic: route.<route_id>.alerts
       - name: RouteSchedule
         description: Displays scheduled and estimated departures by stop.
-        feed: schedule
+        type: feed
+        gtfs: schedule
         endpoints:
           - type: JSON
             path: /web/routes/<route_id>
@@ -116,19 +142,22 @@ pages:
                           - stop_times.departure_time
       - name: RouteMap
         description: Shows trip shapes and, when available, real-time vehicle positions.
-        feed: schedule
+        type: feed
+        gtfs: schedule
         endpoints:
           - type: GeoJSON
             path: /web/routes/<route_id>/map
       - name: RouteStops
         description: Lists the route's stops in both directions.
-        feed: schedule
+        type: feed
+        gtfs: schedule
         endpoints:
           - type: JSON
             path: /web/routes/<route_id>
       - name: RouteFares
         description: Displays fares and fare rules applicable to the route.
-        feed: schedule
+        type: feed
+        gtfs: schedule
         endpoints:
           - type: JSON
             path: /web/routes/<route_id>/fares
@@ -266,9 +295,9 @@ pages:
     path: /blog/<slug>
     description: Detail page for a blog post.
     components:
-      - name: ArticleHeader
+      - name: PostHeader
         description: Presents the post title, authors, date, and summary.
-      - name: ArticleBody
+      - name: PostBody
         description: Renders the post content and supporting media.
 
   - name: Events

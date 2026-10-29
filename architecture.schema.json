@@ -81,7 +81,11 @@
           "type": "string",
           "minLength": 1
         },
-        "feed": {
+        "type": {
+          "type": "string",
+          "enum": ["editorial_content", "feed"]
+        },
+        "gtfs": {
           "type": "string",
           "enum": ["schedule", "realtime"]
         },
