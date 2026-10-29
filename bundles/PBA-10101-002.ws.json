@@ -4,12 +4,20 @@
     "trips": [
       {
         "route_short_name": "SJ - SALITRILLOS - EXT. KARPINSKY",
+        "route_color": null,
+        "route_text_color": null,
         "trip_headsign": null,
+        "trip_short_name": null,
+        "direction_id": 1,
         "departure_time": "08:01:10"
       },
       {
         "route_short_name": "SJ - SAN RAMÓN TRES RÍOS - VILLA HERMOSA",
+        "route_color": null,
+        "route_text_color": null,
         "trip_headsign": null,
+        "trip_short_name": null,
+        "direction_id": 1,
         "departure_time": "08:03:29"
       }
     ]
