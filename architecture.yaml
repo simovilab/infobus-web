@@ -194,9 +194,13 @@ pages:
             path: /web/stops/map
         data_entities:
           - stops.stop_id
+          - stops.stop_code
           - stops.stop_name
           - stops.stop_lat
           - stops.stop_lon
+          - stops.location_type
+          - stops.parent_station
+          - stops.wheelchair_boarding
 
   - name: Stop
     path: /stops/<stop_id>
@@ -213,10 +217,19 @@ pages:
           - stops.stop_id
           - stops.stop_code
           - stops.stop_name
+          - stops.tts_stop_name
           - stops.stop_desc
           - stops.stop_lat
           - stops.stop_lon
+          - stops.zone_id
+          - stops.stop_url
+          - stops.location_type
+          - stops.parent_station
+          - stops.stop_timezone
           - stops.wheelchair_boarding
+          - stops.level_id
+          - stops.platform_code
+          - stops.stop_access
       - name: StopNextArrivals
         description: Shows upcoming arrivals at the stop.
         feed: realtime
@@ -229,7 +242,11 @@ pages:
           - collection: trips
             fields:
               - routes.route_short_name
+              - routes.route_color
+              - routes.route_text_color
               - trips.trip_headsign
+              - trips.trip_short_name
+              - trips.direction_id
               - stop_times.departure_time
       - name: StopAlerts
         description: Displays active alerts that apply to the stop.
@@ -249,11 +266,17 @@ pages:
           - collection: routes
             fields:
               - routes.route_id
+              - routes.agency_id
               - routes.route_short_name
               - routes.route_long_name
+              - routes.route_desc
+              - routes.route_type
+              - routes.route_url
               - routes.route_color
               - routes.route_text_color
+              - routes.route_sort_order
               - trips.direction_id
+              - trips.trip_headsign
       - name: StopMap
         description: Shows the stop location and nearby area.
         feed: schedule
