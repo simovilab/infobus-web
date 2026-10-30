@@ -288,8 +288,24 @@ pages:
     components:
       - name: PageHeader
         description: Introduces the blog and its editorial scope.
-      - name: ArticleMenu
+        data_entities:
+          - blog.headline
+          - blog.title
+          - blog.description
+      - name: BlogPosts
         description: Lists blog posts with publication information and summaries.
+        data_entities:
+          - posts
+      - name: BlogPosts
+        description: Displays a preview of a blog post including metadata and image
+        data_entities:
+          - post.path
+          - post.title
+          - post.description
+          - post.image
+          - post.date
+          - post.authors
+          - post.badge
 
   - name: Blog Post
     path: /blog/<slug>
