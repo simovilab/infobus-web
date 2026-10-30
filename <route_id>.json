@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "version": "0.1",
+    "date": "2026-10-28",
+    "title": "Route",
+    "route": "<route_id>"
+  },
+  "components": {
+    "route_header": {
+      "route_id": "Example Route ID",
+      "route_short_name": "Example Short Name",
+      "route_long_name": "Example Long Name",
+      "route_desc": "Example Description",
+      "route_color": "Example Color",
+      "route_text_color": "Example Text Color",
+      "route_type": "Example Type",
+      "cemv_support": "Example CEMV Support"
+    },
+    "route_schedule": {
+      "calendar": {
+        "service_id": "Example Service ID",
+        "monday": "Example Monday",
+        "tuesday": "Example Tuesday",
+        "wednesday": "Example Wednesday",
+        "thursday": "Example Thursday",
+        "friday": "Example Friday",
+        "saturday": "Example Saturday",
+        "sunday": "Example Sunday",
+        "start_date": "Example Start Date",
+        "end_date": "Example End Date"
+      },
+      "calendar_dates": {
+        "service_id": "Example Service ID",
+        "date": "Example Date",
+        "exception_type": "Example Exception Type"
+      },
+      "services": {
+        "service_id": "Example Service ID",
+        "directions": [
+          {
+            "direction_id": 0,
+            "route.first_trip_departure_time": "Example First Trip Departure Time",
+            "route.last_trip_departure_time": "Example Last Trip Departure Time",
+            "trips": [
+              {
+                "trip_id": "Example Trip ID",
+                "route.first_stop_name": "Example First Stop Name",
+                "route.first_departure_time": "Example First Departure Time",
+                "route.last_stop_name": "Example Last Stop Name",
+                "route.last_arrival_time": "Example Last Arrival Time",
+                "stop_times": [
+                  {
+                    "stops.stop_name": "Example Stop Name",
+                    "stop_times.departure_time": "Example Departure Time"
+                  },
+                  {
+                    "stops.stop_name": "Example Stop Name 2",
+                    "stop_times.departure_time": "Example Departure Time 2"
+                  },
+                  {
+                    "stops.stop_name": "Example Stop Name 3",
+                    "stop_times.departure_time": "Example Departure Time 3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "direction_id": 1,
+            "route.first_trip_departure_time": "Example First Trip Departure Time",
+            "route.last_trip_departure_time": "Example Last Trip Departure Time",
+            "trips": [
+              {
+                "trip_id": "Example Trip ID",
+                "route.first_stop_name": "Example First Stop Name",
+                "route.first_departure_time": "Example First Departure Time",
+                "route.last_stop_name": "Example Last Stop Name",
+                "route.last_arrival_time": "Example Last Arrival Time",
+                "stop_times": [
+                  {
+                    "stops.stop_name": "Example Stop Name",
+                    "stop_times.departure_time": "Example Departure Time"
+                  },
+                  {
+                    "stops.stop_name": "Example Stop Name 2",
+                    "stop_times.departure_time": "Example Departure Time 2"
+                  },
+                  {
+                    "stops.stop_name": "Example Stop Name 3",
+                    "stop_times.departure_time": "Example Departure Time 3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "stops": {
+        "directions": [
+          {
+            "direction_id": 0,
+            "stops": [
+              {
+                "stop_id": "Example Stop ID 1",
+                "stop_code": "Example Stop Code 1",
+                "stop_name": "Example Stop Name 1",
+                "tts_stop_name": "Example TTS Stop Name 1",
+                "stop_desc": "Example Stop Description 1",
+                "zone_id": "Example Zone ID 1",
+                "stop_url": "Example Stop URL 1",
+                "location_type": "Example Location Type 1",
+                "parent_station": "Example Parent Station 1",
+                "stop_timezone": "Example Stop Timezone 1",
+                "wheelchair_boarding": "Example Wheelchair Boarding 1",
+                "level_id": "Example Level ID 1",
+                "platform_code": "Example Platform Code 1",
+                "stop_access": "Example Stop Access 1"
+              }
+            ]
+          },
+          {
+            "direction_id": 1,
+            "stops": [
+              {
+                "stop_id": "Example Stop ID 2",
+                "stop_code": "Example Stop Code 2",
+                "stop_name": "Example Stop Name 2",
+                "tts_stop_name": "Example TTS Stop Name 2",
+                "stop_desc": "Example Stop Description 2",
+                "zone_id": "Example Zone ID 2",
+                "stop_url": "Example Stop URL 2",
+                "location_type": "Example Location Type 2",
+                "parent_station": "Example Parent Station 2",
+                "stop_timezone": "Example Stop Timezone 2",
+                "wheelchair_boarding": "Example Wheelchair Boarding 2",
+                "level_id": "Example Level ID 2",
+                "platform_code": "Example Platform Code 2",
+                "stop_access": "Example Stop Access 2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -83,7 +83,7 @@ pages:
             topic: route.<route_id>.stop_times
         data_entities:
           - routes.route_short_name
-          - collection: trips
+          - object: trips
             fields:
               - trips.trip_headsign
               - stop_times.departure_time
@@ -104,7 +104,7 @@ pages:
             path: /web/routes/<route_id>
             key: components.route_schedule
         data_entities:
-          - collection: calendar
+          - object: calendar
             fields:
               - service_id
               - monday
@@ -116,27 +116,27 @@ pages:
               - sunday
               - start_date
               - end_date
-          - collection: calendar_dates
+          - object: calendar_dates
             fields:
               - service_id
               - date
               - exception_type
-          - collection: services
+          - object: services
             fields:
               - calendar.service_id
-              - collection: direction
+              - array: directions
                 fields:
                   - trips.direction_id
                   - route.first_trip_departure_time
                   - route.last_trip_departure_time
-                  - collection: trips
+                  - array: trips
                     fields:
                       - trips.trip_id
                       - route.first_stop_name
                       - route.first_departure_time
                       - route.last_stop_name
                       - route.last_arrival_time
-                      - collection: stop_times
+                      - array: stop_times
                         fields:
                           - stops.stop_name
                           - stop_times.departure_time
@@ -154,6 +154,28 @@ pages:
         endpoints:
           - type: JSON
             path: /web/routes/<route_id>
+        data_entities:
+          - array: directions
+            fields:
+              - direction_id
+              - array: stops
+                fields:
+                  - stop_id
+                  - stop_code
+                  - stop_name
+                  - tts_stop_name
+                  - stop_desc
+                  - stop_lat
+                  - stop_lon
+                  - zone_id
+                  - stop_url
+                  - location_type
+                  - parent_station
+                  - stop_timezone
+                  - wheelchair_boarding
+                  - level_id
+                  - platform_code
+                  - stop_access
       - name: RouteFares
         description: Displays fares and fare rules applicable to the route.
         type: feed
@@ -217,7 +239,7 @@ pages:
             path: /web/trips/search
             key: components.trips_finder
         data_entities:
-          - collection: stops
+          - object: stops
             fields:
               - stops.stop_id
               - stops.stop_code
@@ -229,7 +251,7 @@ pages:
               - stops.wheelchair_boarding
               - stops.stop_lat
               - stops.stop_lon
-          - collection: routes
+          - object: routes
             fields:
               - routes.route_id
               - routes.route_short_name
@@ -237,7 +259,7 @@ pages:
               - routes.route_color
               - routes.route_text_color
               - agency.agency_name
-          - collection: destinations
+          - object: destinations
             fields:
               - trips.trip_headsign
               - routes.route_id
@@ -252,7 +274,7 @@ pages:
             key: components.trips_disruptions
         data_entities:
           - feed_header.timestamp
-          - collection: alerts
+          - object: alerts
             fields:
               - feed_entity.id
               - alerts.header_text
@@ -278,12 +300,12 @@ pages:
           - stops.platform_code
           - stops.wheelchair_boarding
           - trip_updates.timestamp
-          - collection: service_exceptions
+          - object: service_exceptions
             fields:
               - calendar_dates.service_id
               - calendar_dates.date
               - calendar_dates.exception_type
-          - collection: routes
+          - object: routes
             fields:
               - routes.route_id
               - routes.route_short_name
@@ -294,7 +316,7 @@ pages:
               - stop.first_departure_time
               - stop.last_departure_time
               - stop.next_service_date
-              - collection: departures
+              - object: departures
                 fields:
                   - run.id
                   - run.start_date
@@ -337,18 +359,18 @@ pages:
         data_entities:
           - trip_updates.timestamp
           - vehicle_positions.timestamp
-          - collection: agencies
+          - object: agencies
             fields:
               - agency.agency_id
               - agency.agency_name
-              - collection: routes
+              - object: routes
                 fields:
                   - routes.route_id
                   - routes.route_short_name
                   - routes.route_long_name
                   - routes.route_color
                   - routes.route_text_color
-                  - collection: runs
+                  - object: runs
                     fields:
                       - run.id
                       - run.start_date
@@ -364,7 +386,7 @@ pages:
                       - trip_updates.trip.schedule_relationship
                       - trip_updates.delay
                       - vehicle_positions.occupancy_status
-                  - collection: scheduled_not_tracked
+                  - object: scheduled_not_tracked
                     fields:
                       - trips.trip_id
                       - trips.trip_headsign
@@ -382,13 +404,13 @@ pages:
           - stops.stop_lat
           - stops.stop_lon
           - trips.shape_id
-          - collection: shapes
+          - object: shapes
             fields:
               - shapes.shape_id
               - shapes.shape_pt_lat
               - shapes.shape_pt_lon
               - shapes.shape_pt_sequence
-          - collection: vehicles
+          - object: vehicles
             fields:
               - run.id
               - vehicle_positions.position.latitude
@@ -489,7 +511,7 @@ pages:
           - trip_updates.timestamp
           - trip_updates.delay
           - trip_updates.trip.modified_trip.modifications_id
-          - collection: stop_times
+          - object: stop_times
             fields:
               - stop_times.stop_sequence
               - stops.stop_id
@@ -516,7 +538,7 @@ pages:
               - trip_updates.stop_time_update.stop_time_properties.stop_headsign
               - trip_updates.stop_time_update.stop_time_properties.pickup_type
               - trip_updates.stop_time_update.stop_time_properties.drop_off_type
-          - collection: replacement_stops
+          - object: replacement_stops
             fields:
               - trip_modifications.modifications.replacement_stops.stop_id
               - trip_modifications.modifications.replacement_stops.travel_time_to_stop
@@ -533,7 +555,7 @@ pages:
             path: /ws/updates
             topic: trip.alerts.by_run.<run_id>
         data_entities:
-          - collection: alerts
+          - object: alerts
             fields:
               - feed_entity.id
               - alerts.header_text
@@ -557,7 +579,7 @@ pages:
             path: /web/trips/<run_id>
             key: components.trip_alternatives
         data_entities:
-          - collection: departures
+          - object: departures
             fields:
               - run.id
               - trips.trip_id
@@ -585,13 +607,13 @@ pages:
             topic: trip.vehicle_positions.by_run.<run_id>
         data_entities:
           - trips.shape_id
-          - collection: shapes
+          - object: shapes
             fields:
               - shapes.shape_pt_lat
               - shapes.shape_pt_lon
               - shapes.shape_pt_sequence
           - stop_times.shape_dist_traveled
-          - collection: stops
+          - object: stops
             fields:
               - stops.stop_id
               - stops.stop_name
@@ -639,7 +661,7 @@ pages:
             key: components.alerts_for_you
         data_entities:
           - feed_header.timestamp
-          - collection: alerts
+          - object: alerts
             fields:
               - feed_entity.id
               - alerts.header_text
@@ -661,17 +683,17 @@ pages:
             path: /web/alerts/search
             key: components.alerts_search
         data_entities:
-          - collection: routes
+          - object: routes
             fields:
               - routes.route_id
               - routes.route_short_name
               - routes.route_long_name
-          - collection: stops
+          - object: stops
             fields:
               - stops.stop_id
               - stops.stop_code
               - stops.stop_name
-          - collection: agencies
+          - object: agencies
             fields:
               - agency.agency_id
               - agency.agency_name
@@ -685,7 +707,7 @@ pages:
             key: components.alerts_list
         data_entities:
           - feed_header.timestamp
-          - collection: alerts
+          - object: alerts
             fields:
               - feed_entity.id
               - alerts.header_text
@@ -696,12 +718,12 @@ pages:
               - alert.status
               - alerts.impact_period.start
               - alerts.impact_period.end
-              - collection: affected_routes
+              - object: affected_routes
                 fields:
                   - routes.route_short_name
                   - routes.route_color
                   - routes.route_text_color
-              - collection: affected_stops
+              - object: affected_stops
                 fields:
                   - stops.stop_name
       - name: AlertsRecent
@@ -713,7 +735,7 @@ pages:
             path: /web/alerts
             key: components.alerts_recent
         data_entities:
-          - collection: alerts
+          - object: alerts
             fields:
               - feed_entity.id
               - alerts.header_text
@@ -724,7 +746,7 @@ pages:
               - alerts.impact_period.end
               - alert.first_seen_at
               - alert.last_seen_at
-              - collection: affected_routes
+              - object: affected_routes
                 fields:
                   - routes.route_short_name
                   - routes.route_color
@@ -738,12 +760,12 @@ pages:
             path: /web/alerts
             key: components.alerts_service_days
         data_entities:
-          - collection: service_days
+          - object: service_days
             fields:
               - calendar_dates.date
               - calendar_dates.service_id
               - calendar_dates.exception_type
-              - collection: routes
+              - object: routes
                 fields:
                   - trips.service_id
                   - routes.route_id
@@ -783,7 +805,7 @@ pages:
             path: /web/alerts/<entity_id>
             key: components.alert_affected_services
         data_entities:
-          - collection: informed_entities
+          - object: informed_entities
             fields:
               - alerts.informed_entity.agency_id
               - alerts.informed_entity.route_id
@@ -800,7 +822,7 @@ pages:
               - stops.stop_code
               - stops.stop_name
               - run.id
-              - collection: other_routes
+              - object: other_routes
                 fields:
                   - routes.route_id
                   - routes.route_short_name
@@ -815,11 +837,11 @@ pages:
             key: components.alert_period
         data_entities:
           - alert.status
-          - collection: impact_period
+          - object: impact_period
             fields:
               - alerts.impact_period.start
               - alerts.impact_period.end
-          - collection: communication_period
+          - object: communication_period
             fields:
               - alerts.communication_period.start
               - alerts.communication_period.end
@@ -841,7 +863,7 @@ pages:
           - alerts.url
           - alerts.image.localized_image.url
           - alerts.image_alternative_text
-          - collection: temporary_stops
+          - object: temporary_stops
             fields:
               - trip_modifications.modifications.service_alert_id
               - trip_modifications.modifications.replacement_stops.stop_id
@@ -859,7 +881,7 @@ pages:
           - type: GeoJSON
             path: /web/alerts/<entity_id>/map
         data_entities:
-          - collection: shapes
+          - object: shapes
             fields:
               - shapes.shape_id
               - shapes.shape_pt_lat
@@ -869,12 +891,12 @@ pages:
           - trip_modifications.selected_trips.shape_id
           - feed_entity.shape.shape_id
           - feed_entity.shape.encoded_polyline
-          - collection: stops
+          - object: stops
             fields:
               - stops.stop_id
               - stops.stop_lat
               - stops.stop_lon
-          - collection: temporary_stops
+          - object: temporary_stops
             fields:
               - feed_entity.stop.stop_id
               - feed_entity.stop.stop_lat

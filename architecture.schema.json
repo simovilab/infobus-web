@@ -111,16 +111,37 @@
           "pattern": "^[a-z][a-z0-9_]*(?:\\.[a-z][a-z0-9_]*)*$"
         },
         {
-          "$ref": "#/$defs/collection"
+          "$ref": "#/$defs/object"
+        },
+        {
+          "$ref": "#/$defs/array"
         }
       ]
     },
-    "collection": {
+    "object": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["collection", "fields"],
+      "required": ["object", "fields"],
       "properties": {
-        "collection": {
+        "object": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "fields": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/dataEntity"
+          }
+        }
+      }
+    },
+    "array": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["array", "fields"],
+      "properties": {
+        "array": {
           "type": "string",
           "pattern": "^[a-z][a-z0-9_]*$"
         },
@@ -149,7 +170,8 @@
         "key": {
           "type": "string",
           "minLength": 1,
-          "pattern": "^[a-z][a-z0-9_]*(?:\\.[a-z][a-z0-9_]*)*$"
+          "pattern": "^[a-z][a-z0-9_]*(?:\\.[a-z][a-z0-9_]*)*$",
+          "description": "The JSON key used to locate the data in the endpoint."
         },
         "topic": {
           "type": "string",
