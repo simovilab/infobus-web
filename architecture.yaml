@@ -188,7 +188,8 @@ pages:
         description: Finds stops by name, identifier, location, or other criteria.
       - name: StopsMap
         description: Shows all stops within the service area.
-        feed: schedule
+        type: feed
+        gtfs: schedule
         endpoints:
           - type: GeoJSON
             path: /web/stops/map
@@ -208,7 +209,8 @@ pages:
     components:
       - name: StopHeader
         description: Presents the stop's essential information.
-        feed: schedule
+        type: feed
+        gtfs: schedule
         endpoints:
           - type: JSON
             path: /web/stops/<stop_id>
@@ -232,7 +234,8 @@ pages:
           - stops.stop_access
       - name: StopNextArrivals
         description: Shows upcoming arrivals at the stop.
-        feed: realtime
+        type: feed
+        gtfs: realtime
         endpoints:
           - type: WebSocket
             path: /ws/updates
@@ -250,14 +253,16 @@ pages:
               - stop_times.departure_time
       - name: StopAlerts
         description: Displays active alerts that apply to the stop.
-        feed: realtime
+        type: feed
+        gtfs: realtime
         endpoints:
           - type: WebSocket
             path: /ws/updates
             topic: stop.<stop_id>.alerts
       - name: StopRoutes
         description: Lists routes that serve the stop.
-        feed: schedule
+        type: feed
+        gtfs: schedule
         endpoints:
           - type: JSON
             path: /web/stops/<stop_id>
@@ -279,7 +284,8 @@ pages:
               - trips.trip_headsign
       - name: StopMap
         description: Shows the stop location and nearby area.
-        feed: schedule
+        type: feed
+        gtfs: schedule
         endpoints:
           - type: GeoJSON
             path: /web/stops/<stop_id>/map
