@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "version": "0.1",
+    "date": "2026-10-31",
+    "title": "Stop",
+    "stop": "<stop_id>"
+  },
+  "components": {
+    "stop_header": {
+      "stop_id": "Example Stop ID",
+      "stop_code": "Example Stop Code",
+      "stop_name": "Example Stop Name",
+      "tts_stop_name": "Example TTS Stop Name",
+      "stop_desc": "Example Stop Description",
+      "stop_lat": "Example Stop Latitude",
+      "stop_lon": "Example Stop Longitude",
+      "zone_id": "Example Zone ID",
+      "stop_url": "Example Stop URL",
+      "location_type": "Example Location Type",
+      "parent_station": "Example Parent Station",
+      "stop_timezone": "Example Stop Timezone",
+      "wheelchair_boarding": "Example Wheelchair Boarding",
+      "level_id": "Example Level ID",
+      "platform_code": "Example Platform Code",
+      "stop_access": "Example Stop Access"
+    },
+    "stop_routes": {
+      "routes": [
+        {
+          "route_id": "Example Route ID 1",
+          "agency_id": "Example Agency ID 1",
+          "route_short_name": "Example Short Name 1",
+          "route_long_name": "Example Long Name 1",
+          "route_desc": "Example Description 1",
+          "route_type": "Example Type 1",
+          "route_url": "Example Route URL 1",
+          "route_color": "Example Color 1",
+          "route_text_color": "Example Text Color 1",
+          "route_sort_order": "Example Sort Order 1",
+          "trips.direction_id": 0,
+          "trips.trip_headsign": "Example Trip Headsign 1"
+        },
+        {
+          "route_id": "Example Route ID 2",
+          "agency_id": "Example Agency ID 2",
+          "route_short_name": "Example Short Name 2",
+          "route_long_name": "Example Long Name 2",
+          "route_desc": "Example Description 2",
+          "route_type": "Example Type 2",
+          "route_url": "Example Route URL 2",
+          "route_color": "Example Color 2",
+          "route_text_color": "Example Text Color 2",
+          "route_sort_order": "Example Sort Order 2",
+          "trips.direction_id": 1,
+          "trips.trip_headsign": "Example Trip Headsign 2"
+        }
+      ]
+    }
+  }
+}
