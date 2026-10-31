@@ -264,7 +264,7 @@ pages:
             topic: stop.<stop_id>.stop_times
         data_entities:
           - stops.stop_name
-          - collection: trips
+          - array: trips
             fields:
               - routes.route_short_name
               - routes.route_color
@@ -290,7 +290,7 @@ pages:
             path: /web/stops/<stop_id>
             key: components.stop_routes
         data_entities:
-          - collection: routes
+          - array: routes
             fields:
               - routes.route_id
               - routes.agency_id
