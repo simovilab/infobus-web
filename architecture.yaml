@@ -230,7 +230,7 @@ pages:
     description: Detail page for a single transit stop.
     components:
       - name: StopHeader
-        description: Presents the stop's essential information.
+        description: Presents the stop's ID, name, and essential information.
         type: feed
         gtfs: schedule
         endpoints:
