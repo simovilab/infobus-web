@@ -296,8 +296,10 @@ pages:
         description: Lists blog posts with publication information and summaries.
         data_entities:
           - posts
-      - name: BlogPosts
-        description: Displays a preview of a blog post including metadata and image
+      - name: BlogPost
+        description: A customizable article to display in a blog page
+        endpoints:
+          - path: /blog/<slug>
         data_entities:
           - post.path
           - post.title
@@ -306,6 +308,7 @@ pages:
           - post.date
           - post.authors
           - post.badge
+          - post.to
 
   - name: Blog Post
     path: /blog/<slug>
@@ -313,8 +316,25 @@ pages:
     components:
       - name: PostHeader
         description: Presents the post title, authors, date, and summary.
+        data_entities:
+          - collection: post
+          - post.title
+          - post.description
+          - post.badge
+          - post.date
+          - collection: authors
+            fields:
+              - post.authors.name
+              - post.authors.avatar
+              - post.authors.to
       - name: PostBody
         description: Renders the post content and supporting media.
+        data_entities:
+          - post.body
+      - name: ContentToc
+        description: A sticky Table of Contents with automatic active anchor link highlighting.
+        data_entities:
+          - post.body.toc.links
 
   - name: Events
     path: /events
