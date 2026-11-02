@@ -295,21 +295,19 @@ pages:
       - name: BlogPosts
         description: Lists blog posts with publication information and summaries.
         data_entities:
-          - posts
-      - name: BlogPost
-        description: A customizable article to display in a blog page
-        endpoints:
-          - path: /blog/<slug>
-        data_entities:
-          - post.path
-          - post.title
-          - post.description
-          - post.image
-          - post.date
-          - post.authors
-          - post.badge
-          - post.to
-
+          - collection: post
+            fields:
+              - post.path
+              - post.title
+              - post.description
+              - post.image
+              - post.date
+              - post.badge
+              - collection: authors
+                fields:
+                  - name
+                  - avatar
+                  - to
   - name: Blog Post
     path: /blog/<slug>
     description: Detail page for a blog post.
