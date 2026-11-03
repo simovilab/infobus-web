@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "0.1",
-    "date": "2026-10-31",
+    "date": "2026-11-02",
     "title": "Stop",
     "stop": "<stop_id>"
   },
@@ -27,32 +27,47 @@
     "stop_routes": {
       "routes": [
         {
-          "route_id": "Example Route ID 1",
-          "agency_id": "Example Agency ID 1",
-          "route_short_name": "Example Short Name 1",
-          "route_long_name": "Example Long Name 1",
-          "route_desc": "Example Description 1",
-          "route_type": "Example Type 1",
-          "route_url": "Example Route URL 1",
-          "route_color": "Example Color 1",
-          "route_text_color": "Example Text Color 1",
-          "route_sort_order": "Example Sort Order 1",
-          "trips.direction_id": 0,
-          "trips.trip_headsign": "Example Trip Headsign 1"
-        },
-        {
-          "route_id": "Example Route ID 2",
-          "agency_id": "Example Agency ID 2",
-          "route_short_name": "Example Short Name 2",
-          "route_long_name": "Example Long Name 2",
-          "route_desc": "Example Description 2",
-          "route_type": "Example Type 2",
-          "route_url": "Example Route URL 2",
-          "route_color": "Example Color 2",
-          "route_text_color": "Example Text Color 2",
-          "route_sort_order": "Example Sort Order 2",
-          "trips.direction_id": 1,
-          "trips.trip_headsign": "Example Trip Headsign 2"
+          "route_id": "Example Route ID",
+          "route_short_name": "Example Short Name",
+          "route_long_name": "Example Long Name",
+          "route_desc": "Example Description",
+          "route_type": "Example Type",
+          "route_url": "Example Route URL",
+          "route_color": "Example Color",
+          "route_text_color": "Example Text Color",
+          "route_sort_order": "Example Sort Order",
+          "directions": [
+            {
+              "direction_id": 0,
+              "trip_headsign": "Example Trip Headsign 1",
+              "departures": [
+                {
+                  "trip_id": "Example Trip ID 1",
+                  "service_id": "Example Service ID 1",
+                  "stop_times.arrival_time": "Example Arrival Time 1",
+                  "stop_times.departure_time": "Example Departure Time 1"
+                },
+                {
+                  "trip_id": "Example Trip ID 2",
+                  "service_id": "Example Service ID 2",
+                  "stop_times.arrival_time": "Example Arrival Time 2",
+                  "stop_times.departure_time": "Example Departure Time 2"
+                }
+              ]
+            },
+            {
+              "direction_id": 1,
+              "trip_headsign": "Example Trip Headsign 2",
+              "departures": [
+                {
+                  "trip_id": "Example Trip ID 3",
+                  "service_id": "Example Service ID 3",
+                  "stop_times.arrival_time": "Example Arrival Time 3",
+                  "stop_times.departure_time": "Example Departure Time 3"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
