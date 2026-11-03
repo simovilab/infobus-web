@@ -106,21 +106,21 @@ pages:
         data_entities:
           - object: calendar
             fields:
-              - service_id
-              - monday
-              - tuesday
-              - wednesday
-              - thursday
-              - friday
-              - saturday
-              - sunday
-              - start_date
-              - end_date
+              - calendar.service_id
+              - calendar.monday
+              - calendar.tuesday
+              - calendar.wednesday
+              - calendar.thursday
+              - calendar.friday
+              - calendar.saturday
+              - calendar.sunday
+              - calendar.start_date
+              - calendar.end_date
           - object: calendar_dates
             fields:
-              - service_id
-              - date
-              - exception_type
+              - calendar_dates.service_id
+              - calendar_dates.date
+              - calendar_dates.exception_type
           - object: services
             fields:
               - calendar.service_id
@@ -157,25 +157,25 @@ pages:
         data_entities:
           - array: directions
             fields:
-              - direction_id
+              - trips.direction_id
               - array: stops
                 fields:
-                  - stop_id
-                  - stop_code
-                  - stop_name
-                  - tts_stop_name
-                  - stop_desc
-                  - stop_lat
-                  - stop_lon
-                  - zone_id
-                  - stop_url
-                  - location_type
-                  - parent_station
-                  - stop_timezone
-                  - wheelchair_boarding
-                  - level_id
-                  - platform_code
-                  - stop_access
+                  - stops.stop_id
+                  - stops.stop_code
+                  - stops.stop_name
+                  - stops.tts_stop_name
+                  - stops.stop_desc
+                  - stops.stop_lat
+                  - stops.stop_lon
+                  - stops.zone_id
+                  - stops.stop_url
+                  - stops.location_type
+                  - stops.parent_station
+                  - stops.stop_timezone
+                  - stops.wheelchair_boarding
+                  - stops.level_id
+                  - stops.platform_code
+                  - stops.stop_access
       - name: RouteFares
         description: Displays fares and fare rules applicable to the route.
         type: feed
