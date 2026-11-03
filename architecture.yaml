@@ -208,6 +208,24 @@ pages:
     components:
       - name: StopsSearch
         description: Finds stops by name, identifier, location, or other criteria.
+        type: feed
+        gtfs: schedule
+        endpoints:
+          - type: JSON
+            path: /web/stops/search
+            key: components.stops_search
+        data_entities:
+          - array: stops
+            fields:
+              - stops.stop_id
+              - stops.stop_code
+              - stops.stop_name
+              - stops.stop_desc
+              - stops.stop_lat
+              - stops.stop_lon
+              - stops.location_type
+              - stops.parent_station
+              - stops.wheelchair_boarding
       - name: StopsMap
         description: Shows all stops within the service area.
         type: feed
@@ -219,6 +237,7 @@ pages:
           - stops.stop_id
           - stops.stop_code
           - stops.stop_name
+          - stops.stop_desc
           - stops.stop_lat
           - stops.stop_lon
           - stops.location_type
@@ -266,12 +285,14 @@ pages:
           - stops.stop_name
           - array: trips
             fields:
+              - routes.route_id
               - routes.route_short_name
               - routes.route_color
               - routes.route_text_color
+              - trips.trip_id # check with Fabián: only needed once realtime is added
               - trips.trip_headsign
-              - trips.trip_short_name
               - trips.direction_id
+              - stop_times.arrival_time
               - stop_times.departure_time
       - name: StopAlerts
         description: Displays active alerts that apply to the stop.
@@ -293,17 +314,24 @@ pages:
           - array: routes
             fields:
               - routes.route_id
-              - routes.agency_id
               - routes.route_short_name
               - routes.route_long_name
               - routes.route_desc
-              - routes.route_type
+              - routes.route_type # check with Fabián the relevancy of this data
               - routes.route_url
               - routes.route_color
               - routes.route_text_color
               - routes.route_sort_order
-              - trips.direction_id
-              - trips.trip_headsign
+              - array: directions
+                fields:
+                  - trips.direction_id
+                  - trips.trip_headsign
+                  - array: departures
+                    fields:
+                      - trips.trip_id
+                      - trips.service_id # check with Fabián the relevancy of this data
+                      - stop_times.arrival_time
+                      - stop_times.departure_time
       - name: StopMap
         description: Shows the stop location and nearby area.
         type: feed
@@ -311,6 +339,32 @@ pages:
         endpoints:
           - type: GeoJSON
             path: /web/stops/<stop_id>/map
+        data_entities:
+          - stops.stop_id
+          - stops.stop_name
+          - stops.stop_lat
+          - stops.stop_lon
+          - stops.location_type
+          - stops.wheelchair_boarding
+          - array: stops # check with Fabián the relevancy of this data
+            fields:
+              - stops.stop_id
+              - stops.stop_name
+              - stops.stop_lat
+              - stops.stop_lon
+              - stops.location_type
+              - stops.wheelchair_boarding
+          - array: routes
+            fields:
+              - routes.route_id
+              - routes.route_short_name
+              - routes.route_color
+              - array: shapes # check with Fabián: heavy (~1,800 points per shape)
+                fields:
+                  - shapes.shape_id
+                  - shapes.shape_pt_lat
+                  - shapes.shape_pt_lon
+                  - shapes.shape_pt_sequence
 
   - name: Trips
     path: /trips
