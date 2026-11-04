@@ -47,10 +47,62 @@ pages:
     components:
       - name: RoutesSearch
         description: Finds routes by name, number, location, or other criteria.
+        type: feed
+        gtfs: schedule
+        endpoints:
+          - type: JSON
+            path: /web/routes/search
+            key: components.routes_search
+        data_entities:
+          - array: routes
+            properties:
+              - routes.route_id
+              - routes.route_short_name
+              - routes.route_long_name
+              - routes.route_desc
+              - routes.route_type
+              - routes.route_color
+              - routes.route_text_color
+              - agency.agency_name
+              - networks.network_name
       - name: RoutesMenu
         description: Lists routes by an appropriate grouping such as type or number.
+        type: feed
+        gtfs: schedule
+        endpoints:
+          - type: JSON
+            path: /web/routes
+            key: components.routes_menu
+        data_entities:
+          - array: routes
+            properties:
+              - routes.route_id
+              - routes.route_short_name
+              - routes.route_long_name
+              - routes.route_type
+              - routes.route_color
+              - routes.route_text_color
+              - routes.route_sort_order
+              - networks.network_id
+              - networks.network_name
       - name: RoutesMap
         description: Shows all routes within the service area.
+        type: feed
+        gtfs: schedule
+        endpoints:
+          - type: GeoJSON
+            path: /web/routes/map
+        data_entities:
+          - array: routes
+            properties:
+              - routes.route_id
+              - routes.route_short_name
+              - routes.route_color
+              - routes.route_text_color
+              - array: shapes # check with Fabián: simplified geometry here, full shape requested apart (the full shapes of all the routes are heavy)
+                properties:
+                  - trips.direction_id
+                  - shapes.shape_id
 
   - name: Route
     path: /routes/<route_id>
@@ -190,8 +242,44 @@ pages:
     components:
       - name: RegionsSearch
         description: Finds regions by name, identifier, or other criteria.
+        type: feed
+        gtfs: schedule
+        endpoints:
+          - type: JSON
+            path: /web/routes/regions/search # check with Fabián: same prefix as the page path (/routes/regions) instead of /web/regions
+            key: components.regions_search
+        data_entities:
+          # check with Fabián: GTFS has no regions, using networks (networks.txt, route_networks.txt) as the bundle of routes; alternative is the CTP route prefix (157A and 157B -> 157)
+          - array: regions
+            properties:
+              - networks.network_id
+              - networks.network_name
+              - array: routes
+                properties:
+                  - routes.route_id
+                  - routes.route_short_name
+                  - routes.route_long_name
       - name: RegionsMap
         description: Shows all regions within the service area.
+        type: feed
+        gtfs: schedule
+        endpoints:
+          - type: GeoJSON
+            path: /web/routes/regions/map
+        data_entities:
+          - array: regions
+            properties:
+              - networks.network_id
+              - networks.network_name
+              - array: routes
+                properties:
+                  - routes.route_id
+                  - routes.route_color
+                  - routes.route_text_color
+                  - array: shapes # check with Fabián: simplified geometry here, full shape requested apart
+                    properties:
+                      - trips.direction_id
+                      - shapes.shape_id
 
   - name: Region
     path: /routes/regions/<region_id>
@@ -199,8 +287,54 @@ pages:
     components:
       - name: RegionHeader
         description: Presents the region's ID, name, and essential information.
+        type: feed
+        gtfs: schedule
+        endpoints:
+          - type: JSON
+            path: /web/routes/regions/<region_id>
+            key: components.region_header
+        data_entities:
+          - networks.network_id
+          - networks.network_name
+          - agency.agency_name
+      - name: RegionRoutes # check with Fabián: new component, the page only had header and map
+        description: Lists the routes that belong to the region.
+        type: feed
+        gtfs: schedule
+        endpoints:
+          - type: JSON
+            path: /web/routes/regions/<region_id>
+            key: components.region_routes
+        data_entities:
+          - array: routes
+            properties:
+              - routes.route_id
+              - routes.route_short_name
+              - routes.route_long_name
+              - routes.route_desc
+              - routes.route_type
+              - routes.route_color
+              - routes.route_text_color
+              - routes.route_sort_order
       - name: RegionMap
         description: Shows the region's boundaries and included routes.
+        type: feed
+        gtfs: schedule
+        endpoints:
+          - type: GeoJSON
+            path: /web/routes/regions/<region_id>/map
+        data_entities:
+          - networks.network_id
+          - array: routes
+            properties:
+              - routes.route_id
+              - routes.route_short_name
+              - routes.route_color
+              - routes.route_text_color
+              - array: shapes
+                properties:
+                  - trips.direction_id
+                  - shapes.shape_id
 
   - name: Stops
     path: /stops
