@@ -121,13 +121,13 @@
     "object": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["object", "fields"],
+      "required": ["object", "properties"],
       "properties": {
         "object": {
           "type": "string",
           "pattern": "^[a-z][a-z0-9_]*$"
         },
-        "fields": {
+        "properties": {
           "type": "array",
           "minItems": 1,
           "items": {
@@ -139,13 +139,13 @@
     "array": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["array", "fields"],
+      "required": ["array", "properties"],
       "properties": {
         "array": {
           "type": "string",
           "pattern": "^[a-z][a-z0-9_]*$"
         },
-        "fields": {
+        "properties": {
           "type": "array",
           "minItems": 1,
           "items": {
