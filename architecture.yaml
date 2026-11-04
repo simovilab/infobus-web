@@ -272,6 +272,15 @@ pages:
         description: Finds news items by topic, date, or keyword.
       - name: NewsMenu
         description: Lists published news and service updates.
+      - name: NewsBanner
+        description: Display a list of blog posts in a responsive grid layout.
+        data_entities:
+          - collection: posts
+            fields:
+              - posts.title
+              - posts.date
+              - posts.image
+              - posts.to
 
   - name: News Article
     path: /news/<slug>
@@ -279,8 +288,21 @@ pages:
     components:
       - name: ArticleHeader
         description: Presents the article title, publication information, and summary.
+        data_entities:
+          - new.title
+          - new.date
       - name: ArticleBody
         description: Renders the article content and supporting media.
+        data_entities:
+          - new.content
+          - new.image
+      - name: ArticleSurround
+        description: A pair of prev and next links to navigate between pages.
+        data_entities:
+          - news.title
+          - news.path
+          - news.date
+          - news.image
 
   - name: Blog
     path: /blog
@@ -305,9 +327,9 @@ pages:
               - post.badge
               - collection: authors
                 fields:
-                  - name
-                  - avatar
-                  - to
+                  - author.name
+                  - author.avatar
+                  - author.to
   - name: Blog Post
     path: /blog/<slug>
     description: Detail page for a blog post.
@@ -322,9 +344,9 @@ pages:
           - post.date
           - collection: authors
             fields:
-              - post.authors.name
-              - post.authors.avatar
-              - post.authors.to
+              - authors.name
+              - authors.avatar
+              - authors.to
       - name: PostBody
         description: Renders the post content and supporting media.
         data_entities:
@@ -342,6 +364,15 @@ pages:
         description: Finds events by date, location, or topic.
       - name: EventsMenu
         description: Lists upcoming and recent events.
+      - name: EventCard
+        description: Displays a summary of an event and navigates to its detail page.
+        data_entities:
+          - event.title
+          - event.description
+          - event.date
+          - event.location
+          - event.image
+          - event.to
 
   - name: Event
     path: /events/<slug>
@@ -351,6 +382,14 @@ pages:
         description: Presents the event title, date, location, and essential details.
       - name: EventBody
         description: Renders the event description, schedule, and supporting media.
+        data_entities:
+          - event.description
+          - event.date
+          - event.to
+      - name: ContentToc
+        description: A sticky Table of Contents with automatic active anchor link highlighting (with info about other events).
+        data_entities:
+          - post.body.toc.links
 
   - name: Resources
     path: /resources
