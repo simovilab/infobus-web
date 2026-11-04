@@ -1261,8 +1261,13 @@ pages:
     components:
       - name: PageHeader
         description: Introduces the available passenger resources.
+        type: editorial_content
+        data_entities:
+          - resources.title
+          - resources.description
       - name: ResourcesMenu
         description: Links to the guide, accessibility, and tourism resources.
+        type: editorial_content
 
   - name: User Guide
     path: /resources/guide
@@ -1270,8 +1275,15 @@ pages:
     components:
       - name: PageHeader
         description: Introduces the passenger usage guide.
+        type: editorial_content
+        data_entities:
+          - user_guide.title
+          - user_guide.description
       - name: PictureAndText
         description: Explains common passenger journeys with text and illustrations.
+        type: editorial_content
+        data_entities:
+          - user_guide.body
 
   - name: Accessibility
     path: /resources/accessibility
@@ -1279,8 +1291,15 @@ pages:
     components:
       - name: PageHeader
         description: Introduces accessibility commitments and available support.
+        type: editorial_content
+        data_entities:
+          - accessibility.title
+          - accessibility.description
       - name: PictureAndText
         description: Explains accessible service features and how to use them.
+        type: editorial_content
+        data_entities:
+          - accessibility.body
 
   - name: Tourism
     path: /resources/tourism
@@ -1288,8 +1307,15 @@ pages:
     components:
       - name: PageHeader
         description: Introduces visitor-focused transport information.
+        type: editorial_content
+        data_entities:
+          - tourism.title
+          - tourism.description
       - name: PictureAndText
         description: Explains tickets, key destinations, and visitor travel guidance.
+        type: editorial_content
+        data_entities:
+          - tourism.body
 
   - name: Design
     path: /design
@@ -1297,8 +1323,15 @@ pages:
     components:
       - name: PageHeader
         description: Introduces the visual identity and its purpose.
+        type: editorial_content
+        data_entities:
+          - design.title
+          - design.description
       - name: Pictures
         description: Displays visual identity examples and design assets.
+        type: editorial_content
+        data_entities:
+          - design.body
 
   - name: Engineering
     path: /engineering
@@ -1306,8 +1339,15 @@ pages:
     components:
       - name: PageHeader
         description: Introduces the service's technical and engineering work.
+        type: editorial_content
+        data_entities:
+          - engineering.title
+          - engineering.description
       - name: PictureAndText
         description: Explains engineering systems, infrastructure, and practices.
+        type: editorial_content
+        data_entities:
+          - engineering.body
 
   - name: Data
     path: /data
@@ -1315,10 +1355,18 @@ pages:
     components:
       - name: PageHeader
         description: Presents the service's data publication information.
+        type: editorial_content
+        data_entities:
+          - data.title
+          - data.description
       - name: DataSummary
         description: Displays feed metadata, availability, and data-use information.
+        type: editorial_content
+        data_entities:
+          - data.body
       - name: DataMenu
         description: Links to available datasets and GTFS documentation.
+        type: editorial_content
 
   - name: GTFS
     path: /data/gtfs
@@ -1326,8 +1374,15 @@ pages:
     components:
       - name: PageHeader
         description: Introduces the GTFS feed and its intended use.
+        type: editorial_content
+        data_entities:
+          - gtfs.title
+          - gtfs.description
       - name: GtfsReference
         description: Describes the published GTFS files, fields, and update cadence.
+        type: editorial_content
+        data_entities:
+          - gtfs.body
 
   - name: Operators
     path: /operators
@@ -1335,8 +1390,13 @@ pages:
     components:
       - name: PageHeader
         description: Introduces the organizations responsible for the service.
+        type: editorial_content
+        data_entities:
+          - operators.title
+          - operators.description
       - name: OperatorsMenu
         description: Lists operators and their responsibilities.
+        type: editorial_content
 
   - name: FAQ
     path: /faq
@@ -1344,8 +1404,15 @@ pages:
     components:
       - name: PageHeader
         description: Introduces the frequently asked questions.
+        type: editorial_content
+        data_entities:
+          - faq.title
+          - faq.description
       - name: FaqList
         description: Groups answers to common passenger questions by topic.
+        type: editorial_content
+        data_entities:
+          - faq.body
 
   - name: Legal
     path: /legal
@@ -1353,8 +1420,15 @@ pages:
     components:
       - name: PageHeader
         description: Introduces the legal information and terms.
+        type: editorial_content
+        data_entities:
+          - legal.title
+          - legal.description
       - name: LegalDocuments
         description: Lists and renders applicable terms, policies, and notices.
+        type: editorial_content
+        data_entities:
+          - legal.body
 
   - name: Contact
     path: /contact
@@ -1362,8 +1436,15 @@ pages:
     components:
       - name: PageHeader
         description: Introduces available support and contact channels.
+        type: editorial_content
+        data_entities:
+          - contact.title
+          - contact.description
       - name: ContactChannels
         description: Lists contact methods, hours, and emergency guidance.
+        type: editorial_content
+        data_entities:
+          - contact.body
 
   - name: About
     path: /about
@@ -1371,5 +1452,12 @@ pages:
     components:
       - name: PageHeader
         description: Introduces InfoTP's mission, scope, and service area.
+        type: editorial_content
+        data_entities:
+          - about.title
+          - about.description
       - name: PictureAndText
         description: Explains the service's history, purpose, and public value.
+        type: editorial_content
+        data_entities:
+          - about.body
