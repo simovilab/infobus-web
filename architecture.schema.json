@@ -71,7 +71,7 @@
     "component": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["name", "description"],
+      "required": ["name", "description", "type", "structure"],
       "properties": {
         "name": {
           "type": "string",
@@ -83,11 +83,13 @@
         },
         "type": {
           "type": "string",
-          "enum": ["editorial_content", "feed"]
+          "enum": ["editorial_content", "feed", "local_storage"],
+          "description": "Source of the component's data: staff-written content, the Infobús API feed, or the visitor's browser storage."
         },
         "gtfs": {
           "type": "string",
-          "enum": ["schedule", "realtime"]
+          "enum": ["schedule", "realtime"],
+          "description": "Highest GTFS layer the component depends on; realtime components may also read schedule data."
         },
         "endpoints": {
           "type": "array",
@@ -97,12 +99,27 @@
           }
         },
         "structure": {
-          "oneOf": [
+          "$ref": "#/$defs/structure"
+        }
+      },
+      "if": {
+        "properties": {
+          "type": {
+            "const": "feed"
+          }
+        }
+      },
+      "then": {
+        "required": ["gtfs", "endpoints"]
+      },
+      "else": {
+        "not": {
+          "anyOf": [
             {
-              "$ref": "#/$defs/structure"
+              "required": ["gtfs"]
             },
             {
-              "type": "null"
+              "required": ["endpoints"]
             }
           ]
         }
@@ -110,7 +127,8 @@
     },
     "dataEntity": {
       "type": "string",
-      "pattern": "^[a-z][a-z0-9_]*(?:\\.[a-z][a-z0-9_]*)*$"
+      "pattern": "^[a-z][a-z0-9_]*(?:\\.[a-z][a-z0-9_]*)*$",
+      "description": "A unit of information as <source>.<field>, e.g. a GTFS table column (routes.route_id), a GTFS-RT message field (trip_updates.delay), a derived API value (run.id, trip.last_stop_name), an editorial field (news.title) or a browser-stored value (recent_pages.path)."
     },
     "structure": {
       "type": "object",
@@ -144,11 +162,15 @@
     "endpoint": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["type", "path"],
+      "required": ["protocol", "format", "path"],
       "properties": {
-        "type": {
+        "protocol": {
           "type": "string",
-          "enum": ["JSON", "GeoJSON", "WebSocket"]
+          "enum": ["HTTP", "WebSocket"]
+        },
+        "format": {
+          "type": "string",
+          "enum": ["JSON", "GeoJSON"]
         },
         "path": {
           "type": "string",
@@ -170,7 +192,7 @@
         {
           "if": {
             "properties": {
-              "type": {
+              "protocol": {
                 "const": "WebSocket"
               }
             }
@@ -186,11 +208,25 @@
         },
         {
           "if": {
-            "properties": {
-              "type": {
-                "const": "JSON"
+            "allOf": [
+              {
+                "properties": {
+                  "protocol": {
+                    "const": "HTTP"
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "format": {
+                    "const": "JSON"
+                  }
+                }
               }
-            }
+            ]
+          },
+          "then": {
+            "required": ["key"]
           },
           "else": {
             "not": {

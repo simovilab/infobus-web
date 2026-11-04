@@ -1,9 +1,9 @@
 $schema: ./architecture.schema.json
 
 metadata:
-  version: "0.1"
+  version: "0.2"
   title: Infobús Web Information Architecture
-  date: 2026-10-28
+  date: 2026-11-04
 
 pages:
   - name: Home
@@ -12,49 +12,138 @@ pages:
     components:
       - name: RecentlyVisitedPages
         description: Displays a list of pages the user has recently visited, including routes, stops, and other relevant sections.
-        type: editorial_content
+        type: local_storage
+        structure:
+          type: array
+          values:
+            - recent_pages.title
+            - recent_pages.path
+            - recent_pages.visited_at
       - name: AlertsDigest
         description: Summarizes active alerts affecting the transit service.
-        type: editorial_content
+        type: feed
+        gtfs: realtime
+        endpoints:
+          - protocol: HTTP
+            format: JSON
+            path: /web/home
+            key: components.alerts_digest
+        structure:
+          type: object
+          values:
+            - feed_header.timestamp
+            - alert.active_count
+            - name: alerts
+              type: array
+              values:
+                - feed_entity.id
+                - alerts.header_text
+                - alerts.effect
+                - alerts.severity_level
+                - alerts.impact_period.start
+                - alerts.impact_period.end
+                - name: affected_routes
+                  type: array
+                  values:
+                    - routes.route_id
+                    - routes.route_short_name
+                    - routes.route_color
+                    - routes.route_text_color
       - name: RoutesBanner
         description: Description of the routes and their content.
         type: editorial_content
+        structure:
+          type: object
+          values:
+            - routes_banner.header
+            - routes_banner.body
+            - routes_banner.image_url
       - name: StopsBanner
         description: Description of the stops and their content.
         type: editorial_content
+        structure:
+          type: object
+          values:
+            - stops_banner.header
+            - stops_banner.body
+            - stops_banner.image_url
       - name: TripsBanner
         description: Description of the trips and their content.
         type: editorial_content
+        structure:
+          type: object
+          values:
+            - trips_banner.header
+            - trips_banner.body
+            - trips_banner.image_url
       - name: FaresBanner
         description: Description of the fares and their content.
         type: editorial_content
+        structure:
+          type: object
+          values:
+            - fares_banner.header
+            - fares_banner.body
+            - fares_banner.image_url
       - name: AlertsBanner
         description: Description of the alerts and their content.
         type: editorial_content
+        structure:
+          type: object
+          values:
+            - alerts_banner.header
+            - alerts_banner.body
+            - alerts_banner.image_url
       - name: NewsBanner
         description: Description of the news and their content.
         type: editorial_content
+        structure:
+          type: object
+          values:
+            - news_banner.header
+            - news_banner.body
+            - news_banner.image_url
       - name: EventsBanner
         description: Description of the events and their content.
         type: editorial_content
+        structure:
+          type: object
+          values:
+            - events_banner.header
+            - events_banner.body
+            - events_banner.image_url
       - name: BlogBanner
         description: Description of the blog and its content.
         type: editorial_content
+        structure:
+          type: object
+          values:
+            - blog_banner.header
+            - blog_banner.body
+            - blog_banner.image_url
 
   - name: Routes
     path: /routes
     description: Information about all the routes in the transit system.
     components:
+      - name: PageHeader
+        description: Introduces the routes section and how to browse it.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - routes_page.title
+            - routes_page.description
       - name: RoutesSearch
         description: Finds routes by name, number, location, or other criteria.
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/routes/search
             key: components.routes_search
         structure:
-          name: routes
           type: array
           values:
             - routes.route_id
@@ -71,11 +160,11 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/routes
             key: components.routes_menu
         structure:
-          name: routes
           type: array
           values:
             - routes.route_id
@@ -92,10 +181,10 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: GeoJSON
+          - protocol: HTTP
+            format: GeoJSON
             path: /web/routes/map
         structure:
-          name: routes
           type: array
           values:
             - routes.route_id
@@ -117,7 +206,8 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/routes/<route_id>
             key: components.route_header
         structure:
@@ -131,48 +221,89 @@ pages:
             - routes.route_text_color
             - routes.route_type
             - routes.cemv_support
-            - routes.agency_id # only for GTFS-complete
-            - routes.network_id # only for GTFS-complete (GTFS forbids it when networks.txt is used)
-            - routes.continuous_pickup # only for GTFS-complete
-            - routes.continuous_drop_off # only for GTFS-complete
+            - routes.agency_id
+            - routes.network_id
+            - routes.continuous_pickup
+            - routes.continuous_drop_off
       - name: RouteNextTrips
         description: Shows ongoing and upcoming trips for the current time.
         type: feed
         gtfs: realtime
         endpoints:
-          - type: WebSocket
+          - protocol: HTTP
+            format: JSON
+            path: /web/routes/<route_id>
+            key: components.route_next_trips
+          - protocol: WebSocket
+            format: JSON
             path: /ws/updates
             topic: route.<route_id>.stop_times
         structure:
           type: object
           values:
+            - routes.route_id
             - routes.route_short_name
+            - trip_updates.timestamp
             - name: trips
-              type: object
+              type: array
               values:
+                - run.id
+                - trips.trip_id
                 - trips.trip_headsign
+                - trips.direction_id
+                - trips.wheelchair_accessible
+                - trip.first_stop_name
+                - trip.last_stop_name
                 - stop_times.departure_time
+                - trip_updates.trip.schedule_relationship
+                - trip_updates.stop_time_update.departure.time
+                - trip_updates.stop_time_update.departure.delay
+                - vehicle_positions.occupancy_status
       - name: RouteAlerts
         description: Displays active alerts that apply to the route.
         type: feed
         gtfs: realtime
         endpoints:
-          - type: WebSocket
+          - protocol: HTTP
+            format: JSON
+            path: /web/routes/<route_id>
+            key: components.route_alerts
+          - protocol: WebSocket
+            format: JSON
             path: /ws/updates
             topic: route.<route_id>.alerts
+        structure:
+          type: object
+          values:
+            - feed_header.timestamp
+            - name: alerts
+              type: array
+              values:
+                - feed_entity.id
+                - alerts.header_text
+                - alerts.tts_header_text
+                - alerts.cause
+                - alerts.effect
+                - alerts.severity_level
+                - alert.status
+                - alerts.impact_period.start
+                - alerts.impact_period.end
+                - alerts.informed_entity.direction_id
+                - alerts.informed_entity.stop_id
       - name: RouteSchedule
         description: Displays scheduled and estimated departures by stop.
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/routes/<route_id>
             key: components.route_schedule
         structure:
           type: object
           values:
             - name: calendar
-              type: object
+              type: array
               values:
                 - calendar.service_id
                 - calendar.monday
@@ -185,13 +316,13 @@ pages:
                 - calendar.start_date
                 - calendar.end_date
             - name: calendar_dates
-              type: object
+              type: array
               values:
                 - calendar_dates.service_id
                 - calendar_dates.date
                 - calendar_dates.exception_type
             - name: services
-              type: object
+              type: array
               values:
                 - calendar.service_id
                 - name: directions
@@ -216,25 +347,72 @@ pages:
       - name: RouteMap
         description: Shows trip shapes and, when available, real-time vehicle positions.
         type: feed
-        gtfs: schedule
+        gtfs: realtime
         endpoints:
-          - type: GeoJSON
+          - protocol: HTTP
+            format: GeoJSON
             path: /web/routes/<route_id>/map
+          - protocol: WebSocket
+            format: JSON
+            path: /ws/updates
+            topic: route.<route_id>.vehicle_positions
+        structure:
+          type: object
+          values:
+            - routes.route_id
+            - routes.route_short_name
+            - routes.route_color
+            - routes.route_text_color
+            - name: directions
+              type: array
+              values:
+                - trips.direction_id
+                - trips.trip_headsign
+                - name: shapes
+                  type: array
+                  values:
+                    - shapes.shape_id
+                    - shapes.shape_pt_lat
+                    - shapes.shape_pt_lon
+                    - shapes.shape_pt_sequence
+                - name: stops
+                  type: array
+                  values:
+                    - stops.stop_id
+                    - stops.stop_name
+                    - stops.stop_lat
+                    - stops.stop_lon
+                    - stop_times.stop_sequence
+            - name: vehicles
+              type: array
+              values:
+                - run.id
+                - trips.trip_id
+                - trips.direction_id
+                - vehicle_positions.position.latitude
+                - vehicle_positions.position.longitude
+                - vehicle_positions.position.bearing
+                - vehicle_positions.vehicle.label
+                - vehicle_positions.occupancy_status
+                - vehicle_positions.timestamp
       - name: RouteStops
         description: Lists the route's stops in both directions.
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/routes/<route_id>
+            key: components.route_stops
         structure:
-          name: directions
           type: array
           values:
             - trips.direction_id
+            - trips.trip_headsign
             - name: stops
               type: array
               values:
+                - stop_times.stop_sequence
                 - stops.stop_id
                 - stops.stop_code
                 - stops.stop_name
@@ -256,8 +434,33 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/routes/<route_id>/fares
+            key: components.route_fares
+        structure:
+          type: object
+          values:
+            - routes.route_id
+            - routes.network_id
+            - name: fare_products
+              type: array
+              values:
+                - fare_products.fare_product_id
+                - fare_products.fare_product_name
+                - fare_products.amount
+                - fare_products.currency
+                - fare_media.fare_media_name
+                - fare_media.fare_media_type
+                - rider_categories.rider_category_name
+            - name: leg_rules
+              type: array
+              values:
+                - fare_leg_rules.leg_group_id
+                - fare_leg_rules.from_area_id
+                - fare_leg_rules.to_area_id
+                - areas.area_name
+                - fare_leg_rules.fare_product_id
 
   - name: Regions
     path: /routes/regions
@@ -268,11 +471,11 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/routes/regions/search # check with Fabián: same prefix as the page path (/routes/regions) instead of /web/regions
             key: components.regions_search
         structure:
-          name: regions
           type: array
           values:
             - networks.network_id
@@ -288,10 +491,10 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: GeoJSON
+          - protocol: HTTP
+            format: GeoJSON
             path: /web/routes/regions/map
         structure:
-          name: regions
           type: array
           values:
             - networks.network_id
@@ -317,7 +520,8 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/routes/regions/<region_id>
             key: components.region_header
         structure:
@@ -331,11 +535,11 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/routes/regions/<region_id>
             key: components.region_routes
         structure:
-          name: routes
           type: array
           values:
             - routes.route_id
@@ -351,7 +555,8 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: GeoJSON
+          - protocol: HTTP
+            format: GeoJSON
             path: /web/routes/regions/<region_id>/map
         structure:
           type: object
@@ -374,16 +579,24 @@ pages:
     path: /stops
     description: Information about all stops in the transit system.
     components:
+      - name: PageHeader
+        description: Introduces the stops section and how to find a stop.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - stops_page.title
+            - stops_page.description
       - name: StopsSearch
         description: Finds stops by name, identifier, location, or other criteria.
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/stops/search
             key: components.stops_search
         structure:
-          name: stops
           type: array
           values:
             - stops.stop_id
@@ -400,10 +613,11 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: GeoJSON
+          - protocol: HTTP
+            format: GeoJSON
             path: /web/stops/map
         structure:
-          type: object
+          type: array
           values:
             - stops.stop_id
             - stops.stop_code
@@ -424,7 +638,8 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/stops/<stop_id>
             key: components.stop_header
         structure:
@@ -451,16 +666,24 @@ pages:
         type: feed
         gtfs: realtime
         endpoints:
-          - type: WebSocket
+          - protocol: HTTP
+            format: JSON
+            path: /web/stops/<stop_id>
+            key: components.stop_next_arrivals
+          - protocol: WebSocket
+            format: JSON
             path: /ws/updates
             topic: stop.<stop_id>.stop_times
         structure:
           type: object
           values:
+            - stops.stop_id
             - stops.stop_name
+            - trip_updates.timestamp
             - name: trips
               type: array
               values:
+                - run.id
                 - routes.route_id
                 - routes.route_short_name
                 - routes.route_color
@@ -468,26 +691,54 @@ pages:
                 - trips.trip_id # check with Fabián: only needed once realtime is added
                 - trips.trip_headsign
                 - trips.direction_id
+                - trips.wheelchair_accessible
                 - stop_times.arrival_time
                 - stop_times.departure_time
+                - trip_updates.trip.schedule_relationship
+                - trip_updates.stop_time_update.arrival.time
+                - trip_updates.stop_time_update.arrival.delay
+                - vehicle_positions.occupancy_status
       - name: StopAlerts
         description: Displays active alerts that apply to the stop.
         type: feed
         gtfs: realtime
         endpoints:
-          - type: WebSocket
+          - protocol: HTTP
+            format: JSON
+            path: /web/stops/<stop_id>
+            key: components.stop_alerts
+          - protocol: WebSocket
+            format: JSON
             path: /ws/updates
             topic: stop.<stop_id>.alerts
+        structure:
+          type: object
+          values:
+            - feed_header.timestamp
+            - name: alerts
+              type: array
+              values:
+                - feed_entity.id
+                - alerts.header_text
+                - alerts.tts_header_text
+                - alerts.cause
+                - alerts.effect
+                - alerts.severity_level
+                - alert.status
+                - alerts.impact_period.start
+                - alerts.impact_period.end
+                - alerts.informed_entity.route_id
+                - alerts.informed_entity.direction_id
       - name: StopRoutes
         description: Lists routes that serve the stop.
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/stops/<stop_id>
             key: components.stop_routes
         structure:
-          name: routes
           type: array
           values:
             - routes.route_id
@@ -516,7 +767,8 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: GeoJSON
+          - protocol: HTTP
+            format: GeoJSON
             path: /web/stops/<stop_id>/map
         structure:
           type: object
@@ -527,7 +779,7 @@ pages:
             - stops.stop_lon
             - stops.location_type
             - stops.wheelchair_boarding
-            - name: stops # check with Fabián the relevancy of this data
+            - name: nearby_stops # check with Fabián the relevancy of this data
               type: array
               values:
                 - stops.stop_id
@@ -554,19 +806,28 @@ pages:
     path: /trips
     description: Current and recent trips in the network, and departures by stop, route, destination and time.
     components:
+      - name: PageHeader
+        description: Introduces the trips section and how to find a departure.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - trips_page.title
+            - trips_page.description
       - name: TripsFinder
-        description: Searches stops by name, sign code or nearby location, routes by number or name, and destinations by place, and remembers recent and saved choices on the device.
+        description: Searches stops by name, sign code or nearby location, routes by number or name, and destinations by place.
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/trips/search
             key: components.trips_finder
         structure:
           type: object
           values:
             - name: stops
-              type: object
+              type: array
               values:
                 - stops.stop_id
                 - stops.stop_code
@@ -579,7 +840,7 @@ pages:
                 - stops.stop_lat
                 - stops.stop_lon
             - name: routes
-              type: object
+              type: array
               values:
                 - routes.route_id
                 - routes.route_short_name
@@ -588,17 +849,29 @@ pages:
                 - routes.route_text_color
                 - agency.agency_name
             - name: destinations
-              type: object
+              type: array
               values:
                 - trips.trip_headsign
                 - routes.route_id
                 - routes.route_short_name
+      - name: TripsRecentChoices
+        description: Remembers the stops, routes and destinations recently chosen or saved on this device, for quick reuse in the finder.
+        type: local_storage
+        structure:
+          type: array
+          values:
+            - recent_choices.kind
+            - recent_choices.id
+            - recent_choices.label
+            - recent_choices.saved
+            - recent_choices.chosen_at
       - name: TripsDisruptions
         description: Flags alerts on the chosen stop and routes above the results, or the most severe network alerts when nothing is chosen, each linking to its alert page.
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/trips
             key: components.trips_disruptions
         structure:
@@ -606,7 +879,7 @@ pages:
           values:
             - feed_header.timestamp
             - name: alerts
-              type: object
+              type: array
               values:
                 - feed_entity.id
                 - alerts.header_text
@@ -622,7 +895,8 @@ pages:
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/trips
             key: components.trips_departures
         structure:
@@ -635,13 +909,13 @@ pages:
             - stops.wheelchair_boarding
             - trip_updates.timestamp
             - name: service_exceptions
-              type: object
+              type: array
               values:
                 - calendar_dates.service_id
                 - calendar_dates.date
                 - calendar_dates.exception_type
             - name: routes
-              type: object
+              type: array
               values:
                 - routes.route_id
                 - routes.route_short_name
@@ -653,7 +927,7 @@ pages:
                 - stop.last_departure_time
                 - stop.next_service_date
                 - name: departures
-                  type: object
+                  type: array
                   values:
                     - run.id
                     - run.start_date
@@ -673,7 +947,7 @@ pages:
                     - frequencies.end_time
                     - frequencies.headway_secs
                     - frequencies.exact_times
-                    - frequencies.trip_id # only for GTFS-complete
+                    - frequencies.trip_id
                     - trip.is_last_of_day
                     - trip_updates.trip.start_time
                     - trip_updates.trip.schedule_relationship
@@ -691,7 +965,8 @@ pages:
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/trips
             key: components.trips_in_service
         structure:
@@ -700,12 +975,12 @@ pages:
             - trip_updates.timestamp
             - vehicle_positions.timestamp
             - name: agencies
-              type: object
+              type: array
               values:
                 - agency.agency_id
                 - agency.agency_name
                 - name: routes
-                  type: object
+                  type: array
                   values:
                     - routes.route_id
                     - routes.route_short_name
@@ -713,7 +988,7 @@ pages:
                     - routes.route_color
                     - routes.route_text_color
                     - name: runs
-                      type: object
+                      type: array
                       values:
                         - run.id
                         - run.start_date
@@ -730,7 +1005,7 @@ pages:
                         - trip_updates.delay
                         - vehicle_positions.occupancy_status
                     - name: scheduled_not_tracked
-                      type: object
+                      type: array
                       values:
                         - trips.trip_id
                         - trips.trip_headsign
@@ -742,7 +1017,8 @@ pages:
         type: feed
         gtfs: realtime
         endpoints:
-          - type: GeoJSON
+          - protocol: HTTP
+            format: GeoJSON
             path: /web/trips/map
         structure:
           type: object
@@ -751,14 +1027,14 @@ pages:
             - stops.stop_lon
             - trips.shape_id
             - name: shapes
-              type: object
+              type: array
               values:
                 - shapes.shape_id
                 - shapes.shape_pt_lat
                 - shapes.shape_pt_lon
                 - shapes.shape_pt_sequence
             - name: vehicles
-              type: object
+              type: array
               values:
                 - run.id
                 - vehicle_positions.position.latitude
@@ -776,7 +1052,8 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/trips/<run_id>
             key: components.trip_header
         structure:
@@ -789,9 +1066,9 @@ pages:
             - trips.trip_headsign
             - trips.trip_short_name
             - trips.direction_id
-            - trips.block_id # only for GTFS-complete
-            - trips.safe_duration_factor # only for GTFS-complete
-            - trips.safe_duration_offset # only for GTFS-complete
+            - trips.block_id
+            - trips.safe_duration_factor
+            - trips.safe_duration_offset
             - routes.route_id
             - routes.route_short_name
             - routes.route_long_name
@@ -800,11 +1077,11 @@ pages:
             - agency.agency_name
             - agency.agency_phone
             - agency.agency_url
-            - agency.agency_email # only for GTFS-complete
-            - agency.agency_fare_url # only for GTFS-complete
-            - agency.agency_lang # only for GTFS-complete
-            - agency.agency_timezone # only for GTFS-complete
-            - agency.cemv_support # only for GTFS-complete
+            - agency.agency_email
+            - agency.agency_fare_url
+            - agency.agency_lang
+            - agency.agency_timezone
+            - agency.cemv_support
             - trip.first_stop_name
             - trip.last_stop_name
             - trip.last_arrival_time
@@ -813,10 +1090,12 @@ pages:
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/trips/<run_id>
             key: components.trip_status
-          - type: WebSocket
+          - protocol: WebSocket
+            format: JSON
             path: /ws/updates
             topic: trip.lifecycle.by_run.<run_id>
         structure:
@@ -831,14 +1110,16 @@ pages:
             - trip_updates.timestamp
             - vehicle_positions.timestamp
       - name: TripVehicle
-        description: Helps the passenger recognise and board the right bus by its number, plate, wheelchair access, bike policy and crowding, or says the bus is not identified.
+        description: Helps the passenger recognize and board the right bus by its number, plate, wheelchair access, bike policy and crowding, or says the bus is not identified.
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/trips/<run_id>
             key: components.trip_vehicle
-          - type: WebSocket
+          - protocol: WebSocket
+            format: JSON
             path: /ws/updates
             topic: trip.occupancy_status.by_run.<run_id>
         structure:
@@ -852,19 +1133,22 @@ pages:
             - vehicle_positions.timestamp
             - trips.wheelchair_accessible
             - trips.bikes_allowed
-            - trips.cars_allowed # only for GTFS-complete
+            - trips.cars_allowed
       - name: TripStops
         description: Lists every stop with scheduled and estimated times, shows where the bus is, counts down to the passenger's boarding and alighting stops, flags skipped, replaced, platform-changed and drop-off-only stops, and after the trip shows the last estimate recorded at each stop.
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/trips/<run_id>
             key: components.trip_stops
-          - type: WebSocket
+          - protocol: WebSocket
+            format: JSON
             path: /ws/updates
             topic: trip.stop_time_updates.by_run.<run_id>
-          - type: WebSocket
+          - protocol: WebSocket
+            format: JSON
             path: /ws/updates
             topic: trip.vehicle_stop_status.by_run.<run_id>
         structure:
@@ -877,7 +1161,7 @@ pages:
             - trip_updates.delay
             - trip_updates.trip.modified_trip.modifications_id
             - name: stop_times
-              type: object
+              type: array
               values:
                 - stop_times.stop_sequence
                 - stops.stop_id
@@ -894,16 +1178,16 @@ pages:
                 - stop_times.pickup_type
                 - stop_times.drop_off_type
                 - stop_times.timepoint
-                - stop_times.trip_id # only for GTFS-complete
-                - stop_times.stop_id # only for GTFS-complete
-                - stop_times.location_group_id # only for GTFS-complete
-                - stop_times.location_id # only for GTFS-complete
-                - stop_times.start_pickup_drop_off_window # only for GTFS-complete
-                - stop_times.end_pickup_drop_off_window # only for GTFS-complete
-                - stop_times.continuous_pickup # only for GTFS-complete
-                - stop_times.continuous_drop_off # only for GTFS-complete
-                - stop_times.pickup_booking_rule_id # only for GTFS-complete
-                - stop_times.drop_off_booking_rule_id # only for GTFS-complete
+                - stop_times.trip_id
+                - stop_times.stop_id
+                - stop_times.location_group_id
+                - stop_times.location_id
+                - stop_times.start_pickup_drop_off_window
+                - stop_times.end_pickup_drop_off_window
+                - stop_times.continuous_pickup
+                - stop_times.continuous_drop_off
+                - stop_times.pickup_booking_rule_id
+                - stop_times.drop_off_booking_rule_id
                 - trip_updates.stop_time_update.stop_sequence
                 - trip_updates.stop_time_update.stop_id
                 - trip_updates.stop_time_update.arrival.time
@@ -915,7 +1199,7 @@ pages:
                 - trip_updates.stop_time_update.stop_time_properties.pickup_type
                 - trip_updates.stop_time_update.stop_time_properties.drop_off_type
             - name: replacement_stops
-              type: object
+              type: array
               values:
                 - trip_modifications.modifications.replacement_stops.stop_id
                 - trip_modifications.modifications.replacement_stops.travel_time_to_stop
@@ -925,63 +1209,77 @@ pages:
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/trips/<run_id>
             key: components.trip_alerts
-          - type: WebSocket
+          - protocol: WebSocket
+            format: JSON
             path: /ws/updates
             topic: trip.alerts.by_run.<run_id>
         structure:
-          name: alerts
           type: object
           values:
-            - feed_entity.id
-            - alerts.header_text
-            - alerts.effect
-            - alerts.severity_level
-            - alert.status
-            - alerts.impact_period.start
-            - alerts.impact_period.end
-            - alerts.informed_entity.agency_id
-            - alerts.informed_entity.route_id
-            - alerts.informed_entity.direction_id
-            - alerts.informed_entity.stop_id
-            - alerts.informed_entity.trip.trip_id
-            - alerts.informed_entity.trip.start_date
+            - feed_header.timestamp
+            - name: alerts
+              type: array
+              values:
+                - feed_entity.id
+                - alerts.header_text
+                - alerts.description_text
+                - alerts.effect
+                - alerts.severity_level
+                - alert.status
+                - alert.affects_passenger_stops
+                - alerts.impact_period.start
+                - alerts.impact_period.end
+                - alerts.informed_entity.agency_id
+                - alerts.informed_entity.route_id
+                - alerts.informed_entity.direction_id
+                - alerts.informed_entity.stop_id
+                - alerts.informed_entity.trip.trip_id
+                - alerts.informed_entity.trip.start_date
       - name: TripAlternatives
         description: Shows the previous and next departures on the same route and direction from the passenger's stop, for when this bus is cancelled, full or missed.
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/trips/<run_id>
             key: components.trip_alternatives
         structure:
-          name: departures
           type: object
           values:
-            - run.id
-            - trips.trip_id
-            - trips.route_id
-            - trips.direction_id
-            - trips.trip_headsign
-            - trips.wheelchair_accessible
-            - routes.route_short_name
-            - routes.route_color
-            - stop_times.departure_time
-            - stop_times.pickup_type
-            - trip_updates.trip.schedule_relationship
-            - trip_updates.stop_time_update.departure.time
-            - trip_updates.stop_time_update.departure_occupancy_status
-            - vehicle_positions.occupancy_status
+            - stops.stop_id
+            - stops.stop_name
+            - name: departures
+              type: array
+              values:
+                - run.id
+                - trips.trip_id
+                - trips.route_id
+                - trips.direction_id
+                - trips.trip_headsign
+                - trips.wheelchair_accessible
+                - routes.route_short_name
+                - routes.route_color
+                - stop_times.departure_time
+                - stop_times.pickup_type
+                - trip_updates.trip.schedule_relationship
+                - trip_updates.stop_time_update.departure.time
+                - trip_updates.stop_time_update.departure_occupancy_status
+                - vehicle_positions.occupancy_status
       - name: TripMap
         description: Loads on request a map of the trip path, its stops, the bus position and any detour.
         type: feed
         gtfs: realtime
         endpoints:
-          - type: GeoJSON
+          - protocol: HTTP
+            format: GeoJSON
             path: /web/trips/<run_id>/map
-          - type: WebSocket
+          - protocol: WebSocket
+            format: JSON
             path: /ws/updates
             topic: trip.vehicle_positions.by_run.<run_id>
         structure:
@@ -989,15 +1287,15 @@ pages:
           values:
             - trips.shape_id
             - name: shapes
-              type: object
+              type: array
               values:
                 - shapes.shape_pt_lat
                 - shapes.shape_pt_lon
                 - shapes.shape_pt_sequence
-                - shapes.shape_dist_traveled # only for GTFS-complete
+                - shapes.shape_dist_traveled
             - stop_times.shape_dist_traveled
             - name: stops
-              type: object
+              type: array
               values:
                 - stops.stop_id
                 - stops.stop_name
@@ -1017,10 +1315,78 @@ pages:
     path: /fares
     description: Information about all fare products and payment options.
     components:
+      - name: PageHeader
+        description: Introduces fares, discounts, and payment options.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - fares_page.title
+            - fares_page.description
       - name: FaresSearch
         description: Finds fare products by name, audience, zone, or price.
+        type: feed
+        gtfs: schedule
+        endpoints:
+          - protocol: HTTP
+            format: JSON
+            path: /web/fares/search
+            key: components.fares_search
+        structure:
+          type: array
+          values:
+            - fare_products.fare_product_id
+            - fare_products.fare_product_name
+            - fare_products.amount
+            - fare_products.currency
+            - rider_categories.rider_category_name
+            - fare_media.fare_media_name
+            - networks.network_name
+            - areas.area_name
       - name: FaresProductMenu
         description: Lists available fare products and their primary characteristics.
+        type: feed
+        gtfs: schedule
+        endpoints:
+          - protocol: HTTP
+            format: JSON
+            path: /web/fares
+            key: components.fares_product_menu
+        structure:
+          type: array
+          values:
+            - fare_products.fare_product_id
+            - fare_products.fare_product_name
+            - fare_products.amount
+            - fare_products.currency
+            - rider_categories.rider_category_id
+            - rider_categories.rider_category_name
+            - rider_categories.is_default_fare_category
+            - fare_media.fare_media_id
+            - fare_media.fare_media_name
+            - fare_media.fare_media_type
+      - name: FaresPaymentOptions
+        description: Lists the accepted payment media, such as cash, transit cards, and contactless bank cards, by operator.
+        type: feed
+        gtfs: schedule
+        endpoints:
+          - protocol: HTTP
+            format: JSON
+            path: /web/fares
+            key: components.fares_payment_options
+        structure:
+          type: array
+          values:
+            - fare_media.fare_media_id
+            - fare_media.fare_media_name
+            - fare_media.fare_media_type
+            - name: agencies
+              type: array
+              values:
+                - agency.agency_id
+                - agency.agency_name
+                - agency.agency_fare_url
+                - agency.cemv_support
 
   - name: Fare Product
     path: /fares/<fare_product_id>
@@ -1028,27 +1394,111 @@ pages:
     components:
       - name: FareProductHeader
         description: Presents the fare product's name, price, and key eligibility information.
+        type: feed
+        gtfs: schedule
+        endpoints:
+          - protocol: HTTP
+            format: JSON
+            path: /web/fares/<fare_product_id>
+            key: components.fare_product_header
+        structure:
+          type: object
+          values:
+            - fare_products.fare_product_id
+            - fare_products.fare_product_name
+            - fare_products.amount
+            - fare_products.currency
+            - rider_categories.rider_category_id
+            - rider_categories.rider_category_name
+            - rider_categories.is_default_fare_category
+            - rider_categories.eligibility_url
+            - fare_media.fare_media_id
+            - fare_media.fare_media_name
+            - fare_media.fare_media_type
+      - name: FareProductRules
+        description: Lists where, when, and on which routes the fare product applies, and its transfer conditions.
+        type: feed
+        gtfs: schedule
+        endpoints:
+          - protocol: HTTP
+            format: JSON
+            path: /web/fares/<fare_product_id>
+            key: components.fare_product_rules
+        structure:
+          type: object
+          values:
+            - name: leg_rules
+              type: array
+              values:
+                - fare_leg_rules.leg_group_id
+                - fare_leg_rules.network_id
+                - networks.network_name
+                - fare_leg_rules.from_area_id
+                - fare_leg_rules.to_area_id
+                - areas.area_name
+                - fare_leg_rules.from_timeframe_group_id
+                - fare_leg_rules.to_timeframe_group_id
+                - timeframes.start_time
+                - timeframes.end_time
+                - timeframes.service_id
+                - fare_leg_rules.rule_priority
+                - name: routes
+                  type: array
+                  values:
+                    - routes.route_id
+                    - routes.route_short_name
+                    - routes.route_color
+                    - routes.route_text_color
+            - name: transfer_rules
+              type: array
+              values:
+                - fare_transfer_rules.from_leg_group_id
+                - fare_transfer_rules.to_leg_group_id
+                - fare_transfer_rules.transfer_count
+                - fare_transfer_rules.duration_limit
+                - fare_transfer_rules.duration_limit_type
+                - fare_transfer_rules.fare_transfer_type
       - name: FareProductDescription
-        description: Explains validity, purchase, use, and fare rules.
+        description: Explains validity, purchase, and use in staff-written text.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - fare_product.body
 
   - name: Alerts
     path: /alerts
     description: All current, upcoming and recent service alerts, with the passenger's own routes and stops first.
     components:
+      - name: PageHeader
+        description: Introduces the alerts section and how to follow routes and stops.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - alerts_page.title
+            - alerts_page.description
       - name: AlertsForYou
         description: Shows alerts for the routes and stops the passenger follows on this device, plus network-wide ones, or says plainly that there are none and when the feed was checked; with nothing followed, explains how to follow.
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/alerts
             key: components.alerts_for_you
         structure:
           type: object
           values:
             - feed_header.timestamp
+            - name: followed
+              type: array
+              values:
+                - followed.kind
+                - followed.id
+                - followed.label
             - name: alerts
-              type: object
+              type: array
               values:
                 - feed_entity.id
                 - alerts.header_text
@@ -1066,26 +1516,27 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/alerts/search
             key: components.alerts_search
         structure:
           type: object
           values:
             - name: routes
-              type: object
+              type: array
               values:
                 - routes.route_id
                 - routes.route_short_name
                 - routes.route_long_name
             - name: stops
-              type: object
+              type: array
               values:
                 - stops.stop_id
                 - stops.stop_code
                 - stops.stop_name
             - name: agencies
-              type: object
+              type: array
               values:
                 - agency.agency_id
                 - agency.agency_name
@@ -1094,7 +1545,8 @@ pages:
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/alerts
             key: components.alerts_list
         structure:
@@ -1102,7 +1554,7 @@ pages:
           values:
             - feed_header.timestamp
             - name: alerts
-              type: object
+              type: array
               values:
                 - feed_entity.id
                 - alerts.header_text
@@ -1114,13 +1566,13 @@ pages:
                 - alerts.impact_period.start
                 - alerts.impact_period.end
                 - name: affected_routes
-                  type: object
+                  type: array
                   values:
                     - routes.route_short_name
                     - routes.route_color
                     - routes.route_text_color
                 - name: affected_stops
-                  type: object
+                  type: array
                   values:
                     - stops.stop_name
       - name: AlertsRecent
@@ -1128,12 +1580,12 @@ pages:
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/alerts
             key: components.alerts_recent
         structure:
-          name: alerts
-          type: object
+          type: array
           values:
             - feed_entity.id
             - alerts.header_text
@@ -1145,7 +1597,7 @@ pages:
             - alert.first_seen_at
             - alert.last_seen_at
             - name: affected_routes
-              type: object
+              type: array
               values:
                 - routes.route_short_name
                 - routes.route_color
@@ -1155,18 +1607,18 @@ pages:
         type: feed
         gtfs: schedule
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/alerts
             key: components.alerts_service_days
         structure:
-          name: service_days
-          type: object
+          type: array
           values:
             - calendar_dates.date
             - calendar_dates.service_id
             - calendar_dates.exception_type
             - name: routes
-              type: object
+              type: array
               values:
                 - trips.service_id
                 - routes.route_id
@@ -1183,7 +1635,8 @@ pages:
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/alerts/<entity_id>
             key: components.alert_header
         structure:
@@ -1204,12 +1657,12 @@ pages:
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/alerts/<entity_id>
             key: components.alert_affected_services
         structure:
-          name: informed_entities
-          type: object
+          type: array
           values:
             - alerts.informed_entity.agency_id
             - alerts.informed_entity.route_id
@@ -1227,7 +1680,7 @@ pages:
             - stops.stop_name
             - run.id
             - name: other_routes
-              type: object
+              type: array
               values:
                 - routes.route_id
                 - routes.route_short_name
@@ -1237,7 +1690,8 @@ pages:
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/alerts/<entity_id>
             key: components.alert_period
         structure:
@@ -1259,7 +1713,8 @@ pages:
         type: feed
         gtfs: realtime
         endpoints:
-          - type: JSON
+          - protocol: HTTP
+            format: JSON
             path: /web/alerts/<entity_id>
             key: components.alert_description
         structure:
@@ -1275,7 +1730,7 @@ pages:
             - alerts.image.localized_image.url
             - alerts.image_alternative_text
             - name: temporary_stops
-              type: object
+              type: array
               values:
                 - trip_modifications.modifications.service_alert_id
                 - trip_modifications.modifications.replacement_stops.stop_id
@@ -1285,18 +1740,25 @@ pages:
       - name: AlertGuidance
         description: Renders staff-written advice, such as alternative routes, walking directions to temporary stops and photos.
         type: editorial_content
+        structure:
+          type: object
+          values:
+            - alert_guidance.body
+            - alert_guidance.image.src
+            - alert_guidance.updated_at
       - name: AlertMap
         description: Loads on request a map of the affected stops, the detour path and the temporary stops.
         type: feed
         gtfs: realtime
         endpoints:
-          - type: GeoJSON
+          - protocol: HTTP
+            format: GeoJSON
             path: /web/alerts/<entity_id>/map
         structure:
           type: object
           values:
             - name: shapes
-              type: object
+              type: array
               values:
                 - shapes.shape_id
                 - shapes.shape_pt_lat
@@ -1307,13 +1769,13 @@ pages:
             - feed_entity.shape.shape_id
             - feed_entity.shape.encoded_polyline
             - name: stops
-              type: object
+              type: array
               values:
                 - stops.stop_id
                 - stops.stop_lat
                 - stops.stop_lon
             - name: temporary_stops
-              type: object
+              type: array
               values:
                 - feed_entity.stop.stop_id
                 - feed_entity.stop.stop_lat
@@ -1323,10 +1785,37 @@ pages:
     path: /news
     description: News and updates about the public transportation service.
     components:
+      - name: PageHeader
+        description: Introduces the news section.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - news_page.title
+            - news_page.description
       - name: NewsSearch
         description: Finds news items by topic, date, or keyword.
+        type: editorial_content
+        structure:
+          type: array
+          values:
+            - news.slug
+            - news.title
+            - news.description
+            - news.date
+            - news.badge.label
       - name: NewsMenu
         description: Lists published news and service updates.
+        type: editorial_content
+        structure:
+          type: array
+          values:
+            - news.slug
+            - news.title
+            - news.description
+            - news.date
+            - news.badge.label
+            - news.image.src
 
   - name: News Article
     path: /news/<slug>
@@ -1334,8 +1823,28 @@ pages:
     components:
       - name: ArticleHeader
         description: Presents the article title, publication information, and summary.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - news.title
+            - news.description
+            - news.date
+            - news.badge.label
+            - news.image.src
+            - name: authors
+              type: array
+              values:
+                - news.authors.name
+                - news.authors.to
+                - news.authors.avatar.src
       - name: ArticleBody
         description: Renders the article content and supporting media.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - news.body
 
   - name: Blog
     path: /blog
@@ -1343,8 +1852,29 @@ pages:
     components:
       - name: PageHeader
         description: Introduces the blog and its editorial scope.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - blog_page.title
+            - blog_page.description
       - name: ArticleMenu
         description: Lists blog posts with publication information and summaries.
+        type: editorial_content
+        structure:
+          type: array
+          values:
+            - blog.slug
+            - blog.title
+            - blog.description
+            - blog.date
+            - blog.badge.label
+            - blog.image.src
+            - name: authors
+              type: array
+              values:
+                - blog.authors.name
+                - blog.authors.avatar.src
 
   - name: Blog Post
     path: /blog/<slug>
@@ -1352,17 +1882,67 @@ pages:
     components:
       - name: PostHeader
         description: Presents the post title, authors, date, and summary.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - blog.title
+            - blog.description
+            - blog.date
+            - blog.badge.label
+            - blog.image.src
+            - name: authors
+              type: array
+              values:
+                - blog.authors.name
+                - blog.authors.to
+                - blog.authors.avatar.src
       - name: PostBody
         description: Renders the post content and supporting media.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - blog.body
 
   - name: Events
     path: /events
     description: Information about transit-related events.
     components:
+      - name: PageHeader
+        description: Introduces the events section.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - events_page.title
+            - events_page.description
       - name: EventsSearch
         description: Finds events by date, location, or topic.
+        type: editorial_content
+        structure:
+          type: array
+          values:
+            - events.slug
+            - events.title
+            - events.start_date
+            - events.end_date
+            - events.location
+            - events.badge.label
       - name: EventsMenu
         description: Lists upcoming and recent events.
+        type: editorial_content
+        structure:
+          type: array
+          values:
+            - events.slug
+            - events.title
+            - events.description
+            - events.start_date
+            - events.end_date
+            - events.location
+            - events.badge.label
+            - events.image.src
 
   - name: Event
     path: /events/<slug>
@@ -1370,8 +1950,24 @@ pages:
     components:
       - name: EventHeader
         description: Presents the event title, date, location, and essential details.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - events.title
+            - events.description
+            - events.start_date
+            - events.end_date
+            - events.location
+            - events.badge.label
+            - events.image.src
       - name: EventBody
         description: Renders the event description, schedule, and supporting media.
+        type: editorial_content
+        structure:
+          type: object
+          values:
+            - events.body
 
   - name: Resources
     path: /resources
@@ -1388,6 +1984,12 @@ pages:
       - name: ResourcesMenu
         description: Links to the guide, accessibility, and tourism resources.
         type: editorial_content
+        structure:
+          type: array
+          values:
+            - resources.link_title
+            - resources.link_description
+            - resources.link_path
 
   - name: User Guide
     path: /resources/guide
@@ -1511,6 +2113,12 @@ pages:
       - name: DataMenu
         description: Links to available datasets and GTFS documentation.
         type: editorial_content
+        structure:
+          type: array
+          values:
+            - data.link_title
+            - data.link_description
+            - data.link_path
 
   - name: GTFS
     path: /data/gtfs
@@ -1547,6 +2155,14 @@ pages:
       - name: OperatorsMenu
         description: Lists operators and their responsibilities.
         type: editorial_content
+        structure:
+          type: array
+          values:
+            - operators.name
+            - operators.role
+            - operators.description
+            - operators.url
+            - operators.logo.src
 
   - name: FAQ
     path: /faq
