@@ -125,6 +125,10 @@ pages:
           - routes.route_text_color
           - routes.route_type
           - routes.cemv_support
+          - routes.agency_id # only for GTFS-complete
+          - routes.network_id # only for GTFS-complete (GTFS forbids it when networks.txt is used)
+          - routes.continuous_pickup # only for GTFS-complete
+          - routes.continuous_drop_off # only for GTFS-complete
       - name: RouteNextTrips
         description: Shows ongoing and upcoming trips for the current time.
         type: feed
@@ -610,6 +614,7 @@ pages:
                   - frequencies.end_time
                   - frequencies.headway_secs
                   - frequencies.exact_times
+                  - frequencies.trip_id # only for GTFS-complete
                   - trip.is_last_of_day
                   - trip_updates.trip.start_time
                   - trip_updates.trip.schedule_relationship
@@ -713,6 +718,9 @@ pages:
           - trips.trip_headsign
           - trips.trip_short_name
           - trips.direction_id
+          - trips.block_id # only for GTFS-complete
+          - trips.safe_duration_factor # only for GTFS-complete
+          - trips.safe_duration_offset # only for GTFS-complete
           - routes.route_id
           - routes.route_short_name
           - routes.route_long_name
@@ -721,6 +729,11 @@ pages:
           - agency.agency_name
           - agency.agency_phone
           - agency.agency_url
+          - agency.agency_email # only for GTFS-complete
+          - agency.agency_fare_url # only for GTFS-complete
+          - agency.agency_lang # only for GTFS-complete
+          - agency.agency_timezone # only for GTFS-complete
+          - agency.cemv_support # only for GTFS-complete
           - trip.first_stop_name
           - trip.last_stop_name
           - trip.last_arrival_time
@@ -764,6 +777,7 @@ pages:
           - vehicle_positions.timestamp
           - trips.wheelchair_accessible
           - trips.bikes_allowed
+          - trips.cars_allowed # only for GTFS-complete
       - name: TripStops
         description: Lists every stop with scheduled and estimated times, shows where the bus is, counts down to the passenger's boarding and alighting stops, flags skipped, replaced, platform-changed and drop-off-only stops, and after the trip shows the last estimate recorded at each stop.
         type: feed
@@ -802,6 +816,16 @@ pages:
               - stop_times.pickup_type
               - stop_times.drop_off_type
               - stop_times.timepoint
+              - stop_times.trip_id # only for GTFS-complete
+              - stop_times.stop_id # only for GTFS-complete
+              - stop_times.location_group_id # only for GTFS-complete
+              - stop_times.location_id # only for GTFS-complete
+              - stop_times.start_pickup_drop_off_window # only for GTFS-complete
+              - stop_times.end_pickup_drop_off_window # only for GTFS-complete
+              - stop_times.continuous_pickup # only for GTFS-complete
+              - stop_times.continuous_drop_off # only for GTFS-complete
+              - stop_times.pickup_booking_rule_id # only for GTFS-complete
+              - stop_times.drop_off_booking_rule_id # only for GTFS-complete
               - trip_updates.stop_time_update.stop_sequence
               - trip_updates.stop_time_update.stop_id
               - trip_updates.stop_time_update.arrival.time
@@ -886,6 +910,7 @@ pages:
               - shapes.shape_pt_lat
               - shapes.shape_pt_lon
               - shapes.shape_pt_sequence
+              - shapes.shape_dist_traveled # only for GTFS-complete
           - stop_times.shape_dist_traveled
           - object: stops
             properties:
