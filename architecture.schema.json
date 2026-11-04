@@ -96,60 +96,47 @@
             "$ref": "#/$defs/endpoint"
           }
         },
-        "data_entities": {
-          "type": ["array", "null"],
-          "items": {
-            "$ref": "#/$defs/dataEntity"
-          }
+        "structure": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/structure"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       }
     },
     "dataEntity": {
-      "oneOf": [
-        {
-          "type": "string",
-          "pattern": "^[a-z][a-z0-9_]*(?:\\.[a-z][a-z0-9_]*)*$"
-        },
-        {
-          "$ref": "#/$defs/object"
-        },
-        {
-          "$ref": "#/$defs/array"
-        }
-      ]
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*(?:\\.[a-z][a-z0-9_]*)*$"
     },
-    "object": {
+    "structure": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["object", "properties"],
+      "required": ["type", "values"],
       "properties": {
-        "object": {
+        "name": {
           "type": "string",
           "pattern": "^[a-z][a-z0-9_]*$"
         },
-        "properties": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "$ref": "#/$defs/dataEntity"
-          }
-        }
-      }
-    },
-    "array": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["array", "properties"],
-      "properties": {
-        "array": {
+        "type": {
           "type": "string",
-          "pattern": "^[a-z][a-z0-9_]*$"
+          "enum": ["object", "array"]
         },
-        "properties": {
+        "values": {
           "type": "array",
           "minItems": 1,
           "items": {
-            "$ref": "#/$defs/dataEntity"
+            "oneOf": [
+              {
+                "$ref": "#/$defs/dataEntity"
+              },
+              {
+                "$ref": "#/$defs/structure"
+              }
+            ]
           }
         }
       }
