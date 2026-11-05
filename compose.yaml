@@ -1,0 +1,38 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ${IMAGE_NAME:-infobus-web}:${IMAGE_TAG:-latest}
+    container_name: infobus-web
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      NITRO_HOST: 0.0.0.0
+      NITRO_PORT: "3000"
+      NUXT_PUBLIC_SITE_URL: https://${DOMAIN:?Set DOMAIN in .env}
+    networks:
+      - traefik_proxy
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik_proxy
+
+      # HTTPS router with a Let's Encrypt certificate issued by Traefik's resolver
+      - traefik.http.routers.infobus-web.rule=Host(`${DOMAIN}`)
+      - traefik.http.routers.infobus-web.entrypoints=${TRAEFIK_ENTRYPOINT:-websecure}
+      - traefik.http.routers.infobus-web.tls=true
+      - traefik.http.routers.infobus-web.tls.certresolver=${TRAEFIK_CERT_RESOLVER:-letsencrypt}
+      - traefik.http.routers.infobus-web.service=infobus-web
+      - traefik.http.services.infobus-web.loadbalancer.server.port=3000
+
+      # HTTP router that only redirects to HTTPS
+      - traefik.http.routers.infobus-web-http.rule=Host(`${DOMAIN}`)
+      - traefik.http.routers.infobus-web-http.entrypoints=${TRAEFIK_HTTP_ENTRYPOINT:-web}
+      - traefik.http.routers.infobus-web-http.middlewares=infobus-web-https
+      - traefik.http.middlewares.infobus-web-https.redirectscheme.scheme=https
+      - traefik.http.middlewares.infobus-web-https.redirectscheme.permanent=true
+
+networks:
+  # Created and managed by the Traefik stack already running on the server
+  traefik_proxy:
+    external: true

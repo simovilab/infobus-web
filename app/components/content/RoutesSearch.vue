@@ -1,5 +1,22 @@
+<script setup lang="ts">
+const samples = [
+  { label: 'Route 1', to: '/routes/1' },
+  { label: 'Route 2', to: '/routes/2' },
+  { label: 'Route 3', to: '/routes/3' },
+  { label: 'Route 4', to: '/routes/4' }
+]
+</script>
+
 <template>
-  <div class="flex w-full items-center justify-center my-8 py-16 border border-dashed border-muted rounded-lg bg-elevated text-lg font-semibold text-muted">
-    RoutesSearch
-  </div>
+  <BlueprintCard>
+    <template #default="{ structure }">
+      <BlueprintSearch
+        :structure="structure"
+        placeholder="Search routes by name, number, location…"
+        result-name="route"
+        to="/routes/1"
+        :samples="samples"
+      />
+    </template>
+  </BlueprintCard>
 </template>

@@ -1,5 +1,17 @@
+<script setup lang="ts">
+const samples = [{ label: 'Sample event', to: '/events/sample-event' }]
+</script>
+
 <template>
-  <div class="flex w-full items-center justify-center my-8 py-16 border border-dashed border-muted rounded-lg bg-elevated text-lg font-semibold text-muted">
-    EventsSearch
-  </div>
+  <BlueprintCard>
+    <template #default="{ structure }">
+      <BlueprintSearch
+        :structure="structure"
+        placeholder="Search events by date, location or topic…"
+        result-name="event"
+        to="/events/sample-event"
+        :samples="samples"
+      />
+    </template>
+  </BlueprintCard>
 </template>

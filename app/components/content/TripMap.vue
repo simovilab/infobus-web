@@ -1,5 +1,13 @@
 <template>
-  <div class="flex w-full items-center justify-center my-8 py-16 border border-dashed border-muted rounded-lg bg-elevated text-lg font-semibold text-muted">
-    TripMap
-  </div>
+  <BlueprintCard>
+    <template #default="{ structure }">
+      <BlueprintMap
+        label="Map of this trip"
+        icon="i-lucide-bus"
+        popup-label="Popup on the bus"
+        feature-name="bus"
+        :structure="structure"
+      />
+    </template>
+  </BlueprintCard>
 </template>

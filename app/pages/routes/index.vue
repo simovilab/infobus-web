@@ -1,12 +1,10 @@
-<script setup lang="ts">
-const page = getArchitecturePage('/routes')
-</script>
-
 <template>
-  <UPageSection :title="page.name" :description="page.description" />
-  <UContainer>
-    <RoutesSearch />
+  <BlueprintPage
+    path="/routes"
+  >
+    <PageHeader class="lg:col-span-2" />
+    <RoutesSearch class="lg:col-span-2" />
     <RoutesMenu />
     <RoutesMap />
-  </UContainer>
+  </BlueprintPage>
 </template>

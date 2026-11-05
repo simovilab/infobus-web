@@ -1,7 +1,9 @@
-<script setup lang="ts">
-const page = getArchitecturePage('/operators')
-</script>
-
 <template>
-  <UPageSection :title="page.name" :description="page.description" />
+  <BlueprintPage
+    path="/operators"
+    :columns="1"
+  >
+    <PageHeader />
+    <OperatorsMenu />
+  </BlueprintPage>
 </template>

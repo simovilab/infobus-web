@@ -1,7 +1,9 @@
-<script setup lang="ts">
-const page = getArchitecturePage('/resources/tourism')
-</script>
-
 <template>
-  <UPageSection :title="page.name" :description="page.description" />
+  <BlueprintPage
+    path="/resources/tourism"
+    :columns="1"
+  >
+    <PageHeader />
+    <PictureAndText />
+  </BlueprintPage>
 </template>

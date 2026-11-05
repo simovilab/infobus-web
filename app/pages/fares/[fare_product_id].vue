@@ -1,12 +1,15 @@
 <script setup lang="ts">
 const route = useRoute()
-const fareProductId = computed(() => String(route.params.fare_product_id || ''))
+const fare_productId = computed(() => String(route.params.fare_product_id || ''))
 </script>
 
 <template>
-  <UPageSection :title="`Fare Product ${fareProductId}`" />
-  <UContainer>
-    <FareProductHeader />
+  <BlueprintPage
+    path="/fares/<fare_product_id>"
+    :title="`Fare product ${fare_productId}`"
+  >
+    <FareProductHeader class="lg:col-span-2" />
+    <FareProductRules />
     <FareProductDescription />
-  </UContainer>
+  </BlueprintPage>
 </template>

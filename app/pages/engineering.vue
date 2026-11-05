@@ -1,7 +1,9 @@
-<script setup lang="ts">
-const page = getArchitecturePage('/engineering')
-</script>
-
 <template>
-  <UPageSection :title="page.name" :description="page.description" />
+  <BlueprintPage
+    path="/engineering"
+    :columns="1"
+  >
+    <PageHeader />
+    <PictureAndText />
+  </BlueprintPage>
 </template>

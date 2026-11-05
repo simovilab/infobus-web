@@ -1,0 +1,31 @@
+# Dependencies and build outputs (rebuilt inside the image)
+node_modules
+.output
+.nuxt
+.nitro
+.cache
+.data
+dist
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Tooling and editor files
+.git
+.github
+.vscode
+.idea
+.fleet
+.history
+.DS_Store
+*.log
+logs
+
+# Docker files themselves
+Dockerfile
+compose*.yaml
+compose*.yml
+docker-compose*.yml
+.dockerignore

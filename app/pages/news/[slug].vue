@@ -1,12 +1,9 @@
-<script setup lang="ts">
-const route = useRoute()
-const articleId = computed(() => String(route.params.slug || ''))
-</script>
-
 <template>
-  <UPageSection :title="`Article ${articleId}`" />
-  <UContainer>
+  <BlueprintPage
+    path="/news/<slug>"
+    :columns="1"
+  >
     <ArticleHeader />
     <ArticleBody />
-  </UContainer>
+  </BlueprintPage>
 </template>

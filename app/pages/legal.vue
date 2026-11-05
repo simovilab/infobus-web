@@ -1,7 +1,9 @@
-<script setup lang="ts">
-const page = getArchitecturePage('/legal')
-</script>
-
 <template>
-  <UPageSection :title="page.name" :description="page.description" />
+  <BlueprintPage
+    path="/legal"
+    :columns="1"
+  >
+    <PageHeader />
+    <LegalDocuments />
+  </BlueprintPage>
 </template>

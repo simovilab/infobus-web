@@ -4,14 +4,16 @@ const routeId = computed(() => String(route.params.route_id || ''))
 </script>
 
 <template>
-  <UPageSection :title="`Route ${routeId}`" />
-  <UContainer>
-    <RouteHeader />
+  <BlueprintPage
+    path="/routes/<route_id>"
+    :title="`Route ${routeId}`"
+  >
+    <RouteHeader class="lg:col-span-2" />
     <RouteNextTrips />
     <RouteAlerts />
-    <RouteSchedule />
+    <RouteSchedule class="lg:col-span-2" />
     <RouteMap />
     <RouteStops />
-    <RouteFares />
-  </UContainer>
+    <RouteFares class="lg:col-span-2" />
+  </BlueprintPage>
 </template>

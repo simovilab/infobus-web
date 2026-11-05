@@ -1,5 +1,17 @@
+<script setup lang="ts">
+const samples = [{ label: 'Sample article', to: '/news/sample-article' }]
+</script>
+
 <template>
-  <div class="flex w-full items-center justify-center my-8 py-16 border border-dashed border-muted rounded-lg bg-elevated text-lg font-semibold text-muted">
-    NewsSearch
-  </div>
+  <BlueprintCard>
+    <template #default="{ structure }">
+      <BlueprintSearch
+        :structure="structure"
+        placeholder="Search news by topic, date or keyword…"
+        result-name="article"
+        to="/news/sample-article"
+        :samples="samples"
+      />
+    </template>
+  </BlueprintCard>
 </template>

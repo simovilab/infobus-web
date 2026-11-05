@@ -88,7 +88,7 @@
         },
         "gtfs": {
           "type": "string",
-          "enum": ["schedule", "realtime"],
+          "enum": ["Schedule", "Realtime"],
           "description": "Highest GTFS layer the component depends on; realtime components may also read schedule data."
         },
         "endpoints": {

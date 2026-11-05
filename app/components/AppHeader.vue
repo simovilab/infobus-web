@@ -57,11 +57,10 @@ const items = computed(() => [{
     <template #left>
       <NuxtLink
         to="/"
-        class="focus-visible:outline-3 outline-primary/25 rounded-md p-1 -ms-1"
+        class="focus-visible:outline-3 outline-primary/25 rounded-md p-1 -ms-1 text-lg font-bold text-highlighted"
       >
-        <AppLogo class="w-auto h-6 shrink-0" />
+        Infobús Web
       </NuxtLink>
-
     </template>
 
     <UNavigationMenu

@@ -4,12 +4,14 @@ const stopId = computed(() => String(route.params.stop_id || ''))
 </script>
 
 <template>
-  <UPageSection :title="`Stop ${stopId}`" />
-  <UContainer>
-    <StopHeader />
-    <StopRoutes />
+  <BlueprintPage
+    path="/stops/<stop_id>"
+    :title="`Stop ${stopId}`"
+  >
+    <StopHeader class="lg:col-span-2" />
     <StopNextArrivals />
     <StopAlerts />
-    <StopMap />
-  </UContainer>
+    <StopRoutes class="lg:col-span-2" />
+    <StopMap class="lg:col-span-2" />
+  </BlueprintPage>
 </template>

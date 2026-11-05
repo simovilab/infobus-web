@@ -1,7 +1,9 @@
-<script setup lang="ts">
-const page = getArchitecturePage('/resources')
-</script>
-
 <template>
-  <UPageSection :title="page.name" :description="page.description" />
+  <BlueprintPage
+    path="/resources"
+    :columns="1"
+  >
+    <PageHeader />
+    <ResourcesMenu />
+  </BlueprintPage>
 </template>

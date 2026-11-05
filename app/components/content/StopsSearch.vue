@@ -1,5 +1,22 @@
+<script setup lang="ts">
+const samples = [
+  { label: 'Stop 1', to: '/stops/1' },
+  { label: 'Stop 2', to: '/stops/2' },
+  { label: 'Stop 3', to: '/stops/3' },
+  { label: 'Stop 4', to: '/stops/4' }
+]
+</script>
+
 <template>
-  <div class="flex w-full items-center justify-center my-8 py-16 border border-dashed border-muted rounded-lg bg-elevated text-lg font-semibold text-muted">
-    StopsSearch
-  </div>
+  <BlueprintCard>
+    <template #default="{ structure }">
+      <BlueprintSearch
+        :structure="structure"
+        placeholder="Search stops by name, code, location…"
+        result-name="stop"
+        to="/stops/1"
+        :samples="samples"
+      />
+    </template>
+  </BlueprintCard>
 </template>

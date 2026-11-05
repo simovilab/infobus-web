@@ -57,6 +57,42 @@ pnpm preview
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
+## Deploy with Docker Compose and Traefik
+
+The production stack is a single container behind a Traefik reverse proxy that is already running on the server and owns the external Docker network `traefik_proxy`. Traefik issues the Let's Encrypt certificate through its certificate resolver.
+
+1. Create the environment file and set the public domain (its DNS record must point to the server):
+
+   ```bash
+   cp .env.example .env
+   # edit DOMAIN, and TRAEFIK_* if your Traefik uses other entrypoint/resolver names
+   ```
+
+2. Build and start:
+
+   ```bash
+   docker compose up -d --build
+   ```
+
+3. Check the container is healthy and reachable through Traefik:
+
+   ```bash
+   docker compose ps
+   docker compose logs -f web
+   ```
+
+Configuration lives in `.env`:
+
+| Variable | Default | Purpose |
+| --- | --- | --- |
+| `DOMAIN` | — (required) | Hostname routed by Traefik, e.g. `infobus.example.com` |
+| `TRAEFIK_ENTRYPOINT` | `websecure` | Traefik HTTPS entrypoint |
+| `TRAEFIK_HTTP_ENTRYPOINT` | `web` | Traefik HTTP entrypoint; requests are redirected to HTTPS |
+| `TRAEFIK_CERT_RESOLVER` | `letsencrypt` | Name of the ACME resolver configured in Traefik |
+| `IMAGE_NAME` / `IMAGE_TAG` | `infobus-web` / `latest` | Tag of the image built by Compose |
+
+The [Dockerfile](./Dockerfile) builds the site in a Node 22 stage and ships only the Nitro output (`.output`), running as the unprivileged `node` user with a built-in health check on port 3000. To deploy a new version, pull the code and run `docker compose up -d --build` again.
+
 ## Renovate integration
 
 Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.

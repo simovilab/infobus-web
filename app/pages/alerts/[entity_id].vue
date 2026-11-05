@@ -1,13 +1,18 @@
 <script setup lang="ts">
 const route = useRoute()
-const alertId = computed(() => String(route.params.entity_id || ''))
+const entityId = computed(() => String(route.params.entity_id || ''))
 </script>
 
 <template>
-  <UPageSection :title="`Alert ${alertId}`" />
-  <UContainer>
-    <AlertHeader />
+  <BlueprintPage
+    path="/alerts/<entity_id>"
+    :title="`Alert ${entityId}`"
+  >
+    <AlertHeader class="lg:col-span-2" />
+    <AlertAffectedServices />
     <AlertPeriod />
     <AlertDescription />
-  </UContainer>
+    <AlertGuidance />
+    <AlertMap class="lg:col-span-2" />
+  </BlueprintPage>
 </template>

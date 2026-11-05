@@ -1,12 +1,9 @@
-<script setup lang="ts">
-const route = useRoute()
-const eventId = computed(() => String(route.params.slug || ''))
-</script>
-
 <template>
-  <UPageSection :title="`Event ${eventId}`" />
-  <UContainer>
+  <BlueprintPage
+    path="/events/<slug>"
+    :columns="1"
+  >
     <EventHeader />
     <EventBody />
-  </UContainer>
+  </BlueprintPage>
 </template>

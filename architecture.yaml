@@ -1,7 +1,7 @@
 $schema: ./architecture.schema.json
 
 metadata:
-  version: "0.2"
+  version: "0.3"
   title: Infobús Web Information Architecture
   date: 2026-11-04
 
@@ -22,7 +22,7 @@ pages:
       - name: AlertsDigest
         description: Summarizes active alerts affecting the transit service.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -137,7 +137,7 @@ pages:
       - name: RoutesSearch
         description: Finds routes by name, number, location, or other criteria.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -158,7 +158,7 @@ pages:
       - name: RoutesMenu
         description: Lists routes by an appropriate grouping such as type or number.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -179,7 +179,7 @@ pages:
       - name: RoutesMap
         description: Shows all routes within the service area.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: GeoJSON
@@ -204,7 +204,7 @@ pages:
       - name: RouteHeader
         description: Presents the route's essential information.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -228,7 +228,7 @@ pages:
       - name: RouteNextTrips
         description: Shows ongoing and upcoming trips for the current time.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -262,7 +262,7 @@ pages:
       - name: RouteAlerts
         description: Displays active alerts that apply to the route.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -293,7 +293,7 @@ pages:
       - name: RouteSchedule
         description: Displays scheduled and estimated departures by stop.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -347,7 +347,7 @@ pages:
       - name: RouteMap
         description: Shows trip shapes and, when available, real-time vehicle positions.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: GeoJSON
@@ -398,7 +398,7 @@ pages:
       - name: RouteStops
         description: Lists the route's stops in both directions.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -432,7 +432,7 @@ pages:
       - name: RouteFares
         description: Displays fares and fare rules applicable to the route.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -469,7 +469,7 @@ pages:
       - name: RegionsSearch
         description: Finds regions by name, identifier, or other criteria.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -489,7 +489,7 @@ pages:
       - name: RegionsMap
         description: Shows all regions within the service area.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: GeoJSON
@@ -518,7 +518,7 @@ pages:
       - name: RegionHeader
         description: Presents the region's ID, name, and essential information.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -533,7 +533,7 @@ pages:
       - name: RegionRoutes # check with Fabián: new component, the page only had header and map
         description: Lists the routes that belong to the region.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -553,7 +553,7 @@ pages:
       - name: RegionMap
         description: Shows the region's boundaries and included routes.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: GeoJSON
@@ -590,7 +590,7 @@ pages:
       - name: StopsSearch
         description: Finds stops by name, identifier, location, or other criteria.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -611,7 +611,7 @@ pages:
       - name: StopsMap
         description: Shows all stops within the service area.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: GeoJSON
@@ -636,7 +636,7 @@ pages:
       - name: StopHeader
         description: Presents the stop's ID, name, and essential information.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -664,7 +664,7 @@ pages:
       - name: StopNextArrivals
         description: Shows upcoming arrivals at the stop.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -701,7 +701,7 @@ pages:
       - name: StopAlerts
         description: Displays active alerts that apply to the stop.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -732,7 +732,7 @@ pages:
       - name: StopRoutes
         description: Lists routes that serve the stop.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -765,7 +765,7 @@ pages:
       - name: StopMap
         description: Shows the stop location and nearby area.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: GeoJSON
@@ -779,7 +779,7 @@ pages:
             - stops.stop_lon
             - stops.location_type
             - stops.wheelchair_boarding
-            - name: nearby_stops # check with Fabián the relevancy of this data
+            - name: nearby_stops
               type: array
               values:
                 - stops.stop_id
@@ -817,7 +817,7 @@ pages:
       - name: TripsFinder
         description: Searches stops by name, sign code or nearby location, routes by number or name, and destinations by place.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -868,7 +868,7 @@ pages:
       - name: TripsDisruptions
         description: Flags alerts on the chosen stop and routes above the results, or the most severe network alerts when nothing is chosen, each linking to its alert page.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -893,7 +893,7 @@ pages:
       - name: TripsDepartures
         description: Once a stop, route or destination is chosen, lists departures for that time, marks each as live or scheduled, flags cancelled, accessible and crowded buses and the last bus, and says when there is no more service.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -963,7 +963,7 @@ pages:
       - name: TripsInService
         description: Shows the trips running now and those that ended in the last hours, by operator and route, each marked as on time, late, without signal, not tracked, cancelled, interrupted or completed, and says how many routes are tracked.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1015,7 +1015,7 @@ pages:
       - name: TripsMap
         description: Loads on request a map of the chosen stop, the paths of its routes and the buses on their way, or of every tracked bus in service when nothing is chosen.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: GeoJSON
@@ -1050,7 +1050,7 @@ pages:
       - name: TripHeader
         description: Presents the route, destination, operator and its contact, and a share link that keeps the passenger's stops.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1088,7 +1088,7 @@ pages:
       - name: TripStatus
         description: Says in one line whether the bus is on time, late, cancelled, without signal, not tracked or finished, and how fresh that is.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1112,7 +1112,7 @@ pages:
       - name: TripVehicle
         description: Helps the passenger recognize and board the right bus by its number, plate, wheelchair access, bike policy and crowding, or says the bus is not identified.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1137,7 +1137,7 @@ pages:
       - name: TripStops
         description: Lists every stop with scheduled and estimated times, shows where the bus is, counts down to the passenger's boarding and alighting stops, flags skipped, replaced, platform-changed and drop-off-only stops, and after the trip shows the last estimate recorded at each stop.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1207,7 +1207,7 @@ pages:
       - name: TripAlerts
         description: Shows the alerts that affect this journey in plain words, marking those that touch the passenger's stops.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1242,7 +1242,7 @@ pages:
       - name: TripAlternatives
         description: Shows the previous and next departures on the same route and direction from the passenger's stop, for when this bus is cancelled, full or missed.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1273,7 +1273,7 @@ pages:
       - name: TripMap
         description: Loads on request a map of the trip path, its stops, the bus position and any detour.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: GeoJSON
@@ -1326,7 +1326,7 @@ pages:
       - name: FaresSearch
         description: Finds fare products by name, audience, zone, or price.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1346,7 +1346,7 @@ pages:
       - name: FaresProductMenu
         description: Lists available fare products and their primary characteristics.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1368,7 +1368,7 @@ pages:
       - name: FaresPaymentOptions
         description: Lists the accepted payment media, such as cash, transit cards, and contactless bank cards, by operator.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1395,7 +1395,7 @@ pages:
       - name: FareProductHeader
         description: Presents the fare product's name, price, and key eligibility information.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1418,7 +1418,7 @@ pages:
       - name: FareProductRules
         description: Lists where, when, and on which routes the fare product applies, and its transfer conditions.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1481,7 +1481,7 @@ pages:
       - name: AlertsForYou
         description: Shows alerts for the routes and stops the passenger follows on this device, plus network-wide ones, or says plainly that there are none and when the feed was checked; with nothing followed, explains how to follow.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1514,7 +1514,7 @@ pages:
       - name: AlertsSearch
         description: Finds a route, stop or operator to check or follow, and filters every alert list by effect, cause and dates.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1543,7 +1543,7 @@ pages:
       - name: AlertsList
         description: Lists every alert, in effect now and then upcoming, most severe first, filterable by operator and by effect such as detours or accessibility issues, or says there are none.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1578,7 +1578,7 @@ pages:
       - name: AlertsRecent
         description: Lists alerts that have left the feed in the last days, with when they were first and last published, so anyone can check what happened.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1605,7 +1605,7 @@ pages:
       - name: AlertsServiceDays
         description: Lists the coming dates when service is added or removed, such as holidays, from the schedule's calendar exceptions, marking the routes the passenger follows.
         type: feed
-        gtfs: schedule
+        gtfs: Schedule
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1633,7 +1633,7 @@ pages:
       - name: AlertHeader
         description: Presents the alert in plain words with its effect, severity, cause, whether it is upcoming, in effect or over, when it was first and last published, and a share link that still works after the alert ends.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1655,7 +1655,7 @@ pages:
       - name: AlertAffectedServices
         description: Lists what is affected, keeping route, direction, stop and trip together as the alert gives them, each linking to its page, with other routes that still serve each affected stop.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1688,7 +1688,7 @@ pages:
       - name: AlertPeriod
         description: Says in plain dates when service is affected and when the alert is shown, and says when no end date has been announced.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1711,7 +1711,7 @@ pages:
       - name: AlertDescription
         description: Explains what is happening and what changes for the passenger, including temporary stops, in text that screen readers can speak.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: JSON
@@ -1749,7 +1749,7 @@ pages:
       - name: AlertMap
         description: Loads on request a map of the affected stops, the detour path and the temporary stops.
         type: feed
-        gtfs: realtime
+        gtfs: Realtime
         endpoints:
           - protocol: HTTP
             format: GeoJSON

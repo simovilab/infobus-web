@@ -1,7 +1,9 @@
-<script setup lang="ts">
-const page = getArchitecturePage('/faq')
-</script>
-
 <template>
-  <UPageSection :title="page.name" :description="page.description" />
+  <BlueprintPage
+    path="/faq"
+    :columns="1"
+  >
+    <PageHeader />
+    <FaqList />
+  </BlueprintPage>
 </template>
