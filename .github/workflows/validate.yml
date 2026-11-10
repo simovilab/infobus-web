@@ -1,0 +1,35 @@
+name: Validate architecture
+
+on:
+  pull_request:
+    paths:
+      - architecture.yaml
+      - architecture.schema.json
+      - bundles/**
+      - "[[]*[]].json"
+      - scripts/validate_architecture.py
+      - .github/workflows/validate.yml
+  push:
+    branches: [main]
+    paths:
+      - architecture.yaml
+      - architecture.schema.json
+      - bundles/**
+      - "[[]*[]].json"
+      - scripts/validate_architecture.py
+      - .github/workflows/validate.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "pyyaml>=6" "jsonschema>=4.18,<5"
+      - run: python scripts/validate_architecture.py
