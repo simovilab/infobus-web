@@ -13,7 +13,11 @@
       "route_color": "A5B345",
       "route_text_color": "C936DF",
       "route_type": "3",
-      "cemv_support": true
+      "cemv_support": true,
+      "agency_id": "CTP",
+      "network_id": "metropolitana",
+      "continuous_pickup": 1,
+      "continuous_drop_off": 1
     },
     "route_schedule": {
       "calendar": [
@@ -34,40 +38,49 @@
         {
           "service_id": "entresemana",
           "date": "2026-12-01",
-          "exception_type": 1,
-          "holiday_name": "Día de la Abolición del Ejército"
+          "exception_type": 1
         }
       ],
       "services": [
         {
           "service_id": "entresemana",
-          "direction": [
+          "directions": [
             {
               "direction_id": 0,
+              "route.first_trip_departure_time": "07:40:00",
+              "route.last_trip_departure_time": "07:55:00",
               "trips": [
                 {
                   "trip_id": "A1",
+                  "route.first_stop_name": "Parada A1",
+                  "route.first_departure_time": "07:40:00",
+                  "route.last_stop_name": "Parada A2",
+                  "route.last_arrival_time": "07:42:00",
                   "stop_times": [
                     {
-                      "stop_name": "Parada A1",
-                      "departure_time": "07:40:00"
+                      "stops.stop_name": "Parada A1",
+                      "stop_times.departure_time": "07:40:00"
                     },
                     {
-                      "stop_name": "Parada A2",
-                      "departure_time": "07:42:00"
+                      "stops.stop_name": "Parada A2",
+                      "stop_times.departure_time": "07:42:00"
                     }
                   ]
                 },
                 {
                   "trip_id": "A2",
+                  "route.first_stop_name": "Parada A1",
+                  "route.first_departure_time": "07:55:00",
+                  "route.last_stop_name": "Parada A2",
+                  "route.last_arrival_time": "07:57:00",
                   "stop_times": [
                     {
-                      "stop_name": "Parada A1",
-                      "departure_time": "07:55:00"
+                      "stops.stop_name": "Parada A1",
+                      "stop_times.departure_time": "07:55:00"
                     },
                     {
-                      "stop_name": "Parada A2",
-                      "departure_time": "07:57:00"
+                      "stops.stop_name": "Parada A2",
+                      "stop_times.departure_time": "07:57:00"
                     }
                   ]
                 }
@@ -75,34 +88,40 @@
             },
             {
               "direction_id": 1,
+              "route.first_trip_departure_time": "07:40:00",
+              "route.last_trip_departure_time": "07:55:00",
               "trips": [
                 {
                   "trip_id": "B1",
-                  "first_stop_name": "Parada B1",
-                  "first_departure_time": "07:40:00",
-                  "last_stop_name": "Parada B15",
-                  "last_arrival_time": "25:04:00",
+                  "route.first_stop_name": "Parada B1",
+                  "route.first_departure_time": "07:40:00",
+                  "route.last_stop_name": "Parada B2",
+                  "route.last_arrival_time": "07:42:00",
                   "stop_times": [
                     {
-                      "stop_name": "Parada B1",
-                      "departure_time": "07:40:00"
+                      "stops.stop_name": "Parada B1",
+                      "stop_times.departure_time": "07:40:00"
                     },
                     {
-                      "stop_name": "Parada B2",
-                      "departure_time": "07:42:00"
+                      "stops.stop_name": "Parada B2",
+                      "stop_times.departure_time": "07:42:00"
                     }
                   ]
                 },
                 {
                   "trip_id": "B2",
+                  "route.first_stop_name": "Parada B1",
+                  "route.first_departure_time": "07:55:00",
+                  "route.last_stop_name": "Parada B2",
+                  "route.last_arrival_time": "07:57:00",
                   "stop_times": [
                     {
-                      "stop_name": "Parada B1",
-                      "departure_time": "07:55:00"
+                      "stops.stop_name": "Parada B1",
+                      "stop_times.departure_time": "07:55:00"
                     },
                     {
-                      "stop_name": "Parada B2",
-                      "departure_time": "07:57:00"
+                      "stops.stop_name": "Parada B2",
+                      "stop_times.departure_time": "07:57:00"
                     }
                   ]
                 }
@@ -111,6 +130,96 @@
           ]
         }
       ]
-    }
+    },
+    "route_stops": [
+      {
+        "direction_id": 0,
+        "trip_headsign": "Curridabat",
+        "stops": [
+          {
+            "stop_sequence": 1,
+            "stop_id": "A1",
+            "stop_code": null,
+            "stop_name": "Parada A1",
+            "tts_stop_name": null,
+            "stop_desc": null,
+            "stop_lat": 9.9281,
+            "stop_lon": -84.0907,
+            "zone_id": null,
+            "stop_url": null,
+            "location_type": "0",
+            "parent_station": null,
+            "stop_timezone": null,
+            "wheelchair_boarding": null,
+            "level_id": null,
+            "platform_code": null,
+            "stop_access": null
+          },
+          {
+            "stop_sequence": 2,
+            "stop_id": "A2",
+            "stop_code": null,
+            "stop_name": "Parada A2",
+            "tts_stop_name": null,
+            "stop_desc": null,
+            "stop_lat": 9.9212,
+            "stop_lon": -84.0655,
+            "zone_id": null,
+            "stop_url": null,
+            "location_type": "0",
+            "parent_station": null,
+            "stop_timezone": null,
+            "wheelchair_boarding": null,
+            "level_id": null,
+            "platform_code": null,
+            "stop_access": null
+          }
+        ]
+      },
+      {
+        "direction_id": 1,
+        "trip_headsign": "San José",
+        "stops": [
+          {
+            "stop_sequence": 1,
+            "stop_id": "B1",
+            "stop_code": null,
+            "stop_name": "Parada B1",
+            "tts_stop_name": null,
+            "stop_desc": null,
+            "stop_lat": 9.9212,
+            "stop_lon": -84.0655,
+            "zone_id": null,
+            "stop_url": null,
+            "location_type": "0",
+            "parent_station": null,
+            "stop_timezone": null,
+            "wheelchair_boarding": null,
+            "level_id": null,
+            "platform_code": null,
+            "stop_access": null
+          },
+          {
+            "stop_sequence": 2,
+            "stop_id": "B2",
+            "stop_code": null,
+            "stop_name": "Parada B2",
+            "tts_stop_name": null,
+            "stop_desc": null,
+            "stop_lat": 9.9281,
+            "stop_lon": -84.0907,
+            "zone_id": null,
+            "stop_url": null,
+            "location_type": "0",
+            "parent_station": null,
+            "stop_timezone": null,
+            "wheelchair_boarding": null,
+            "level_id": null,
+            "platform_code": null,
+            "stop_access": null
+          }
+        ]
+      }
+    ]
   }
 }
