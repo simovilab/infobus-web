@@ -12,12 +12,12 @@
       "route_desc": "La ruta más Freses",
       "route_color": "A5B345",
       "route_text_color": "C936DF",
-      "route_type": "3",
+      "route_type": 3,
       "cemv_support": true,
-      "agency_id": "CTP",
-      "network_id": "metropolitana",
-      "continuous_pickup": 1,
-      "continuous_drop_off": 1
+      "agency_id": null,
+      "network_id": null,
+      "continuous_pickup": null,
+      "continuous_drop_off": null
     },
     "route_schedule": {
       "calendar": [
@@ -58,12 +58,12 @@
                   "route.last_arrival_time": "07:42:00",
                   "stop_times": [
                     {
-                      "stops.stop_name": "Parada A1",
-                      "stop_times.departure_time": "07:40:00"
+                      "stop_name": "Parada A1",
+                      "departure_time": "07:40:00"
                     },
                     {
-                      "stops.stop_name": "Parada A2",
-                      "stop_times.departure_time": "07:42:00"
+                      "stop_name": "Parada A2",
+                      "departure_time": "07:42:00"
                     }
                   ]
                 },
@@ -75,12 +75,12 @@
                   "route.last_arrival_time": "07:57:00",
                   "stop_times": [
                     {
-                      "stops.stop_name": "Parada A1",
-                      "stop_times.departure_time": "07:55:00"
+                      "stop_name": "Parada A1",
+                      "departure_time": "07:55:00"
                     },
                     {
-                      "stops.stop_name": "Parada A2",
-                      "stop_times.departure_time": "07:57:00"
+                      "stop_name": "Parada A2",
+                      "departure_time": "07:57:00"
                     }
                   ]
                 }
@@ -95,16 +95,16 @@
                   "trip_id": "B1",
                   "route.first_stop_name": "Parada B1",
                   "route.first_departure_time": "07:40:00",
-                  "route.last_stop_name": "Parada B2",
-                  "route.last_arrival_time": "07:42:00",
+                  "route.last_stop_name": "Parada B15",
+                  "route.last_arrival_time": "25:04:00",
                   "stop_times": [
                     {
-                      "stops.stop_name": "Parada B1",
-                      "stop_times.departure_time": "07:40:00"
+                      "stop_name": "Parada B1",
+                      "departure_time": "07:40:00"
                     },
                     {
-                      "stops.stop_name": "Parada B2",
-                      "stop_times.departure_time": "07:42:00"
+                      "stop_name": "Parada B2",
+                      "departure_time": "07:42:00"
                     }
                   ]
                 },
@@ -116,12 +116,12 @@
                   "route.last_arrival_time": "07:57:00",
                   "stop_times": [
                     {
-                      "stops.stop_name": "Parada B1",
-                      "stop_times.departure_time": "07:55:00"
+                      "stop_name": "Parada B1",
+                      "departure_time": "07:55:00"
                     },
                     {
-                      "stops.stop_name": "Parada B2",
-                      "stop_times.departure_time": "07:57:00"
+                      "stop_name": "Parada B2",
+                      "departure_time": "07:57:00"
                     }
                   ]
                 }
@@ -147,7 +147,7 @@
             "stop_lon": -84.0907,
             "zone_id": null,
             "stop_url": null,
-            "location_type": "0",
+            "location_type": 0,
             "parent_station": null,
             "stop_timezone": null,
             "wheelchair_boarding": null,
@@ -166,7 +166,7 @@
             "stop_lon": -84.0655,
             "zone_id": null,
             "stop_url": null,
-            "location_type": "0",
+            "location_type": 0,
             "parent_station": null,
             "stop_timezone": null,
             "wheelchair_boarding": null,
@@ -191,7 +191,7 @@
             "stop_lon": -84.0655,
             "zone_id": null,
             "stop_url": null,
-            "location_type": "0",
+            "location_type": 0,
             "parent_station": null,
             "stop_timezone": null,
             "wheelchair_boarding": null,
@@ -210,7 +210,7 @@
             "stop_lon": -84.0907,
             "zone_id": null,
             "stop_url": null,
-            "location_type": "0",
+            "location_type": 0,
             "parent_station": null,
             "stop_timezone": null,
             "wheelchair_boarding": null,

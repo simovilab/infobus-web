@@ -3,41 +3,6 @@
     "stop_id": "PBA-10101-002",
     "stop_name": "ESTACION DE TRENES DEL ATLÁNTICO",
     "trip_updates.timestamp": null,
-    "trips": [
-      {
-        "run.id": null,
-        "route_id": "0050-A",
-        "route_short_name": "SJ - SALITRILLOS - EXT. KARPINSKY",
-        "route_color": null,
-        "route_text_color": null,
-        "trip_id": null,
-        "trip_headsign": null,
-        "direction_id": 1,
-        "wheelchair_accessible": null,
-        "stop_times.arrival_time": null,
-        "stop_times.departure_time": null,
-        "trip_updates.trip.schedule_relationship": null,
-        "trip_updates.stop_time_update.arrival.time": null,
-        "trip_updates.stop_time_update.arrival.delay": null,
-        "vehicle_positions.occupancy_status": null
-      },
-      {
-        "run.id": null,
-        "route_id": "0050-E",
-        "route_short_name": "SJ - SAN RAMÓN TRES RÍOS - VILLA HERMOSA",
-        "route_color": null,
-        "route_text_color": null,
-        "trip_id": null,
-        "trip_headsign": null,
-        "direction_id": 1,
-        "wheelchair_accessible": null,
-        "stop_times.arrival_time": null,
-        "stop_times.departure_time": null,
-        "trip_updates.trip.schedule_relationship": null,
-        "trip_updates.stop_time_update.arrival.time": null,
-        "trip_updates.stop_time_update.arrival.delay": null,
-        "vehicle_positions.occupancy_status": null
-      }
-    ]
+    "trips": []
   }
 }
