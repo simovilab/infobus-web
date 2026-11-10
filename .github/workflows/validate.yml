@@ -6,7 +6,7 @@ on:
       - architecture.yaml
       - architecture.schema.json
       - bundles/**
-      - "[[]*[]].json"
+      - "*.json"
       - scripts/validate_architecture.py
       - .github/workflows/validate.yml
   push:
@@ -15,7 +15,7 @@ on:
       - architecture.yaml
       - architecture.schema.json
       - bundles/**
-      - "[[]*[]].json"
+      - "*.json"
       - scripts/validate_architecture.py
       - .github/workflows/validate.yml
   workflow_dispatch:
