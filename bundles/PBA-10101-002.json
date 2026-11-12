@@ -15,7 +15,7 @@
       "stop_lon": -84.06965415832572,
       "zone_id": null,
       "stop_url": null,
-      "location_type": "0",
+      "location_type": 0,
       "parent_station": null,
       "stop_timezone": null,
       "wheelchair_boarding": null,
@@ -23,84 +23,43 @@
       "platform_code": null,
       "stop_access": null
     },
-    "stop_routes": {
-      "routes": [
-        {
-          "route_id": "0050-A",
-          "route_short_name": "SJ - SALITRILLOS - EXT. KARPINSKY",
-          "route_long_name": "SAN JOSÉ - SAN PEDRO - SALITRILLOS - EXT. KARPINSKY",
-          "route_desc": null,
-          "route_type": "3",
-          "route_url": null,
-          "route_color": null,
-          "route_text_color": null,
-          "route_sort_order": null,
-          "directions": [
-            {
-              "direction_id": 1,
-              "trip_headsign": null,
-              "departures": [
-                {
-                  "trip_id": null,
-                  "service_id": null,
-                  "stop_times.arrival_time": null,
-                  "stop_times.departure_time": null
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "route_id": "0050-E",
-          "route_short_name": "SJ - SAN RAMÓN TRES RÍOS - VILLA HERMOSA",
-          "route_long_name": "SAN JOSÉ - SAN RAMÓN DE TRES RÍOS - VILLA HERMOSA",
-          "route_desc": null,
-          "route_type": "3",
-          "route_url": null,
-          "route_color": null,
-          "route_text_color": null,
-          "route_sort_order": null,
-          "directions": [
-            {
-              "direction_id": 1,
-              "trip_headsign": null,
-              "departures": [
-                {
-                  "trip_id": null,
-                  "service_id": null,
-                  "stop_times.arrival_time": null,
-                  "stop_times.departure_time": null
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "route_id": "0051-B",
-          "route_short_name": "SJ - CARMIOL",
-          "route_long_name": "SAN JOSÉ - URBANIZACIÓN CARMIOL Y VICEVERSA",
-          "route_desc": null,
-          "route_type": "3",
-          "route_url": null,
-          "route_color": null,
-          "route_text_color": null,
-          "route_sort_order": null,
-          "directions": [
-            {
-              "direction_id": 1,
-              "trip_headsign": null,
-              "departures": [
-                {
-                  "trip_id": null,
-                  "service_id": null,
-                  "stop_times.arrival_time": null,
-                  "stop_times.departure_time": null
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
+    "stop_routes": [
+      {
+        "route_id": "0050-A",
+        "route_short_name": "SJ - SALITRILLOS - EXT. KARPINSKY",
+        "route_long_name": "SAN JOSÉ - SAN PEDRO - SALITRILLOS - EXT. KARPINSKY",
+        "route_desc": null,
+        "route_type": 3,
+        "route_url": null,
+        "route_color": null,
+        "route_text_color": null,
+        "route_sort_order": null,
+        "directions": []
+      },
+      {
+        "route_id": "0050-E",
+        "route_short_name": "SJ - SAN RAMÓN TRES RÍOS - VILLA HERMOSA",
+        "route_long_name": "SAN JOSÉ - SAN RAMÓN DE TRES RÍOS - VILLA HERMOSA",
+        "route_desc": null,
+        "route_type": 3,
+        "route_url": null,
+        "route_color": null,
+        "route_text_color": null,
+        "route_sort_order": null,
+        "directions": []
+      },
+      {
+        "route_id": "0051-B",
+        "route_short_name": "SJ - CARMIOL",
+        "route_long_name": "SAN JOSÉ - URBANIZACIÓN CARMIOL Y VICEVERSA",
+        "route_desc": null,
+        "route_type": 3,
+        "route_url": null,
+        "route_color": null,
+        "route_text_color": null,
+        "route_sort_order": null,
+        "directions": []
+      }
+    ]
   }
 }

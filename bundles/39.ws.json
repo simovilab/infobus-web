@@ -1,14 +1,36 @@
 {
   "route_next_trips": {
+    "route_id": "39",
     "route_short_name": "39",
+    "trip_updates.timestamp": null,
     "trips": [
       {
+        "run.id": null,
+        "trip_id": "A1",
         "trip_headsign": "Curridabat",
-        "departure_time": "08:30:00"
+        "direction_id": 0,
+        "wheelchair_accessible": null,
+        "trip.first_stop_name": "Parada A1",
+        "trip.last_stop_name": "Parada A2",
+        "departure_time": "07:40:00",
+        "trip_updates.trip.schedule_relationship": null,
+        "trip_updates.stop_time_update.departure.time": null,
+        "trip_updates.stop_time_update.departure.delay": null,
+        "vehicle_positions.occupancy_status": null
       },
       {
+        "run.id": null,
+        "trip_id": "A2",
         "trip_headsign": "Curridabat",
-        "departure_time": "09:00:00"
+        "direction_id": 0,
+        "wheelchair_accessible": null,
+        "trip.first_stop_name": "Parada A1",
+        "trip.last_stop_name": "Parada A2",
+        "departure_time": "07:55:00",
+        "trip_updates.trip.schedule_relationship": null,
+        "trip_updates.stop_time_update.departure.time": null,
+        "trip_updates.stop_time_update.departure.delay": null,
+        "vehicle_positions.occupancy_status": null
       }
     ]
   }

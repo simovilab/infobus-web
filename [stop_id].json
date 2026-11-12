@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "version": "0.1",
+    "date": "2026-11-02",
+    "title": "Stop",
+    "stop": "<stop_id>"
+  },
+  "components": {
+    "stop_header": {
+      "stop_id": "Example Stop ID",
+      "stop_code": "Example Stop Code",
+      "stop_name": "Example Stop Name",
+      "tts_stop_name": "Example TTS Stop Name",
+      "stop_desc": "Example Stop Description",
+      "stop_lat": "Example Stop Latitude",
+      "stop_lon": "Example Stop Longitude",
+      "zone_id": "Example Zone ID",
+      "stop_url": "Example Stop URL",
+      "location_type": "Example Location Type",
+      "parent_station": "Example Parent Station",
+      "stop_timezone": "Example Stop Timezone",
+      "wheelchair_boarding": "Example Wheelchair Boarding",
+      "level_id": "Example Level ID",
+      "platform_code": "Example Platform Code",
+      "stop_access": "Example Stop Access"
+    },
+    "stop_routes": [
+      {
+        "route_id": "Example Route ID",
+        "route_short_name": "Example Short Name",
+        "route_long_name": "Example Long Name",
+        "route_desc": "Example Description",
+        "route_type": "Example Type",
+        "route_url": "Example Route URL",
+        "route_color": "Example Color",
+        "route_text_color": "Example Text Color",
+        "route_sort_order": "Example Sort Order",
+        "directions": [
+          {
+            "direction_id": 0,
+            "trip_headsign": "Example Trip Headsign 1",
+            "departures": [
+              {
+                "trip_id": "Example Trip ID 1",
+                "service_id": "Example Service ID 1",
+                "stop_times.arrival_time": "Example Arrival Time 1",
+                "stop_times.departure_time": "Example Departure Time 1"
+              },
+              {
+                "trip_id": "Example Trip ID 2",
+                "service_id": "Example Service ID 2",
+                "stop_times.arrival_time": "Example Arrival Time 2",
+                "stop_times.departure_time": "Example Departure Time 2"
+              }
+            ]
+          },
+          {
+            "direction_id": 1,
+            "trip_headsign": "Example Trip Headsign 2",
+            "departures": [
+              {
+                "trip_id": "Example Trip ID 3",
+                "service_id": "Example Service ID 3",
+                "stop_times.arrival_time": "Example Arrival Time 3",
+                "stop_times.departure_time": "Example Departure Time 3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
