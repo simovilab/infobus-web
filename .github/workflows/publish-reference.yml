@@ -1,0 +1,23 @@
+name: Publish reference files
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to publish
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    uses: simovilab/.github/.github/workflows/publish-reference.yml@main
+    with:
+      tag: ${{ inputs.tag }}
+      files: |
+        architecture.yaml:architecture.yaml
+      python_packages: pyyaml>=6 jsonschema>=4.18,<5
+      validate_cmd: python scripts/validate_architecture.py
